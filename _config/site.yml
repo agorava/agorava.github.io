@@ -1,0 +1,5 @@
+profiles: 
+  production: 
+    base_url: http://agorava.org 
+    deploy: 
+      host: github_pages
