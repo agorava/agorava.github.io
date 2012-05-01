@@ -3,3 +3,4 @@ profiles:
     base_url: http://agorava.org 
     deploy: 
       host: github_pages
+      branch: master
