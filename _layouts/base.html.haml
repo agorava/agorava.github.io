@@ -11,14 +11,21 @@
     %link{ :rel=>'stylesheet', :type=>'text/css', :href=>"#{site.base_url}/stylesheets/styles.css" }
     /[if lt IE 9]
       %script{ :type=>'text/javascript', :src=>'//html5shim.googlecode.com/svn/trunk/html5.js' }
+    %script{ :type=>'text/javascript', :src=>'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' }
+    %script{ :type=>'text/javascript', :src=>"#{site.base_url}/javascripts/bootstrap-collapse.js" }
   %body
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
+          %a.btn.btn-navbar{"data-toggle"=>"collapse", "data-target"=>".nav-collapse"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
           %a.brand{ :href=>"#{site.base_url}" } Agorava
-          %ul.nav
-            %li
-              %a{ :href=>"#{site.base_url}" } Home
+          .nav-collapse
+            %ul.nav
+              %li
+                %a{ :href=>"#{site.base_url}" } Home
     .container
       ~ content
       %hr

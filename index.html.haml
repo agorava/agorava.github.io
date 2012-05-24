@@ -1,27 +1,59 @@
 ---
 layout: base
 ---
-.hero-unit
-  %h1 Welcome to Agorava
-  %p  Agorava is a Java framework that ease connexion and interaction with Social Media and Online services 
-  %p
-    -#%a.btn.btn-primary.btn-large{ :href=>'http://awestruct.org' }
-      -#%i.icon-info-sign.icon-white
-      -#Learn more &raquo;
-.row
-  .span6
-    %h2 Status
-    %p
-      Agorava is in bootstrap phase right now. It'll inherit from project like
-      %a{ :href=>"https://github.com/seam/social" } Seam Social
-      and
-      %a{ :href=>"http://java.net/projects/dalicore "} Dalicore
-    %p
-      %a.btn{ :href=>'http://github.com/agorava' } Github repos &raquo; 
-  .span6
-    %h2 News
-    %p
-      Agorava Project started on April 30th. We are discussing release 0.1 right now
-    %p
-      %a.btn{ :href=>'http://twitter.com/AgoravaProj' } Follow us on Twitter &raquo; 
+.container
+  .row
+    .span12
+      .hero-unit.clearfix
+        %img.hidden-phone{ :style=>"float:right; margin-left:20px;", :src=>"https://secure.gravatar.com/avatar/efab5e4cbc6f0788ec3f0e8ac804f3b9?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png"}
+        %h1 Welcome to Agorava
+        %p  Agorava is a Java framework that ease connexion and interaction with Social Media and Online services 
+        %p
+          -#%a.btn.btn-primary.btn-large{ :href=>'http://awestruct.org' }
+            -#%i.icon-info-sign.icon-white
+            -#Learn more &raquo;
+        
+  .row
+    .span6
+      %h2 Status
+      %p
+        Agorava is in bootstrap phase right now. It'll inherit from project like
+        %a{ :href=>"https://github.com/seam/social" } Seam Social
+        and
+        %a{ :href=>"http://java.net/projects/dalicore"} Dalicore
+      %p
+        %a.btn{ :href=>"https://issues.jboss.org/browse/AGOVA" } JIRA &raquo;
+        %a.btn{ :href=>"https://agorava.ci.cloudbees.com/" } Jenkins &raquo;
+        %a.btn{ :href=>"http://github.com/agorava" } Github repos &raquo;
   
+      %ul.well.nav.nav-list
+        %li.nav-header Repositories
+        %li
+          %a{ :href=>"https://github.com/agorava/agorava-parent"} agorava-parent
+        %li
+          %a{ :href=>"https://github.com/agorava/agorava-core"} agorava-core
+        %li
+          %a{ :href=>"https://github.com/agorava/agorava-twitter"} agorava-twitter
+        %li
+          %a{ :href=>"https://github.com/agorava/agorava-facebook"} agorava-facebook
+        %li
+          %a{ :href=>"https://github.com/agorava/agorava-linkedin"} agorava-linkedin
+        %li
+          %a{ :href=>"https://github.com/agorava/agorava-socializer"} agorava-socializer
+        %li
+          %a{ :href=>"https://github.com/agorava/agorava.github.com"} agorava.github.com
+    .span6
+      %h2 News
+      %p
+        Agorava Project started on April 30th. We are discussing release 0.1 right now
+      %p
+        %a.twitter-follow-button{:href=>"https://twitter.com/AgoravaProj", :data=>{"show-count"=>"false", :size=>"large"}} Follow me on Twitter
+      .well.last-tweets
+        %ul.nav.nav-list.twitter-list
+          %li.nav-header Last tweets
+          #twitter_update_list
+  
+      :javascript
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      %script{ :type=>'text/javascript', :src=>'http://twitter.com/javascripts/blogger.js' }
+      %script{ :type=>'text/javascript', :src=>'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=AgoravaProj&count=5&include_rts=true&callback=twitterCallback2' }
