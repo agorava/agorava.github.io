@@ -14,7 +14,7 @@ layout: base
             -#Learn more &raquo;
         
   .row
-    .span6
+    .span3
       %h2 Status
       %p
         Agorava is in bootstrap phase right now. It'll inherit from project like
@@ -42,12 +42,27 @@ layout: base
           %a{ :href=>"https://github.com/agorava/agorava-socializer"} agorava-socializer
         %li
           %a{ :href=>"https://github.com/agorava/agorava.github.com"} agorava.github.com
-    .span6
+    .span5
       %h2 News
       %p
-        Agorava Project started on April 30th. We are discussing release 0.1 right now
+      Agorava project is begining but we try to keep you posted with project news :
       %p
-        %a.twitter-follow-button{:href=>"https://twitter.com/AgoravaProj", :data=>{"show-count"=>"false", :size=>"large"}} Follow me on Twitter
+      %ul
+        %li
+          The project now has  a
+          %a{ :href=>"https://issues.jboss.org/browse/AGOVA" } JIRA
+          (thank you JBoss)
+        %li
+          We released Demo Web app
+          %a{ :href=>"https://github.com/agorava/agorava-socializer"} socializer
+          to show some Agorava features
+        %li
+          Agorava Project started on April 30th 2012. We are discussing release 0.5 right now
+    
+      
+    .span4
+      %p
+        %a.twitter-follow-button{:href=>"https://twitter.com/AgoravaProj", :data=>{"show-count"=>"false", :size=>"large"}} Follow us on Twitter
       .well.last-tweets
         %ul.nav.nav-list.twitter-list
           %li.nav-header Last tweets
