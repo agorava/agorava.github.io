@@ -2,4 +2,21 @@
 @import "bootstrap";
 
 // Include responsive Bootstrap styles
-// @import "bootstrap-responsive";
+@import "bootstrap-responsive";
+
+ul.twitter-list li {
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+ul.twitter-list li:last-child {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  border-bottom: 0px;
+}
+
+ul.twitter-list li.nav-header {
+  margin-top: 0px;
+  border-bottom: 0px;
+}
