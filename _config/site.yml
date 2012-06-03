@@ -1,6 +1,6 @@
 profiles: 
   production: 
-    base_url: http://agorava.github.com
+    base_url: http://agorava.org
     deploy: 
       host: github_pages
       branch: master
