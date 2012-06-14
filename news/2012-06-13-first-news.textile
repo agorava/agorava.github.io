@@ -1,0 +1,13 @@
+---
+title: "First Agorava news"
+authors: [pauldijou]
+layout: post
+tags: [announce]
+---
+h3. Here we go!
+
+Hey guys! This is the first news about Agorava.
+
+h3. How?
+
+To write other news, just create a file like <code>yyyy-mm-dd-your-news-name.textile</code> inside the <code>news</code> folder, copy/paste the header of another news and start writing your own using <code>Textile</code> syntax. 

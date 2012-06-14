@@ -25,7 +25,15 @@
           .nav-collapse
             %ul.nav
               %li
-                %a{ :href=>"#{site.base_url}" } Home
+                %a{ :href=>"#{site.base_url}/" } Home
+              %li
+                %a{ :href=>"#{site.base_url}/news/" } News
+      :javascript
+        var indexOfSharp = window.location.pathname.indexOf('#');
+        var pathname = indexOfSharp > 0 ? window.location.pathname.substring(0, indexOfSharp) : window.location.pathname;
+        var selector = "body > .navbar > .navbar-inner a[href='#{site.base_url}"+pathname+"']";
+        $(selector).closest("li").addClass("active");
+    
     .container
       ~ content
       %hr
@@ -34,3 +42,5 @@
     -# Uncomment script tags (remove leading -#) when you're ready to use behaviors
     -# %script{ :type=>'text/javascript', :src=>'//cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js' }
     -# %script{ :type=>'text/javascript', :src=>"#{site.base_url}/javascripts/bootstrap-collapse.js" }
+    
+    

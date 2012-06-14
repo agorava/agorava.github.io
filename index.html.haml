@@ -44,6 +44,17 @@ layout: base
           %a{ :href=>"https://github.com/agorava/agorava.github.com"} agorava.github.com
     .span4
       %h2 News
+      .well.last-posts
+        %ul.nav.nav-list
+          - for post in site.posts[0,5]
+            %li
+              %h3
+                %a{:href=>post.url} #{post.title}
+              Posted on 
+              %span.date= post.date.strftime( '%b %d, %Y' )
+            %li.divider
+        %a.btn{:href=>"#{site.base_url}/news/"} Read more
+        = partial( 'subscribe.html.haml' )
       %p
       Agorava project is begining but we try to keep you posted with project news :
       %p
