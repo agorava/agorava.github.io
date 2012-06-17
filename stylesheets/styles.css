@@ -6065,3 +6065,46 @@ ul.twitter-list li.nav-header {
   margin-top: 0px;
   border-bottom: 0px;
 }
+
+/* line 24 */
+.posts .post {
+  margin-bottom: 40px;
+}
+
+/* line 29 */
+.post h2 > a {
+  margin-right: 15px;
+}
+/* line 33 */
+.post h2, .post .content, .post .footer {
+  border-bottom: 1px solid #DDDDDD;
+  margin-bottom: 10px;
+}
+/* line 38 */
+.post .footer {
+  padding-bottom: 10px;
+}
+/* line 42 */
+.post h2 a:hover {
+  text-decoration: none;
+}
+/* line 46 */
+.post .meta {
+  margin-bottom: 10px;
+}
+/* line 50 */
+.post a.tag {
+  background-color: #999999;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 11px;
+  color: white;
+  padding: 2px 4px;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 60 */
+.post a.tag:hover {
+  background-color: #B94A48;
+}

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<feed xml:lang='en-US' xmlns='http://www.w3.org/2005/Atom'>
+  <id>http://localhost:4242/</id>
+  <title>http://localhost:4242</title>
+  <updated>2012-06-13T00:00:00Z</updated>
+  <link href='http://localhost:4242/news.atom' rel='self' type='application/atom+xml' />
+  <link href='http://localhost:4242/' rel='alternate' type='text/html' />
+  <entry>
+    <id>http://localhost:4242/news/2012/06/13/first-news.html</id>
+    <title>First Agorava news</title>
+    <updated>2012-06-13T00:00:00Z</updated>
+    <published>2012-06-13T00:00:00Z</published>
+    <link href='http://localhost:4242/news/2012/06/13/first-news.html' rel='alternate' type='text/html' />
+    <summary>
+      Here we go!
+      Hey guys! This is the first news about Agorava.
+      How?
+      To write other news, just create a file like yyyy-mm-dd-your-news-name.textile inside the news folder, copy/paste the header of another news and start writing your own using Textile syntax....
+    </summary>
+    <content type='html'>
+      &lt;h3&gt;Here we go!&lt;/h3&gt;
+&lt;p&gt;Hey guys! This is the first news about Agorava.&lt;/p&gt;
+&lt;h3&gt;How?&lt;/h3&gt;
+&lt;p&gt;To write other news, just create a file like &lt;code&gt;yyyy-mm-dd-your-news-name.textile&lt;/code&gt; inside the &lt;code&gt;news&lt;/code&gt; folder, copy/paste the header of another news and start writing your own using &lt;code&gt;Textile&lt;/code&gt; syntax.&lt;/p&gt;
+    </content>
+  </entry>
+</feed>
