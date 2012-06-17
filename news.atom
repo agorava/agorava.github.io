@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <feed xml:lang='en-US' xmlns='http://www.w3.org/2005/Atom'>
-  <id>http://localhost:4242/</id>
-  <title>http://localhost:4242</title>
+  <id>http://agorava.org/</id>
+  <title>http://agorava.org</title>
   <updated>2012-06-13T00:00:00Z</updated>
-  <link href='http://localhost:4242/news.atom' rel='self' type='application/atom+xml' />
-  <link href='http://localhost:4242/' rel='alternate' type='text/html' />
+  <link href='http://agorava.org/news.atom' rel='self' type='application/atom+xml' />
+  <link href='http://agorava.org/' rel='alternate' type='text/html' />
   <entry>
-    <id>http://localhost:4242/news/2012/06/13/first-news.html</id>
+    <id>http://agorava.org/news/2012/06/13/first-news.html</id>
     <title>First Agorava news</title>
     <updated>2012-06-13T00:00:00Z</updated>
     <published>2012-06-13T00:00:00Z</published>
-    <link href='http://localhost:4242/news/2012/06/13/first-news.html' rel='alternate' type='text/html' />
+    <link href='http://agorava.org/news/2012/06/13/first-news.html' rel='alternate' type='text/html' />
     <summary>
       Here we go!
       Hey guys! This is the first news about Agorava.
