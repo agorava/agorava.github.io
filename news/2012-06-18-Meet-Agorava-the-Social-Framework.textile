@@ -1,0 +1,40 @@
+---
+title: "Meet Agorava, The Social Framework"
+authors: [asd]
+layout: post
+tags: [announce]
+---
+
+Did you ever looked for a nice solution in java to authenticate your users with their Twitter, Facebook or LinkedIn account ? Have you ever looked for a nice way to post a new tweet or Facebook update from your Java application ? Do you need to read your timeline or perform a search on a Social Media services from Java EE web application ? If you answered yes to one of these questions Agorava is (or will be soon) the right answer to your needs.
+Agorava the missing framework to deal with Social Media based on OAuth 1.0a and OAuht 2.0. It provides a way to authenticate on Social Media use APIs and map JSON answers to Java pojo. It'll have multiple implementation (CDI, Java SE, JSR 330 supporting framework,...) to support your needs. Right now the only implementation is based on CDI but we'll provide others in the coming months (with your help maybe)
+
+h3. Project genesis
+
+Agorava's short history is important because it helps to understand the goals of our team. In march 2011 the project Seam Social was launched. This project was a collection of CDI beans and extension to support Social Network consuming. It lived inside Seam 3 project which was an ambitious JBoss project aimed to provide a rich eco system for Java EE 6 thru CDI extensions. For all kind of reasons we won't develop here, Seam 3 changed 
+
+
+h3. But most Social Media provides already their own APIS. So why do we reinvent the wheel ?
+
+Yes it's true, but these social API are always in Javascript. So they are ok if you want to deal with GUI or simple manipulation. Should you need to extend functionalities (crawl Twitter followers for instance or perform full text search on your Facebook Timeline) or build a mashup between different services those JS API would show their limit quickly.
+Having a vendor free solution to deal with these Services is also an advantage, we'll try to implement all the available public APIs and provide similar functionalities across all Social Media.
+
+h3. Agorava and other similar projects out there
+
+h4. Java Scribe
+
+h4. Spring Social
+
+h3. Project roadmap
+
+h3. Should you want to contribute
+
+h3. Many thanks to...
+
+Ippon Technlogies
+JBoss
+CloudBees
+Jetbrains
+
+
+
+
