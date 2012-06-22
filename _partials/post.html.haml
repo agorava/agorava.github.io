@@ -14,13 +14,14 @@
     %a{:href=>page.post.url}
       = page.post.title
   .meta
-    Posted by 
-    %span.authors= ' '.concat(page.post.authors.map{|u| site.identities.method_missing(u).firstName+' '+site.identities.method_missing(u).lastName} * ', ')
-    on 
-    %span.date= page.post.date.strftime( '%b %d, %Y' )
-    - if site.disqus
-      | 
-      = page.post.disqus_comments_link
+    %strong
+      Posted by 
+      %span.authors= ' '.concat(page.post.authors.map{|u| site.identities.method_missing(u).firstName+' '+site.identities.method_missing(u).lastName} * ', ')
+      on 
+      %span.date= page.post.date.strftime( '%b %d, %Y' )
+      - if site.disqus
+        | 
+        = page.post.disqus_comments_link
     
   .content
     ~ page.post.content
@@ -37,3 +38,6 @@
         - for tag in page.post.tags
           - unless tag.nil?
             %a.tag{:href=>tag.primary_page.url}= tag
+  - if page.alone
+    .comments
+      = page.post.disqus_comments

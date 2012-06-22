@@ -6,6 +6,8 @@ Awestruct::Extensions::Pipeline.new do
   extension Awestruct::Extensions::TagCloud.new( :posts, '/news/tags/index.html', :layout=>'base' )
   extension Awestruct::Extensions::Atomizer.new( :posts, '/news.atom', :num_entries=>20 )
   extension Awestruct::Extensions::Indexifier.new
+  extension Awestruct::Extensions::Disqus.new()
   helper Awestruct::Extensions::Partial
+  helper Awestruct::Extensions::GoogleAnalytics
 end
 

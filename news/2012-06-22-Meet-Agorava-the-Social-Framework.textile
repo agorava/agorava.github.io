@@ -1,0 +1,67 @@
+---
+title: "Meet Agorava, The Social Framework"
+authors: [asd]
+layout: post
+tags: [Announce,Socializer,Roadmap]
+---
+
+!<{width:80%}/images/logo.png!
+
+Did you ever looked for a nice solution in java to authenticate your users with their Twitter, Facebook or LinkedIn account ? Have you ever looked for a nice way to post tweets or Facebook updates from your Java application ? Do you need to read your timeline or perform a search on a Social Media services from Java EE web application ? If you answered yes to one of these questions Agorava is (or will be soon) the right answer to your needs.
+Agorava is the missing framework to deal with Social Media based on OAuth 1.0a and OAuth 2.0. It provides a way to authenticate on Social Media, use APIs and map JSON answers to Java pojo. It'll have multiple implementation (CDI, Java SE, JSR 330 supporting framework,...) to support your needs. Right now the only implementation is based on CDI but we'll provide others in the coming months.
+
+h3. Project genesis
+
+Agorava's short history is important because it helps to understand the goals of our team. In march 2011 the project Seam Social was launched. This project was a collection of CDI beans and extension to support Social Network consuming. It lived inside Seam 3 project which was an ambitious JBoss project aimed to provide a rich ecosystem for Java EE 6 thru CDI extensions. For all kind of reasons we won't develop here, Seam 3 project was stopped at the end of 2011 to create a new project around CDI ecosystem : "Apache Deltaspike":https://cwiki.apache.org/confluence/display/DeltaSpike/Temporary+Documentation (merging Seam 3, Apache CODI and ohers initiatives).
+In parallel of this event, a few people launched a JCP proposal on Social Media : "Java Social JSR 357":http://jcp.org/en/jsr/detail?id=357. Projects like Seam Social or "DaliCore":http://java.net/projects/dalicore were main influencers for this proposal. This proposal was voted down for all kind of reasons, but mainly because there wasn't a real proof of concept (an implementation) behind it.
+So the conjunction of these 2 stories brought us to create a new project : start from Seam Social code to provide an implementation for Java Social with the goal to go back to JCP in the future. Agorava was born
+
+
+h3. But most Social Media provides already their own APIS. So why do we reinvent the wheel ?
+
+Yes it's true, but these social API are always in Javascript. So they are ok if you want to deal with GUI or simple manipulation. Should you need to extend functionalities (crawl Twitter followers for instance or perform full text search on your Facebook Timeline) or build a mashup between different services those JS API would show their limit quickly.
+Having a vendor free solution to deal with these Services is also an advantage, we'll try to implement all the available public APIs and provide similar functionalities across all Social Media.
+
+h3. Agorava is already alive and kicking
+
+Agorava can be used right now. You can test our demo application "Socializer":http://socializer.agorava.cloudbees.net/ or fork the "Socializer project on Github":https://github.com/agorava/agorava-socializer and run it with a simple @mvn -Prun@.
+You already have some documentation on our "wiki":https://docs.jboss.org/author/display/AGOVA to start hacking our code so feel free to try it ! 
+
+h3. Project roadmap
+
+Right now we're aiming a 0.5.0 release (the 0.5.0 SNAPSHOT is fully functional) during the summer. This version will be focused on CDI implementation only. Main objective of 0.5.0 are :
+ 
+ * Stabilize core API
+ * Documentation on architecture and main concept
+ * Test and provide documentation to run code on Glassfish, JBoss, TomEE, Tomcat and Jetty
+ * Enabling the possibility to load/change OAuth config at runtime (right now these config must be known at compile time)
+ * Support stateless architecture (right now an http session is needed to store user Oauth Tokens)
+
+Normally (except if people are ready to contribute and are not afraid of refactoring for version 1.0.0), We won't work on existing module (Twitter, Facebook, LinkedIn) since API could change in version 1.0.0 when we'll integrate JAX-RS client framework.
+
+Objective for 1.0.0 are :
+
+  * Change REST engine for JAX-RS 2.0 client framework
+  * If necessary implement our own OAuth implementation on JAX-RS client Framework
+  * Provide compatibility with Weld-OSGi
+  * Java SE implementation
+  * JSR 330 specific API and implementation (Guice or Spring)
+  * Finished Twitter, LinkedIn, Facebook Modules
+  * New modules ?
+
+h3. Should you want to contribute
+
+Off course we need contributors to help us in our project. You can join us on our "Google Group":https://groups.google.com/forum/?fromgroups#!forum/agorava-dev or on IRC (@chat.freenode.net@ channel @#Agorava@).
+Feedback on our "JIRA":https://issues.jboss.org/browse/AGOVA and "pull requests on Github":https://github.com/agorava are Welcome.
+
+h3. Project Sponsors
+
+On this road we are not alone. Organizations help us every day to make Agorava a reality and a success. So we'd like to thanks :
+
+ * "Ippon Technologies":http://blog.ippon.fr (my employer) a French consulting company that accepted to let me time for working on Seam Social and now on Agorava
+ * JBoss (Red Hat) who welcomed me for Seam Social and helped Agorava launch and continue to support us every day with Jira, Confluence and good advice. Special thanks to Jason, Pete, Lincoln and Dan.
+ * The JCP. Ok they voted down our JSR proposal but most of their critics were helpful and lead us to start Agorava. We'll get back to them soon.
+ * Spring Source. Spring Social was the inspirer of Seam Social. I also borrowed a lot of code from Spring Social for Twitter, LinkedIn and Facebook connectors. Thank you guys.
+
+
+
