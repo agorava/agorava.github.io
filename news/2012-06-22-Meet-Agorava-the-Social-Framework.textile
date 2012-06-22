@@ -2,7 +2,7 @@
 title: "Meet Agorava, The Social Framework"
 authors: [asd]
 layout: post
-tags: [announce,Socializer,Roadmap]
+tags: [announce,Socializer,roadmap]
 ---
 
 !<{width:80%}/images/logo.png!
