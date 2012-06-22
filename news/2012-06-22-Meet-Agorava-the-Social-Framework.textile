@@ -2,7 +2,7 @@
 title: "Meet Agorava, The Social Framework"
 authors: [asd]
 layout: post
-tags: [Announce,Socializer,Roadmap]
+tags: [announce,Socializer,Roadmap]
 ---
 
 !<{width:80%}/images/logo.png!
@@ -34,7 +34,7 @@ Right now we're aiming a 0.5.0 release (the 0.5.0 SNAPSHOT is fully functional) 
  
 * Support stateless architecture (right now an http session is needed to store user Oauth Tokens)
 
-Normally (except if people are ready to contribute and are not afraid of refactoring for version 1.0.0), We won't work on existing module (Twitter, Facebook, LinkedIn) since API could change in version 1.0.0 when we'll integrate JAX-RS client framework.
+Normally (except if people are ready to contribute and are not afraid of refactoring for version 1.0.0), we won't work on existing modules (Twitter, Facebook, LinkedIn) since API could change in version 1.0.0 when we'll integrate JAX-RS client framework.
 
 Objective for 1.0.0 are:
 
@@ -46,14 +46,14 @@ Objective for 1.0.0 are:
 * Finished Twitter, LinkedIn, Facebook Modules
 * New modules?
 
-h3. If I want to contribute?
+h3. If You want to contribute?
 
-Off course we need contributors to help us to make Agorava a better Social Media API for Java platform.
+Of course we need contributors to help us to make Agorava a better Social Media API for Java platform.
 
 To contribute to, help or just follow the project you can:
 * join us on our "Google Group":http://groups.google.com/group/agorava-dev
 * Subscribe to our mailing list (same content as Group) by sending an empty mail to "agorava-dev+subscribe@googlegroups.com":mailto:agorava-dev+subscribe@googlegroups.com
-* join us on IRC on @chat.freenode.net@ channel @#Agorava@
+* join us on IRC on @chat.freenode.net@ channel @#agorava@
 * post your issues, enhancement wishes or ideas on our "JIRA":https://issues.jboss.org/browse/AGOVA
 * fork our project and send pull requests on "Github":https://github.com/agorava
 * follow us on Twitter "@agoravaproj":http://twitter.com/agoravaproj
@@ -63,7 +63,7 @@ h3. Project Sponsors
 
 On this road we are not alone. Organizations help us every day to make Agorava a reality and a success. So we'd like to thanks :
 
-* "Ippon Technologies":http://blog.ippon.fr (my employer) a French consulting company that accepted to let me time for working on Seam Social and now on Agorava
+* "Ippon Technologies":http://blog.ippon.fr (my employer) a French Consulting company that agreed for giving me time to work on Seam Social and now on Agorava
 * JBoss (Red Hat) who hosted Seam Social and helped Agorava launch and continue to support us every day with Jira, Confluence and good advice. Special thanks to Jason, Pete, Lincoln and Dan.
 * The JCP. Ok they voted down our JSR proposal but most of their critics were helpful and lead us to start Agorava. We'll get back to them soon.
 * Spring Source. Spring Social was the inspirer of Seam Social. I also borrowed a lot of code from Spring Social for Twitter, LinkedIn and Facebook connectors. Thank you guys.
