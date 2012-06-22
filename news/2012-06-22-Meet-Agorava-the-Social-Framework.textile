@@ -46,7 +46,7 @@ Objective for 1.0.0 are:
 * Finished Twitter, LinkedIn, Facebook Modules
 * New modules?
 
-h3. If You want to contribute?
+h3. If you want to contribute?
 
 Of course we need contributors to help us to make Agorava a better Social Media API for Java platform.
 
