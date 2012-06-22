@@ -35,7 +35,7 @@ Agorava project is live and growing day by day! It also have &lt;a href=&quot;ht
 &lt;ul&gt;
 	&lt;li&gt;Support stateless architecture (right now an http session is needed to store user Oauth Tokens)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Normally (except if people are ready to contribute and are not afraid of refactoring for version 1.0.0), We won&amp;#8217;t work on existing module (Twitter, Facebook, LinkedIn) since &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; could change in version 1.0.0 when we&amp;#8217;ll integrate &lt;span class=&quot;caps&quot;&gt;JAX&lt;/span&gt;-RS client framework.&lt;/p&gt;
+&lt;p&gt;Normally (except if people are ready to contribute and are not afraid of refactoring for version 1.0.0), we won&amp;#8217;t work on existing modules (Twitter, Facebook, LinkedIn) since &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; could change in version 1.0.0 when we&amp;#8217;ll integrate &lt;span class=&quot;caps&quot;&gt;JAX&lt;/span&gt;-RS client framework.&lt;/p&gt;
 &lt;p&gt;Objective for 1.0.0 are:&lt;/p&gt;
 &lt;ul&gt;
 	&lt;li&gt;Change &lt;span class=&quot;caps&quot;&gt;REST&lt;/span&gt; engine for &lt;span class=&quot;caps&quot;&gt;JAX&lt;/span&gt;-RS 2.0 client framework&lt;/li&gt;
@@ -46,13 +46,13 @@ Agorava project is live and growing day by day! It also have &lt;a href=&quot;ht
 	&lt;li&gt;Finished Twitter, LinkedIn, Facebook Modules&lt;/li&gt;
 	&lt;li&gt;New modules?&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;If I want to contribute?&lt;/h3&gt;
-&lt;p&gt;Off course we need contributors to help us to make Agorava a better Social Media &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; for Java platform.&lt;/p&gt;
+&lt;h3&gt;If You want to contribute?&lt;/h3&gt;
+&lt;p&gt;Of course we need contributors to help us to make Agorava a better Social Media &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; for Java platform.&lt;/p&gt;
 &lt;p&gt;To contribute to, help or just follow the project you can:&lt;/p&gt;
 &lt;ul&gt;
 	&lt;li&gt;join us on our &lt;a href=&quot;http://groups.google.com/group/agorava-dev&quot;&gt;Google Group&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;Subscribe to our mailing list (same content as Group) by sending an empty mail to &lt;a href=&quot;mailto:agorava-dev+subscribe@googlegroups.com&quot;&gt;agorava-dev+subscribe@googlegroups.com&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;join us on &lt;span class=&quot;caps&quot;&gt;IRC&lt;/span&gt; on &lt;code&gt;chat.freenode.net&lt;/code&gt; channel &lt;code&gt;#Agorava&lt;/code&gt;&lt;/li&gt;
+	&lt;li&gt;join us on &lt;span class=&quot;caps&quot;&gt;IRC&lt;/span&gt; on &lt;code&gt;chat.freenode.net&lt;/code&gt; channel &lt;code&gt;#agorava&lt;/code&gt;&lt;/li&gt;
 	&lt;li&gt;post your issues, enhancement wishes or ideas on our &lt;a href=&quot;https://issues.jboss.org/browse/AGOVA&quot;&gt;&lt;span class=&quot;caps&quot;&gt;JIRA&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;fork our project and send pull requests on &lt;a href=&quot;https://github.com/agorava&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;follow us on Twitter &lt;a href=&quot;http://twitter.com/agoravaproj&quot;&gt;@agoravaproj&lt;/a&gt;&lt;/li&gt;
@@ -61,7 +61,7 @@ Agorava project is live and growing day by day! It also have &lt;a href=&quot;ht
 &lt;h3&gt;Project Sponsors&lt;/h3&gt;
 &lt;p&gt;On this road we are not alone. Organizations help us every day to make Agorava a reality and a success. So we&amp;#8217;d like to thanks :&lt;/p&gt;
 &lt;ul&gt;
-	&lt;li&gt;&lt;a href=&quot;http://blog.ippon.fr&quot;&gt;Ippon Technologies&lt;/a&gt; (my employer) a French consulting company that accepted to let me time for working on Seam Social and now on Agorava&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://blog.ippon.fr&quot;&gt;Ippon Technologies&lt;/a&gt; (my employer) a French Consulting company that agreed for giving me time to work on Seam Social and now on Agorava&lt;/li&gt;
 	&lt;li&gt;JBoss (Red Hat) who hosted Seam Social and helped Agorava launch and continue to support us every day with Jira, Confluence and good advice. Special thanks to Jason, Pete, Lincoln and Dan.&lt;/li&gt;
 	&lt;li&gt;The &lt;span class=&quot;caps&quot;&gt;JCP&lt;/span&gt;. Ok they voted down our &lt;span class=&quot;caps&quot;&gt;JSR&lt;/span&gt; proposal but most of their critics were helpful and lead us to start Agorava. We&amp;#8217;ll get back to them soon.&lt;/li&gt;
 	&lt;li&gt;Spring Source. Spring Social was the inspirer of Seam Social. I also borrowed a lot of code from Spring Social for Twitter, LinkedIn and Facebook connectors. Thank you guys.&lt;/li&gt;
