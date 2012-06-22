@@ -2,26 +2,64 @@
 <feed xml:lang='en-US' xmlns='http://www.w3.org/2005/Atom'>
   <id>http://agorava.org/</id>
   <title>http://agorava.org</title>
-  <updated>2012-06-13T00:00:00Z</updated>
+  <updated>2012-06-22T00:00:00Z</updated>
   <link href='http://agorava.org/news.atom' rel='self' type='application/atom+xml' />
   <link href='http://agorava.org/' rel='alternate' type='text/html' />
   <entry>
-    <id>http://agorava.org/news/2012/06/13/first-news.html</id>
-    <title>First Agorava news</title>
-    <updated>2012-06-13T00:00:00Z</updated>
-    <published>2012-06-13T00:00:00Z</published>
-    <link href='http://agorava.org/news/2012/06/13/first-news.html' rel='alternate' type='text/html' />
+    <id>http://agorava.org/news/2012/06/22/Meet-Agorava-the-Social-Framework.html</id>
+    <title>Meet Agorava, The Social Framework</title>
+    <updated>2012-06-22T00:00:00Z</updated>
+    <link href='http://agorava.org/news/2012/06/22/Meet-Agorava-the-Social-Framework.html' rel='alternate' type='text/html' />
     <summary>
-      Here we go!
-      Hey guys! This is the first news about Agorava.
-      How?
-      To write other news, just create a file like yyyy-mm-dd-your-news-name.textile inside the news folder, copy/paste the header of another news and start writing your own using Textile syntax....
+      
+      Did you ever looked for a nice solution in java to authenticate your users with their Twitter, Facebook or LinkedIn account ? Have you ever looked for a nice way to post tweets or Facebook updates from your Java application ? Do you need to read your timeline or perform a search on a Social Media services from Java EE web application ? If you answered yes to one of these questions Agorava is (or will be soon) the right answer to your needs.
+      Agorava is the missing framework to deal with Social Media based on OAuth 1.0a and OAuth 2.0.......
     </summary>
     <content type='html'>
-      &lt;h3&gt;Here we go!&lt;/h3&gt;
-&lt;p&gt;Hey guys! This is the first news about Agorava.&lt;/p&gt;
-&lt;h3&gt;How?&lt;/h3&gt;
-&lt;p&gt;To write other news, just create a file like &lt;code&gt;yyyy-mm-dd-your-news-name.textile&lt;/code&gt; inside the &lt;code&gt;news&lt;/code&gt; folder, copy/paste the header of another news and start writing your own using &lt;code&gt;Textile&lt;/code&gt; syntax.&lt;/p&gt;
+      &lt;p style=&quot;float:left;&quot;&gt;&lt;img src=&quot;http://agorava.org/images/logo.png&quot; style=&quot;width:80%;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Did you ever looked for a nice solution in java to authenticate your users with their Twitter, Facebook or LinkedIn account ? Have you ever looked for a nice way to post tweets or Facebook updates from your Java application ? Do you need to read your timeline or perform a search on a Social Media services from Java EE web application ? If you answered yes to one of these questions Agorava is (or will be soon) the right answer to your needs.&lt;br /&gt;
+Agorava is the missing framework to deal with Social Media based on OAuth 1.0a and OAuth 2.0. It provides a way to authenticate on Social Media, use APIs and map &lt;span class=&quot;caps&quot;&gt;JSON&lt;/span&gt; answers to Java pojo. It&amp;#8217;ll have multiple implementation (&lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt;, Java SE, &lt;span class=&quot;caps&quot;&gt;JSR&lt;/span&gt; 330 supporting framework,&amp;#8230;) to support your needs. Right now the only implementation is based on &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; but we&amp;#8217;ll provide others in the coming months.&lt;/p&gt;
+&lt;h3&gt;Project genesis&lt;/h3&gt;
+&lt;p&gt;Agorava&amp;#8217;s short history is important because it helps to understand the goals of our team. In march 2011 the project Seam Social was launched. This project was a collection of &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; beans and extension to support Social Network consuming. It lived inside Seam 3 project which was an ambitious JBoss project aimed to provide a rich ecosystem for Java EE 6 thru &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; extensions. For all kind of reasons we won&amp;#8217;t develop here, Seam 3 project was stopped at the end of 2011 to create a new project around &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; ecosystem : &lt;a href=&quot;https://cwiki.apache.org/confluence/display/DeltaSpike/Temporary+Documentation&quot;&gt;Apache Deltaspike&lt;/a&gt; (merging Seam 3, Apache &lt;span class=&quot;caps&quot;&gt;CODI&lt;/span&gt; and ohers initiatives).&lt;br /&gt;
+In parallel of this event, a few people launched a &lt;span class=&quot;caps&quot;&gt;JCP&lt;/span&gt; proposal on Social Media : &lt;a href=&quot;http://jcp.org/en/jsr/detail?id=357&quot;&gt;Java Social &lt;span class=&quot;caps&quot;&gt;JSR&lt;/span&gt; 357&lt;/a&gt;. Projects like Seam Social or &lt;a href=&quot;http://java.net/projects/dalicore&quot;&gt;DaliCore&lt;/a&gt; were main influencers for this proposal. This proposal was voted down for all kind of reasons, but mainly because there wasn&amp;#8217;t a real proof of concept (an implementation) behind it.&lt;br /&gt;
+So the conjunction of these 2 stories brought us to create a new project : start from Seam Social code to provide an implementation for Java Social with the goal to go back to &lt;span class=&quot;caps&quot;&gt;JCP&lt;/span&gt; in the future. Agorava was born&lt;/p&gt;
+&lt;h3&gt;But most Social Media provides already their own &lt;span class=&quot;caps&quot;&gt;APIS&lt;/span&gt;. So why do we reinvent the wheel ?&lt;/h3&gt;
+&lt;p&gt;Yes it&amp;#8217;s true, but these social &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; are always in Javascript. So they are ok if you want to deal with &lt;span class=&quot;caps&quot;&gt;GUI&lt;/span&gt; or simple manipulation. Should you need to extend functionalities (crawl Twitter followers for instance or perform full text search on your Facebook Timeline) or build a mashup between different services those JS &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; would show their limit quickly.&lt;br /&gt;
+Having a vendor free solution to deal with these Services is also an advantage, we&amp;#8217;ll try to implement all the available public APIs and provide similar functionalities across all Social Media.&lt;/p&gt;
+&lt;h3&gt;Agorava is already alive and kicking&lt;/h3&gt;
+&lt;p&gt;Agorava can be used right now. You can test our demo application &lt;a href=&quot;http://socializer.agorava.cloudbees.net/&quot;&gt;Socializer&lt;/a&gt; or fork the &lt;a href=&quot;https://github.com/agorava/agorava-socializer&quot;&gt;Socializer project on Github&lt;/a&gt; and run it with a simple &lt;code&gt;mvn -Prun&lt;/code&gt;.&lt;br /&gt;
+You already have some documentation on our &lt;a href=&quot;https://docs.jboss.org/author/display/AGOVA&quot;&gt;wiki&lt;/a&gt; to start hacking our code so feel free to try it !&lt;/p&gt;
+&lt;h3&gt;Project roadmap&lt;/h3&gt;
+&lt;p&gt;Right now we&amp;#8217;re aiming a 0.5.0 release (the 0.5.0 &lt;span class=&quot;caps&quot;&gt;SNAPSHOT&lt;/span&gt; is fully functional) during the summer. This version will be focused on &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; implementation only. Main objective of 0.5.0 are :&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Stabilize core &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;Documentation on architecture and main concept&lt;/li&gt;
+	&lt;li&gt;Test and provide documentation to run code on Glassfish, JBoss, TomEE, Tomcat and Jetty&lt;/li&gt;
+	&lt;li&gt;Enabling the possibility to load/change OAuth config at runtime (right now these config must be known at compile time)&lt;/li&gt;
+	&lt;li&gt;Support stateless architecture (right now an http session is needed to store user Oauth Tokens)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Normally (except if people are ready to contribute and are not afraid of refactoring for version 1.0.0), We won&amp;#8217;t work on existing module (Twitter, Facebook, LinkedIn) since &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; could change in version 1.0.0 when we&amp;#8217;ll integrate &lt;span class=&quot;caps&quot;&gt;JAX&lt;/span&gt;-RS client framework.&lt;/p&gt;
+&lt;p&gt;Objective for 1.0.0 are :&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Change &lt;span class=&quot;caps&quot;&gt;REST&lt;/span&gt; engine for &lt;span class=&quot;caps&quot;&gt;JAX&lt;/span&gt;-RS 2.0 client framework&lt;/li&gt;
+	&lt;li&gt;If necessary implement our own OAuth implementation on &lt;span class=&quot;caps&quot;&gt;JAX&lt;/span&gt;-RS client Framework&lt;/li&gt;
+	&lt;li&gt;Provide compatibility with Weld-OSGi&lt;/li&gt;
+	&lt;li&gt;Java SE implementation&lt;/li&gt;
+	&lt;li&gt;&lt;span class=&quot;caps&quot;&gt;JSR&lt;/span&gt; 330 specific &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; and implementation (Guice or Spring)&lt;/li&gt;
+	&lt;li&gt;Finished Twitter, LinkedIn, Facebook Modules&lt;/li&gt;
+	&lt;li&gt;New modules ?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Should you want to contribute&lt;/h3&gt;
+&lt;p&gt;Off course we need contributors to help us in our project. You can join us on our &lt;a href=&quot;https://groups.google.com/forum/?fromgroups#!forum/agorava-dev&quot;&gt;Google Group&lt;/a&gt; or on &lt;span class=&quot;caps&quot;&gt;IRC&lt;/span&gt; (&lt;code&gt;chat.freenode.net&lt;/code&gt; channel &lt;code&gt;#Agorava&lt;/code&gt;).&lt;br /&gt;
+Feedback on our &lt;a href=&quot;https://issues.jboss.org/browse/AGOVA&quot;&gt;&lt;span class=&quot;caps&quot;&gt;JIRA&lt;/span&gt;&lt;/a&gt; and &lt;a href=&quot;https://github.com/agorava&quot;&gt;pull requests on Github&lt;/a&gt; are Welcome.&lt;/p&gt;
+&lt;h3&gt;Project Sponsors&lt;/h3&gt;
+&lt;p&gt;On this road we are not alone. Organizations help us every day to make Agorava a reality and a success. So we&amp;#8217;d like to thanks :&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;http://blog.ippon.fr&quot;&gt;Ippon Technologies&lt;/a&gt; (my employer) a French consulting company that accepted to let me time for working on Seam Social and now on Agorava&lt;/li&gt;
+	&lt;li&gt;JBoss (Red Hat) who welcomed me for Seam Social and helped Agorava launch and continue to support us every day with Jira, Confluence and good advice. Special thanks to Jason, Pete, Lincoln and Dan.&lt;/li&gt;
+	&lt;li&gt;The &lt;span class=&quot;caps&quot;&gt;JCP&lt;/span&gt;. Ok they voted down our &lt;span class=&quot;caps&quot;&gt;JSR&lt;/span&gt; proposal but most of their critics were helpful and lead us to start Agorava. We&amp;#8217;ll get back to them soon.&lt;/li&gt;
+	&lt;li&gt;Spring Source. Spring Social was the inspirer of Seam Social. I also borrowed a lot of code from Spring Social for Twitter, LinkedIn and Facebook connectors. Thank you guys.&lt;/li&gt;
+&lt;/ul&gt;
     </content>
   </entry>
 </feed>

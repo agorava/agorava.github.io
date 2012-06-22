@@ -52,8 +52,9 @@
     <div class='container'>
       <div class='row'>
   <div class='span9'>
-    <div class='posts'>
-      <div class='post'>
+    <div class='post'>
+  <ul class='pager visible-desktop' style='float:right;'>
+  </ul>
   <h2>
     <a href='/news/2012/06/22/Meet-Agorava-the-Social-Framework/'>
       Meet Agorava, The Social Framework
@@ -128,49 +129,55 @@ Feedback on our <a href="https://issues.jboss.org/browse/AGOVA"><span class="cap
       <a class='tag' href='/news/tags/Roadmap/'>Roadmap</a>
     </span>
   </div>
+  <div class='comments'>
+    
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                var disqus_shortname = 'agoravablog';
+                var disqus_url = "http://agorava.org/news/2012/06/22/Meet-Agorava-the-Social-Framework/";
+                var disqus_developer = null;
+                var disqus_identifier = "69a1846ed702cdf32308a36f80534c99b8b91cab";
+                (function() {
+                  var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+                  dsq.src = "http://agoravablog.disqus.com/embed.js";
+                  (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+                })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=agoravablog">comments powered by Disqus.</a></noscript>
+  </div>
 </div>
-    </div>
-    <div class='visible-phone'>
+    <div class='visible-desktop'>
       <ul class='pager'>
-        <li class='previous disabled'>
-          <a href='#'>Previous</a>
-        </li>
-        <li class='disabled'>
-          <a href='#'>1 of 1</a>
-        </li>
-        <li class='next disabled'>
-          <a href='#'>Next</a>
-        </li>
       </ul>
     </div>
-    <div class='pagination pagination-centered hidden-phone'>
-      <ul>
-        <li class='disabled'>
-          <a href='#'>First</a>
-        </li>
-        <li class='disabled'>
-          <a href='#'>Previous</a>
-        </li>
-        <li class='active'>
-          <a href='#'>1 of 1</a>
-        </li>
-        <li class='disabled'>
-          <a href='#'>Next</a>
-        </li>
-        <li class='disabled'>
-          <a href='#'>Last</a>
-        </li>
+    <div class='hidden-desktop'>
+      <ul class='pager'>
       </ul>
     </div>
+    <aside class='visible-phone'>
+      <ul class='nav nav-list well'>
+        <li class='nav-header'>
+          Tag Cloud
+        </li>
+        <li>
+          <div class='tag-cloud'>
+            <span class='tag tag-0'>
+              <a href='/news/tags/Announce/'>Announce</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/news/tags/Roadmap/'>Roadmap</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/news/tags/Socializer/'>Socializer</a>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </aside>
   </div>
   <div class='span3'>
-    <div class='follow-scroll hidden-phone'>
-      <div style='margin-bottom:20px;text-align:center;'>
-        <a class='btn' href='http://agorava.org/news.atom'>
-          Subscribe RSS
-        </a>
-      </div>
-      <ul class='nav nav-list well' style='clear:both;'>
+    <aside class='hidden-phone'>
+      <ul class='nav nav-list well'>
         <li class='nav-header'>
           Tag Cloud
         </li>
@@ -188,32 +195,7 @@ Feedback on our <a href="https://issues.jboss.org/browse/AGOVA"><span class="cap
           </div>
         </li>
       </ul>
-    </div>
-    <div class='visible-phone'>
-      <div style='margin-bottom:20px;text-align:center;'>
-        <a class='btn' href='http://agorava.org/news.atom'>
-          Subscribe RSS
-        </a>
-      </div>
-      <ul class='nav nav-list well' style='clear:both;'>
-        <li class='nav-header'>
-          Tag Cloud
-        </li>
-        <li>
-          <div class='tag-cloud'>
-            <span class='tag tag-0'>
-              <a href='/news/tags/Announce/'>Announce</a>
-            </span>
-            <span class='tag tag-0'>
-              <a href='/news/tags/Roadmap/'>Roadmap</a>
-            </span>
-            <span class='tag tag-0'>
-              <a href='/news/tags/Socializer/'>Socializer</a>
-            </span>
-          </div>
-        </li>
-      </ul>
-    </div>
+    </aside>
   </div>
 </div>
       <hr />

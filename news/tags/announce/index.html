@@ -55,29 +55,77 @@
     <div class='posts'>
       <div class='post'>
   <h2>
-    <a href='/news/2012/06/13/first-news/'>
-      First Agorava news
+    <a href='/news/2012/06/22/Meet-Agorava-the-Social-Framework/'>
+      Meet Agorava, The Social Framework
     </a>
   </h2>
   <div class='meta'>
-    Posted by
-    <span class='authors'> Paul Dijou</span>
-    on
-    <span class='date'>Jun 13, 2012</span>
+    <strong>
+      Posted by
+      <span class='authors'> Antoine Sabot-Durand</span>
+      on
+      <span class='date'>Jun 22, 2012</span>
+      |
+       <a href="/news/2012/06/22/Meet-Agorava-the-Social-Framework/#disqus_thread" data-disqus-identifier="69a1846ed702cdf32308a36f80534c99b8b91cab">Comments</a>
+    </strong>
   </div>
   <div class='content'>
-    <h3>Here we go!</h3>
-<p>Hey guys! This is the first news about Agorava.</p>
-<h3>How?</h3>
-<p>To write other news, just create a file like <code>yyyy-mm-dd-your-news-name.textile</code> inside the <code>news</code> folder, copy/paste the header of another news and start writing your own using <code>Textile</code> syntax.</p>
+    <p style="float:left;"><img src="/images/logo.png" style="width:80%;" alt="" /></p>
+<p>Did you ever looked for a nice solution in java to authenticate your users with their Twitter, Facebook or LinkedIn account ? Have you ever looked for a nice way to post tweets or Facebook updates from your Java application ? Do you need to read your timeline or perform a search on a Social Media services from Java EE web application ? If you answered yes to one of these questions Agorava is (or will be soon) the right answer to your needs.<br />
+Agorava is the missing framework to deal with Social Media based on OAuth 1.0a and OAuth 2.0. It provides a way to authenticate on Social Media, use APIs and map <span class="caps">JSON</span> answers to Java pojo. It&#8217;ll have multiple implementation (<span class="caps">CDI</span>, Java SE, <span class="caps">JSR</span> 330 supporting framework,&#8230;) to support your needs. Right now the only implementation is based on <span class="caps">CDI</span> but we&#8217;ll provide others in the coming months.</p>
+<h3>Project genesis</h3>
+<p>Agorava&#8217;s short history is important because it helps to understand the goals of our team. In march 2011 the project Seam Social was launched. This project was a collection of <span class="caps">CDI</span> beans and extension to support Social Network consuming. It lived inside Seam 3 project which was an ambitious JBoss project aimed to provide a rich ecosystem for Java EE 6 thru <span class="caps">CDI</span> extensions. For all kind of reasons we won&#8217;t develop here, Seam 3 project was stopped at the end of 2011 to create a new project around <span class="caps">CDI</span> ecosystem : <a href="https://cwiki.apache.org/confluence/display/DeltaSpike/Temporary+Documentation">Apache Deltaspike</a> (merging Seam 3, Apache <span class="caps">CODI</span> and ohers initiatives).<br />
+In parallel of this event, a few people launched a <span class="caps">JCP</span> proposal on Social Media : <a href="http://jcp.org/en/jsr/detail?id=357">Java Social <span class="caps">JSR</span> 357</a>. Projects like Seam Social or <a href="http://java.net/projects/dalicore">DaliCore</a> were main influencers for this proposal. This proposal was voted down for all kind of reasons, but mainly because there wasn&#8217;t a real proof of concept (an implementation) behind it.<br />
+So the conjunction of these 2 stories brought us to create a new project : start from Seam Social code to provide an implementation for Java Social with the goal to go back to <span class="caps">JCP</span> in the future. Agorava was born</p>
+<h3>But most Social Media provides already their own <span class="caps">APIS</span>. So why do we reinvent the wheel ?</h3>
+<p>Yes it&#8217;s true, but these social <span class="caps">API</span> are always in Javascript. So they are ok if you want to deal with <span class="caps">GUI</span> or simple manipulation. Should you need to extend functionalities (crawl Twitter followers for instance or perform full text search on your Facebook Timeline) or build a mashup between different services those JS <span class="caps">API</span> would show their limit quickly.<br />
+Having a vendor free solution to deal with these Services is also an advantage, we&#8217;ll try to implement all the available public APIs and provide similar functionalities across all Social Media.</p>
+<h3>Agorava is already alive and kicking</h3>
+<p>Agorava can be used right now. You can test our demo application <a href="http://socializer.agorava.cloudbees.net/">Socializer</a> or fork the <a href="https://github.com/agorava/agorava-socializer">Socializer project on Github</a> and run it with a simple <code>mvn -Prun</code>.<br />
+You already have some documentation on our <a href="https://docs.jboss.org/author/display/AGOVA">wiki</a> to start hacking our code so feel free to try it !</p>
+<h3>Project roadmap</h3>
+<p>Right now we&#8217;re aiming a 0.5.0 release (the 0.5.0 <span class="caps">SNAPSHOT</span> is fully functional) during the summer. This version will be focused on <span class="caps">CDI</span> implementation only. Main objective of 0.5.0 are :</p>
+<ul>
+	<li>Stabilize core <span class="caps">API</span></li>
+	<li>Documentation on architecture and main concept</li>
+	<li>Test and provide documentation to run code on Glassfish, JBoss, TomEE, Tomcat and Jetty</li>
+	<li>Enabling the possibility to load/change OAuth config at runtime (right now these config must be known at compile time)</li>
+	<li>Support stateless architecture (right now an http session is needed to store user Oauth Tokens)</li>
+</ul>
+<p>Normally (except if people are ready to contribute and are not afraid of refactoring for version 1.0.0), We won&#8217;t work on existing module (Twitter, Facebook, LinkedIn) since <span class="caps">API</span> could change in version 1.0.0 when we&#8217;ll integrate <span class="caps">JAX</span>-RS client framework.</p>
+<p>Objective for 1.0.0 are :</p>
+<ul>
+	<li>Change <span class="caps">REST</span> engine for <span class="caps">JAX</span>-RS 2.0 client framework</li>
+	<li>If necessary implement our own OAuth implementation on <span class="caps">JAX</span>-RS client Framework</li>
+	<li>Provide compatibility with Weld-OSGi</li>
+	<li>Java SE implementation</li>
+	<li><span class="caps">JSR</span> 330 specific <span class="caps">API</span> and implementation (Guice or Spring)</li>
+	<li>Finished Twitter, LinkedIn, Facebook Modules</li>
+	<li>New modules ?</li>
+</ul>
+<h3>Should you want to contribute</h3>
+<p>Off course we need contributors to help us in our project. You can join us on our <a href="https://groups.google.com/forum/?fromgroups#!forum/agorava-dev">Google Group</a> or on <span class="caps">IRC</span> (<code>chat.freenode.net</code> channel <code>#Agorava</code>).<br />
+Feedback on our <a href="https://issues.jboss.org/browse/AGOVA"><span class="caps">JIRA</span></a> and <a href="https://github.com/agorava">pull requests on Github</a> are Welcome.</p>
+<h3>Project Sponsors</h3>
+<p>On this road we are not alone. Organizations help us every day to make Agorava a reality and a success. So we&#8217;d like to thanks :</p>
+<ul>
+	<li><a href="http://blog.ippon.fr">Ippon Technologies</a> (my employer) a French consulting company that accepted to let me time for working on Seam Social and now on Agorava</li>
+	<li>JBoss (Red Hat) who welcomed me for Seam Social and helped Agorava launch and continue to support us every day with Jira, Confluence and good advice. Special thanks to Jason, Pete, Lincoln and Dan.</li>
+	<li>The <span class="caps">JCP</span>. Ok they voted down our <span class="caps">JSR</span> proposal but most of their critics were helpful and lead us to start Agorava. We&#8217;ll get back to them soon.</li>
+	<li>Spring Source. Spring Social was the inspirer of Seam Social. I also borrowed a lot of code from Spring Social for Twitter, LinkedIn and Facebook connectors. Thank you guys.</li>
+</ul>
   </div>
   <div class='footer'>
-    <a href='/news/2012/06/13/first-news/'>Permalink</a>
+    <a href='/news/2012/06/22/Meet-Agorava-the-Social-Framework/'>Permalink</a>
+    |
+     <a href="/news/2012/06/22/Meet-Agorava-the-Social-Framework/#disqus_thread" data-disqus-identifier="69a1846ed702cdf32308a36f80534c99b8b91cab">Comments</a>
     |
     <span class='tags'>
       <i class='icon-tags'></i>
       Tags :
-      <a class='tag' href='/news/tags/announce/'>announce</a>
+      <a class='tag' href='/news/tags/Announce/'>Announce</a>
+      <a class='tag' href='/news/tags/Socializer/'>Socializer</a>
+      <a class='tag' href='/news/tags/Roadmap/'>Roadmap</a>
     </span>
   </div>
 </div>
@@ -129,7 +177,13 @@
         <li>
           <div class='tag-cloud'>
             <span class='tag tag-0'>
-              <a href='/news/tags/announce/'>announce</a>
+              <a href='/news/tags/Announce/'>Announce</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/news/tags/Roadmap/'>Roadmap</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/news/tags/Socializer/'>Socializer</a>
             </span>
           </div>
         </li>
@@ -148,7 +202,13 @@
         <li>
           <div class='tag-cloud'>
             <span class='tag tag-0'>
-              <a href='/news/tags/announce/'>announce</a>
+              <a href='/news/tags/Announce/'>Announce</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/news/tags/Roadmap/'>Roadmap</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/news/tags/Socializer/'>Socializer</a>
             </span>
           </div>
         </li>
@@ -161,5 +221,15 @@
         <p>&copy; Agorava 2012</p>
       </footer>
     </div>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount','UA-31280631-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
   </body>
 </html>
