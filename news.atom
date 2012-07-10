@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<feed xml:lang='en-US' xmlns='http://www.w3.org/2005/Atom'>
+  <id>http://localhost:4242/</id>
+  <title>http://localhost:4242</title>
+  <updated>2012-07-10T00:00:00Z</updated>
+  <link href='http://localhost:4242/news.atom' rel='self' type='application/atom+xml' />
+  <link href='http://localhost:4242/' rel='alternate' type='text/html' />
+  <entry>
+    <id>http://localhost:4242/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin.html</id>
+    <title>Starting a CDI webapp from Maven with Weld-Servlet and Jetty Plugin</title>
+    <updated>2012-07-10T00:00:00Z</updated>
+    <published>2012-07-10T00:00:00Z</published>
+    <link href='http://localhost:4242/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin.html' rel='alternate' type='text/html' />
+    <summary>
+      
+In Agorava framework we want to provide an easy way to launch our example applications. One of the easiest way is to provide a maven Goal that build the project and launch it with embedded Jetty servlet container. If you have read our previous post you already know that right now Agorava has only a CDI implementation. So when we created Socializer demo app we add to find a way to launch CDI container from Jetty Maven Plugin. This article is about how we did it.
+Launching CDI from Servlet Api
+The first problem to deal with was about launching CDI container...
+    </summary>
+    <content type='html'>
+      &lt;p style=&quot;float:left;&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/weld.png&quot; style=&quot;width:80px;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;In Agorava framework we want to provide an easy way to launch our example applications. One of the easiest way is to provide a maven Goal that build the project and launch it with embedded Jetty servlet container. If you have read our &lt;a href=&quot;http://localhost:4242/news/2012/06/22/Meet-Agorava-the-Social-Framework&quot;&gt;previous post&lt;/a&gt; you already know that right now Agorava has only a &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; implementation. So when we created &lt;a href=&quot;http://socializer.agorava.cloudbees.net/home.jsf&quot;&gt;Socializer demo app&lt;/a&gt; we add to find a way to launch &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; container from Jetty Maven Plugin. This article is about how we did it.&lt;/p&gt;
+&lt;h3&gt;Launching &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; from Servlet Api&lt;/h3&gt;
+&lt;p&gt;The first problem to deal with was about launching &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; container from Servlet &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;. &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; is a Java EE 6 specification and thus comes in all Java EE container like JBoss, TomEE or Glassfish. However the specification doesn&amp;#8217;t provide a standard way to launch &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; container outside Java EE. Each implementation bring its own solution (to be more precise OpenWebBeans and Weld bring a solution, Candi has no known way to be launch outside Resin). We decided to go with Weld because it&amp;#8217;s the &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; RI and that it is the implementation on which Agorava was the more tested thru Glassfish and JBoss.&lt;/p&gt;
+&lt;h3&gt;Adding maven dependecies&lt;/h3&gt;
+&lt;p&gt;As we wanted to support Jetty but also full Java EE containers we added a profile in the pom.xml in the project. As this profile is supposed to build and run the project we called it &lt;code&gt;run&lt;/code&gt;&lt;/p&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>http://localhost:4242/news/2012/06/22/Meet-Agorava-the-Social-Framework.html</id>
+    <title>Meet Agorava, The Social Framework</title>
+    <updated>2012-06-22T00:00:00Z</updated>
+    <published>2012-06-22T00:00:00Z</published>
+    <link href='http://localhost:4242/news/2012/06/22/Meet-Agorava-the-Social-Framework.html' rel='alternate' type='text/html' />
+    <summary>
+      
+      Did you ever looked for a nice solution in java to authenticate your users with their Twitter, Facebook or LinkedIn account ? Have you ever looked for a nice way to post tweets or Facebook updates from your Java application? Do you need to read your timeline or perform a search on a Social Media services from Java EE web application? If you answered yes to one of these questions Agorava is (or will be soon) the right answer to your needs.
+      Agorava is the missing framework to deal with Social Media based on OAuth 1.0a and OAuth 2.0. It provides...
+    </summary>
+    <content type='html'>
+      &lt;p style=&quot;float:left;&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/logo.png&quot; style=&quot;width:80%;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Did you ever looked for a nice solution in java to authenticate your users with their Twitter, Facebook or LinkedIn account ? Have you ever looked for a nice way to post tweets or Facebook updates from your Java application? Do you need to read your timeline or perform a search on a Social Media services from Java EE web application? If you answered yes to one of these questions Agorava is (or will be soon) the right answer to your needs.&lt;br /&gt;
+Agorava is the missing framework to deal with Social Media based on OAuth 1.0a and OAuth 2.0. It provides a way to authenticate on Social Media, use APIs and map &lt;span class=&quot;caps&quot;&gt;JSON&lt;/span&gt; answers to Java pojo. It&amp;#8217;ll have multiple implementations (like &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt;, Java SE, &lt;span class=&quot;caps&quot;&gt;JSR&lt;/span&gt; 330 supporting framework and others) to support your needs. Right now the only implementation is based on &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; but we&amp;#8217;ll provide others in the coming months.&lt;/p&gt;
+&lt;h3&gt;Agorava genesis&lt;/h3&gt;
+&lt;p&gt;Agorava&amp;#8217;s short history is important because it helps to understand the goals of our team. In March 2011 the project Seam Social was launched. This project was a collection of &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; beans and extension to support Social Network consuming. It lived inside Seam 3 project which was an ambitious JBoss project aimed to provide a rich ecosystem for Java EE 6 thru &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; extensions. For all kind of reasons we won&amp;#8217;t develop here, Seam 3 project was stopped at the end of 2011 to create a new project around &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; ecosystem : &lt;a href=&quot;https://cwiki.apache.org/confluence/display/DeltaSpike/Temporary+Documentation&quot;&gt;Apache Deltaspike&lt;/a&gt; (merging Seam 3, Apache &lt;span class=&quot;caps&quot;&gt;CODI&lt;/span&gt; and others initiatives).&lt;br /&gt;
+In parallel of this event, a few people launched a &lt;span class=&quot;caps&quot;&gt;JCP&lt;/span&gt; proposal on Social Media : &lt;a href=&quot;http://jcp.org/en/jsr/detail?id=357&quot;&gt;Java Social &lt;span class=&quot;caps&quot;&gt;JSR&lt;/span&gt; 357&lt;/a&gt;. Projects like Seam Social or &lt;a href=&quot;http://java.net/projects/dalicore&quot;&gt;DaliCore&lt;/a&gt; were main influencers for this proposal. This proposal was voted down for all kind of reasons, but mainly because there wasn&amp;#8217;t a real proof of concept (an implementation) behind it.&lt;br /&gt;
+So the conjunction of these 2 stories brought us to create a new project : start from Seam Social code to provide an implementation for Java Social with the goal to go back to &lt;span class=&quot;caps&quot;&gt;JCP&lt;/span&gt; in the future. This project is also a experiment to answer the problem and challenges in creating a standard &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; for Social Media &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; for Java platform. Thus Agorava is born&lt;/p&gt;
+&lt;h3&gt;But most Social Media already have their own APIs. So why do we reinvent the wheel?&lt;/h3&gt;
+&lt;p&gt;Yes it&amp;#8217;s true, but these social APIs are almost always in Javascript only and if it’s available in Java,  mostly its created by a third part or its build for one or few particular Social Media. So they are ok if you want to deal with &lt;span class=&quot;caps&quot;&gt;GUI&lt;/span&gt; or simple manipulation. If you need to extend functionalities (crawl Twitter followers for instance or perform full text search on your Facebook Timeline) or build a mashup between different services those JS &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; would show their limit quickly.&lt;br /&gt;
+Having a vendor free solution to deal with these Services is also an advantage, we&amp;#8217;ll try to implement all the available public APIs and provide similar functionalities across &amp;#8220;all Social Media&amp;#8221;.&lt;/p&gt;
+&lt;h3&gt;Agorava is already alive and active!&lt;/h3&gt;
+&lt;p&gt;Agorava can be used right now. You can test our demo application &lt;a href=&quot;http://socializer.agorava.cloudbees.net/&quot;&gt;Socializer&lt;/a&gt; or fork the &lt;a href=&quot;https://github.com/agorava/agorava-socializer&quot;&gt;Socializer project on Github&lt;/a&gt; and run it with a simple &lt;code&gt;mvn -Prun&lt;/code&gt;.&lt;br /&gt;
+You already have some documentation on our &lt;a href=&quot;https://docs.jboss.org/author/display/AGOVA&quot;&gt;wiki&lt;/a&gt; to start hacking our code so feel free to try it!&lt;br /&gt;
+Agorava project is live and growing day by day! It also have &lt;a href=&quot;https://groups.google.com/forum/?fromgroups#!forum/agorava-dev&quot;&gt;User Group&lt;/a&gt; for anyone like to post doubts or know the progress of the project&lt;/p&gt;
+&lt;h3&gt;Project roadmap&lt;/h3&gt;
+&lt;p&gt;Right now we&amp;#8217;re aiming a 0.5.0 release (the 0.5.0 &lt;span class=&quot;caps&quot;&gt;SNAPSHOT&lt;/span&gt; is fully functional) during the summer. This version will be focused on &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; implementation only. Main objective of 0.5.0 are:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Support stateless architecture (right now an http session is needed to store user Oauth Tokens)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Normally (except if people are ready to contribute and are not afraid of refactoring for version 1.0.0), we won&amp;#8217;t work on existing modules (Twitter, Facebook, LinkedIn) since &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; could change in version 1.0.0 when we&amp;#8217;ll integrate &lt;span class=&quot;caps&quot;&gt;JAX&lt;/span&gt;-RS client framework.&lt;/p&gt;
+&lt;p&gt;Objective for 1.0.0 are:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Change &lt;span class=&quot;caps&quot;&gt;REST&lt;/span&gt; engine for &lt;span class=&quot;caps&quot;&gt;JAX&lt;/span&gt;-RS 2.0 client framework&lt;/li&gt;
+	&lt;li&gt;If necessary implement our own OAuth implementation on &lt;span class=&quot;caps&quot;&gt;JAX&lt;/span&gt;-RS client Framework&lt;/li&gt;
+	&lt;li&gt;Provide compatibility with Weld-OSGi&lt;/li&gt;
+	&lt;li&gt;Java SE implementation&lt;/li&gt;
+	&lt;li&gt;&lt;span class=&quot;caps&quot;&gt;JSR&lt;/span&gt; 330 specific &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; and implementation (Guice or Spring)&lt;/li&gt;
+	&lt;li&gt;Finished Twitter, LinkedIn, Facebook Modules&lt;/li&gt;
+	&lt;li&gt;New modules?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;If you want to contribute?&lt;/h3&gt;
+&lt;p&gt;Of course we need contributors to help us to make Agorava a better Social Media &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; for Java platform.&lt;/p&gt;
+&lt;p&gt;To contribute to, help or just follow the project you can:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;join us on our &lt;a href=&quot;http://groups.google.com/group/agorava-dev&quot;&gt;Google Group&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;Subscribe to our mailing list (same content as Group) by sending an empty mail to &lt;a href=&quot;mailto:agorava-dev+subscribe@googlegroups.com&quot;&gt;agorava-dev+subscribe@googlegroups.com&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;join us on &lt;span class=&quot;caps&quot;&gt;IRC&lt;/span&gt; on &lt;code&gt;chat.freenode.net&lt;/code&gt; channel &lt;code&gt;#agorava&lt;/code&gt;&lt;/li&gt;
+	&lt;li&gt;post your issues, enhancement wishes or ideas on our &lt;a href=&quot;https://issues.jboss.org/browse/AGOVA&quot;&gt;&lt;span class=&quot;caps&quot;&gt;JIRA&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;fork our project and send pull requests on &lt;a href=&quot;https://github.com/agorava&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;follow us on Twitter &lt;a href=&quot;http://twitter.com/agoravaproj&quot;&gt;@agoravaproj&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;spread the word&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Project Sponsors&lt;/h3&gt;
+&lt;p&gt;On this road we are not alone. Organizations help us every day to make Agorava a reality and a success. So we&amp;#8217;d like to thanks :&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;http://blog.ippon.fr&quot;&gt;Ippon Technologies&lt;/a&gt; (my employer) a French Consulting company that agreed for giving me time to work on Seam Social and now on Agorava&lt;/li&gt;
+	&lt;li&gt;JBoss (Red Hat) who hosted Seam Social and helped Agorava launch and continue to support us every day with Jira, Confluence and good advice. Special thanks to Jason, Pete, Lincoln and Dan.&lt;/li&gt;
+	&lt;li&gt;The &lt;span class=&quot;caps&quot;&gt;JCP&lt;/span&gt;. Ok they voted down our &lt;span class=&quot;caps&quot;&gt;JSR&lt;/span&gt; proposal but most of their critics were helpful and lead us to start Agorava. We&amp;#8217;ll get back to them soon.&lt;/li&gt;
+	&lt;li&gt;Spring Source. Spring Social was the inspirer of Seam Social. I also borrowed a lot of code from Spring Social for Twitter, LinkedIn and Facebook connectors. Thank you guys.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Follow us&lt;/h3&gt;
+&lt;p&gt;If you like to keep track of the progress of Agorava following links help you&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Website: &lt;a href=&quot;http://agorava.org&quot;&gt;http://agorava.org&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;Twitter : &lt;a href=&quot;http://twitter.com/AgoravaProj&quot;&gt;@Agoravaproj&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;User Group: &lt;a href=&quot;http://groups.google.com/group/agorava-dev&quot;&gt;http://groups.google.com/group/agorava-dev&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;GitHub: &lt;a href=&quot;https://github.com/agorava&quot;&gt;https://github.com/agorava&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See you soon!&lt;/p&gt;
+    </content>
+  </entry>
+</feed>
