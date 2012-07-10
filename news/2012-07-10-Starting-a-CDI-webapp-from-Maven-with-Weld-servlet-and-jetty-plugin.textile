@@ -1,0 +1,200 @@
+---
+title: "Starting a CDI webapp from Maven with Weld-Servlet and Jetty Plugin"
+authors: [asd]
+layout: post
+tags: [CDI,Jetty,Maven,Socializer]
+---
+
+!<{width:80px}/images/weld.png!
+
+
+In Agorava framework we want to provide an easy way to launch our example applications. One of the easiest way is to provide a maven Goal that build the project and launch it with embedded Jetty servlet container. If you have read our "previous post":/news/2012/06/22/Meet-Agorava-the-Social-Framework you already know that right now Agorava has only a CDI implementation. So when we created "Socializer demo app":http://socializer.agorava.cloudbees.net/home.jsf we add to find a way to launch CDI container from Jetty Maven Plugin. This article is about how we did it.
+
+h3. Launching CDI from Servlet Api
+
+The first problem to deal with is about launching CDI container from Servlet API. CDI is a Java EE 6 specification and thus comes in all Java EE container like JBoss, TomEE or Glassfish. However the specification doesn't provide a standard way to launch CDI container outside Java EE. Each implementation brings its own solution (to be more precise OpenWebBeans and Weld bring a solution, Candi has no known way to be launch outside Resin). We decided to go with Weld because it's the CDI RI and that it is the implementation on which Agorava was the more tested thru Glassfish and JBoss.
+
+h3. Adding maven dependecies
+
+As we want to support Jetty but also full Java EE containers we added a profile in the pom.xml to keep the Java EE build clean. As this profile is supposed to build and run the project we call it @run@. We add the following dependencies in the pom.xml
+
+bc(prettify).. <profile>
+  <id>run</id>
+    <dependencies>
+        <dependency>
+            <groupId>org.jboss.weld.servlet</groupId>
+            <artifactId>weld-servlet</artifactId>
+            <version>1.1.8.Final</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-api</artifactId>
+            <version>2.1.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-impl</artifactId>
+            <version>2.1.3</version>
+        </dependency>
+    </dependencies>
+</profile>
+
+p. Jsf dependencies are added because Socializer uses JSF and Jetty doesn't provide thrm. The Jboss Weld Servlet is the important dependency here since it will provide bootstrapping for CDI thru servlet API. It also will bring transitively all the needed dependencies for Weld core and CDI API.
+
+h3. Adding Jetty Maven plugin
+
+Now we can add the plugin to our new profile
+
+bc(prettify).. <build>
+    <plugins>
+       <plugin>
+          <groupId>org.mortbay.jetty</groupId>
+          <artifactId>jetty-maven-plugin</artifactId>
+          <version>8.1.3.v20120416</version>
+       </plugin>
+    </plugins>
+</build>
+
+p. This plugin allows to build a Maven project and launch Jetty directly from Maven with a simple @mvn jetty:run@ command.
+
+h3. Boostraping CDI
+
+To bootstrap CDI, we have 2 steps to perform :
+
+h4. Expose CDI bean manager thru JNDI
+
+To do that we create a @jetty-env.xml@ file in WEB-INF containing this 
+
+bc(prettify).. <!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+<Configure id="webAppCtx" class="org.eclipse.jetty.webapp.WebAppContext">
+    <New id="BeanManager" class="org.eclipse.jetty.plus.jndi.Resource">
+        <Arg>
+            <Ref id="webAppCtx"/>
+        </Arg>
+        <Arg>BeanManager</Arg>
+        <Arg>
+            <New class="javax.naming.Reference">
+                <Arg>javax.enterprise.inject.spi.BeanManager</Arg>
+                <Arg>org.jboss.weld.resources.ManagerObjectFactory</Arg>
+                <Arg/>
+            </New>
+        </Arg>
+    </New>
+</Configure>
+
+p. This file is a standard Jetty config file and is run by the container at boot time.
+
+h4. Adding Web.xml configuration
+
+To achieve the bootstrapping we also need to add two entries to @web.xml@ :
+
+* One to retrieve the BeanManager exposed in the file above and expose it to servlet API
+* One to launch the servlet listener that will boot CDI container
+
+As we don't want to pollute existing web.xml which works perfectly for Java EE 6 containers, we add a web.xml overriding file to add our entries. This file is declared in Jetty plugin configuration like this
+
+bc(prettify).. <plugin>
+    <groupId>org.mortbay.jetty</groupId>
+    <artifactId>jetty-maven-plugin</artifactId>
+    <version>8.1.3.v20120416</version>
+    <configuration>
+        <webApp>
+            <overrideDescriptor>src/main/webapp/WEB-INF/web-add.xml</overrideDescriptor>
+        </webApp>
+    </configuration>
+</plugin>
+
+p. The content of web-add.xml file is as follow
+
+bc(prettify).. <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+    <listener>
+        <listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
+    </listener>
+
+    <resource-env-ref>
+        <resource-env-ref-name>BeanManager</resource-env-ref-name>
+        <resource-env-ref-type>
+            javax.enterprise.inject.spi.BeanManager
+        </resource-env-ref-type>
+    </resource-env-ref>
+</web-app>
+
+p. It's content will override web.xml one (i.e web.xml will be interpreted before web-add.xml).
+
+h3. Last trick to allow injection in servlets
+
+Weld Servlet will try to decorate some Jetty internal class to add the possibility of using @@Inject@ inside servlets. This class is a Jetty system class and therefore is not visible from the web application. We have to tell Jetty classloader to expose this class to the web app in order to have Weld Servlet decorating it.
+To allow this we create a @jetty-context.xml@ file in WEB-INF
+
+bc(prettify).. <!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+    <Set name="serverClasses">
+        <Array type="java.lang.String">
+            <Item>-org.eclipse.jetty.servlet.ServletContextHandler.Decorator</Item>
+        </Array>
+    </Set>
+</Configure>
+
+p. Then we add it to Jetty Maven plugin configuration like this
+
+bc(prettify).. <configuration>
+    <webApp>
+        <overrideDescriptor>src/main/webapp/WEB-INF/web-add.xml</overrideDescriptor>
+    </webApp>
+    <contextXml>src/main/webapp/WEB-INF/jetty-context.xml</contextXml>
+</configuration>
+
+p. Then we're done
+
+h3. To sum up
+
+Here is the complete @run@ Profile in our @pom.xml@ file
+
+bc(prettify).. <profile>
+    <id>run</id>
+    <dependencies>
+        <dependency>
+            <groupId>org.jboss.weld.servlet</groupId>
+            <artifactId>weld-servlet</artifactId>
+            <version>1.1.8.Final</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-api</artifactId>
+            <version>2.1.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-impl</artifactId>
+            <version>2.1.3</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <defaultGoal>clean jetty:run</defaultGoal>
+        <plugins>
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>8.1.3.v20120416</version>
+                <configuration>
+                    <webApp>
+                        <overrideDescriptor>src/main/webapp/WEB-INF/web-add.xml</overrideDescriptor>
+                    </webApp>
+                    <contextXml>src/main/webapp/WEB-INF/jetty-context.xml</contextXml>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</profile>
+
+p. Don't forget the 3 files above @jetty-env.xml@ to define JNDI, @web-add.xml@ to override web.xml with CDI servlet bootstrapping and JNDI and @jetty-context.xml@ to expose the internal servlet implementation for Weld decorator.
+With this Maven profile, we only have to enter @mvn -Prun@ to build our web application and have it launched in Jetty to test it. Hard to make it simpler.
+
+h3. Check our code
+
+Feel free to look at "Socializer code":http://github.com/agorava/agorava-socializer and play with our API. Contribution are always welcome.
+
