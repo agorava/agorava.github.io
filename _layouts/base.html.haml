@@ -30,6 +30,8 @@
                 %a{ :href=>"#{site.base_url}/" } Home
               %li
                 %a{ :href=>"#{site.base_url}/news/" } Blog
+              %li
+                %a{ :href=>"#{site.base_url}/calendar" } Calendar
       :javascript
         var indexOfSharp = window.location.pathname.indexOf('#');
         var pathname = indexOfSharp > 0 ? window.location.pathname.substring(0, indexOfSharp) : window.location.pathname;
