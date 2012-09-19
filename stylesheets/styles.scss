@@ -8,6 +8,24 @@ p {
   text-align: justify;
 }
 
+.ribbon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border: 0px;
+  z-index: 1031;
+}
+
+img.left {
+  float: left;
+  margin: 0px 15px 10px 0px;
+}
+
+img.right {
+  float: right;
+  margin: 0px 0px 10px 15px;
+}
+
 
 ul.twitter-list li {
   padding-bottom: 6px;
@@ -64,5 +82,12 @@ ul.twitter-list li.nav-header {
   
   a.tag:hover {
     background-color: #B94A48;
+  }
+}
+
+.sponsors {
+  [class*="span"] {
+    text-align: center;
+    margin-top: 50px;
   }
 }

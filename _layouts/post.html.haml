@@ -4,34 +4,16 @@ layout: base
 .row
   .span9
     = partial('post.html.haml', {'parent'=>page, 'post'=>page, 'alone' => true})
-
-    .visible-desktop
-      %ul.pager
-        - if page.next_post
-          %li.previous
-            %a{:href=>page.next_post.url} Previous: #{page.next_post.title}
-        - if page.previous_post
-          %li.next
-            %a{:href=>page.previous_post.url} Next: #{page.previous_post.title}
-    
-    .hidden-desktop
-      %ul.pager
-        - if page.next_post
-          %li.previous
-            %a{:href=>page.next_post.url} Previous
-        - if page.previous_post
-          %li.next
-            %a{:href=>page.previous_post.url} Next
-
-    %aside.visible-phone
+  
+  .span3
+    %aside.hidden-phone
       %ul.nav.nav-list.well
         %li.nav-header
           Tag Cloud
         %li
           = site.posts_tag_cloud
-      
-  .span3
-    %aside.hidden-phone
+          
+    %aside.visible-phone
       %ul.nav.nav-list.well
         %li.nav-header
           Tag Cloud

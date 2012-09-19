@@ -5,7 +5,7 @@ layout: post
 tags: [CDI,Jetty,Maven,Socializer]
 ---
 
-!<{width:80px}/images/weld.png!
+!(left){width:80px}#{site.base_url}/images/weld.png!
 
 
 In Agorava framework we want to provide an easy way to launch our example applications. One of the easiest way is to provide a maven Goal that build the project and launch it with embedded Jetty servlet container. If you have read our "previous post":/news/2012/06/22/Meet-Agorava-the-Social-Framework you already know that right now Agorava has only a CDI implementation. So when we created "Socializer demo app":http://socializer.agorava.cloudbees.net/home.jsf we add to find a way to launch CDI container from Jetty Maven Plugin. This article is about how we did it.

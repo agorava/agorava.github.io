@@ -6,6 +6,8 @@ layout: base
     .posts
       - page.posts.each do |post|
         = partial('post.html.haml', {'parent'=>page, 'post'=>post, 'alone' => false})
+        
+    = page.disqus_comments_count
 
     - current_page_number = page.posts.current_page_index + 1
     %div.visible-phone

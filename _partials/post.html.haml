@@ -1,14 +1,14 @@
 ---
 ---
-.post
+%article.post
   - if page.alone
     %ul.pager.visible-desktop{:style=>"float:right;"}
-      - if page.post.next_post
-        %li
-          %a{:href=>page.post.next_post.url} Previous
       - if page.post.previous_post
         %li
-          %a{:href=>page.post.previous_post.url} Next
+          %a{:href=>page.post.previous_post.url} Previous
+      - if page.post.next_post
+        %li
+          %a{:href=>page.post.next_post.url} Next
 
   %h2
     %a{:href=>page.post.url}
@@ -25,6 +25,7 @@
     
   .content
     ~ page.post.content
+    
   .footer
     %a{:href=>page.post.url} Permalink
     | 
@@ -38,6 +39,27 @@
         - for tag in page.post.tags
           - unless tag.nil?
             %a.tag{:href=>tag.primary_page.url}= tag
+            
   - if page.alone
+    .visible-desktop
+      %ul.pager
+        - if page.post.previous_post
+          %li.previous
+            %a{:href=>page.post.previous_post.url} Previous: #{page.post.previous_post.title}
+        - if page.post.next_post
+          %li.next
+            %a{:href=>page.post.next_post.url} Next: #{page.post.next_post.title}
+    
+    .hidden-desktop
+      %ul.pager
+        - if page.post.previous_post
+          %li.previous
+            %a{:href=>page.post.previous_post.url} Previous
+        - if page.post.next_post
+          %li.next
+            %a{:href=>page.post.next_post.url} Next
+    
+    = page.post.disqus_comments_count
+    
     .comments
       = page.post.disqus_comments

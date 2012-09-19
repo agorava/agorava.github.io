@@ -2,20 +2,9 @@
 layout: base
 title: "Agorava Event Calendar"
 ---
-%iframe{:frameborder => "0", :height => "600", :scrolling => "no", :src => "https://www.google.com/calendar/embed?showTitle=0&showPrint=0&showCalendars=0&mode=AGENDA&height=600&wkst=2&bgcolor=%23FFFFFF&src=ttnv2snkbbprldf5d07m558mto%40group.calendar.google.com&color=%23B1440E&ctz=Etc%2FGMT", :style => " border-width:0 ", :width => "800"}
-        
-  .span3
-    .follow-scroll.hidden-phone
-      %div{:style=>"margin-bottom:20px;text-align:center;"}
-        = partial( 'subscribe.html.haml' )
-      
-      %ul.nav.nav-list.well{:style=>"clear:both;"}
-        %li.nav-header
-          Tag Cloud
-        %li
-          = site.posts_tag_cloud
-    .visible-phone
-      %div{:style=>"margin-bottom:20px;text-align:center;"}
-        = partial( 'subscribe.html.haml' )
+.row
+  .span12
+    %iframe{:frameborder => "0", :width => "100%", :height => "650px", :scrolling => "no", :src => "https://www.google.com/calendar/embed?showTitle=0&showPrint=0&showCalendars=0&mode=AGENDA&height=600&wkst=2&bgcolor=%23FFFFFF&src=ttnv2snkbbprldf5d07m558mto%40group.calendar.google.com&color=%23B1440E&ctz=Etc%2FGMT", :style => " border-width:0 "}
+
       
         

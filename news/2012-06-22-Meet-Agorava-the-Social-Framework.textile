@@ -5,7 +5,7 @@ layout: post
 tags: [announce,Socializer,roadmap]
 ---
 
-!<{width:80%}/images/logo.png!
+!(left)#{site.base_url}/images/logo.png!
 
 Did you ever looked for a nice solution in java to authenticate your users with their Twitter, Facebook or LinkedIn account ? Have you ever looked for a nice way to post tweets or Facebook updates from your Java application? Do you need to read your timeline or perform a search on a Social Media services from Java EE web application? If you answered yes to one of these questions Agorava is (or will be soon) the right answer to your needs.
 Agorava is the missing framework to deal with Social Media based on OAuth 1.0a and OAuth 2.0. It provides a way to authenticate on Social Media, use APIs and map JSON answers to Java pojo. It'll have multiple implementations (like CDI, Java SE, JSR 330 supporting framework and others) to support your needs. Right now the only implementation is based on CDI but we'll provide others in the coming months.
