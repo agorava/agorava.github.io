@@ -5,6 +5,7 @@ _tmp
 _deploy
 *.swp
 .DS_Store
+.awestruct
 
 # Intellij IDEA
 *.iml
