@@ -6032,53 +6032,74 @@ p {
   text-align: justify;
 }
 
-/* line 12 */
+/* line 11 */
+.ribbon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border: 0px;
+  z-index: 1031;
+}
+
+/* line 19 */
+img.left {
+  float: left;
+  margin: 0px 15px 10px 0px;
+}
+
+/* line 24 */
+img.right {
+  float: right;
+  margin: 0px 0px 10px 15px;
+}
+
+/* line 30 */
 ul.twitter-list li {
   padding-bottom: 6px;
   margin-bottom: 6px;
   border-bottom: 1px solid #E5E5E5;
 }
 
-/* line 18 */
+/* line 36 */
 ul.twitter-list li:last-child {
   padding-bottom: 0px;
   margin-bottom: 0px;
   border-bottom: 0px;
 }
 
-/* line 24 */
+/* line 42 */
 ul.twitter-list li.nav-header {
   margin-top: 0px;
   border-bottom: 0px;
 }
 
-/* line 29 */
+/* line 47 */
 .posts .post {
   margin-bottom: 40px;
 }
 
-/* line 34 */
+/* line 52 */
 .post h2 > a {
   margin-right: 15px;
 }
-/* line 38 */
+/* line 56 */
 .post h2, .post .content, .post .footer {
   border-bottom: 1px solid #DDDDDD;
   margin-bottom: 10px;
 }
-/* line 43 */
+/* line 61 */
 .post .footer {
   padding-bottom: 10px;
 }
-/* line 47 */
+/* line 65 */
 .post h2 a:hover {
   text-decoration: none;
 }
-/* line 51 */
+/* line 69 */
 .post .meta {
   margin-bottom: 10px;
 }
-/* line 55 */
+/* line 73 */
 .post a.tag {
   background-color: #999999;
   -webkit-border-radius: 3px;
@@ -6090,7 +6111,13 @@ ul.twitter-list li.nav-header {
   font-weight: bold;
   text-decoration: none;
 }
-/* line 65 */
+/* line 83 */
 .post a.tag:hover {
   background-color: #B94A48;
+}
+
+/* line 89 */
+.sponsors [class*="span"] {
+  text-align: center;
+  margin-top: 50px;
 }

@@ -11,24 +11,16 @@
         }
       /*]]>*/
     </style>
-<<<<<<< HEAD
-    <link href='http://localhost:4242/stylesheets/styles.css' rel='stylesheet' type='text/css' />
-=======
     <link href='http://agorava.org/stylesheets/styles.css' rel='stylesheet' type='text/css' />
->>>>>>> 49898868ca9ce9d27ed18f1e20c339b0e6517518
     <!--[if lt IE 9]>
       <script src='//html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
     <![endif]-->
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' type='text/javascript'></script>
-<<<<<<< HEAD
-    <script src='http://localhost:4242/javascripts/bootstrap-collapse.js' type='text/javascript'></script>
-=======
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js' type='text/javascript'></script>
     <script src='http://agorava.org/javascripts/bootstrap-collapse.js' type='text/javascript'></script>
->>>>>>> 49898868ca9ce9d27ed18f1e20c339b0e6517518
   </head>
   <body>
-    <a href='https://github.com/agorava'>
-      <img alt='Fork me on GitHub' src='https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png' style='position: absolute; top: 25px; right: 0; border: 0;' />
+    <a class='visible-desktop' href='https://github.com/agorava'>
+      <img alt='Fork me on GitHub' class='ribbon' src='https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png' />
     </a>
     <div class='navbar navbar-fixed-top'>
       <div class='navbar-inner'>
@@ -38,16 +30,6 @@
             <span class='icon-bar'></span>
             <span class='icon-bar'></span>
           </a>
-<<<<<<< HEAD
-          <a class='brand' href='http://localhost:4242'>Agorava</a>
-          <div class='nav-collapse'>
-            <ul class='nav'>
-              <li>
-                <a href='http://localhost:4242/'>Home</a>
-              </li>
-              <li>
-                <a href='http://localhost:4242/news/'>Blog</a>
-=======
           <a class='brand' href='http://agorava.org'>Agorava</a>
           <div class='nav-collapse'>
             <ul class='nav'>
@@ -56,7 +38,12 @@
               </li>
               <li>
                 <a href='http://agorava.org/news/'>Blog</a>
->>>>>>> 49898868ca9ce9d27ed18f1e20c339b0e6517518
+              </li>
+              <li>
+                <a href='http://agorava.org/calendar/'>Calendar</a>
+              </li>
+              <li>
+                <a href='http://agorava.org/sponsors/'>Sponsors</a>
               </li>
             </ul>
           </div>
@@ -66,11 +53,7 @@
         //<![CDATA[
           var indexOfSharp = window.location.pathname.indexOf('#');
           var pathname = indexOfSharp > 0 ? window.location.pathname.substring(0, indexOfSharp) : window.location.pathname;
-<<<<<<< HEAD
-          var selector = "body > .navbar > .navbar-inner a[href='http://localhost:4242"+pathname+"']";
-=======
           var selector = "body > .navbar > .navbar-inner a[href='http://agorava.org"+pathname+"']";
->>>>>>> 49898868ca9ce9d27ed18f1e20c339b0e6517518
           $(selector).closest("li").addClass("active");
         //]]>
       </script>
@@ -78,10 +61,10 @@
     <div class='container'>
       <div class='row'>
   <div class='span9'>
-    <div class='post'>
+    <article class='post'>
   <ul class='pager visible-desktop' style='float:right;'>
     <li>
-      <a href='/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/'>Previous</a>
+      <a href='/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/'>Next</a>
     </li>
   </ul>
   <h2>
@@ -96,15 +79,11 @@
       on
       <span class='date'>Jun 22, 2012</span>
       |
-<<<<<<< HEAD
-       <a href="/news/2012/06/22/Meet-Agorava-the-Social-Framework/#disqus_thread">Comments</a>
-=======
        <a href="/news/2012/06/22/Meet-Agorava-the-Social-Framework/#disqus_thread" data-disqus-identifier="69a1846ed702cdf32308a36f80534c99b8b91cab">Comments</a>
->>>>>>> 49898868ca9ce9d27ed18f1e20c339b0e6517518
     </strong>
   </div>
   <div class='content'>
-    <p style="float:left;"><img src="/images/logo.png" style="width:80%;" alt="" /></p>
+    <p><img src="http://agorava.org/images/logo.png" class="left" alt="" /></p>
 <p>Did you ever looked for a nice solution in java to authenticate your users with their Twitter, Facebook or LinkedIn account ? Have you ever looked for a nice way to post tweets or Facebook updates from your Java application? Do you need to read your timeline or perform a search on a Social Media services from Java EE web application? If you answered yes to one of these questions Agorava is (or will be soon) the right answer to your needs.<br />
 Agorava is the missing framework to deal with Social Media based on OAuth 1.0a and OAuth 2.0. It provides a way to authenticate on Social Media, use APIs and map <span class="caps">JSON</span> answers to Java pojo. It&#8217;ll have multiple implementations (like <span class="caps">CDI</span>, Java SE, <span class="caps">JSR</span> 330 supporting framework and others) to support your needs. Right now the only implementation is based on <span class="caps">CDI</span> but we&#8217;ll provide others in the coming months.</p>
 <h3>Agorava genesis</h3>
@@ -167,11 +146,7 @@ Agorava project is live and growing day by day! It also have <a href="https://gr
   <div class='footer'>
     <a href='/news/2012/06/22/Meet-Agorava-the-Social-Framework/'>Permalink</a>
     |
-<<<<<<< HEAD
-     <a href="/news/2012/06/22/Meet-Agorava-the-Social-Framework/#disqus_thread">Comments</a>
-=======
      <a href="/news/2012/06/22/Meet-Agorava-the-Social-Framework/#disqus_thread" data-disqus-identifier="69a1846ed702cdf32308a36f80534c99b8b91cab">Comments</a>
->>>>>>> 49898868ca9ce9d27ed18f1e20c339b0e6517518
     |
     <span class='tags'>
       <i class='icon-tags'></i>
@@ -181,20 +156,37 @@ Agorava project is live and growing day by day! It also have <a href="https://gr
       <a class='tag' href='/news/tags/roadmap/'>roadmap</a>
     </span>
   </div>
+  <div class='visible-desktop'>
+    <ul class='pager'>
+      <li class='next'>
+        <a href='/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/'>Next: Starting a CDI webapp from Maven with Weld-Servlet and Jetty Plugin</a>
+      </li>
+    </ul>
+  </div>
+  <div class='hidden-desktop'>
+    <ul class='pager'>
+      <li class='next'>
+        <a href='/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/'>Next</a>
+      </li>
+    </ul>
+  </div>
+  
+              <script type="text/javascript">
+              var disqus_shortname = 'agoravablog';
+              (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.src = "http://disqus.com/forums/agoravablog/count.js";
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+              }());
+              </script>
   <div class='comments'>
     
                 <div id="disqus_thread"></div>
                 <script type="text/javascript">
                 var disqus_shortname = 'agoravablog';
-<<<<<<< HEAD
-                var disqus_url = "http://localhost:4242/news/2012/06/22/Meet-Agorava-the-Social-Framework/";
-                var disqus_developer = 1;
-                var disqus_identifier = null;
-=======
                 var disqus_url = "http://agorava.org/news/2012/06/22/Meet-Agorava-the-Social-Framework/";
                 var disqus_developer = null;
                 var disqus_identifier = "69a1846ed702cdf32308a36f80534c99b8b91cab";
->>>>>>> 49898868ca9ce9d27ed18f1e20c339b0e6517518
                 (function() {
                   var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
                   dsq.src = "http://agoravablog.disqus.com/embed.js";
@@ -203,50 +195,7 @@ Agorava project is live and growing day by day! It also have <a href="https://gr
                 </script>
                 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=agoravablog">comments powered by Disqus.</a></noscript>
   </div>
-</div>
-    <div class='visible-desktop'>
-      <ul class='pager'>
-        <li class='previous'>
-          <a href='/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/'>Previous: Starting a CDI webapp from Maven with Weld-Servlet and Jetty Plugin</a>
-        </li>
-      </ul>
-    </div>
-    <div class='hidden-desktop'>
-      <ul class='pager'>
-        <li class='previous'>
-          <a href='/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/'>Previous</a>
-        </li>
-      </ul>
-    </div>
-    <aside class='visible-phone'>
-      <ul class='nav nav-list well'>
-        <li class='nav-header'>
-          Tag Cloud
-        </li>
-        <li>
-          <div class='tag-cloud'>
-              <span class='tag tag-0'>
-                <a href='/news/tags/CDI/'>CDI</a>
-              </span>
-              <span class='tag tag-0'>
-                <a href='/news/tags/Jetty/'>Jetty</a>
-              </span>
-              <span class='tag tag-0'>
-                <a href='/news/tags/Maven/'>Maven</a>
-              </span>
-              <span class='tag tag-6'>
-                <a href='/news/tags/Socializer/'>Socializer</a>
-              </span>
-              <span class='tag tag-0'>
-                <a href='/news/tags/announce/'>announce</a>
-              </span>
-              <span class='tag tag-0'>
-                <a href='/news/tags/roadmap/'>roadmap</a>
-              </span>
-            </div>
-        </li>
-      </ul>
-    </aside>
+</article>
   </div>
   <div class='span3'>
     <aside class='hidden-phone'>
@@ -256,25 +205,54 @@ Agorava project is live and growing day by day! It also have <a href="https://gr
         </li>
         <li>
           <div class='tag-cloud'>
-              <span class='tag tag-0'>
-                <a href='/news/tags/CDI/'>CDI</a>
-              </span>
-              <span class='tag tag-0'>
-                <a href='/news/tags/Jetty/'>Jetty</a>
-              </span>
-              <span class='tag tag-0'>
-                <a href='/news/tags/Maven/'>Maven</a>
-              </span>
-              <span class='tag tag-6'>
-                <a href='/news/tags/Socializer/'>Socializer</a>
-              </span>
-              <span class='tag tag-0'>
-                <a href='/news/tags/announce/'>announce</a>
-              </span>
-              <span class='tag tag-0'>
-                <a href='/news/tags/roadmap/'>roadmap</a>
-              </span>
-            </div>
+            <span class='tag tag-0'>
+              <a href='/news/tags/CDI/'>CDI</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/news/tags/Jetty/'>Jetty</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/news/tags/Maven/'>Maven</a>
+            </span>
+            <span class='tag tag-6'>
+              <a href='/news/tags/Socializer/'>Socializer</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/news/tags/announce/'>announce</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/news/tags/roadmap/'>roadmap</a>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </aside>
+    <aside class='visible-phone'>
+      <ul class='nav nav-list well'>
+        <li class='nav-header'>
+          Tag Cloud
+        </li>
+        <li>
+          <div class='tag-cloud'>
+            <span class='tag tag-0'>
+              <a href='/news/tags/CDI/'>CDI</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/news/tags/Jetty/'>Jetty</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/news/tags/Maven/'>Maven</a>
+            </span>
+            <span class='tag tag-6'>
+              <a href='/news/tags/Socializer/'>Socializer</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/news/tags/announce/'>announce</a>
+            </span>
+            <span class='tag tag-0'>
+              <a href='/news/tags/roadmap/'>roadmap</a>
+            </span>
+          </div>
         </li>
       </ul>
     </aside>
@@ -287,11 +265,7 @@ Agorava project is live and growing day by day! It also have <a href="https://gr
     </div>
     <script type="text/javascript">
     var _gaq = _gaq || [];
-<<<<<<< HEAD
-    _gaq.push(['_setAccount','']);
-=======
     _gaq.push(['_setAccount','UA-31280631-1']);
->>>>>>> 49898868ca9ce9d27ed18f1e20c339b0e6517518
     _gaq.push(['_trackPageview']);
     (function() {
      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;

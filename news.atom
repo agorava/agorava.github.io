@@ -1,18 +1,5 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <feed xml:lang='en-US' xmlns='http://www.w3.org/2005/Atom'>
-<<<<<<< HEAD
-  <id>http://localhost:4242/</id>
-  <title>http://localhost:4242</title>
-  <updated>2012-07-10T00:00:00Z</updated>
-  <link href='http://localhost:4242/news.atom' rel='self' type='application/atom+xml' />
-  <link href='http://localhost:4242/' rel='alternate' type='text/html' />
-  <entry>
-    <id>http://localhost:4242/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin.html</id>
-    <title>Starting a CDI webapp from Maven with Weld-Servlet and Jetty Plugin</title>
-    <updated>2012-07-10T00:00:00Z</updated>
-    <published>2012-07-10T00:00:00Z</published>
-    <link href='http://localhost:4242/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin.html' rel='alternate' type='text/html' />
-=======
   <id>http://agorava.org/</id>
   <title>http://agorava.org</title>
   <updated>2012-07-10T00:00:00Z</updated>
@@ -24,34 +11,14 @@
     <updated>2012-07-10T00:00:00Z</updated>
     <published>2012-07-10T00:00:00Z</published>
     <link href='http://agorava.org/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin.html' rel='alternate' type='text/html' />
->>>>>>> 49898868ca9ce9d27ed18f1e20c339b0e6517518
     <summary>
       
 In Agorava framework we want to provide an easy way to launch our example applications. One of the easiest way is to provide a maven Goal that build the project and launch it with embedded Jetty servlet container. If you have read our previous post you already know that right now Agorava has only a CDI implementation. So when we created Socializer demo app we add to find a way to launch CDI container from Jetty Maven Plugin. This article is about how we did it.
 Launching CDI from Servlet Api
-<<<<<<< HEAD
-The first problem to deal with was about launching CDI container...
-    </summary>
-    <content type='html'>
-      &lt;p style=&quot;float:left;&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/weld.png&quot; style=&quot;width:80px;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;In Agorava framework we want to provide an easy way to launch our example applications. One of the easiest way is to provide a maven Goal that build the project and launch it with embedded Jetty servlet container. If you have read our &lt;a href=&quot;http://localhost:4242/news/2012/06/22/Meet-Agorava-the-Social-Framework&quot;&gt;previous post&lt;/a&gt; you already know that right now Agorava has only a &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; implementation. So when we created &lt;a href=&quot;http://socializer.agorava.cloudbees.net/home.jsf&quot;&gt;Socializer demo app&lt;/a&gt; we add to find a way to launch &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; container from Jetty Maven Plugin. This article is about how we did it.&lt;/p&gt;
-&lt;h3&gt;Launching &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; from Servlet Api&lt;/h3&gt;
-&lt;p&gt;The first problem to deal with was about launching &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; container from Servlet &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;. &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; is a Java EE 6 specification and thus comes in all Java EE container like JBoss, TomEE or Glassfish. However the specification doesn&amp;#8217;t provide a standard way to launch &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; container outside Java EE. Each implementation bring its own solution (to be more precise OpenWebBeans and Weld bring a solution, Candi has no known way to be launch outside Resin). We decided to go with Weld because it&amp;#8217;s the &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; RI and that it is the implementation on which Agorava was the more tested thru Glassfish and JBoss.&lt;/p&gt;
-&lt;h3&gt;Adding maven dependecies&lt;/h3&gt;
-&lt;p&gt;As we wanted to support Jetty but also full Java EE containers we added a profile in the pom.xml in the project. As this profile is supposed to build and run the project we called it &lt;code&gt;run&lt;/code&gt;&lt;/p&gt;
-    </content>
-  </entry>
-  <entry>
-    <id>http://localhost:4242/news/2012/06/22/Meet-Agorava-the-Social-Framework.html</id>
-    <title>Meet Agorava, The Social Framework</title>
-    <updated>2012-06-22T00:00:00Z</updated>
-    <published>2012-06-22T00:00:00Z</published>
-    <link href='http://localhost:4242/news/2012/06/22/Meet-Agorava-the-Social-Framework.html' rel='alternate' type='text/html' />
-=======
 The first problem to deal with is about launching CDI container...
     </summary>
     <content type='html'>
-      &lt;p style=&quot;float:left;&quot;&gt;&lt;img src=&quot;http://agorava.org/images/weld.png&quot; style=&quot;width:80px;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://agorava.org/images/weld.png&quot; style=&quot;width:80px;&quot; class=&quot;left&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;In Agorava framework we want to provide an easy way to launch our example applications. One of the easiest way is to provide a maven Goal that build the project and launch it with embedded Jetty servlet container. If you have read our &lt;a href=&quot;http://agorava.org/news/2012/06/22/Meet-Agorava-the-Social-Framework&quot;&gt;previous post&lt;/a&gt; you already know that right now Agorava has only a &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; implementation. So when we created &lt;a href=&quot;http://socializer.agorava.cloudbees.net/home.jsf&quot;&gt;Socializer demo app&lt;/a&gt; we add to find a way to launch &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; container from Jetty Maven Plugin. This article is about how we did it.&lt;/p&gt;
 &lt;h3&gt;Launching &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; from Servlet Api&lt;/h3&gt;
 &lt;p&gt;The first problem to deal with is about launching &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; container from Servlet &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;. &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; is a Java EE 6 specification and thus comes in all Java EE container like JBoss, TomEE or Glassfish. However the specification doesn&amp;#8217;t provide a standard way to launch &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; container outside Java EE. Each implementation brings its own solution (to be more precise OpenWebBeans and Weld bring a solution, Candi has no known way to be launch outside Resin). We decided to go with Weld because it&amp;#8217;s the &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; RI and that it is the implementation on which Agorava was the more tested thru Glassfish and JBoss.&lt;/p&gt;
@@ -102,18 +69,13 @@ With this Maven profile, we only have to enter &lt;code&gt;mvn -Prun&lt;/code&gt
     <updated>2012-06-22T00:00:00Z</updated>
     <published>2012-06-22T00:00:00Z</published>
     <link href='http://agorava.org/news/2012/06/22/Meet-Agorava-the-Social-Framework.html' rel='alternate' type='text/html' />
->>>>>>> 49898868ca9ce9d27ed18f1e20c339b0e6517518
     <summary>
       
       Did you ever looked for a nice solution in java to authenticate your users with their Twitter, Facebook or LinkedIn account ? Have you ever looked for a nice way to post tweets or Facebook updates from your Java application? Do you need to read your timeline or perform a search on a Social Media services from Java EE web application? If you answered yes to one of these questions Agorava is (or will be soon) the right answer to your needs.
       Agorava is the missing framework to deal with Social Media based on OAuth 1.0a and OAuth 2.0. It provides...
     </summary>
     <content type='html'>
-<<<<<<< HEAD
-      &lt;p style=&quot;float:left;&quot;&gt;&lt;img src=&quot;http://localhost:4242/images/logo.png&quot; style=&quot;width:80%;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-=======
-      &lt;p style=&quot;float:left;&quot;&gt;&lt;img src=&quot;http://agorava.org/images/logo.png&quot; style=&quot;width:80%;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
->>>>>>> 49898868ca9ce9d27ed18f1e20c339b0e6517518
+      &lt;p&gt;&lt;img src=&quot;http://agorava.org/images/logo.png&quot; class=&quot;left&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Did you ever looked for a nice solution in java to authenticate your users with their Twitter, Facebook or LinkedIn account ? Have you ever looked for a nice way to post tweets or Facebook updates from your Java application? Do you need to read your timeline or perform a search on a Social Media services from Java EE web application? If you answered yes to one of these questions Agorava is (or will be soon) the right answer to your needs.&lt;br /&gt;
 Agorava is the missing framework to deal with Social Media based on OAuth 1.0a and OAuth 2.0. It provides a way to authenticate on Social Media, use APIs and map &lt;span class=&quot;caps&quot;&gt;JSON&lt;/span&gt; answers to Java pojo. It&amp;#8217;ll have multiple implementations (like &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt;, Java SE, &lt;span class=&quot;caps&quot;&gt;JSR&lt;/span&gt; 330 supporting framework and others) to support your needs. Right now the only implementation is based on &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; but we&amp;#8217;ll provide others in the coming months.&lt;/p&gt;
 &lt;h3&gt;Agorava genesis&lt;/h3&gt;
