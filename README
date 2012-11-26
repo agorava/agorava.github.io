@@ -1,0 +1,1 @@
+to publish : awestruct -P production --deploy
