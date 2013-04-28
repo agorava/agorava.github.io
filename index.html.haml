@@ -9,14 +9,23 @@ layout: base
       %p The Social Framework
       
 .row
-  .span3
+  .span8
+    %h2 News
+    .well.last-posts
+      %ul.nav.nav-list
+        - for post in site.posts[0,5]
+          %li
+            %h4
+              %a{:href=>post.url} #{post.title}
+            Posted on 
+            %span.date= post.date.strftime( '%b %d, %Y' )
+          %li.divider
+      %a.btn{:href=>"#{site.base_url}/news/"} Read more
+      = partial( 'subscribe.html.haml' )
+  .span4
     %h2 Status
     %p
-      Agorava is in bootstrap phase right now. It'll inherit from project like
-      %a{ :href=>"https://github.com/seam/social" } Seam Social
-      and
-      %a{ :href=>"http://java.net/projects/dalicore"} Dalicore
-    %p
+      %a.btn{ :href=>"http://socializer.agorava.cloudbees.net/" } Demo &raquo;
       %a.btn{ :href=>"https://issues.jboss.org/browse/AGOVA" } JIRA &raquo;
       %a.btn{ :href=>"https://docs.jboss.org/author/display/AGOVA" } Doc &raquo;
       %a.btn{ :href=>"https://agorava.ci.cloudbees.com/" } Jenkins &raquo;
@@ -37,42 +46,14 @@ layout: base
         %a{ :href=>"https://github.com/agorava/agorava-socializer"} agorava-socializer
       %li
         %a{ :href=>"https://github.com/agorava/agorava.github.com"} agorava.github.com
-  .span5
-    %h2 News
-    .well.last-posts
-      %ul.nav.nav-list
-        - for post in site.posts[0,5]
-          %li
-            %h3
-              %a{:href=>post.url} #{post.title}
-            Posted on 
-            %span.date= post.date.strftime( '%b %d, %Y' )
-          %li.divider
-      %a.btn{:href=>"#{site.base_url}/news/"} Read more
-      = partial( 'subscribe.html.haml' )
     %p
-    Agorava project is begining but we try to keep you posted with project news :
-    %p
-    %ul
-      %li
-        The project now has  a
-        %a{ :href=>"https://issues.jboss.org/browse/AGOVA" } JIRA
-        (thank you JBoss)
-      %li
-        We released Demo Web app
-        %a{ :href=>"https://github.com/agorava/agorava-socializer"} socializer
-        to show some Agorava features
-      %li
-        Agorava Project started on April 30th 2012. We are discussing release 0.5 right now
-  
-    
-  .span4
     %p
       %a.twitter-follow-button{:href=>"https://twitter.com/AgoravaProj", :data=>{"show-count"=>"false", :size=>"large"}} Follow us on Twitter
     .well.last-tweets
       %ul.nav.nav-list.twitter-list
         %li.nav-header Last tweets
         #twitter_update_list
+    %p
 
     :javascript
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

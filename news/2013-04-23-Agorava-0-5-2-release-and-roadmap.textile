@@ -1,0 +1,62 @@
+---
+title: "Agorava 0.5.2 released. What's new and what's on the roadmap ?"
+authors: [asd]
+layout: post
+tags: [CDI,OpenWebBeans,Weld,Solder,roadmap]
+---
+
+!(left){width:96px}#{site.base_url}/images/Compass-Vintage.png!
+
+
+Version 0.5.2 just hit Maven Central, what's new in this release and what to expect in the coming months
+
+h3. It's been a long time
+
+We didn't have much time lately to work on Agorava Core but that's going to change in the coming month.
+On the module side, some initiative were started (among them stackoverflow, github, instagram...). We'll post about them later.
+
+
+h3. Release notes
+
+Since we didn't gave an announcement for 0.5.0 relase, you'll find bellow a compilation of both release notes
+
+        Release Notes - Agorava - Version 0.5.1 and 0.5.2
+
+<h4>        Bug
+</h4>
+<ul>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-25'>AGOVA-25</a>] -         Weld 1.1.9 and beyond not supported
+</li>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-14'>AGOVA-14</a>] -         SimpleOAuthAppSettingsBuilder doesn&#39;t work when callback url is an SSL uri
+</li>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-19'>AGOVA-19</a>] -         Agora dependencies in dependency management uses dynamic project version
+</li>
+</ul>
+
+<h4>        Enhancement
+</h4>
+<ul>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-26'>AGOVA-26</a>] -         Add OpenWebBeans tests
+</li>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-15'>AGOVA-15</a>] -         Complicated to use Agorava without session scope
+</li>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-16'>AGOVA-16</a>] -         Annotation @OAuthApplication make params mandatory
+</li>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-17'>AGOVA-17</a>] -         Making PropertyOAuthAppSettingsBuilder as default builder for OAuthApplication
+</li>
+</ul>
+
+<h4>        Task
+</h4>
+<ul>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-27'>AGOVA-27</a>] -         Align Generics on solder last updates
+</li>
+</ul>
+
+h3. What's coming next in core ?
+
+We're now actively working on API simplification and OpenWebBeans support in core. After that we'll be working by integrating our own OAuth engine and provide a JAX-RS implementation of it. You can follow the roadmap on our "Jira instance":http://issues.jboss.org/AGOVA 
+
+h3. What's coming next in modules ?
+
+Our main modules (Twitter, Facebook, LinkedIn) are still in snapshot. We expect to release them during Q3 2013. Stay tuned and thanks for your patience
