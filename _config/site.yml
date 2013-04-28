@@ -9,4 +9,5 @@ profiles:
       host: github_pages
       branch: master
 disqus: agoravablog
+base_url: http://agorava.org
       
