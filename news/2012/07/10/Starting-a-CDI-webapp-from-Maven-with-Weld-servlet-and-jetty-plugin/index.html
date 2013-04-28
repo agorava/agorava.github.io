@@ -1,256 +1,279 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8' />
+    <meta charset="utf-8">
     <title>Agorava Project</title>
-    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
-    <style type='text/css'>
-      /*<![CDATA[*/
-        body {
-          padding-top: 60px;
-        }
-      /*]]>*/
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <style>
+      body {
+        padding-top: 60px;
+      }
     </style>
-    <link href='http://agorava.org/stylesheets/styles.css' rel='stylesheet' type='text/css' />
+    <link href="http://localhost:4242/stylesheets/styles.css" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]>
-      <script src='//html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]-->
-    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js' type='text/javascript'></script>
-    <script src='http://agorava.org/javascripts/bootstrap-collapse.js' type='text/javascript'></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://localhost:4242/javascripts/bootstrap-collapse.js" type="text/javascript"></script>
   </head>
   <body>
-    <a class='visible-desktop' href='https://github.com/agorava'>
-      <img alt='Fork me on GitHub' class='ribbon' src='https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png' />
+    <a class="visible-desktop" href="https://github.com/agorava">
+      <img alt="Fork me on GitHub" class="ribbon" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
     </a>
-    <div class='navbar navbar-fixed-top'>
-      <div class='navbar-inner'>
-        <div class='container'>
-          <a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </a>
-          <a class='brand' href='http://agorava.org'>Agorava</a>
-          <div class='nav-collapse'>
-            <ul class='nav'>
+          <a class="brand" href="http://localhost:4242">Agorava</a>
+          <div class="nav-collapse">
+            <ul class="nav">
               <li>
-                <a href='http://agorava.org/'>Home</a>
+                <a href="http://localhost:4242/">Home</a>
               </li>
               <li>
-                <a href='http://agorava.org/news/'>Blog</a>
+                <a href="http://localhost:4242/news/">Blog</a>
               </li>
               <li>
-                <a href='http://agorava.org/calendar/'>Calendar</a>
+                <a href="http://localhost:4242/calendar/">Calendar</a>
               </li>
               <li>
-                <a href='http://agorava.org/sponsors/'>Sponsors</a>
+                <a href="http://localhost:4242/sponsors/">Sponsors</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <script type='text/javascript'>
-        //<![CDATA[
-          var indexOfSharp = window.location.pathname.indexOf('#');
-          var pathname = indexOfSharp > 0 ? window.location.pathname.substring(0, indexOfSharp) : window.location.pathname;
-          var selector = "body > .navbar > .navbar-inner a[href='http://agorava.org"+pathname+"']";
-          $(selector).closest("li").addClass("active");
-        //]]>
+      <script>
+        var indexOfSharp = window.location.pathname.indexOf('#');
+        var pathname = indexOfSharp > 0 ? window.location.pathname.substring(0, indexOfSharp) : window.location.pathname;
+        var selector = "body > .navbar > .navbar-inner a[href='http://localhost:4242"+pathname+"']";
+        $(selector).closest("li").addClass("active");
       </script>
     </div>
-    <div class='container'>
-      <div class='row'>
-  <div class='span9'>
-    <article class='post'>
-  <ul class='pager visible-desktop' style='float:right;'>
-    <li>
-      <a href='/news/2012/06/22/Meet-Agorava-the-Social-Framework/'>Previous</a>
-    </li>
-  </ul>
-  <h2>
-    <a href='/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/'>
-      Starting a CDI webapp from Maven with Weld-Servlet and Jetty Plugin
-    </a>
-  </h2>
-  <div class='meta'>
-    <strong>
-      Posted by
-      <span class='authors'> Antoine Sabot-Durand</span>
-      on
-      <span class='date'>Jul 10, 2012</span>
-      |
-       <a href="http://agorava.org/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/#disqus_thread" data-disqus-identifier="adf545f104b409e98dd05ac409bd8e04c1f37403">Comments</a>
-    </strong>
-  </div>
-  <div class='content'>
-    <p><img src="http://agorava.org/images/weld.png" style="width:80px;" class="left" alt="" /></p>
-<p>In Agorava framework we want to provide an easy way to launch our example applications. One of the easiest way is to provide a maven Goal that build the project and launch it with embedded Jetty servlet container. If you have read our <a href="/news/2012/06/22/Meet-Agorava-the-Social-Framework">previous post</a> you already know that right now Agorava has only a <span class="caps">CDI</span> implementation. So when we created <a href="http://socializer.agorava.cloudbees.net/home.jsf">Socializer demo app</a> we add to find a way to launch <span class="caps">CDI</span> container from Jetty Maven Plugin. This article is about how we did it.</p>
-<h3>Launching <span class="caps">CDI</span> from Servlet Api</h3>
-<p>The first problem to deal with is about launching <span class="caps">CDI</span> container from Servlet <span class="caps">API</span>. <span class="caps">CDI</span> is a Java EE 6 specification and thus comes in all Java EE container like JBoss, TomEE or Glassfish. However the specification doesn&#8217;t provide a standard way to launch <span class="caps">CDI</span> container outside Java EE. Each implementation brings its own solution (to be more precise OpenWebBeans and Weld bring a solution, Candi has no known way to be launch outside Resin). We decided to go with Weld because it&#8217;s the <span class="caps">CDI</span> RI and that it is the implementation on which Agorava was the more tested thru Glassfish and JBoss.</p>
-<h3>Adding maven dependecies</h3>
-<p>As we want to support Jetty but also full Java EE containers we added a profile in the pom.xml to keep the Java EE build clean. As this profile is supposed to build and run the project we call it <code>run</code>. We add the following dependencies in the pom.xml</p>
-<pre class="prettify"><code class="prettify">&lt;profile&gt;&#x000A;  &lt;id&gt;run&lt;/id&gt;&#x000A;    &lt;dependencies&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;org.jboss.weld.servlet&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;weld-servlet&lt;/artifactId&gt;&#x000A;            &lt;version&gt;1.1.8.Final&lt;/version&gt;&#x000A;            &lt;scope&gt;runtime&lt;/scope&gt;&#x000A;        &lt;/dependency&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;com.sun.faces&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;jsf-api&lt;/artifactId&gt;&#x000A;            &lt;version&gt;2.1.3&lt;/version&gt;&#x000A;        &lt;/dependency&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;com.sun.faces&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;jsf-impl&lt;/artifactId&gt;&#x000A;            &lt;version&gt;2.1.3&lt;/version&gt;&#x000A;        &lt;/dependency&gt;&#x000A;    &lt;/dependencies&gt;&#x000A;&lt;/profile&gt;</code></pre>
-<p>Jsf dependencies are added because Socializer uses <span class="caps">JSF</span> and Jetty doesn&#8217;t provide thrm. The Jboss Weld Servlet is the important dependency here since it will provide bootstrapping for <span class="caps">CDI</span> thru servlet <span class="caps">API</span>. It also will bring transitively all the needed dependencies for Weld core and <span class="caps">CDI</span> <span class="caps">API</span>.</p>
-<h3>Adding Jetty Maven plugin</h3>
-<p>Now we can add the plugin to our new profile</p>
-<pre class="prettify"><code class="prettify">&lt;build&gt;&#x000A;    &lt;plugins&gt;&#x000A;       &lt;plugin&gt;&#x000A;          &lt;groupId&gt;org.mortbay.jetty&lt;/groupId&gt;&#x000A;          &lt;artifactId&gt;jetty-maven-plugin&lt;/artifactId&gt;&#x000A;          &lt;version&gt;8.1.3.v20120416&lt;/version&gt;&#x000A;       &lt;/plugin&gt;&#x000A;    &lt;/plugins&gt;&#x000A;&lt;/build&gt;</code></pre>
-<p>This plugin allows to build a Maven project and launch Jetty directly from Maven with a simple <code>mvn jetty:run</code> command.</p>
-<h3>Boostraping <span class="caps">CDI</span></h3>
-<p>To bootstrap <span class="caps">CDI</span>, we have 2 steps to perform :</p>
-<h4>Expose <span class="caps">CDI</span> bean manager thru <span class="caps">JNDI</span></h4>
-<p>To do that we create a <code>jetty-env.xml</code> file in <span class="caps">WEB</span>-<span class="caps">INF</span> containing this</p>
-<pre class="prettify"><code class="prettify">&lt;!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://www.eclipse.org/jetty/configure.dtd"&gt;&#x000A;&lt;Configure id="webAppCtx" class="org.eclipse.jetty.webapp.WebAppContext"&gt;&#x000A;    &lt;New id="BeanManager" class="org.eclipse.jetty.plus.jndi.Resource"&gt;&#x000A;        &lt;Arg&gt;&#x000A;            &lt;Ref id="webAppCtx"/&gt;&#x000A;        &lt;/Arg&gt;&#x000A;        &lt;Arg&gt;BeanManager&lt;/Arg&gt;&#x000A;        &lt;Arg&gt;&#x000A;            &lt;New class="javax.naming.Reference"&gt;&#x000A;                &lt;Arg&gt;javax.enterprise.inject.spi.BeanManager&lt;/Arg&gt;&#x000A;                &lt;Arg&gt;org.jboss.weld.resources.ManagerObjectFactory&lt;/Arg&gt;&#x000A;                &lt;Arg/&gt;&#x000A;            &lt;/New&gt;&#x000A;        &lt;/Arg&gt;&#x000A;    &lt;/New&gt;&#x000A;&lt;/Configure&gt;</code></pre>
-<p>This file is a standard Jetty config file and is run by the container at boot time.</p>
-<h4>Adding Web.xml configuration</h4>
-<p>To achieve the bootstrapping we also need to add two entries to <code>web.xml</code> :</p>
-<ul>
-	<li>One to retrieve the BeanManager exposed in the file above and expose it to servlet <span class="caps">API</span></li>
-	<li>One to launch the servlet listener that will boot <span class="caps">CDI</span> container</li>
-</ul>
-<p>As we don&#8217;t want to pollute existing web.xml which works perfectly for Java EE 6 containers, we add a web.xml overriding file to add our entries. This file is declared in Jetty plugin configuration like this</p>
-<pre class="prettify"><code class="prettify">&lt;plugin&gt;&#x000A;    &lt;groupId&gt;org.mortbay.jetty&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;jetty-maven-plugin&lt;/artifactId&gt;&#x000A;    &lt;version&gt;8.1.3.v20120416&lt;/version&gt;&#x000A;    &lt;configuration&gt;&#x000A;        &lt;webApp&gt;&#x000A;            &lt;overrideDescriptor&gt;src/main/webapp/WEB-INF/web-add.xml&lt;/overrideDescriptor&gt;&#x000A;        &lt;/webApp&gt;&#x000A;    &lt;/configuration&gt;&#x000A;&lt;/plugin&gt;</code></pre>
-<p>The content of web-add.xml file is as follow</p>
-<pre class="prettify"><code class="prettify">&lt;web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&#x000A;         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"&gt;</code>&#x000A;&#x000A;<code class="prettify">    &lt;listener&gt;&#x000A;        &lt;listener-class&gt;org.jboss.weld.environment.servlet.Listener&lt;/listener-class&gt;&#x000A;    &lt;/listener&gt;</code>&#x000A;&#x000A;<code class="prettify">    &lt;resource-env-ref&gt;&#x000A;        &lt;resource-env-ref-name&gt;BeanManager&lt;/resource-env-ref-name&gt;&#x000A;        &lt;resource-env-ref-type&gt;&#x000A;            javax.enterprise.inject.spi.BeanManager&#x000A;        &lt;/resource-env-ref-type&gt;&#x000A;    &lt;/resource-env-ref&gt;&#x000A;&lt;/web-app&gt;</code></pre>
-<p>It&#8217;s content will override web.xml one (i.e web.xml will be interpreted before web-add.xml).</p>
-<h3>Last trick to allow injection in servlets</h3>
-<p>Weld Servlet will try to decorate some Jetty internal class to add the possibility of using <code>@Inject</code> inside servlets. This class is a Jetty system class and therefore is not visible from the web application. We have to tell Jetty classloader to expose this class to the web app in order to have Weld Servlet decorating it.<br />
-To allow this we create a <code>jetty-context.xml</code> file in <span class="caps">WEB</span>-<span class="caps">INF</span></p>
-<pre class="prettify"><code class="prettify">&lt;!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd"&gt;&#x000A;&lt;Configure class="org.eclipse.jetty.webapp.WebAppContext"&gt;&#x000A;    &lt;Set name="serverClasses"&gt;&#x000A;        &lt;Array type="java.lang.String"&gt;&#x000A;            &lt;Item&gt;-org.eclipse.jetty.servlet.ServletContextHandler.Decorator&lt;/Item&gt;&#x000A;        &lt;/Array&gt;&#x000A;    &lt;/Set&gt;&#x000A;&lt;/Configure&gt;</code></pre>
-<p>Then we add it to Jetty Maven plugin configuration like this</p>
-<pre class="prettify"><code class="prettify">&lt;configuration&gt;&#x000A;    &lt;webApp&gt;&#x000A;        &lt;overrideDescriptor&gt;src/main/webapp/WEB-INF/web-add.xml&lt;/overrideDescriptor&gt;&#x000A;    &lt;/webApp&gt;&#x000A;    &lt;contextXml&gt;src/main/webapp/WEB-INF/jetty-context.xml&lt;/contextXml&gt;&#x000A;&lt;/configuration&gt;</code></pre>
-<p>Then we&#8217;re done</p>
-<h3>To sum up</h3>
-<p>Here is the complete <code>run</code> Profile in our <code>pom.xml</code> file</p>
-<pre class="prettify"><code class="prettify">&lt;profile&gt;&#x000A;    &lt;id&gt;run&lt;/id&gt;&#x000A;    &lt;dependencies&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;org.jboss.weld.servlet&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;weld-servlet&lt;/artifactId&gt;&#x000A;            &lt;version&gt;1.1.8.Final&lt;/version&gt;&#x000A;            &lt;scope&gt;runtime&lt;/scope&gt;&#x000A;        &lt;/dependency&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;com.sun.faces&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;jsf-api&lt;/artifactId&gt;&#x000A;            &lt;version&gt;2.1.3&lt;/version&gt;&#x000A;        &lt;/dependency&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;com.sun.faces&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;jsf-impl&lt;/artifactId&gt;&#x000A;            &lt;version&gt;2.1.3&lt;/version&gt;&#x000A;        &lt;/dependency&gt;&#x000A;    &lt;/dependencies&gt;&#x000A;    &lt;build&gt;&#x000A;        &lt;defaultGoal&gt;clean jetty:run&lt;/defaultGoal&gt;&#x000A;        &lt;plugins&gt;&#x000A;            &lt;plugin&gt;&#x000A;                &lt;groupId&gt;org.mortbay.jetty&lt;/groupId&gt;&#x000A;                &lt;artifactId&gt;jetty-maven-plugin&lt;/artifactId&gt;&#x000A;                &lt;version&gt;8.1.3.v20120416&lt;/version&gt;&#x000A;                &lt;configuration&gt;&#x000A;                    &lt;webApp&gt;&#x000A;                        &lt;overrideDescriptor&gt;src/main/webapp/WEB-INF/web-add.xml&lt;/overrideDescriptor&gt;&#x000A;                    &lt;/webApp&gt;&#x000A;                    &lt;contextXml&gt;src/main/webapp/WEB-INF/jetty-context.xml&lt;/contextXml&gt;&#x000A;                &lt;/configuration&gt;&#x000A;            &lt;/plugin&gt;&#x000A;        &lt;/plugins&gt;&#x000A;    &lt;/build&gt;&#x000A;&lt;/profile&gt;</code></pre>
-<p>Don&#8217;t forget the 3 files above <code>jetty-env.xml</code> to define <span class="caps">JNDI</span>, <code>web-add.xml</code> to override web.xml with <span class="caps">CDI</span> servlet bootstrapping and <span class="caps">JNDI</span> and <code>jetty-context.xml</code> to expose the internal servlet implementation for Weld decorator.<br />
-With this Maven profile, we only have to enter <code>mvn -Prun</code> to build our web application and have it launched in Jetty to test it. Hard to make it simpler.</p>
-<h3>Check our code</h3>
-<p>Feel free to look at <a href="http://github.com/agorava/agorava-socializer">Socializer code</a> and play with our <span class="caps">API</span>. Contribution are always welcome.</p>
-  </div>
-  <div class='footer'>
-    <a href='/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/'>Permalink</a>
-    |
-     <a href="http://agorava.org/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/#disqus_thread" data-disqus-identifier="adf545f104b409e98dd05ac409bd8e04c1f37403">Comments</a>
-    |
-    <span class='tags'>
-      <i class='icon-tags'></i>
-      Tags :
-      <a class='tag' href='/news/tags/CDI/'>CDI</a>
-      <a class='tag' href='/news/tags/Jetty/'>Jetty</a>
-      <a class='tag' href='/news/tags/Maven/'>Maven</a>
-      <a class='tag' href='/news/tags/Socializer/'>Socializer</a>
-    </span>
-  </div>
-  <div class='visible-desktop'>
-    <ul class='pager'>
-      <li class='previous'>
-        <a href='/news/2012/06/22/Meet-Agorava-the-Social-Framework/'>Previous: Meet Agorava, The Social Framework</a>
-      </li>
-    </ul>
-  </div>
-  <div class='hidden-desktop'>
-    <ul class='pager'>
-      <li class='previous'>
-        <a href='/news/2012/06/22/Meet-Agorava-the-Social-Framework/'>Previous</a>
-      </li>
-    </ul>
-  </div>
-  
-                <script type="text/javascript">
-                var disqus_shortname = 'agoravablog';
-                (function () {
-                  var s = document.createElement('script'); s.async = true;
-                  s.src = "http://disqus.com/forums/agoravablog/count.js";
-                  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-                }());
-                </script>
-  <div class='comments'>
-    
-                  <div id="disqus_thread"></div>
-                  <script type="text/javascript">
-                  var disqus_shortname = 'agoravablog';
-                  var disqus_url = "http://agorava.org/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/";
-                  var disqus_developer = null;
-                  var disqus_identifier = "adf545f104b409e98dd05ac409bd8e04c1f37403";
-                  (function() {
-                    var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
-                    dsq.src = "http://agoravablog.disqus.com/embed.js";
-                    (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
-                  })();
-                  </script>
-                  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=agoravablog">comments powered by Disqus.</a></noscript>
-  </div>
-</article>
-  </div>
-  <div class='span3'>
-    <aside class='hidden-phone'>
-      <ul class='nav nav-list well'>
-        <li class='nav-header'>
-          Tag Cloud
-        </li>
-        <li>
-          <div class='tag-cloud'>
-            <span class='tag tag-0'>
-              <a href='http://agorava.org/news/tags/CDI/'>CDI</a>
-            </span>
-            <span class='tag tag-0'>
-              <a href='http://agorava.org/news/tags/Jetty/'>Jetty</a>
-            </span>
-            <span class='tag tag-0'>
-              <a href='http://agorava.org/news/tags/Maven/'>Maven</a>
-            </span>
-            <span class='tag tag-6'>
-              <a href='http://agorava.org/news/tags/Socializer/'>Socializer</a>
-            </span>
-            <span class='tag tag-0'>
-              <a href='http://agorava.org/news/tags/announce/'>announce</a>
-            </span>
-            <span class='tag tag-0'>
-              <a href='http://agorava.org/news/tags/roadmap/'>roadmap</a>
-            </span>
-          </div>
-        </li>
-      </ul>
-    </aside>
-    <aside class='visible-phone'>
-      <ul class='nav nav-list well'>
-        <li class='nav-header'>
-          Tag Cloud
-        </li>
-        <li>
-          <div class='tag-cloud'>
-            <span class='tag tag-0'>
-              <a href='http://agorava.org/news/tags/CDI/'>CDI</a>
-            </span>
-            <span class='tag tag-0'>
-              <a href='http://agorava.org/news/tags/Jetty/'>Jetty</a>
-            </span>
-            <span class='tag tag-0'>
-              <a href='http://agorava.org/news/tags/Maven/'>Maven</a>
-            </span>
-            <span class='tag tag-6'>
-              <a href='http://agorava.org/news/tags/Socializer/'>Socializer</a>
-            </span>
-            <span class='tag tag-0'>
-              <a href='http://agorava.org/news/tags/announce/'>announce</a>
-            </span>
-            <span class='tag tag-0'>
-              <a href='http://agorava.org/news/tags/roadmap/'>roadmap</a>
-            </span>
-          </div>
-        </li>
-      </ul>
-    </aside>
-  </div>
-</div>
-      <hr />
+    <div class="container">
+      <div class="row">
+        <div class="span9">
+          <article class="post">
+            <ul class="pager visible-desktop" style="float:right;">
+              <li>
+                <a href="/news/2012/06/22/Meet-Agorava-the-Social-Framework/">Previous</a>
+              </li>
+              <li>
+                <a href="/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/">Next</a>
+              </li>
+            </ul>
+            <h2>
+              <a href="/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/">
+                Starting a CDI webapp from Maven with Weld-Servlet and Jetty Plugin
+              </a>
+            </h2>
+            <div class="meta">
+              <strong>
+                Posted by
+                <span class="authors"> Antoine Sabot-Durand</span>
+                on
+                <span class="date">Jul 10, 2012</span>
+                |
+                 <a href="http://localhost:4242/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/#disqus_thread">Comments</a>
+              </strong>
+            </div>
+            <div class="content">
+              <p><img src="http://localhost:4242/images/weld.png" style="width:80px;" class="left" alt="" /></p>
+              <p>In Agorava framework we want to provide an easy way to launch our example applications. One of the easiest way is to provide a maven Goal that build the project and launch it with embedded Jetty servlet container. If you have read our <a href="/news/2012/06/22/Meet-Agorava-the-Social-Framework">previous post</a> you already know that right now Agorava has only a <span class="caps">CDI</span> implementation. So when we created <a href="http://socializer.agorava.cloudbees.net/home.jsf">Socializer demo app</a> we add to find a way to launch <span class="caps">CDI</span> container from Jetty Maven Plugin. This article is about how we did it.</p>
+              <h3>Launching <span class="caps">CDI</span> from Servlet Api</h3>
+              <p>The first problem to deal with is about launching <span class="caps">CDI</span> container from Servlet <span class="caps">API</span>. <span class="caps">CDI</span> is a Java EE 6 specification and thus comes in all Java EE container like JBoss, TomEE or Glassfish. However the specification doesn&#8217;t provide a standard way to launch <span class="caps">CDI</span> container outside Java EE. Each implementation brings its own solution (to be more precise OpenWebBeans and Weld bring a solution, Candi has no known way to be launch outside Resin). We decided to go with Weld because it&#8217;s the <span class="caps">CDI</span> RI and that it is the implementation on which Agorava was the more tested thru Glassfish and JBoss.</p>
+              <h3>Adding maven dependecies</h3>
+              <p>As we want to support Jetty but also full Java EE containers we added a profile in the pom.xml to keep the Java EE build clean. As this profile is supposed to build and run the project we call it <code>run</code>. We add the following dependencies in the pom.xml</p>
+              <pre class="prettify"><code class="prettify">&lt;profile&gt;&#x000A;  &lt;id&gt;run&lt;/id&gt;&#x000A;    &lt;dependencies&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;org.jboss.weld.servlet&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;weld-servlet&lt;/artifactId&gt;&#x000A;            &lt;version&gt;1.1.8.Final&lt;/version&gt;&#x000A;            &lt;scope&gt;runtime&lt;/scope&gt;&#x000A;        &lt;/dependency&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;com.sun.faces&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;jsf-api&lt;/artifactId&gt;&#x000A;            &lt;version&gt;2.1.3&lt;/version&gt;&#x000A;        &lt;/dependency&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;com.sun.faces&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;jsf-impl&lt;/artifactId&gt;&#x000A;            &lt;version&gt;2.1.3&lt;/version&gt;&#x000A;        &lt;/dependency&gt;&#x000A;    &lt;/dependencies&gt;&#x000A;&lt;/profile&gt;</code></pre>
+              <p>Jsf dependencies are added because Socializer uses <span class="caps">JSF</span> and Jetty doesn&#8217;t provide thrm. The Jboss Weld Servlet is the important dependency here since it will provide bootstrapping for <span class="caps">CDI</span> thru servlet <span class="caps">API</span>. It also will bring transitively all the needed dependencies for Weld core and <span class="caps">CDI</span> <span class="caps">API</span>.</p>
+              <h3>Adding Jetty Maven plugin</h3>
+              <p>Now we can add the plugin to our new profile</p>
+              <pre class="prettify"><code class="prettify">&lt;build&gt;&#x000A;    &lt;plugins&gt;&#x000A;       &lt;plugin&gt;&#x000A;          &lt;groupId&gt;org.mortbay.jetty&lt;/groupId&gt;&#x000A;          &lt;artifactId&gt;jetty-maven-plugin&lt;/artifactId&gt;&#x000A;          &lt;version&gt;8.1.3.v20120416&lt;/version&gt;&#x000A;       &lt;/plugin&gt;&#x000A;    &lt;/plugins&gt;&#x000A;&lt;/build&gt;</code></pre>
+              <p>This plugin allows to build a Maven project and launch Jetty directly from Maven with a simple <code>mvn jetty:run</code> command.</p>
+              <h3>Boostraping <span class="caps">CDI</span></h3>
+              <p>To bootstrap <span class="caps">CDI</span>, we have 2 steps to perform :</p>
+              <h4>Expose <span class="caps">CDI</span> bean manager thru <span class="caps">JNDI</span></h4>
+              <p>To do that we create a <code>jetty-env.xml</code> file in <span class="caps">WEB</span>-<span class="caps">INF</span> containing this</p>
+              <pre class="prettify"><code class="prettify">&lt;!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://www.eclipse.org/jetty/configure.dtd"&gt;&#x000A;&lt;Configure id="webAppCtx" class="org.eclipse.jetty.webapp.WebAppContext"&gt;&#x000A;    &lt;New id="BeanManager" class="org.eclipse.jetty.plus.jndi.Resource"&gt;&#x000A;        &lt;Arg&gt;&#x000A;            &lt;Ref id="webAppCtx"/&gt;&#x000A;        &lt;/Arg&gt;&#x000A;        &lt;Arg&gt;BeanManager&lt;/Arg&gt;&#x000A;        &lt;Arg&gt;&#x000A;            &lt;New class="javax.naming.Reference"&gt;&#x000A;                &lt;Arg&gt;javax.enterprise.inject.spi.BeanManager&lt;/Arg&gt;&#x000A;                &lt;Arg&gt;org.jboss.weld.resources.ManagerObjectFactory&lt;/Arg&gt;&#x000A;                &lt;Arg/&gt;&#x000A;            &lt;/New&gt;&#x000A;        &lt;/Arg&gt;&#x000A;    &lt;/New&gt;&#x000A;&lt;/Configure&gt;</code></pre>
+              <p>This file is a standard Jetty config file and is run by the container at boot time.</p>
+              <h4>Adding Web.xml configuration</h4>
+              <p>To achieve the bootstrapping we also need to add two entries to <code>web.xml</code> :</p>
+              <ul>
+              	<li>One to retrieve the BeanManager exposed in the file above and expose it to servlet <span class="caps">API</span></li>
+              	<li>One to launch the servlet listener that will boot <span class="caps">CDI</span> container</li>
+              </ul>
+              <p>As we don&#8217;t want to pollute existing web.xml which works perfectly for Java EE 6 containers, we add a web.xml overriding file to add our entries. This file is declared in Jetty plugin configuration like this</p>
+              <pre class="prettify"><code class="prettify">&lt;plugin&gt;&#x000A;    &lt;groupId&gt;org.mortbay.jetty&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;jetty-maven-plugin&lt;/artifactId&gt;&#x000A;    &lt;version&gt;8.1.3.v20120416&lt;/version&gt;&#x000A;    &lt;configuration&gt;&#x000A;        &lt;webApp&gt;&#x000A;            &lt;overrideDescriptor&gt;src/main/webapp/WEB-INF/web-add.xml&lt;/overrideDescriptor&gt;&#x000A;        &lt;/webApp&gt;&#x000A;    &lt;/configuration&gt;&#x000A;&lt;/plugin&gt;</code></pre>
+              <p>The content of web-add.xml file is as follow</p>
+              <pre class="prettify"><code class="prettify">&lt;web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&#x000A;         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"&gt;</code>&#x000A;&#x000A;<code class="prettify">    &lt;listener&gt;&#x000A;        &lt;listener-class&gt;org.jboss.weld.environment.servlet.Listener&lt;/listener-class&gt;&#x000A;    &lt;/listener&gt;</code>&#x000A;&#x000A;<code class="prettify">    &lt;resource-env-ref&gt;&#x000A;        &lt;resource-env-ref-name&gt;BeanManager&lt;/resource-env-ref-name&gt;&#x000A;        &lt;resource-env-ref-type&gt;&#x000A;            javax.enterprise.inject.spi.BeanManager&#x000A;        &lt;/resource-env-ref-type&gt;&#x000A;    &lt;/resource-env-ref&gt;&#x000A;&lt;/web-app&gt;</code></pre>
+              <p>It&#8217;s content will override web.xml one (i.e web.xml will be interpreted before web-add.xml).</p>
+              <h3>Last trick to allow injection in servlets</h3>
+              <p>Weld Servlet will try to decorate some Jetty internal class to add the possibility of using <code>@Inject</code> inside servlets. This class is a Jetty system class and therefore is not visible from the web application. We have to tell Jetty classloader to expose this class to the web app in order to have Weld Servlet decorating it.<br />
+              To allow this we create a <code>jetty-context.xml</code> file in <span class="caps">WEB</span>-<span class="caps">INF</span></p>
+              <pre class="prettify"><code class="prettify">&lt;!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd"&gt;&#x000A;&lt;Configure class="org.eclipse.jetty.webapp.WebAppContext"&gt;&#x000A;    &lt;Set name="serverClasses"&gt;&#x000A;        &lt;Array type="java.lang.String"&gt;&#x000A;            &lt;Item&gt;-org.eclipse.jetty.servlet.ServletContextHandler.Decorator&lt;/Item&gt;&#x000A;        &lt;/Array&gt;&#x000A;    &lt;/Set&gt;&#x000A;&lt;/Configure&gt;</code></pre>
+              <p>Then we add it to Jetty Maven plugin configuration like this</p>
+              <pre class="prettify"><code class="prettify">&lt;configuration&gt;&#x000A;    &lt;webApp&gt;&#x000A;        &lt;overrideDescriptor&gt;src/main/webapp/WEB-INF/web-add.xml&lt;/overrideDescriptor&gt;&#x000A;    &lt;/webApp&gt;&#x000A;    &lt;contextXml&gt;src/main/webapp/WEB-INF/jetty-context.xml&lt;/contextXml&gt;&#x000A;&lt;/configuration&gt;</code></pre>
+              <p>Then we&#8217;re done</p>
+              <h3>To sum up</h3>
+              <p>Here is the complete <code>run</code> Profile in our <code>pom.xml</code> file</p>
+              <pre class="prettify"><code class="prettify">&lt;profile&gt;&#x000A;    &lt;id&gt;run&lt;/id&gt;&#x000A;    &lt;dependencies&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;org.jboss.weld.servlet&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;weld-servlet&lt;/artifactId&gt;&#x000A;            &lt;version&gt;1.1.8.Final&lt;/version&gt;&#x000A;            &lt;scope&gt;runtime&lt;/scope&gt;&#x000A;        &lt;/dependency&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;com.sun.faces&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;jsf-api&lt;/artifactId&gt;&#x000A;            &lt;version&gt;2.1.3&lt;/version&gt;&#x000A;        &lt;/dependency&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;com.sun.faces&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;jsf-impl&lt;/artifactId&gt;&#x000A;            &lt;version&gt;2.1.3&lt;/version&gt;&#x000A;        &lt;/dependency&gt;&#x000A;    &lt;/dependencies&gt;&#x000A;    &lt;build&gt;&#x000A;        &lt;defaultGoal&gt;clean jetty:run&lt;/defaultGoal&gt;&#x000A;        &lt;plugins&gt;&#x000A;            &lt;plugin&gt;&#x000A;                &lt;groupId&gt;org.mortbay.jetty&lt;/groupId&gt;&#x000A;                &lt;artifactId&gt;jetty-maven-plugin&lt;/artifactId&gt;&#x000A;                &lt;version&gt;8.1.3.v20120416&lt;/version&gt;&#x000A;                &lt;configuration&gt;&#x000A;                    &lt;webApp&gt;&#x000A;                        &lt;overrideDescriptor&gt;src/main/webapp/WEB-INF/web-add.xml&lt;/overrideDescriptor&gt;&#x000A;                    &lt;/webApp&gt;&#x000A;                    &lt;contextXml&gt;src/main/webapp/WEB-INF/jetty-context.xml&lt;/contextXml&gt;&#x000A;                &lt;/configuration&gt;&#x000A;            &lt;/plugin&gt;&#x000A;        &lt;/plugins&gt;&#x000A;    &lt;/build&gt;&#x000A;&lt;/profile&gt;</code></pre>
+              <p>Don&#8217;t forget the 3 files above <code>jetty-env.xml</code> to define <span class="caps">JNDI</span>, <code>web-add.xml</code> to override web.xml with <span class="caps">CDI</span> servlet bootstrapping and <span class="caps">JNDI</span> and <code>jetty-context.xml</code> to expose the internal servlet implementation for Weld decorator.<br />
+              With this Maven profile, we only have to enter <code>mvn -Prun</code> to build our web application and have it launched in Jetty to test it. Hard to make it simpler.</p>
+              <h3>Check our code</h3>
+              <p>Feel free to look at <a href="http://github.com/agorava/agorava-socializer">Socializer code</a> and play with our <span class="caps">API</span>. Contribution are always welcome.</p>
+            </div>
+            <div class="footer">
+              <a href="/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/">Permalink</a>
+              |
+               <a href="http://localhost:4242/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/#disqus_thread">Comments</a>
+              |
+              <span class="tags">
+                <i class="icon-tags"></i>
+                Tags :
+                <a class="tag" href="/news/tags/CDI/">CDI</a>
+                <a class="tag" href="/news/tags/Jetty/">Jetty</a>
+                <a class="tag" href="/news/tags/Maven/">Maven</a>
+                <a class="tag" href="/news/tags/Socializer/">Socializer</a>
+              </span>
+            </div>
+            <div class="visible-desktop">
+              <ul class="pager">
+                <li class="previous">
+                  <a href="/news/2012/06/22/Meet-Agorava-the-Social-Framework/">Previous: Meet Agorava, The Social Framework</a>
+                </li>
+                <li class="next">
+                  <a href="/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/">Next: Agorava 0.5.2 released. What's new and what's on the roadmap ?</a>
+                </li>
+              </ul>
+            </div>
+            <div class="hidden-desktop">
+              <ul class="pager">
+                <li class="previous">
+                  <a href="/news/2012/06/22/Meet-Agorava-the-Social-Framework/">Previous</a>
+                </li>
+                <li class="next">
+                  <a href="/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/">Next</a>
+                </li>
+              </ul>
+            </div>
+            
+                        <script type="text/javascript">
+                        var disqus_shortname = 'agoravablog';
+                        (function () {
+                          var s = document.createElement('script'); s.async = true;
+                          s.src = "http://disqus.com/forums/agoravablog/count.js";
+                          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+                        }());
+                        </script>
+            <div class="comments">
+              
+                          <div id="disqus_thread"></div>
+                          <script type="text/javascript">
+                          var disqus_shortname = 'agoravablog';
+                          var disqus_url = "http://localhost:4242/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/";
+                          var disqus_developer = 1;
+                          var disqus_identifier = null;
+                          (function() {
+                            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+                            dsq.src = "http://agoravablog.disqus.com/embed.js";
+                            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+                          })();
+                          </script>
+                          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=agoravablog">comments powered by Disqus.</a></noscript>
+            </div>
+          </article>
+        </div>
+        <div class="span3">
+          <aside class="hidden-phone">
+            <ul class="nav nav-list well">
+              <li class="nav-header">
+                Tag Cloud
+              </li>
+              <li>
+                <div class="tag-cloud">
+                  <span class="tag tag-6">
+                    <a href="http://localhost:4242/news/tags/CDI/">CDI</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://localhost:4242/news/tags/Jetty/">Jetty</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://localhost:4242/news/tags/Maven/">Maven</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://localhost:4242/news/tags/OpenWebBeans/">OpenWebBeans</a>
+                  </span>
+                  <span class="tag tag-6">
+                    <a href="http://localhost:4242/news/tags/Socializer/">Socializer</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://localhost:4242/news/tags/Solder/">Solder</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://localhost:4242/news/tags/Weld/">Weld</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://localhost:4242/news/tags/announce/">announce</a>
+                  </span>
+                  <span class="tag tag-6">
+                    <a href="http://localhost:4242/news/tags/roadmap/">roadmap</a>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </aside>
+          <aside class="visible-phone">
+            <ul class="nav nav-list well">
+              <li class="nav-header">
+                Tag Cloud
+              </li>
+              <li>
+                <div class="tag-cloud">
+                  <span class="tag tag-6">
+                    <a href="http://localhost:4242/news/tags/CDI/">CDI</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://localhost:4242/news/tags/Jetty/">Jetty</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://localhost:4242/news/tags/Maven/">Maven</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://localhost:4242/news/tags/OpenWebBeans/">OpenWebBeans</a>
+                  </span>
+                  <span class="tag tag-6">
+                    <a href="http://localhost:4242/news/tags/Socializer/">Socializer</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://localhost:4242/news/tags/Solder/">Solder</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://localhost:4242/news/tags/Weld/">Weld</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://localhost:4242/news/tags/announce/">announce</a>
+                  </span>
+                  <span class="tag tag-6">
+                    <a href="http://localhost:4242/news/tags/roadmap/">roadmap</a>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+      <hr>
       <footer>
-        <p>&copy; Agorava 2012</p>
+        <p>&copy; Agorava 2013</p>
       </footer>
     </div>
     <script type="text/javascript">
     var _gaq = _gaq || [];
-    _gaq.push(['_setAccount','UA-31280631-1']);
+    _gaq.push(['_setAccount','']);
     _gaq.push(['_trackPageview']);
     (function() {
      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
