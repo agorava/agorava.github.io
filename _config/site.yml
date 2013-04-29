@@ -2,6 +2,7 @@ title: Agorava
 gem_version: 0.5.0
 google_analytics: UA-31280631-1
 disqus: agoravablog
+base_url: http://agorava.org/
 
 profiles:
   development:
