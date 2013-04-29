@@ -8,7 +8,7 @@ profiles:
   development:
     disqus_developer: true
   production:
-    base_url: http://agorava.org/
+    base_url: http://www.agorava.org/
     disqus_generate_id: true
     deploy:
       host: github_pages
