@@ -16,11 +16,12 @@
     %script{ :type=>'text/javascript', :src=>"#{site.base_url}/javascripts/bootstrap-collapse.js" }
     
   %body
-    %a.visible-desktop{ :href=>'https://github.com/agorava'}
-      %img.ribbon{ :src=>'https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png', :alt=>'Fork me on GitHub'} 
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
+          .github-banner
+            %a{:href=>'https://github.com/agorava'}
+              %img{:style=>'position: absolute; top: 0; right: 0; border: 0;z-index: 900;', :src=>'https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png', :alt=>'Fork me on GitHub'}
           %a.btn.btn-navbar{"data-toggle"=>"collapse", "data-target"=>".nav-collapse"}
             %span.icon-bar
             %span.icon-bar
