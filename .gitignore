@@ -6,6 +6,7 @@ _tmp
 _deploy
 *.swp
 .DS_Store
+.bundle
 
 # Intellij IDEA
 *.iml
