@@ -1,0 +1,62 @@
+---
+title: "Twitter, Facebook and LinkdedIn modules released in 0.5"
+authors: [asd]
+layout: post
+tags: [Twitter,Facebook,LinkedIn]
+---
+
+
+This week-end we released version 0.5 of Twitter, Facebook and LinkedIn Agorava modules. They are now in Maven central
+
+h3. End of a long SNAPSHOT
+
+These 3 modules were in SNAPSHOT mode for a long time. As people use them today in production and we are about to change (slightly) Agorava core
+API, we decided to release them to be sure that you won't have trouble when core will be updated.
+
+h3. How to grab them
+
+Right now they are only available in CDI implementation. You can get them with
+
+<pre>
+  <dependency>
+      <groupId>org.agorava</groupId>
+      <artifactId>agorava-twitter-cdi</artifactId>
+      <version>0.5.0</version>
+  </dependency>
+</pre>
+
+or
+
+<pre>
+  <dependency>
+      <groupId>org.agorava</groupId>
+      <artifactId>agorava-facebook-cdi</artifactId>
+      <version>0.5.0</version>
+  </dependency>
+</pre>
+
+or
+
+<pre>
+  <dependency>
+      <groupId>org.agorava</groupId>
+      <artifactId>agorava-linkedin-cdi</artifactId>
+      <version>0.5.0</version>
+  </dependency>
+</pre>
+
+don't forget to add Agorava core CDI to your project as well
+
+<pre>
+  <dependency>
+      <groupId>org.agorava</groupId>
+      <artifactId>agorava-core-impl-cdi</artifactId>
+      <version>0.5.2</version>
+  </dependency>
+</pre>
+
+h4. What's next?
+
+We'll finish some API stabilization on Agorava Core, publish compatible modules and then work hard to provide up to date modules on these
+major social network.
+

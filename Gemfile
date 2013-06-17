@@ -1,5 +1,0 @@
-source 'https://rubygems.org'
-gem 'awestruct', '~> 0.5.1'
-gem 'haml', '~> 4.0.3'
-gem 'RedCloth', '~> 4.2.9'
-gem 'rb-fsevent', '~> 0.9'
