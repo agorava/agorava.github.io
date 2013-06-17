@@ -62,15 +62,12 @@
           <article class="post">
             <ul class="pager visible-desktop" style="float:right;">
               <li>
-                <a href="/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/">Previous</a>
-              </li>
-              <li>
-                <a href="/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released/">Next</a>
+                <a href="/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/">Previous</a>
               </li>
             </ul>
             <h2>
-              <a href="/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/">
-                Agorava 0.5.2 released. What's new and what's on the roadmap ?
+              <a href="/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released/">
+                Twitter, Facebook and LinkdedIn modules released in 0.5
               </a>
             </h2>
             <div class="meta">
@@ -78,74 +75,53 @@
                 Posted by
                 <span class="authors"> Antoine Sabot-Durand</span>
                 on
-                <span class="date">Apr 23, 2013</span>
+                <span class="date">Jun 16, 2013</span>
                 |
-                 <a href="http://agorava.org/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/#disqus_thread" data-disqus-identifier="8dd5525338a67a6dba0536cb925a41741984b58d">Comments</a>
+                 <a href="http://agorava.org/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released/#disqus_thread" data-disqus-identifier="827ba22c97a931a5a7ffc270d69e160406a2c646">Comments</a>
               </strong>
             </div>
             <div class="content">
-              <p><img src="http://agorava.org/images/Compass-Vintage.png" style="width:96px;" class="left" alt="" /></p>
-              <p>Version 0.5.2 just hit Maven Central, what&#8217;s new in this release and what to expect in the coming months</p>
-              <h3>It&#8217;s been a long time</h3>
-              <p>We didn&#8217;t have much time lately to work on Agorava Core but that&#8217;s going to change in the coming month.<br />
-              On the module side, some initiative were started (among them stackoverflow, github, instagram&#8230;). We&#8217;ll post about them later.</p>
-              <h3>Release notes</h3>
-              <p>Since we didn&#8217;t gave an announcement for 0.5.0 relase, you&#8217;ll find bellow a compilation of both release notes</p>
-              Release Notes &#8211; Agorava &#8211; Version 0.5.1 and 0.5.2
-              <h4>        Bug</h4>
-              <ul>
-              <li>[<a href='https://issues.jboss.org/browse/AGOVA-25'><span class="caps">AGOVA</span>-25</a>] &#8211;         Weld 1.1.9 and beyond not supported</li>
-              <li>[<a href='https://issues.jboss.org/browse/AGOVA-14'><span class="caps">AGOVA</span>-14</a>] &#8211;         SimpleOAuthAppSettingsBuilder doesn&#39;t work when callback url is an <span class="caps">SSL</span> uri</li>
-              <li>[<a href='https://issues.jboss.org/browse/AGOVA-19'><span class="caps">AGOVA</span>-19</a>] &#8211;         Agora dependencies in dependency management uses dynamic project version</li>
-              </ul>
-              <h4>        Enhancement</h4>
-              <ul>
-              <li>[<a href='https://issues.jboss.org/browse/AGOVA-26'><span class="caps">AGOVA</span>-26</a>] &#8211;         Add OpenWebBeans tests</li>
-              <li>[<a href='https://issues.jboss.org/browse/AGOVA-15'><span class="caps">AGOVA</span>-15</a>] &#8211;         Complicated to use Agorava without session scope</li>
-              <li>[<a href='https://issues.jboss.org/browse/AGOVA-16'><span class="caps">AGOVA</span>-16</a>] &#8211;         Annotation @OAuthApplication make params mandatory</li>
-              <li>[<a href='https://issues.jboss.org/browse/AGOVA-17'><span class="caps">AGOVA</span>-17</a>] &#8211;         Making PropertyOAuthAppSettingsBuilder as default builder for OAuthApplication</li>
-              </ul>
-              <h4>        Task</h4>
-              <ul>
-              <li>[<a href='https://issues.jboss.org/browse/AGOVA-27'><span class="caps">AGOVA</span>-27</a>] &#8211;         Align Generics on solder last updates</li>
-              </ul>
-              <h3>What&#8217;s coming next in core ?</h3>
-              <p>We&#8217;re now actively working on <span class="caps">API</span> simplification and OpenWebBeans support in core. After that we&#8217;ll be working by integrating our own OAuth engine and provide a <span class="caps">JAX</span>-RS implementation of it. You can follow the roadmap on our <a href="http://issues.jboss.org/AGOVA">Jira instance</a></p>
-              <h3>What&#8217;s coming next in modules ?</h3>
-              <p>Our main modules (Twitter, Facebook, LinkedIn) are still in snapshot. We expect to release them during Q3 2013. Stay tuned and thanks for your patience</p>
+              <p>This week-end we released version 0.5 of Twitter, Facebook and LinkedIn Agorava modules. They are now in Maven central</p>
+              <h3>End of a long <span class="caps">SNAPSHOT</span></h3>
+              <p>These 3 modules were in <span class="caps">SNAPSHOT</span> mode for a long time. As people use them today in production and we are about to change (slightly) Agorava core<br />
+              <span class="caps">API</span>, we decided to release them to be sure that you won&#8217;t have trouble when core will be updated.</p>
+              <h3>How to grab them</h3>
+              <p>Right now they are only available in <span class="caps">CDI</span> implementation. You can get them with</p>
+              <pre>&#x000A;  &lt;dependency&gt;&#x000A;      &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;      &lt;artifactId&gt;agorava-twitter-cdi&lt;/artifactId&gt;&#x000A;      &lt;version&gt;0.5.0&lt;/version&gt;&#x000A;  &lt;/dependency&gt;</pre>
+              <p>or</p>
+              <pre>&#x000A;  &lt;dependency&gt;&#x000A;      &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;      &lt;artifactId&gt;agorava-facebook-cdi&lt;/artifactId&gt;&#x000A;      &lt;version&gt;0.5.0&lt;/version&gt;&#x000A;  &lt;/dependency&gt;</pre>
+              <p>or</p>
+              <pre>&#x000A;  &lt;dependency&gt;&#x000A;      &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;      &lt;artifactId&gt;agorava-linkedin-cdi&lt;/artifactId&gt;&#x000A;      &lt;version&gt;0.5.0&lt;/version&gt;&#x000A;  &lt;/dependency&gt;</pre>
+              <p>don&#8217;t forget to add Agorava core <span class="caps">CDI</span> to your project as well</p>
+              <pre>&#x000A;  &lt;dependency&gt;&#x000A;      &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;      &lt;artifactId&gt;agorava-core-impl-cdi&lt;/artifactId&gt;&#x000A;      &lt;version&gt;0.5.2&lt;/version&gt;&#x000A;  &lt;/dependency&gt;</pre>
+              <h4>What&#8217;s next?</h4>
+              <p>We&#8217;ll finish some <span class="caps">API</span> stabilization on Agorava Core, publish compatible modules and then work hard to provide up to date modules on these<br />
+              major social network.</p>
             </div>
             <div class="footer">
-              <a href="/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/">Permalink</a>
+              <a href="/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released/">Permalink</a>
               |
-               <a href="http://agorava.org/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/#disqus_thread" data-disqus-identifier="8dd5525338a67a6dba0536cb925a41741984b58d">Comments</a>
+               <a href="http://agorava.org/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released/#disqus_thread" data-disqus-identifier="827ba22c97a931a5a7ffc270d69e160406a2c646">Comments</a>
               |
               <span class="tags">
                 <i class="icon-tags"></i>
                 Tags :
-                <a class="tag" href="/news/tags/CDI/">CDI</a>
-                <a class="tag" href="/news/tags/OpenWebBeans/">OpenWebBeans</a>
-                <a class="tag" href="/news/tags/Weld/">Weld</a>
-                <a class="tag" href="/news/tags/Solder/">Solder</a>
-                <a class="tag" href="/news/tags/roadmap/">roadmap</a>
+                <a class="tag" href="/news/tags/Twitter/">Twitter</a>
+                <a class="tag" href="/news/tags/Facebook/">Facebook</a>
+                <a class="tag" href="/news/tags/LinkedIn/">LinkedIn</a>
               </span>
             </div>
             <div class="visible-desktop">
               <ul class="pager">
                 <li class="previous">
-                  <a href="/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/">Previous: Starting a CDI webapp from Maven with Weld-Servlet and Jetty Plugin</a>
-                </li>
-                <li class="next">
-                  <a href="/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released/">Next: Twitter, Facebook and LinkdedIn modules released in 0.5</a>
+                  <a href="/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/">Previous: Agorava 0.5.2 released. What's new and what's on the roadmap ?</a>
                 </li>
               </ul>
             </div>
             <div class="hidden-desktop">
               <ul class="pager">
                 <li class="previous">
-                  <a href="/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/">Previous</a>
-                </li>
-                <li class="next">
-                  <a href="/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released/">Next</a>
+                  <a href="/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/">Previous</a>
                 </li>
               </ul>
             </div>
@@ -163,9 +139,9 @@
                           <div id="disqus_thread"></div>
                           <script type="text/javascript">
                           var disqus_shortname = 'agoravablog';
-                          var disqus_url = "http://agorava.org/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/";
+                          var disqus_url = "http://agorava.org/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released/";
                           var disqus_developer = null;
-                          var disqus_identifier = "8dd5525338a67a6dba0536cb925a41741984b58d";
+                          var disqus_identifier = "827ba22c97a931a5a7ffc270d69e160406a2c646";
                           (function() {
                             var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
                             dsq.src = "http://agoravablog.disqus.com/embed.js";
