@@ -7,6 +7,7 @@ _deploy
 *.swp
 .DS_Store
 .bundle
+Gemfile.lock
 
 # Intellij IDEA
 *.iml
