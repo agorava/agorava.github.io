@@ -62,6 +62,66 @@
           <div class="posts">
             <article class="post">
               <h2>
+                <a href="/news/2013/07/13/Agorava-0-6-0-released/">
+                  Agorava Core 0.6.0 released
+                </a>
+              </h2>
+              <div class="meta">
+                <strong>
+                  Posted by
+                  <span class="authors"> Antoine Sabot-Durand</span>
+                  on
+                  <span class="date">Jul 13, 2013</span>
+                  |
+                   <a href="http://agorava.org/news/2013/07/13/Agorava-0-6-0-released/#disqus_thread" data-disqus-identifier="09a35a2cf58f5d1dc2249c6d99ad018dfff7dfab">Comments</a>
+                </strong>
+              </div>
+              <div class="content">
+                <p>Agorava core version 0.6.0 just hit Maven Central, even if the release notes are quite short, there are a lot of big improvement in this release.</p>
+                <h3>Release notes</h3>
+                <p>First things first, here are the release notes.</p>
+                <h4>        Bug</h4>
+                <ul>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-29'><span class="caps">AGOVA</span>-29</a>] &#8211;         Tests fail with OpenWebBeans</li>
+                </ul>
+                
+                <h4>        Enhancement</h4>
+                <ul>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-23'><span class="caps">AGOVA</span>-23</a>] &#8211;         Get Rid of JBoss Logging</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-30'><span class="caps">AGOVA</span>-30</a>] &#8211;         Agorava OAuth 2.0 support doesn&#39;t follow rfc6749 (was Agorava doesn&#39;t support Empire Avenue)</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-31'><span class="caps">AGOVA</span>-31</a>] &#8211;         Removing Generics to ease control of the framework</li>
+                </ul>
+                <p>Quite terse isn&#8217;t it? Let&#8217;s focus on main points</p>
+                <h3>Stop using JBoss Solder Generics: a long story</h3>
+                <p>To ease creation of new modules and end user&#8217;s application configuration, Agorava integrated from the beginning a solution to automatically create some generics beans. This solution was based on JBoss <a href="http://docs.jboss.org/seam/3/3.1.0.Final/reference/en-US/html/solder-genericbeans.html">Solder Generic Beans</a> extension. As you may know, Solder development was discontinued to be integrated in <a href="http://deltaspike.apache.org">Apache Deltaspike</a>. I tried 3 times to have this Solder functionality integrated to Deltaspike, but hadn&#8217;t enough time and energy to convince Deltaspike tech leader that it could benefit to other <span class="caps">CDI</span> framework development projects.<br />
+                The problem was that Agorava was using Generics and that it was no more supported. First decision was to get this code from Solder and put it in an Agorava module. So we created <a href="https://github.com/agorava/agorava-utils">Agorava-Utils</a> (thanks to Ove Ranheim). In Agorava utils we put our own version of Solder Generics,but there were still issues with this solution, the main one being that Generics in Solder only worked with Weld.<br />
+                So for his release, we decided to drop Generics and write our own extension system to automatically generate certain beans for each social media. Consequences of this redesign are a lighter code base to main and more important OpenWebBeans compatibility.</p>
+                <h3>OpenWebBeans support</h3>
+                <p>We added profile to test our code code against <a href="http://openwebbeans.apache.org">Apache OpenWebBeans</a> 1.1.7+ (version used in <a href="http://tomee.apache.org">Apache TomEE</a> 1.5.1) and made sure that Socializer:https://github.com/agorava/agorava-socializer (our demo application) perfomed well under TomEE.<br />
+                Off course Agorava still supports <a href="http://www.seamframework.org/Weld">JBoss Weld</a> 1.1.5+ (version present in <a href="http://www.jboss.org/jbossas">JBoss AS 7.1.1</a>).<br />
+                So now Agorava works on the 2 main <span class="caps">CDI</span> implementations.</p>
+                <h3>What&#8217;s next ?</h3>
+                <p>Version 0.7.0 has started, we&#8217;re going to integrate our own OAuth engine to prepare migration to OAuth client framework and add support to Apache Camel to provide better integration solution (especially for Social Media providing Streaming <span class="caps">API</span>).<br />
+                In the meantime go for :</p>
+                <pre>&#x000A;  &lt;dependency&gt;&#x000A;      &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;      &lt;artifactId&gt;agorava-core-impl-cdi&lt;/artifactId&gt;&#x000A;      &lt;version&gt;0.6.0&lt;/version&gt;&#x000A;  &lt;/dependency&gt;</pre>
+                <p>and give us your feedback</p>
+              </div>
+              <div class="footer">
+                <a href="/news/2013/07/13/Agorava-0-6-0-released/">Permalink</a>
+                |
+                 <a href="http://agorava.org/news/2013/07/13/Agorava-0-6-0-released/#disqus_thread" data-disqus-identifier="09a35a2cf58f5d1dc2249c6d99ad018dfff7dfab">Comments</a>
+                |
+                <span class="tags">
+                  <i class="icon-tags"></i>
+                  Tags :
+                  <a class="tag" href="/news/tags/CDI/">CDI</a>
+                  <a class="tag" href="/news/tags/OpenWebBeans/">OpenWebBeans</a>
+                  <a class="tag" href="/news/tags/OAuth/">OAuth</a>
+                </span>
+              </div>
+            </article>
+            <article class="post">
+              <h2>
                 <a href="/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/">
                   Agorava 0.5.2 released. What's new and what's on the roadmap ?
                 </a>
@@ -83,7 +143,7 @@
                 <p>We didn&#8217;t have much time lately to work on Agorava Core but that&#8217;s going to change in the coming month.<br />
                 On the module side, some initiative were started (among them stackoverflow, github, instagram&#8230;). We&#8217;ll post about them later.</p>
                 <h3>Release notes</h3>
-                <p>Since we didn&#8217;t gave an announcement for 0.5.0 relase, you&#8217;ll find bellow a compilation of both release notes</p>
+                <p>Since we didn&#8217;t gave an announcement for 0.5.X releases, you&#8217;ll find bellow a compilation of both release notes</p>
                 Release Notes &#8211; Agorava &#8211; Version 0.5.1 and 0.5.2
                 <h4>        Bug</h4>
                 <ul>
@@ -271,9 +331,12 @@
                     <a href="http://agorava.org/news/tags/Maven/">Maven</a>
                   </span>
                   <span class="tag tag-0">
+                    <a href="http://agorava.org/news/tags/OAuth/">OAuth</a>
+                  </span>
+                  <span class="tag tag-3">
                     <a href="http://agorava.org/news/tags/OpenWebBeans/">OpenWebBeans</a>
                   </span>
-                  <span class="tag tag-6">
+                  <span class="tag tag-3">
                     <a href="http://agorava.org/news/tags/Socializer/">Socializer</a>
                   </span>
                   <span class="tag tag-0">
@@ -288,7 +351,7 @@
                   <span class="tag tag-0">
                     <a href="http://agorava.org/news/tags/announce/">announce</a>
                   </span>
-                  <span class="tag tag-6">
+                  <span class="tag tag-3">
                     <a href="http://agorava.org/news/tags/roadmap/">roadmap</a>
                   </span>
                 </div>
@@ -323,9 +386,12 @@
                     <a href="http://agorava.org/news/tags/Maven/">Maven</a>
                   </span>
                   <span class="tag tag-0">
+                    <a href="http://agorava.org/news/tags/OAuth/">OAuth</a>
+                  </span>
+                  <span class="tag tag-3">
                     <a href="http://agorava.org/news/tags/OpenWebBeans/">OpenWebBeans</a>
                   </span>
-                  <span class="tag tag-6">
+                  <span class="tag tag-3">
                     <a href="http://agorava.org/news/tags/Socializer/">Socializer</a>
                   </span>
                   <span class="tag tag-0">
@@ -340,7 +406,7 @@
                   <span class="tag tag-0">
                     <a href="http://agorava.org/news/tags/announce/">announce</a>
                   </span>
-                  <span class="tag tag-6">
+                  <span class="tag tag-3">
                     <a href="http://agorava.org/news/tags/roadmap/">roadmap</a>
                   </span>
                 </div>

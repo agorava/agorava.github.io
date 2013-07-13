@@ -2,13 +2,70 @@
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
   <id>http://agorava.org/</id>
   <title>Agorava</title>
-  <updated>2013-06-17T11:33:44+02:00</updated>
+  <updated>2013-07-13T16:45:35+02:00</updated>
   <link href="http://agorava.org/news.atom" rel="self" type="application/atom+xml" />
   <link href="http://agorava.org/" rel="alternate" type="text/html" />
   <entry>
+    <id>http://agorava.org/news/2013/07/13/Agorava-0-6-0-released.html</id>
+    <title>Agorava Core 0.6.0 released</title>
+    <updated>2013-07-13T16:45:35+02:00</updated>
+    <published>2013-07-13T00:00:00+00:00</published>
+    <link href="http://agorava.org/news/2013/07/13/Agorava-0-6-0-released.html" rel="alternate" type="text/html" />
+    <category term="CDI"></category>
+    <category term="OpenWebBeans"></category>
+    <category term="OAuth"></category>
+    <summary>
+      Agorava core version 0.6.0 just hit Maven Central, even if the release notes are quite short, there are a lot of big improvement in this release.
+      Release notes
+      First things first, here are the release notes.
+              Bug
+      
+      [AGOVA-29] &#8211;         Tests fail with OpenWebBeans
+      
+      
+              Enhancement
+      
+      [AGOVA-23] &#8211;         Get Rid of JBoss Logging
+      [AGOVA-30] &#8211;         Agorava OAuth 2.0 support doesn&#39;t follow rfc6749 (was Agorava doesn&#39;t support Empire Avenue)
+      [AGOVA-31] &#8211;...
+    </summary>
+    <content type="html">
+      &lt;p&gt;Agorava core version 0.6.0 just hit Maven Central, even if the release notes are quite short, there are a lot of big improvement in this release.&lt;/p&gt;
+      &lt;h3&gt;Release notes&lt;/h3&gt;
+      &lt;p&gt;First things first, here are the release notes.&lt;/p&gt;
+      &lt;h4&gt;        Bug&lt;/h4&gt;
+      &lt;ul&gt;
+      &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-29&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-29&lt;/a&gt;] –         Tests fail with OpenWebBeans&lt;/li&gt;
+      &lt;/ul&gt;&lt;h4&gt;        Enhancement&lt;/h4&gt;
+      &lt;ul&gt;
+      &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-23&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-23&lt;/a&gt;] –         Get Rid of JBoss Logging&lt;/li&gt;
+      &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-30&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-30&lt;/a&gt;] –         Agorava OAuth 2.0 support doesn't follow rfc6749 (was Agorava doesn't support Empire Avenue)&lt;/li&gt;
+      &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-31&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-31&lt;/a&gt;] –         Removing Generics to ease control of the framework&lt;/li&gt;
+      &lt;/ul&gt;&lt;p&gt;Quite terse isn’t it? Let’s focus on main points&lt;/p&gt;
+      &lt;h3&gt;Stop using JBoss Solder Generics: a long story&lt;/h3&gt;
+      &lt;p&gt;To ease creation of new modules and end user’s application configuration, Agorava integrated from the beginning a solution to automatically create some generics beans. This solution was based on JBoss &lt;a href=&quot;http://docs.jboss.org/seam/3/3.1.0.Final/reference/en-US/html/solder-genericbeans.html&quot;&gt;Solder Generic Beans&lt;/a&gt; extension. As you may know, Solder development was discontinued to be integrated in &lt;a href=&quot;http://deltaspike.apache.org&quot;&gt;Apache Deltaspike&lt;/a&gt;. I tried 3 times to have this Solder functionality integrated to Deltaspike, but hadn’t enough time and energy to convince Deltaspike tech leader that it could benefit to other &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; framework development projects.&lt;br&gt;
+      The problem was that Agorava was using Generics and that it was no more supported. First decision was to get this code from Solder and put it in an Agorava module. So we created &lt;a href=&quot;https://github.com/agorava/agorava-utils&quot;&gt;Agorava-Utils&lt;/a&gt; (thanks to Ove Ranheim). In Agorava utils we put our own version of Solder Generics,but there were still issues with this solution, the main one being that Generics in Solder only worked with Weld.&lt;br&gt;
+      So for his release, we decided to drop Generics and write our own extension system to automatically generate certain beans for each social media. Consequences of this redesign are a lighter code base to main and more important OpenWebBeans compatibility.&lt;/p&gt;
+      &lt;h3&gt;OpenWebBeans support&lt;/h3&gt;
+      &lt;p&gt;We added profile to test our code code against &lt;a href=&quot;http://openwebbeans.apache.org&quot;&gt;Apache OpenWebBeans&lt;/a&gt; 1.1.7+ (version used in &lt;a href=&quot;http://tomee.apache.org&quot;&gt;Apache TomEE&lt;/a&gt; 1.5.1) and made sure that Socializer:https://github.com/agorava/agorava-socializer (our demo application) perfomed well under TomEE.&lt;br&gt;
+      Off course Agorava still supports &lt;a href=&quot;http://www.seamframework.org/Weld&quot;&gt;JBoss Weld&lt;/a&gt; 1.1.5+ (version present in &lt;a href=&quot;http://www.jboss.org/jbossas&quot;&gt;JBoss AS 7.1.1&lt;/a&gt;).&lt;br&gt;
+      So now Agorava works on the 2 main &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; implementations.&lt;/p&gt;
+      &lt;h3&gt;What’s next ?&lt;/h3&gt;
+      &lt;p&gt;Version 0.7.0 has started, we’re going to integrate our own OAuth engine to prepare migration to OAuth client framework and add support to Apache Camel to provide better integration solution (especially for Social Media providing Streaming &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;).&lt;br&gt;
+      In the meantime go for :&lt;/p&gt;
+      &lt;pre&gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.agorava&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;agorava-core-impl-cdi&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;0.6.0&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;&lt;/pre&gt;
+      &lt;p&gt;and give us your feedback&lt;/p&gt;
+    </content>
+  </entry>
+  <entry>
     <id>http://agorava.org/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released.html</id>
     <title>Twitter, Facebook and LinkdedIn modules released in 0.5</title>
-    <updated>2013-06-17T11:33:44+02:00</updated>
+    <updated>2013-06-17T11:39:49+02:00</updated>
     <published>2013-06-16T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released.html" rel="alternate" type="text/html" />
     <category term="Twitter"></category>
@@ -69,7 +126,7 @@
   <entry>
     <id>http://agorava.org/news/2013/04/23/Agorava-0-5-2-release-and-roadmap.html</id>
     <title>Agorava 0.5.2 released. What's new and what's on the roadmap ?</title>
-    <updated>2013-04-29T14:06:41+02:00</updated>
+    <updated>2013-07-13T12:30:27+02:00</updated>
     <published>2013-04-23T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2013/04/23/Agorava-0-5-2-release-and-roadmap.html" rel="alternate" type="text/html" />
     <category term="CDI"></category>
@@ -84,7 +141,7 @@
       We didn&#8217;t have much time lately to work on Agorava Core but that&#8217;s going to change in the coming month.
       On the module side, some initiative were started (among them stackoverflow, github, instagram&#8230;). We&#8217;ll post about them later.
       Release notes
-      Since we didn&#8217;t gave an announcement for 0.5.0 relase, you&#8217;ll find bellow a compilation of both release notes
+      Since we didn&#8217;t gave an announcement for 0.5.X releases, you&#8217;ll find bellow a compilation of both release notes
       Release Notes &#8211; Agorava &#8211; Version 0.5.1 and 0.5.2
               Bug
       
@@ -97,7 +154,7 @@
       &lt;p&gt;We didn’t have much time lately to work on Agorava Core but that’s going to change in the coming month.&lt;br&gt;
       On the module side, some initiative were started (among them stackoverflow, github, instagram…). We’ll post about them later.&lt;/p&gt;
       &lt;h3&gt;Release notes&lt;/h3&gt;
-      &lt;p&gt;Since we didn’t gave an announcement for 0.5.0 relase, you’ll find bellow a compilation of both release notes&lt;/p&gt;
+      &lt;p&gt;Since we didn’t gave an announcement for 0.5.X releases, you’ll find bellow a compilation of both release notes&lt;/p&gt;
       Release Notes – Agorava – Version 0.5.1 and 0.5.2
       &lt;h4&gt;        Bug&lt;/h4&gt;
       &lt;ul&gt;
@@ -122,7 +179,7 @@
   <entry>
     <id>http://agorava.org/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin.html</id>
     <title>Starting a CDI webapp from Maven with Weld-Servlet and Jetty Plugin</title>
-    <updated>2013-04-29T14:06:41+02:00</updated>
+    <updated>2013-06-17T11:39:49+02:00</updated>
     <published>2012-07-10T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin.html" rel="alternate" type="text/html" />
     <category term="CDI"></category>
@@ -299,7 +356,7 @@
   <entry>
     <id>http://agorava.org/news/2012/06/22/Meet-Agorava-the-Social-Framework.html</id>
     <title>Meet Agorava, The Social Framework</title>
-    <updated>2013-04-29T14:06:41+02:00</updated>
+    <updated>2013-06-17T11:39:49+02:00</updated>
     <published>2012-06-22T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2012/06/22/Meet-Agorava-the-Social-Framework.html" rel="alternate" type="text/html" />
     <category term="announce"></category>
