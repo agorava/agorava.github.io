@@ -18,7 +18,7 @@ On the module side, some initiative were started (among them stackoverflow, gith
 
 h3. Release notes
 
-Since we didn't gave an announcement for 0.5.0 relase, you'll find bellow a compilation of both release notes
+Since we didn't gave an announcement for 0.5.X releases, you'll find bellow a compilation of both release notes
 
         Release Notes - Agorava - Version 0.5.1 and 0.5.2
 

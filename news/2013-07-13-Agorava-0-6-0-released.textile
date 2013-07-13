@@ -1,0 +1,60 @@
+---
+title: "Agorava Core 0.6.0 released"
+authors: [asd]
+layout: post
+tags: [CDI,OpenWebBeans,OAuth]
+---
+
+Agorava core version 0.6.0 just hit Maven Central, even if the release notes are quite short, there are a lot of big improvement in this release.
+
+
+h3. Release notes
+
+First things first, here are the release notes.
+  
+<h4>        Bug
+</h4>
+<ul>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-29'>AGOVA-29</a>] -         Tests fail with OpenWebBeans
+</li>
+</ul>
+                
+<h4>        Enhancement
+</h4>
+<ul>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-23'>AGOVA-23</a>] -         Get Rid of JBoss Logging
+</li>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-30'>AGOVA-30</a>] -         Agorava OAuth 2.0 support doesn&#39;t follow rfc6749 (was Agorava doesn&#39;t support Empire Avenue)
+</li>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-31'>AGOVA-31</a>] -         Removing Generics to ease control of the framework
+</li>
+</ul>
+
+Quite terse isn't it? Let's focus on main points
+
+h3. Stop using JBoss Solder Generics: a long story
+
+To ease creation of new modules and end user's application configuration, Agorava integrated from the beginning a solution to automatically create some generics beans. This solution was based on JBoss "Solder Generic Beans":http://docs.jboss.org/seam/3/3.1.0.Final/reference/en-US/html/solder-genericbeans.html extension. As you may know, Solder development was discontinued to be integrated in "Apache Deltaspike":http://deltaspike.apache.org. I tried 3 times to have this Solder functionality integrated to Deltaspike, but hadn't enough time and energy to convince Deltaspike tech leader that it could benefit to other CDI framework development projects.
+The problem was that Agorava was using Generics and that it was no more supported. First decision was to get this code from Solder and put it in an Agorava module. So we created "Agorava-Utils":https://github.com/agorava/agorava-utils (thanks to Ove Ranheim). In Agorava utils we put our own version of Solder Generics,but there were still issues with this solution, the main one being that Generics in Solder only worked with Weld.
+So for his release, we decided to drop Generics and write our own extension system to automatically generate certain beans for each social media. Consequences of this redesign are a lighter code base to main and more important OpenWebBeans compatibility.
+
+h3. OpenWebBeans support
+
+We added profile to test our code code against "Apache OpenWebBeans":http://openwebbeans.apache.org 1.1.7+ (version used in "Apache TomEE":http://tomee.apache.org 1.5.1) and made sure that Socializer:https://github.com/agorava/agorava-socializer (our demo application) perfomed well under TomEE.
+Off course Agorava still supports "JBoss Weld":http://www.seamframework.org/Weld 1.1.5+ (version present in "JBoss AS 7.1.1":http://www.jboss.org/jbossas).
+So now Agorava works on the 2 main CDI implementations.
+
+h3. What's next ?
+
+Version 0.7.0 has started, we're going to integrate our own OAuth engine to prepare migration to OAuth client framework and add support to Apache Camel to provide better integration solution (especially for Social Media providing Streaming API).
+In the meantime go for : 
+
+<pre>
+  <dependency>
+      <groupId>org.agorava</groupId>
+      <artifactId>agorava-core-impl-cdi</artifactId>
+      <version>0.6.0</version>
+  </dependency>
+</pre>
+
+and give us your feedback
