@@ -1,0 +1,268 @@
+---
+title: "Getting Started"
+authors: [asd]
+layout: doc
+---
+
+== Getting Started with Agorava
+
+=== Foreword
+
+_Agorava's roadmap contains Java SE, JSR 330 and CDI implementations. Right now CDI implementation is the only one developped, so this "getting started" document is only focused on CDI. Other implementations will be released after Agorava 1.0.0. Stay tuned or don't hesitate to contribute to these implementations._
+
+=== Introduction
+Agorava Provides CDI Beans and extensions to interact with major social network. It provides these services and eases mixing them:
+
+- A generic portable REST client API
+- A generic API to deal with OAuth 1.0a and 2.0 services
+- A generic API to work with JSON serialization and de-serialization
+- A generic identification API to retrieve basic user information from a Social Service
+- Specific API for Twitter, Facebook and LinkedIn
+- A multi services manager API allowing to deal with multiple OAuth applications and sessions in the same application
+- An easy way to extend it by creating a new module for a new services
+
+Agorava is independent of CDI implementation and fully portable between Java EE 6 and Servlet environments enhanced with CDI. It can be also used with CDI in JSE (desktop application). It has been fully tested with CDI RI implementation (JBoss Weld) and Apache OpenWebBeans. Caucho Candi was not fully tested yet but will be int the coming releases.
+
+
+=== Getting Started
+
+Agorava is available in Maven Central repository. We don't provide official binaries you can download. Let us know if you need them
+
+To use Agorava you’ll have to add Agorava core libraries in your pom :
+
+-----
+<dependency>
+    <groupId>org.agorava</groupId>
+    <artifactId>agorava-core-impl-cdi</artifactId>
+    <version>0.6.0</version>
+    <scope>compile</scope>
+</dependency>
+-----
+
+You also have to add specific dependencies on the services you need in your code
+
+-----
+<dependency>
+    <groupId>org.agorava</groupId>
+    <artifactId>agorava-twitter-cdi</artifactId>
+    <version>0.6.0</version>
+    <scope>compile</scope>
+</dependency>
+<dependency>
+    <groupId>org.agorava</groupId>
+    <artifactId>agorava-facebook-cdi</artifactId>
+    <version>0.6.0</version>
+    <scope>compile</scope>
+</dependency>
+<dependency>
+    <groupId>org.agorava</groupId>
+    <artifactId>agorava-linkedin-cdi</artifactId>
+    <version>0.6.0</version>
+    <scope>compile</scope>
+</dependency>
+-----
+
+As you'll be using CDI implementation you'll also have to have a CDI compliant environment (Java EE 6 server or bootstrap CDI like Weld-SE or Deltaspike bootstrap)
+
+=== Get Agorava running in five minutes
+
+The https://github.com/agorava/agorava-socializer[Socializer] demo web app is quite simple and give a good idea of possibilities of Agorava Framework. You should give it a try.
+Main steps to use Agorava  are :
+
+- Declare your OAuth application on the Social Media web site you want to use
+- Produce an OAuthAppSettings with a CDI producer with the OAuth app keys
+- Produce a scoped OAuthSession to contain user specific key
+- Inject the OAuthService for the given Social Media
+- Request the Authorization URL for the service and get a request token
+- Store the verifier in OAuthService bean and init access token
+- Use the service
+
+Should you need to fully understand each step, the complete OAuth lifecycle can be found on https://dev.twitter.com/docs/auth/oauth[Twitter developer site] or https://developer.linkedin.com/documents/authentication[LinkedIn developer site].
+
+For a deeper comprehension you can check RFC for http://tools.ietf.org/html/rfc5849[OAuth 1.0a] and http://tools.ietf.org/html/rfc6749[OAuth 2.0]
+
+Points above are detailed below
+
+==== Declaring an OAuth application
+
+To consume an OAuth service you need to declare an application on the service platform (i.e. for Twitter you can do, this on https://dev.twitter.com/apps/new). After this declaration you'll get at least 2 keys to consume your OAuth service :
+
+- an OAuth API public key
+- an OAuth API private/secret key
+
+If you don’t know what this is about, please go check the OAuth concepts on your service documentation.
+
+==== Producing an OAuthAppSettings to bootstrap service
+
+The OAuthAppSettings are the entry point to configure a Social Media. It indicates to Agorava Framework that the srvice is activated and that you you can use its service beans. Usually you create this OAuthAppSettings thru a CDI producer method and by using OAuthAppSettings builder like this, like this :
+
+===== Straight Configuration
+
+Using the SimpleOAuthAppSettingsBuilder you can produce your setting like that :
+
+-----
+@ApplicationScoped
+@Produces
+@Twitter
+public OAuthAppSettings produceSetting() {
+    OAuthAppSettingsBuilder builder = new SimpleOAuthAppSettingsBuilder();
+    return builder.apiKey("< application key >").apiSecret("< application secret >").build();
+}
+-----
+
+
+===== Reading configuration from a Resource bundle
+
+You can ask Agorava to use another builder to read OAuth application settings. The Builder framework also provides a PropertyOAuthAppSettingsBuilder to do it. You'll need to add an "agorava.properties" file in your classpath with the following content :
+
+-----
+twitter.apiKey=<your key>
+twitter.apiSecret=<your secret key>
+twitter.callback=/twittercallback.jsf
+
+facebook.apiKey=<your key>
+facebook.apiSecret=<your secret key>
+facebook.scope=<needed scope>
+
+linkedin.apiKey=<your key>
+linkedin.apiSecret=<your secret key>
+
+callback=/globalcallback.jsf
+-----
+
+Now you can produce Twitter OAuthAppSettings like this
+
+-----
+@ApplicationScoped
+@Produces
+@Twitter
+public OAuthAppSettings produceSetting() {
+    PropertyOAuthAppSettingsBuilder builder = new PropertyOAuthAppSettingsBuilder();
+    return builder.prefix("twitter").build();  //use prefix to find the right key in agorava.properties file
+}
+-----
+
+
+==== Produce a scoped OAuthSession
+
+OAuthSession contains all user information regarding an OAuth Access (each user get a specific access token to access a specific OAuth application). To allow development of all kind of application, OAuthSessionImpl bean has no CDI scope (i.e. has the @Dependent scope). You'll probably want to be sure that when a session is initialized you keep it for your application's lifetime or at least until you decide to dispose of it.
+That's the reason why you need to provide a producer for the current OAuthSession. You'll have to declare your bean with the @Current qualifier to distinguish it from the OAuthSession bean without Qualifier (i.e. with the @Default qualifier).
+If your application needs only one session by social service for each user you can do something like that :
+
+-----
+@SessionScoped
+@Produces
+@Twitter
+@Current
+public OAuthSession produceOauthSession(@Twitter @Default OAuthSession session) {
+    return session;
+}
+-----
+
+Be careful to avoid instantiating the OAuthSession yourself as your OAuthSession needs to have other beans injected in it. In the example above the @Default qualifier in the parameter inject is important since you produce an @Twitter @Current and without it you would lead to circular reference.
+
+Should you need to manage multiple session by user (like in Socializer), Agorava provides a MultiSessionManager that help you maintaining a OAuthSession collection for each users.
+
+
+==== Inject the Oauth Services in your code
+
+You can now inject the services hub and specific apis
+
+-----
+@Named
+@SessionScoped
+public class mySessionBean implements Serializable {
+...
+    @Inject
+    @Twitter
+    OAuthService service;
+
+    @Inject
+    TwitterTimelineService tl;
+
+    @Inject
+    TwitterUserService userService;
+
+    @Named
+    public OAuthService getMyService()
+    {
+        return service;
+    }
+...
+}
+
+-----
+
+
+==== Request the OAuth authorization URL
+
+You can now ask for the authorization URL for your service
+
+-----
+String authURL = service.getAuthorizationUrl();
+-----
+
+Calling this URL will bring the user on the service connection page and right delegation for the application. If the user gives right to the application to use the service on her behalf the service will send the browser back a special code (verifier) that you have to inject in the OAuthService to initiate the connexion.
+
+==== Set the verifier and initiate connexion
+
+As the verifier comes back to the application after an action of the final user, you have to set up a servlet or a JSF page (which url is the callback url you configured when you set up the service) to catch it and add it to the current session. Here is an example with JSF using mySessionBean declared in the previous example :
+
+-----
+<f:metadata>
+  <f:viewParam name="#{myService.verifierParamName} "
+   value="#{myService.verifier} "
+   required="true" requiredMessage="Error with Twitter. Retry later"/>
+  <f:event type="preRenderView" listener="#{myService.initAccessToken()} "/>
+</f:metadata>
+-----
+The service is now connected : you have an access token. Agorava also provide an automatic way to get your user profile thru the OAuthSession :
+
+-----
+UserProfile user = session.getUserProfile();
+String fullName = user.getFullName();
+-----
+
+
+==== Send request to the service
+
+you can now use the service on behalf of the user who gave right to your OAuth application
+-----
+public class myTweetBean implements Serializable {
+
+    @Inject
+    TwitterTimelineService tl;
+
+    public Tweet sendTweet(String msg)
+    {
+      return tl.updateStatus(msg);
+    }
+}
+-----
+
+
+=== To go further
+
+==== Working with Multi Service Manager
+
+Agorava  provides a MultiServicesManager bean that can help you to manage multiple services and session for one user. Without this bean you’ll be able to have multiple services but only one session for each service.
+The https://github.com/agorava/agorava-socializer[Socializer] web app example application is a good starting point to learn how to use MultiServicesManager bean
+
+==== Provided modules
+
+Right now Agorava  comes with 3 basic social media modules:
+
+- https://github.com/agorava/agorava-twitter[Twitter]
+- https://github.com/agorava/agorava-facebook[Facebook]
+- https://github.com/agorava/agorava-socializer[LinkedIn]
+
+Other non officials modules are being developed:
+
+- https://github.com/antoinesd/agorava-github[Github]
+- https://github.com/Riduidel/agorava-stackoverflow[StackOverflow]
+- https://github.com/djegauth/agorava-instagram[Instagram]
+- https://github.com/jugchennai/agorava-empireavenue[Empire Avenue]
+
+==== Extending Agorava
+
+Agorava is thought to be extended with new Social Media modules. Right now we decided to wait before creating new modules. Core API are about to change with integration of JAX-RS 2.0 client framework so we will focus on these module when version 1.0.0 will be released.
