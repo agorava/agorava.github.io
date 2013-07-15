@@ -8,6 +8,48 @@ layout: base
       %h1 Agorava
       %p The Social Framework
 .row
+  .span4
+    %h2 Repos & Status
+    %ul.well.nav.nav-list
+      %li.nav-header Build Status & Repositories
+      %li
+        %p
+          %a{ :href=>"https://agorava.ci.cloudbees.com/job/Agorava-parent-CI/"}
+            %img{ :src=>"https://agorava.ci.cloudbees.com/buildStatus/icon?job=Agorava-parent-CI"}
+          %a{ :href=>"https://github.com/agorava/agorava-parent"} agorava-parent
+      %li
+        %p
+          %a{ :href=>"https://agorava.ci.cloudbees.com/job/Agorava-core-CI/"}
+            %img{ :src=>"https://agorava.ci.cloudbees.com/buildStatus/icon?job=Agorava-core-CI"}
+          %a{ :href=>"https://github.com/agorava/agorava-core"} agorava-core
+      %li
+        %p
+          %a{ :href=>"https://agorava.ci.cloudbees.com/job/Agorava-twitter-CI/"}
+            %img{ :src=>"https://agorava.ci.cloudbees.com/buildStatus/icon?job=Agorava-twitter-CI"}
+          %a{ :href=>"https://github.com/agorava/agorava-twitter"} agorava-twitter
+      %li
+        %p
+          %a{ :href=>"https://agorava.ci.cloudbees.com/job/Agorava-facebook-CI/"}
+            %img{ :src=>"https://agorava.ci.cloudbees.com/buildStatus/icon?job=Agorava-facebook-CI"}
+          %a{ :href=>"https://github.com/agorava/agorava-facebook"} agorava-facebook
+      %li
+        %p
+          %a{ :href=>"https://agorava.ci.cloudbees.com/job/Agorava-linkedin-CI/"}
+            %img{ :src=>"https://agorava.ci.cloudbees.com/buildStatus/icon?job=Agorava-linkedin-CI"}
+          %a{ :href=>"https://github.com/agorava/agorava-linkedin"} agorava-linkedin
+      %li
+        %p
+          %a{ :href=>"https://agorava.ci.cloudbees.com/job/Agorava-socializer-CI/"}
+            %img{ :src=>"https://agorava.ci.cloudbees.com/buildStatus/icon?job=Agorava-socializer-CI"}
+          %a{ :href=>"https://github.com/agorava/agorava-socializer"} agorava-socializer
+    %p
+    %p
+    %p
+      %a.btn{ :href=>"http://socializer.agorava.cloudbees.net/" } Demo &raquo;
+      %a.btn{ :href=>"https://issues.jboss.org/browse/AGOVA" } JIRA &raquo;
+      %a.btn{ :href=>"https://agorava.ci.cloudbees.com/" } Jenkins &raquo;
+    %a.twitter-follow-button{:href=>"https://twitter.com/AgoravaProj", :data=>{"show-count"=>"false", :size=>"large"}} Follow us on Twitter
+    %p
   .span8
     %h2 News
     .well.last-posts
@@ -21,38 +63,6 @@ layout: base
           %li.divider
       %a.btn{:href=>"#{site.base_url}/news/"} Read more
       = partial( 'subscribe.html.haml' )
-  .span4
-    %h2 Status
-    %p
-      %a.btn{ :href=>"http://socializer.agorava.cloudbees.net/" } Demo &raquo;
-      %a.btn{ :href=>"https://issues.jboss.org/browse/AGOVA" } JIRA &raquo;
-      %a.btn{ :href=>"https://docs.jboss.org/author/display/AGOVA" } Doc &raquo;
-      %a.btn{ :href=>"https://agorava.ci.cloudbees.com/" } Jenkins &raquo;
-
-    %ul.well.nav.nav-list
-      %li.nav-header Github Repositories
-      %li
-        %a{ :href=>"https://github.com/agorava/agorava-parent"} agorava-parent
-      %li
-        %a{ :href=>"https://github.com/agorava/agorava-core"} agorava-core
-      %li
-        %a{ :href=>"https://github.com/agorava/agorava-twitter"} agorava-twitter
-      %li
-        %a{ :href=>"https://github.com/agorava/agorava-facebook"} agorava-facebook
-      %li
-        %a{ :href=>"https://github.com/agorava/agorava-linkedin"} agorava-linkedin
-      %li
-        %a{ :href=>"https://github.com/agorava/agorava-socializer"} agorava-socializer
-      %li
-        %a{ :href=>"https://github.com/agorava/agorava.github.com"} agorava.github.com
-    %p
-    %p
-      %a.twitter-follow-button{:href=>"https://twitter.com/AgoravaProj", :data=>{"show-count"=>"false", :size=>"large"}} Follow us on Twitter
-    .well.last-tweets
-      %ul.nav.nav-list.twitter-list
-        %li.nav-header Last tweets
-        #twitter_update_list
-    %p
 
     :javascript
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
