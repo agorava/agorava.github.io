@@ -127,7 +127,7 @@ facebook.scope=<needed scope>
 linkedin.apiKey=<your key>
 linkedin.apiSecret=<your secret key>
 
-callback=/globalcallback.jsf
+callback=globalcallback.jsf 
 -----
 
 Now you can produce Twitter OAuthAppSettings like this
