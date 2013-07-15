@@ -2,13 +2,13 @@
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
   <id>http://agorava.org/</id>
   <title>Agorava</title>
-  <updated>2013-07-13T16:45:35+02:00</updated>
+  <updated>2013-07-15T15:55:32+02:00</updated>
   <link href="http://agorava.org/news.atom" rel="self" type="application/atom+xml" />
   <link href="http://agorava.org/" rel="alternate" type="text/html" />
   <entry>
     <id>http://agorava.org/news/2013/07/13/Agorava-0-6-0-released.html</id>
     <title>Agorava Core 0.6.0 released</title>
-    <updated>2013-07-13T16:45:35+02:00</updated>
+    <updated>2013-07-15T15:55:32+02:00</updated>
     <published>2013-07-13T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2013/07/13/Agorava-0-6-0-released.html" rel="alternate" type="text/html" />
     <category term="CDI"></category>
@@ -50,6 +50,12 @@
       &lt;p&gt;We added profile to test our code code against &lt;a href=&quot;http://openwebbeans.apache.org&quot;&gt;Apache OpenWebBeans&lt;/a&gt; 1.1.7+ (version used in &lt;a href=&quot;http://tomee.apache.org&quot;&gt;Apache TomEE&lt;/a&gt; 1.5.1) and made sure that Socializer:https://github.com/agorava/agorava-socializer (our demo application) perfomed well under TomEE.&lt;br&gt;
       Off course Agorava still supports &lt;a href=&quot;http://www.seamframework.org/Weld&quot;&gt;JBoss Weld&lt;/a&gt; 1.1.5+ (version present in &lt;a href=&quot;http://www.jboss.org/jbossas&quot;&gt;JBoss AS 7.1.1&lt;/a&gt;).&lt;br&gt;
       So now Agorava works on the 2 main &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; implementations.&lt;/p&gt;
+      &lt;h3&gt;So long Solder, Hello Deltaspike&lt;/h3&gt;
+      &lt;p&gt;Leaving JBoss Solder include leaving JBoss Logging. We now use &lt;span class=&quot;caps&quot;&gt;JUL&lt;/span&gt; as logging to continue reducing framework’s dependencies. Our new engine that replace Solder, makes use of Apache Deltaspike utility to register new beans when framework gets initialized. If you are interested to see how we use them, pay a visit to “AgoravaExtension”:“https://github.com/agorava/agorava-core/blob/develop/agorava-core-impl-cdi/src/main/java/org/agorava/core/cdi/AgoravaExtension.java”. I’ll probably write an article on this extension system.&lt;/p&gt;
+      &lt;h3&gt;Modules simultaneous release&lt;/h3&gt;
+      &lt;p&gt;For the first time, we also release simultaneously, Facebook, LinkedIn and Twitter module to 0.6.0 version. These release are there to provide modules supporting the new 0.6.0 &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;.&lt;/p&gt;
+      &lt;h3&gt;A fresh documentation&lt;/h3&gt;
+      &lt;p&gt;Finally, we updated the &lt;a href=&quot;http://agorava.org/doc/getting-started/&quot;&gt;getting started guide&lt;/a&gt; to add the simplification we introduced with this release. Other documentation will be deliver in the coming week, so stay tuned.&lt;/p&gt;
       &lt;h3&gt;What’s next ?&lt;/h3&gt;
       &lt;p&gt;Version 0.7.0 has started, we’re going to integrate our own OAuth engine to prepare migration to OAuth client framework and add support to Apache Camel to provide better integration solution (especially for Social Media providing Streaming &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;).&lt;br&gt;
       In the meantime go for :&lt;/p&gt;
@@ -65,7 +71,7 @@
   <entry>
     <id>http://agorava.org/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released.html</id>
     <title>Twitter, Facebook and LinkdedIn modules released in 0.5</title>
-    <updated>2013-06-17T11:39:49+02:00</updated>
+    <updated>2013-07-15T15:13:07+02:00</updated>
     <published>2013-06-16T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released.html" rel="alternate" type="text/html" />
     <category term="Twitter"></category>
@@ -126,7 +132,7 @@
   <entry>
     <id>http://agorava.org/news/2013/04/23/Agorava-0-5-2-release-and-roadmap.html</id>
     <title>Agorava 0.5.2 released. What's new and what's on the roadmap ?</title>
-    <updated>2013-07-13T12:30:27+02:00</updated>
+    <updated>2013-07-15T15:13:07+02:00</updated>
     <published>2013-04-23T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2013/04/23/Agorava-0-5-2-release-and-roadmap.html" rel="alternate" type="text/html" />
     <category term="CDI"></category>
@@ -179,7 +185,7 @@
   <entry>
     <id>http://agorava.org/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin.html</id>
     <title>Starting a CDI webapp from Maven with Weld-Servlet and Jetty Plugin</title>
-    <updated>2013-06-17T11:39:49+02:00</updated>
+    <updated>2013-07-15T15:13:07+02:00</updated>
     <published>2012-07-10T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin.html" rel="alternate" type="text/html" />
     <category term="CDI"></category>
@@ -356,7 +362,7 @@
   <entry>
     <id>http://agorava.org/news/2012/06/22/Meet-Agorava-the-Social-Framework.html</id>
     <title>Meet Agorava, The Social Framework</title>
-    <updated>2013-06-17T11:39:49+02:00</updated>
+    <updated>2013-07-15T15:13:07+02:00</updated>
     <published>2012-06-22T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2012/06/22/Meet-Agorava-the-Social-Framework.html" rel="alternate" type="text/html" />
     <category term="announce"></category>

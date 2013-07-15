@@ -15,6 +15,7 @@
     <![endif]-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
     <script src="http://agorava.org/javascripts/bootstrap-collapse.js" type="text/javascript"></script>
+    <script src="http://agorava.org/javascripts/bootstrap-dropdown.js" type="text/javascript"></script>
   </head>
   <body>
     <div class="navbar navbar-fixed-top">
@@ -38,6 +39,17 @@
               </li>
               <li>
                 <a href="http://agorava.org/news/">Blog</a>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  Documentation
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="http://agorava.org/doc/getting-started">Getting Started</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="http://agorava.org/calendar/">Calendar</a>
@@ -67,6 +79,69 @@
         </div>
       </div>
       <div class="row">
+        <div class="span4">
+          <h2>Repos & Status</h2>
+          <ul class="well nav nav-list">
+            <li class="nav-header">Build Status & Repositories</li>
+            <li>
+              <p>
+                <a href="https://agorava.ci.cloudbees.com/job/Agorava-parent-CI/">
+                  <img src="https://agorava.ci.cloudbees.com/buildStatus/icon?job=Agorava-parent-CI">
+                </a>
+                <a href="https://github.com/agorava/agorava-parent">agorava-parent</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://agorava.ci.cloudbees.com/job/Agorava-core-CI/">
+                  <img src="https://agorava.ci.cloudbees.com/buildStatus/icon?job=Agorava-core-CI">
+                </a>
+                <a href="https://github.com/agorava/agorava-core">agorava-core</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://agorava.ci.cloudbees.com/job/Agorava-twitter-CI/">
+                  <img src="https://agorava.ci.cloudbees.com/buildStatus/icon?job=Agorava-twitter-CI">
+                </a>
+                <a href="https://github.com/agorava/agorava-twitter">agorava-twitter</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://agorava.ci.cloudbees.com/job/Agorava-facebook-CI/">
+                  <img src="https://agorava.ci.cloudbees.com/buildStatus/icon?job=Agorava-facebook-CI">
+                </a>
+                <a href="https://github.com/agorava/agorava-facebook">agorava-facebook</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://agorava.ci.cloudbees.com/job/Agorava-linkedin-CI/">
+                  <img src="https://agorava.ci.cloudbees.com/buildStatus/icon?job=Agorava-linkedin-CI">
+                </a>
+                <a href="https://github.com/agorava/agorava-linkedin">agorava-linkedin</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://agorava.ci.cloudbees.com/job/Agorava-socializer-CI/">
+                  <img src="https://agorava.ci.cloudbees.com/buildStatus/icon?job=Agorava-socializer-CI">
+                </a>
+                <a href="https://github.com/agorava/agorava-socializer">agorava-socializer</a>
+              </p>
+            </li>
+          </ul>
+          <p></p>
+          <p></p>
+          <p>
+            <a class="btn" href="http://socializer.agorava.cloudbees.net/">Demo &raquo;</a>
+            <a class="btn" href="https://issues.jboss.org/browse/AGOVA">JIRA &raquo;</a>
+            <a class="btn" href="https://agorava.ci.cloudbees.com/">Jenkins &raquo;</a>
+          </p>
+          <a class="twitter-follow-button" data-show-count="false" data-size="large" href="https://twitter.com/AgoravaProj">Follow us on Twitter</a>
+          <p></p>
+        </div>
         <div class="span8">
           <h2>News</h2>
           <div class="well last-posts">
@@ -117,50 +192,6 @@
               Subscribe RSS
             </a>
           </div>
-        </div>
-        <div class="span4">
-          <h2>Status</h2>
-          <p>
-            <a class="btn" href="http://socializer.agorava.cloudbees.net/">Demo &raquo;</a>
-            <a class="btn" href="https://issues.jboss.org/browse/AGOVA">JIRA &raquo;</a>
-            <a class="btn" href="https://docs.jboss.org/author/display/AGOVA">Doc &raquo;</a>
-            <a class="btn" href="https://agorava.ci.cloudbees.com/">Jenkins &raquo;</a>
-          </p>
-          <ul class="well nav nav-list">
-            <li class="nav-header">Github Repositories</li>
-            <li>
-              <a href="https://github.com/agorava/agorava-parent">agorava-parent</a>
-            </li>
-            <li>
-              <a href="https://github.com/agorava/agorava-core">agorava-core</a>
-            </li>
-            <li>
-              <a href="https://github.com/agorava/agorava-twitter">agorava-twitter</a>
-            </li>
-            <li>
-              <a href="https://github.com/agorava/agorava-facebook">agorava-facebook</a>
-            </li>
-            <li>
-              <a href="https://github.com/agorava/agorava-linkedin">agorava-linkedin</a>
-            </li>
-            <li>
-              <a href="https://github.com/agorava/agorava-socializer">agorava-socializer</a>
-            </li>
-            <li>
-              <a href="https://github.com/agorava/agorava.github.com">agorava.github.com</a>
-            </li>
-          </ul>
-          <p></p>
-          <p>
-            <a class="twitter-follow-button" data-show-count="false" data-size="large" href="https://twitter.com/AgoravaProj">Follow us on Twitter</a>
-          </p>
-          <div class="well last-tweets">
-            <ul class="nav nav-list twitter-list">
-              <li class="nav-header">Last tweets</li>
-              <div id="twitter_update_list"></div>
-            </ul>
-          </div>
-          <p></p>
           <script>
             !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
           </script>

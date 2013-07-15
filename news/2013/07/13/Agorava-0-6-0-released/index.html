@@ -15,6 +15,7 @@
     <![endif]-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
     <script src="http://agorava.org/javascripts/bootstrap-collapse.js" type="text/javascript"></script>
+    <script src="http://agorava.org/javascripts/bootstrap-dropdown.js" type="text/javascript"></script>
   </head>
   <body>
     <div class="navbar navbar-fixed-top">
@@ -38,6 +39,17 @@
               </li>
               <li>
                 <a href="http://agorava.org/news/">Blog</a>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  Documentation
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="http://agorava.org/doc/getting-started">Getting Started</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="http://agorava.org/calendar/">Calendar</a>
@@ -104,6 +116,12 @@
               <p>We added profile to test our code code against <a href="http://openwebbeans.apache.org">Apache OpenWebBeans</a> 1.1.7+ (version used in <a href="http://tomee.apache.org">Apache TomEE</a> 1.5.1) and made sure that Socializer:https://github.com/agorava/agorava-socializer (our demo application) perfomed well under TomEE.<br />
               Off course Agorava still supports <a href="http://www.seamframework.org/Weld">JBoss Weld</a> 1.1.5+ (version present in <a href="http://www.jboss.org/jbossas">JBoss AS 7.1.1</a>).<br />
               So now Agorava works on the 2 main <span class="caps">CDI</span> implementations.</p>
+              <h3>So long Solder, Hello Deltaspike</h3>
+              <p>Leaving JBoss Solder include leaving JBoss Logging. We now use <span class="caps">JUL</span> as logging to continue reducing framework&#8217;s dependencies. Our new engine that replace Solder, makes use of Apache Deltaspike utility to register new beans when framework gets initialized. If you are interested to see how we use them, pay a visit to &#8220;AgoravaExtension&#8221;:&#8220;https://github.com/agorava/agorava-core/blob/develop/agorava-core-impl-cdi/src/main/java/org/agorava/core/cdi/AgoravaExtension.java&#8221;. I&#8217;ll probably write an article on this extension system.</p>
+              <h3>Modules simultaneous release</h3>
+              <p>For the first time, we also release simultaneously, Facebook, LinkedIn and Twitter module to 0.6.0 version. These release are there to provide modules supporting the new 0.6.0 <span class="caps">API</span>.</p>
+              <h3>A fresh documentation</h3>
+              <p>Finally, we updated the <a href="/doc/getting-started/">getting started guide</a> to add the simplification we introduced with this release. Other documentation will be deliver in the coming week, so stay tuned.</p>
               <h3>What&#8217;s next ?</h3>
               <p>Version 0.7.0 has started, we&#8217;re going to integrate our own OAuth engine to prepare migration to OAuth client framework and add support to Apache Camel to provide better integration solution (especially for Social Media providing Streaming <span class="caps">API</span>).<br />
               In the meantime go for :</p>
