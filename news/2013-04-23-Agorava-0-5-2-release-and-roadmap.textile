@@ -55,7 +55,7 @@ Since we didn't gave an announcement for 0.5.X releases, you'll find bellow a co
 
 h3. What's coming next in core ?
 
-We're now actively working on API simplification and OpenWebBeans support in core. After that we'll be working by integrating our own OAuth engine and provide a JAX-RS implementation of it. You can follow the roadmap on our "Jira instance":http://issues.jboss.org/AGOVA 
+We're now actively working on API simplification and OpenWebBeans support in core. After that we'll be working by integrating our own OAuth engine and provide a JAX-RS implementation of it. You can follow the roadmap on our "Jira instance":http://issues.jboss.org/browse/AGOVA 
 
 h3. What's coming next in modules ?
 
