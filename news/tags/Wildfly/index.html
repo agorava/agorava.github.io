@@ -74,8 +74,8 @@
           <div class="posts">
             <article class="post">
               <h2>
-                <a href="/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/">
-                  Agorava 0.5.2 released. What's new and what's on the roadmap ?
+                <a href="/news/2013/08/07/Agorava-0-6-1-released/">
+                  Agorava Core 0.6.1 released
                 </a>
               </h2>
               <div class="meta">
@@ -83,55 +83,61 @@
                   Posted by
                   <span class="authors"> Antoine Sabot-Durand</span>
                   on
-                  <span class="date">Apr 23, 2013</span>
+                  <span class="date">Aug 07, 2013</span>
                   |
-                   <a href="http://agorava.org/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/#disqus_thread" data-disqus-identifier="8dd5525338a67a6dba0536cb925a41741984b58d">Comments</a>
+                   <a href="http://agorava.org/news/2013/08/07/Agorava-0-6-1-released/#disqus_thread" data-disqus-identifier="fa7e3f231e7860b892f4858e75d4bb69eda5e043">Comments</a>
                 </strong>
               </div>
               <div class="content">
-                <p><img src="http://agorava.org/images/Compass-Vintage.png" style="width:96px;" class="left" alt="" /></p>
-                <p>Version 0.5.2 just hit Maven Central, what&#8217;s new in this release and what to expect in the coming months</p>
-                <h3>It&#8217;s been a long time</h3>
-                <p>We didn&#8217;t have much time lately to work on Agorava Core but that&#8217;s going to change in the coming month.<br />
-                On the module side, some initiative were started (among them stackoverflow, github, instagram&#8230;). We&#8217;ll post about them later.</p>
+                <p>Agorava core version 0.6.1 just hit Maven Central today, it corrected some issues in 0.6.0 and added interesting features.</p>
                 <h3>Release notes</h3>
-                <p>Since we didn&#8217;t gave an announcement for 0.5.X releases, you&#8217;ll find bellow a compilation of both release notes</p>
-                Release Notes &#8211; Agorava &#8211; Version 0.5.1 and 0.5.2
+                
                 <h4>        Bug</h4>
                 <ul>
-                <li>[<a href='https://issues.jboss.org/browse/AGOVA-25'><span class="caps">AGOVA</span>-25</a>] &#8211;         Weld 1.1.9 and beyond not supported</li>
-                <li>[<a href='https://issues.jboss.org/browse/AGOVA-14'><span class="caps">AGOVA</span>-14</a>] &#8211;         SimpleOAuthAppSettingsBuilder doesn&#39;t work when callback url is an <span class="caps">SSL</span> uri</li>
-                <li>[<a href='https://issues.jboss.org/browse/AGOVA-19'><span class="caps">AGOVA</span>-19</a>] &#8211;         Agora dependencies in dependency management uses dynamic project version</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-33'><span class="caps">AGOVA</span>-33</a>] &#8211;         <span class="caps">NPE</span> when no OAuthSession producer is found</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-34'><span class="caps">AGOVA</span>-34</a>] &#8211;         Unserializable exception for OAuthSession on Wildfly 8.0</li>
                 </ul>
+                
                 <h4>        Enhancement</h4>
                 <ul>
-                <li>[<a href='https://issues.jboss.org/browse/AGOVA-26'><span class="caps">AGOVA</span>-26</a>] &#8211;         Add OpenWebBeans tests</li>
-                <li>[<a href='https://issues.jboss.org/browse/AGOVA-15'><span class="caps">AGOVA</span>-15</a>] &#8211;         Complicated to use Agorava without session scope</li>
-                <li>[<a href='https://issues.jboss.org/browse/AGOVA-16'><span class="caps">AGOVA</span>-16</a>] &#8211;         Annotation @OAuthApplication make params mandatory</li>
-                <li>[<a href='https://issues.jboss.org/browse/AGOVA-17'><span class="caps">AGOVA</span>-17</a>] &#8211;         Making PropertyOAuthAppSettingsBuilder as default builder for OAuthApplication</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-35'><span class="caps">AGOVA</span>-35</a>] &#8211;         Add Weld 2.0 Test profiles</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-39'><span class="caps">AGOVA</span>-39</a>] &#8211;         Adopt JBoss Community code formating</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-45'><span class="caps">AGOVA</span>-45</a>] &#8211;         Switch to a <span class="caps">BOM</span> model</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-46'><span class="caps">AGOVA</span>-46</a>] &#8211;         Officially switch to git flow maven plugin for release</li>
                 </ul>
-                <h4>        Task</h4>
+                
+                <h4>        Feature Request</h4>
                 <ul>
-                <li>[<a href='https://issues.jboss.org/browse/AGOVA-27'><span class="caps">AGOVA</span>-27</a>] &#8211;         Align Generics on solder last updates</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-36'><span class="caps">AGOVA</span>-36</a>] &#8211;         No more resetConnection() in 0.6.0</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-37'><span class="caps">AGOVA</span>-37</a>] &#8211;         Add a Servlet to manage callback in OAuth Dance</li>
                 </ul>
-                <h3>What&#8217;s coming next in core ?</h3>
-                <p>We&#8217;re now actively working on <span class="caps">API</span> simplification and OpenWebBeans support in core. After that we&#8217;ll be working by integrating our own OAuth engine and provide a <span class="caps">JAX</span>-RS implementation of it. You can follow the roadmap on our <a href="http://issues.jboss.org/browse/AGOVA">Jira instance</a></p>
-                <h3>What&#8217;s coming next in modules ?</h3>
-                <p>Our main modules (Twitter, Facebook, LinkedIn) are still in snapshot. We expect to release them during Q3 2013. Stay tuned and thanks for your patience</p>
+                <p>What does it mean in plain english? Let&#8217;s see.</p>
+                <h3><span class="caps">CDI</span> 1.1 and Weld 2.x support</h3>
+                <p>A big thanks to Aslak Knustsen on this point. He added profiles to launch test with Weld 2.x and correxted some issue with Agorava <span class="caps">CDI</span> extension preventing it to run under <span class="caps">CDI</span> 1.1.<br />
+                Agorava now support OpenWebBeans 1.1.7 and Weld from 1.1.5 to 2.0.2. We&#8217;ll continue to extends <span class="caps">CDI</span> support in next release especially with OpenWebBeans 2.x when it&#8217;ll be ready.</p>
+                <h3>Servlet to manage callback in OAuth initialization</h3>
+                <p>An old feature request was achieved in this release the <a href="https://github.com/agorava/agorava-core/blob/0.6.1/agorava-core-impl-cdi/src/main/java/org/agorava/core/cdi/web/OAuthCallBackCdiServlet.java">callback servlet</a> that deal with the end of OAuth initialization process. Its default behavior is to close the current window (working for a popup) but you can easily override it to add your behavior.</p>
+                <h3>Dependency Management with maven <span class="caps">BOM</span></h3>
+                <p>Dependencies are now managed by a Maven Bill Of Material, it will allow Agorava users to integrate Agorava dependencies more easily than with a parent pom. You&#8217;ll just have to add this to the `dependencyManagement` section of your project :</p>
+                <pre>&#x000A;    &lt;dependencyManagement&gt;&#x000A;        &lt;dependencies&gt;&#x000A;            &lt;dependency&gt;&#x000A;                &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;                &lt;artifactId&gt;agorava-bom&lt;/artifactId&gt;&#x000A;                &lt;version&gt;0.6.1&lt;/version&gt;&#x000A;                &lt;type&gt;pom&lt;/type&gt;&#x000A;                &lt;scope&gt;import&lt;/scope&gt;&#x000A;            &lt;/dependency&gt;&#x000A;        &lt;/dependencies&gt;&#x000A;    &lt;/dependencyManagement&gt; </pre>
+                <h3>thanks</h3>
+                <p>Again, many thanks to Aslak Knutsen for his help and to George Gastaldi for his feedback and work on PicketLink integration.</p>
+                <h3>What&#8217;s next ?</h3>
+                <p>Version 0.7.0 has started (for real this time), we&#8217;re going to integrate our own OAuth engine to prepare migration to OAuth client framework and add support to Apache Camel to provide better integration solution (especially for Social Media providing Streaming <span class="caps">API</span>).<br />
+                In the meantime go for :</p>
+                <pre>&#x000A;  &lt;dependency&gt;&#x000A;      &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;      &lt;artifactId&gt;agorava-core-impl-cdi&lt;/artifactId&gt;&#x000A;      &lt;version&gt;0.6.1&lt;/version&gt;&#x000A;  &lt;/dependency&gt;</pre>
+                <p>check our <a href="/doc/getting-started">Getting Started guide</a> and give us your feedback</p>
               </div>
               <div class="footer">
-                <a href="/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/">Permalink</a>
+                <a href="/news/2013/08/07/Agorava-0-6-1-released/">Permalink</a>
                 |
-                 <a href="http://agorava.org/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/#disqus_thread" data-disqus-identifier="8dd5525338a67a6dba0536cb925a41741984b58d">Comments</a>
+                 <a href="http://agorava.org/news/2013/08/07/Agorava-0-6-1-released/#disqus_thread" data-disqus-identifier="fa7e3f231e7860b892f4858e75d4bb69eda5e043">Comments</a>
                 |
                 <span class="tags">
                   <i class="icon-tags"></i>
                   Tags :
                   <a class="tag" href="/news/tags/CDI/">CDI</a>
-                  <a class="tag" href="/news/tags/OpenWebBeans/">OpenWebBeans</a>
-                  <a class="tag" href="/news/tags/Weld/">Weld</a>
-                  <a class="tag" href="/news/tags/Solder/">Solder</a>
-                  <a class="tag" href="/news/tags/roadmap/">roadmap</a>
+                  <a class="tag" href="/news/tags/Wildfly/">Wildfly</a>
                 </span>
               </div>
             </article>

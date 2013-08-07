@@ -128,7 +128,7 @@
           <div class="listingblock">
           
           <div class="content monospaced">
-          <pre>&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-core-impl-cdi&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.6.0&lt;/version&gt;&#x000A;    &lt;scope&gt;compile&lt;/scope&gt;&#x000A;&lt;/dependency&gt;</pre>
+          <pre>&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-core-impl-cdi&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.6.1&lt;/version&gt;&#x000A;    &lt;scope&gt;compile&lt;/scope&gt;&#x000A;&lt;/dependency&gt;</pre>
           </div>
           </div>
           <div class="paragraph">
@@ -137,7 +137,7 @@
           <div class="listingblock">
           
           <div class="content monospaced">
-          <pre>&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-twitter-cdi&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.6.0&lt;/version&gt;&#x000A;    &lt;scope&gt;compile&lt;/scope&gt;&#x000A;&lt;/dependency&gt;&#x000A;&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-facebook-cdi&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.6.0&lt;/version&gt;&#x000A;    &lt;scope&gt;compile&lt;/scope&gt;&#x000A;&lt;/dependency&gt;&#x000A;&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-linkedin-cdi&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.6.0&lt;/version&gt;&#x000A;    &lt;scope&gt;compile&lt;/scope&gt;&#x000A;&lt;/dependency&gt;</pre>
+          <pre>&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-twitter-cdi&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.6.1&lt;/version&gt;&#x000A;    &lt;scope&gt;compile&lt;/scope&gt;&#x000A;&lt;/dependency&gt;&#x000A;&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-facebook-cdi&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.6.1&lt;/version&gt;&#x000A;    &lt;scope&gt;compile&lt;/scope&gt;&#x000A;&lt;/dependency&gt;&#x000A;&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-linkedin-cdi&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.6.1&lt;/version&gt;&#x000A;    &lt;scope&gt;compile&lt;/scope&gt;&#x000A;&lt;/dependency&gt;</pre>
           </div>
           </div>
           <div class="paragraph">
@@ -233,7 +233,7 @@
           <div class="listingblock">
           
           <div class="content monospaced">
-          <pre>twitter.apiKey=&lt;your key&gt;&#x000A;twitter.apiSecret=&lt;your secret key&gt;&#x000A;twitter.callback=/twittercallback.jsf&#x000A;&#x000A;facebook.apiKey=&lt;your key&gt;&#x000A;facebook.apiSecret=&lt;your secret key&gt;&#x000A;facebook.scope=&lt;needed scope&gt;&#x000A;&#x000A;linkedin.apiKey=&lt;your key&gt;&#x000A;linkedin.apiSecret=&lt;your secret key&gt;&#x000A;&#x000A;callback=globalcallback.jsf</pre>
+          <pre>twitter.apiKey=&lt;your key&gt;&#x000A;twitter.apiSecret=&lt;your secret key&gt;&#x000A;&#x000A;facebook.apiKey=&lt;your key&gt;&#x000A;facebook.apiSecret=&lt;your secret key&gt;&#x000A;facebook.scope=&lt;needed scope&gt;&#x000A;&#x000A;linkedin.apiKey=&lt;your key&gt;&#x000A;linkedin.apiSecret=&lt;your secret key&gt;&#x000A;&#x000A;callback=callback</pre>
           </div>
           </div>
           <div class="paragraph">
@@ -271,7 +271,7 @@
           
           </div>
           <div class="sect3">
-          <h4 id="_inject_the_oauth_services_in_your_code">Inject the Oauth Services in your code</h4>
+          <h4 id="_inject_the_oauth_services_in_your_code">Inject the OAuth Services in your code</h4>
           <div class="paragraph">
           <p>You can now inject the services hub and specific apis</p>
           </div>
@@ -300,15 +300,12 @@
           
           </div>
           <div class="sect3">
-          <h4 id="_set_the_verifier_and_initiate_connexion">Set the verifier and initiate connexion</h4>
+          <h4 id="_use_the_callback_servlet">Use the callback servlet</h4>
           <div class="paragraph">
-          <p>As the verifier comes back to the application after an action of the final user, you have to set up a servlet or a JSF page (which url is the callback url you configured when you set up the service) to catch it and add it to the current session. Here is an example with JSF using mySessionBean declared in the previous example :</p>
+          <p>By default the callback from social media is handle by the callback servlet which is mapper to <code>/callback</code> url. The servlet will get the verifier back from the service and request the access token.</p>
           </div>
-          <div class="listingblock">
-          
-          <div class="content monospaced">
-          <pre>&lt;f:metadata&gt;&#x000A;  &lt;f:viewParam name="#{myService.verifierParamName} "&#x000A;   value="#{myService.verifier} "&#x000A;   required="true" requiredMessage="Error with Twitter. Retry later"/&gt;&#x000A;  &lt;f:event type="preRenderView" listener="#{myService.initAccessToken()} "/&gt;&#x000A;&lt;/f:metadata&gt;</pre>
-          </div>
+          <div class="paragraph">
+          <p>By default the servlet is expect to be launch in a popup since it&#8217;ll close the window at the end of treatment, you can change this behavior by overriding <code>renderResponse</code> method in <code>org.agorava.core.cdi.web.OAuthCallBackCdiServlet</code></p>
           </div>
           <div class="paragraph">
           <p>The service is now connected : you have an access token. Agorava also provide an automatic way to get your user profile thru the OAuthSession :</p>

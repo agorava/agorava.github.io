@@ -74,6 +74,75 @@
           <div class="posts">
             <article class="post">
               <h2>
+                <a href="/news/2013/08/07/Agorava-0-6-1-released/">
+                  Agorava Core 0.6.1 released
+                </a>
+              </h2>
+              <div class="meta">
+                <strong>
+                  Posted by
+                  <span class="authors"> Antoine Sabot-Durand</span>
+                  on
+                  <span class="date">Aug 07, 2013</span>
+                  |
+                   <a href="http://agorava.org/news/2013/08/07/Agorava-0-6-1-released/#disqus_thread" data-disqus-identifier="fa7e3f231e7860b892f4858e75d4bb69eda5e043">Comments</a>
+                </strong>
+              </div>
+              <div class="content">
+                <p>Agorava core version 0.6.1 just hit Maven Central today, it corrected some issues in 0.6.0 and added interesting features.</p>
+                <h3>Release notes</h3>
+                
+                <h4>        Bug</h4>
+                <ul>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-33'><span class="caps">AGOVA</span>-33</a>] &#8211;         <span class="caps">NPE</span> when no OAuthSession producer is found</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-34'><span class="caps">AGOVA</span>-34</a>] &#8211;         Unserializable exception for OAuthSession on Wildfly 8.0</li>
+                </ul>
+                
+                <h4>        Enhancement</h4>
+                <ul>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-35'><span class="caps">AGOVA</span>-35</a>] &#8211;         Add Weld 2.0 Test profiles</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-39'><span class="caps">AGOVA</span>-39</a>] &#8211;         Adopt JBoss Community code formating</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-45'><span class="caps">AGOVA</span>-45</a>] &#8211;         Switch to a <span class="caps">BOM</span> model</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-46'><span class="caps">AGOVA</span>-46</a>] &#8211;         Officially switch to git flow maven plugin for release</li>
+                </ul>
+                
+                <h4>        Feature Request</h4>
+                <ul>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-36'><span class="caps">AGOVA</span>-36</a>] &#8211;         No more resetConnection() in 0.6.0</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-37'><span class="caps">AGOVA</span>-37</a>] &#8211;         Add a Servlet to manage callback in OAuth Dance</li>
+                </ul>
+                <p>What does it mean in plain english? Let&#8217;s see.</p>
+                <h3><span class="caps">CDI</span> 1.1 and Weld 2.x support</h3>
+                <p>A big thanks to Aslak Knustsen on this point. He added profiles to launch test with Weld 2.x and correxted some issue with Agorava <span class="caps">CDI</span> extension preventing it to run under <span class="caps">CDI</span> 1.1.<br />
+                Agorava now support OpenWebBeans 1.1.7 and Weld from 1.1.5 to 2.0.2. We&#8217;ll continue to extends <span class="caps">CDI</span> support in next release especially with OpenWebBeans 2.x when it&#8217;ll be ready.</p>
+                <h3>Servlet to manage callback in OAuth initialization</h3>
+                <p>An old feature request was achieved in this release the <a href="https://github.com/agorava/agorava-core/blob/0.6.1/agorava-core-impl-cdi/src/main/java/org/agorava/core/cdi/web/OAuthCallBackCdiServlet.java">callback servlet</a> that deal with the end of OAuth initialization process. Its default behavior is to close the current window (working for a popup) but you can easily override it to add your behavior.</p>
+                <h3>Dependency Management with maven <span class="caps">BOM</span></h3>
+                <p>Dependencies are now managed by a Maven Bill Of Material, it will allow Agorava users to integrate Agorava dependencies more easily than with a parent pom. You&#8217;ll just have to add this to the `dependencyManagement` section of your project :</p>
+                <pre>&#x000A;    &lt;dependencyManagement&gt;&#x000A;        &lt;dependencies&gt;&#x000A;            &lt;dependency&gt;&#x000A;                &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;                &lt;artifactId&gt;agorava-bom&lt;/artifactId&gt;&#x000A;                &lt;version&gt;0.6.1&lt;/version&gt;&#x000A;                &lt;type&gt;pom&lt;/type&gt;&#x000A;                &lt;scope&gt;import&lt;/scope&gt;&#x000A;            &lt;/dependency&gt;&#x000A;        &lt;/dependencies&gt;&#x000A;    &lt;/dependencyManagement&gt; </pre>
+                <h3>thanks</h3>
+                <p>Again, many thanks to Aslak Knutsen for his help and to George Gastaldi for his feedback and work on PicketLink integration.</p>
+                <h3>What&#8217;s next ?</h3>
+                <p>Version 0.7.0 has started (for real this time), we&#8217;re going to integrate our own OAuth engine to prepare migration to OAuth client framework and add support to Apache Camel to provide better integration solution (especially for Social Media providing Streaming <span class="caps">API</span>).<br />
+                In the meantime go for :</p>
+                <pre>&#x000A;  &lt;dependency&gt;&#x000A;      &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;      &lt;artifactId&gt;agorava-core-impl-cdi&lt;/artifactId&gt;&#x000A;      &lt;version&gt;0.6.1&lt;/version&gt;&#x000A;  &lt;/dependency&gt;</pre>
+                <p>check our <a href="/doc/getting-started">Getting Started guide</a> and give us your feedback</p>
+              </div>
+              <div class="footer">
+                <a href="/news/2013/08/07/Agorava-0-6-1-released/">Permalink</a>
+                |
+                 <a href="http://agorava.org/news/2013/08/07/Agorava-0-6-1-released/#disqus_thread" data-disqus-identifier="fa7e3f231e7860b892f4858e75d4bb69eda5e043">Comments</a>
+                |
+                <span class="tags">
+                  <i class="icon-tags"></i>
+                  Tags :
+                  <a class="tag" href="/news/tags/CDI/">CDI</a>
+                  <a class="tag" href="/news/tags/Wildfly/">Wildfly</a>
+                </span>
+              </div>
+            </article>
+            <article class="post">
+              <h2>
                 <a href="/news/2013/07/13/Agorava-0-6-0-released/">
                   Agorava Core 0.6.0 released
                 </a>
@@ -113,7 +182,7 @@
                 Off course Agorava still supports <a href="http://www.seamframework.org/Weld">JBoss Weld</a> 1.1.5+ (version present in <a href="http://www.jboss.org/jbossas">JBoss AS 7.1.1</a>).<br />
                 So now Agorava works on the 2 main <span class="caps">CDI</span> implementations.</p>
                 <h3>So long Solder, Hello Deltaspike</h3>
-                <p>Leaving JBoss Solder include leaving JBoss Logging. We now use <span class="caps">JUL</span> as logging to continue reducing framework&#8217;s dependencies. Our new engine that replace Solder, makes use of Apache Deltaspike utility to register new beans when framework gets initialized. If you are interested to see how we use them, pay a visit to &#8220;AgoravaExtension&#8221;:&#8220;https://github.com/agorava/agorava-core/blob/develop/agorava-core-impl-cdi/src/main/java/org/agorava/core/cdi/AgoravaExtension.java&#8221;. I&#8217;ll probably write an article on this extension system.</p>
+                <p>Leaving JBoss Solder include leaving JBoss Logging. We now use <span class="caps">JUL</span> as logging to continue reducing framework&#8217;s dependencies. Our new engine that replace Solder, makes use of Apache Deltaspike utility to register new beans when framework gets initialized. If you are interested to see how we use them, pay a visit to <a href="https://github.com/agorava/agorava-core/blob/develop/agorava-core-impl-cdi/src/main/java/org/agorava/core/cdi/AgoravaExtension.java">AgoravaExtension</a>. I&#8217;ll probably write an article on this extension system.</p>
                 <h3>Modules simultaneous release</h3>
                 <p>For the first time, we also release simultaneously, Facebook, LinkedIn and Twitter module to 0.6.0 version. These release are there to provide modules supporting the new 0.6.0 <span class="caps">API</span>.</p>
                 <h3>A fresh documentation</h3>
@@ -351,10 +420,10 @@
                   <span class="tag tag-0">
                     <a href="http://agorava.org/news/tags/OAuth/">OAuth</a>
                   </span>
-                  <span class="tag tag-3">
+                  <span class="tag tag-2">
                     <a href="http://agorava.org/news/tags/OpenWebBeans/">OpenWebBeans</a>
                   </span>
-                  <span class="tag tag-3">
+                  <span class="tag tag-2">
                     <a href="http://agorava.org/news/tags/Socializer/">Socializer</a>
                   </span>
                   <span class="tag tag-0">
@@ -367,9 +436,12 @@
                     <a href="http://agorava.org/news/tags/Weld/">Weld</a>
                   </span>
                   <span class="tag tag-0">
+                    <a href="http://agorava.org/news/tags/Wildfly/">Wildfly</a>
+                  </span>
+                  <span class="tag tag-0">
                     <a href="http://agorava.org/news/tags/announce/">announce</a>
                   </span>
-                  <span class="tag tag-3">
+                  <span class="tag tag-2">
                     <a href="http://agorava.org/news/tags/roadmap/">roadmap</a>
                   </span>
                 </div>
@@ -406,10 +478,10 @@
                   <span class="tag tag-0">
                     <a href="http://agorava.org/news/tags/OAuth/">OAuth</a>
                   </span>
-                  <span class="tag tag-3">
+                  <span class="tag tag-2">
                     <a href="http://agorava.org/news/tags/OpenWebBeans/">OpenWebBeans</a>
                   </span>
-                  <span class="tag tag-3">
+                  <span class="tag tag-2">
                     <a href="http://agorava.org/news/tags/Socializer/">Socializer</a>
                   </span>
                   <span class="tag tag-0">
@@ -422,9 +494,12 @@
                     <a href="http://agorava.org/news/tags/Weld/">Weld</a>
                   </span>
                   <span class="tag tag-0">
+                    <a href="http://agorava.org/news/tags/Wildfly/">Wildfly</a>
+                  </span>
+                  <span class="tag tag-0">
                     <a href="http://agorava.org/news/tags/announce/">announce</a>
                   </span>
-                  <span class="tag tag-3">
+                  <span class="tag tag-2">
                     <a href="http://agorava.org/news/tags/roadmap/">roadmap</a>
                   </span>
                 </div>
