@@ -46,7 +46,7 @@ So now Agorava works on the 2 main CDI implementations.
 
 h3. So long Solder, Hello Deltaspike
 
-Leaving JBoss Solder include leaving JBoss Logging. We now use JUL as logging to continue reducing framework's dependencies. Our new engine that replace Solder, makes use of Apache Deltaspike utility to register new beans when framework gets initialized. If you are interested to see how we use them, pay a visit to "AgoravaExtension":"https://github.com/agorava/agorava-core/blob/develop/agorava-core-impl-cdi/src/main/java/org/agorava/core/cdi/AgoravaExtension.java". I'll probably write an article on this extension system.
+Leaving JBoss Solder include leaving JBoss Logging. We now use JUL as logging to continue reducing framework's dependencies. Our new engine that replace Solder, makes use of Apache Deltaspike utility to register new beans when framework gets initialized. If you are interested to see how we use them, pay a visit to "AgoravaExtension":https://github.com/agorava/agorava-core/blob/develop/agorava-core-impl-cdi/src/main/java/org/agorava/core/cdi/AgoravaExtension.java. I'll probably write an article on this extension system.
 
 h3. Modules simultaneous release
 

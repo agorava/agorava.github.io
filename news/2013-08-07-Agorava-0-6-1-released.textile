@@ -1,0 +1,90 @@
+---
+title: "Agorava Core 0.6.1 released"
+authors: [asd]
+layout: post
+tags: [CDI,Wildfly]
+---
+
+Agorava core version 0.6.1 just hit Maven Central today, it corrected some issues in 0.6.0 and added interesting features.
+
+h3. Release notes
+
+    
+<h4>        Bug
+</h4>
+<ul>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-33'>AGOVA-33</a>] -         NPE when no OAuthSession producer is found
+</li>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-34'>AGOVA-34</a>] -         Unserializable exception for OAuthSession on Wildfly 8.0 
+</li>
+</ul>
+                
+<h4>        Enhancement
+</h4>
+<ul>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-35'>AGOVA-35</a>] -         Add Weld 2.0 Test profiles
+</li>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-39'>AGOVA-39</a>] -         Adopt JBoss Community code formating
+</li>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-45'>AGOVA-45</a>] -         Switch to a BOM model
+</li>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-46'>AGOVA-46</a>] -         Officially switch to git flow maven plugin for release
+</li>
+</ul>
+        
+<h4>        Feature Request
+</h4>
+<ul>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-36'>AGOVA-36</a>] -         No more resetConnection() in 0.6.0
+</li>
+<li>[<a href='https://issues.jboss.org/browse/AGOVA-37'>AGOVA-37</a>] -         Add a Servlet to manage callback in OAuth Dance
+</li>
+</ul>
+
+What does it mean in plain english? Let's see.
+
+h3. CDI 1.1 and Weld 2.x support
+
+A big thanks to Aslak Knustsen on this point. He added profiles to launch test with Weld 2.x and correxted some issue with Agorava CDI extension preventing it to run under CDI 1.1.
+Agorava now support OpenWebBeans 1.1.7 and Weld from 1.1.5 to 2.0.2. We'll continue to extends CDI support in next release especially with OpenWebBeans 2.x when it'll be ready.
+
+h3. Servlet to manage callback in OAuth initialization
+
+An old feature request was achieved in this release the "callback servlet":https://github.com/agorava/agorava-core/blob/0.6.1/agorava-core-impl-cdi/src/main/java/org/agorava/core/cdi/web/OAuthCallBackCdiServlet.java that deal with the end of OAuth initialization process. Its default behavior is to close the current window (working for a popup) but you can easily override it to add your behavior.
+
+h3. Dependency Management with maven BOM
+
+Dependencies are now managed by a Maven Bill Of Material, it will allow Agorava users to integrate Agorava dependencies more easily than with a parent pom. You'll just have to add this to the `dependencyManagement` section of your project :
+
+<pre>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.agorava</groupId>
+                <artifactId>agorava-bom</artifactId>
+                <version>0.6.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement> 
+</pre>
+
+h3. thanks
+
+Again, many thanks to Aslak Knutsen for his help and to George Gastaldi for his feedback and work on PicketLink integration.
+
+h3. What's next ?
+
+Version 0.7.0 has started (for real this time), we're going to integrate our own OAuth engine to prepare migration to OAuth client framework and add support to Apache Camel to provide better integration solution (especially for Social Media providing Streaming API).
+In the meantime go for : 
+
+<pre>
+  <dependency>
+      <groupId>org.agorava</groupId>
+      <artifactId>agorava-core-impl-cdi</artifactId>
+      <version>0.6.1</version>
+  </dependency>
+</pre>
+
+check our "Getting Started guide":/doc/getting-started and give us your feedback
