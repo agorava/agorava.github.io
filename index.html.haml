@@ -2,13 +2,13 @@
 layout: base
 ---
 .row
-  .span12
-    .hero-unit.clearfix
+  .col-md-12
+    .jumbotron
       %img.hidden-phone{ :style=>"float:right; margin-left:20px;", :src=>"#{site.base_url}/images/logo.png"}
       %h1 Agorava
       %p The Social Framework
 .row
-  .span4
+  .col-md-4
     %h2 Repos & Status
     %ul.well.nav.nav-list
       %li.nav-header Build Status & Repositories
@@ -50,7 +50,7 @@ layout: base
       %a.btn{ :href=>"https://agorava.ci.cloudbees.com/" } Jenkins &raquo;
     %a.twitter-follow-button{:href=>"https://twitter.com/AgoravaProj", :data=>{"show-count"=>"false", :size=>"large"}} Follow us on Twitter
     %p
-  .span8
+  .col-md-8
     %h2 News
     .well.last-posts
       %ul.nav.nav-list

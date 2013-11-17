@@ -1,6 +1,7 @@
 source 'https://rubygems.org'                             # This tells Bundler where to look for gems
 
 gem 'awestruct', '~> 0.5.1'                               # Goes without saying
+gem 'listen', '=1.2.2'
 gem 'rake', '>= 0.9.2'                                    # Needed for the Rakefile to work
 # gem 'coffee-script', '~> 2.2.0'                         # If using coffee-script or to remove the warning
 # gem 'therubyracer', '0.10.0', :platforms => :ruby       # Javascript runtime on mri (needed for LESS and coffee-script)

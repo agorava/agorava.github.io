@@ -3,53 +3,53 @@
   %head
     %meta{ :charset=>'utf-8' }
     %title Agorava Project 
-    %meta{ :name=>'viewport', :content=>'width=device-width, initial-scale=1.0' }
-    
+    %meta{ :name=>'viewport', :content=>'width=device-width, initial-scale=1.0' } 
+    %link{ :rel=>'stylesheet', :type=>'text/css', :href=>"#{site.base_url}/stylesheets/styles.css" }
     :css
       body {
         padding-top: 60px;
       }
-    %link{ :rel=>'stylesheet', :type=>'text/css', :href=>"#{site.base_url}/stylesheets/styles.css" }
     /[if lt IE 9]
       %script{ :type=>'text/javascript', :src=>'//html5shim.googlecode.com/svn/trunk/html5.js' }
     %script{ :type=>'text/javascript', :src=>'//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js' }
-    %script{ :type=>'text/javascript', :src=>"#{site.base_url}/javascripts/bootstrap-collapse.js" }
-    %script{ :type=>'text/javascript', :src=>"#{site.base_url}/javascripts/bootstrap-dropdown.js" }
+    %script{ :type=>'text/javascript', :src=>"#{site.base_url}/javascripts/bootstrap/collapse.js" }
+    %script{ :type=>'text/javascript', :src=>"#{site.base_url}/javascripts/bootstrap/dropdown.js" }
     
   %body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          .github-banner
-            %a{:href=>'https://github.com/agorava'}
-              %img{:style=>'position: absolute; top: 0; right: 0; border: 0;z-index: 900;', :src=>'https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png', :alt=>'Fork me on GitHub'}
-          %a.btn.btn-navbar{"data-toggle"=>"collapse", "data-target"=>".nav-collapse"}
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.brand{ :href=>"#{site.base_url}" } Agorava
-          .nav-collapse
-            %ul.nav
+    %nav.navbar.navbar-default.navbar-fixed-top{:role=>'navigation'}
+      .navbar-header
+        .github-banner
+          %a{:href=>'https://github.com/agorava'}
+            %img{:style=>'position: absolute; top: 0; right: 0; border: 0;z-index: 900;', :src=>'https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png', :alt=>'Fork me on GitHub'}
+        %a.btn.navbar-toggle{"data-toggle"=>"collapse", "data-target"=>".navbar-collapse"}
+          %span.sr-only
+            Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{ :href=>"#{site.base_url}" } Agorava
+      .navbar-collapse.collaspe
+        %ul.nav.navbar-nav
+          %li
+            %a{ :href=>"#{site.base_url}/" } Home
+          %li
+            %a{ :href=>"#{site.base_url}/news/" } Blog
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle"=>"dropdown", :href=>"#"}
+              Documentation
+              %b.caret
+            %ul.dropdown-menu
               %li
-                %a{ :href=>"#{site.base_url}/" } Home
-              %li
-                %a{ :href=>"#{site.base_url}/news/" } Blog
-              %li.dropdown
-                %a.dropdown-toggle{"data-toggle"=>"dropdown", :href=>"#"}
-                  Documentation
-                  %b.caret
-                %ul.dropdown-menu
-                  %li
-                    %a{:href=>"#{site.base_url}/doc/getting-started" } Getting Started
-              %li
-                %a{ :href=>"#{site.base_url}/calendar/" } Calendar
-              %li
-                %a{ :href=>"#{site.base_url}/sponsors/" } Sponsors
-                
+                %a{:href=>"#{site.base_url}/doc/getting-started" } Getting Started
+          %li
+            %a{ :href=>"#{site.base_url}/calendar/" } Calendar
+          %li
+            %a{ :href=>"#{site.base_url}/sponsors/" } Sponsors
+              
       :javascript
         var indexOfSharp = window.location.pathname.indexOf('#');
         var pathname = indexOfSharp > 0 ? window.location.pathname.substring(0, indexOfSharp) : window.location.pathname;
-        var selector = "body > .navbar > .navbar-inner a[href='#{site.base_url}"+pathname+"']";
+        var selector = "body > .navbar > .navbar-collapse a[href='#{site.base_url}"+pathname+"']";
         $(selector).closest("li").addClass("active");
     
     .container
