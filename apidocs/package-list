@@ -1,0 +1,11 @@
+org.agorava
+org.agorava.api.atinject
+org.agorava.api.event
+org.agorava.api.exception
+org.agorava.api.extractor
+org.agorava.api.oauth
+org.agorava.api.oauth.application
+org.agorava.api.rest
+org.agorava.api.service
+org.agorava.api.storage
+org.agorava.spi

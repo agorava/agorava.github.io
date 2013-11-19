@@ -21,7 +21,7 @@ Agorava Provides CDI Beans and extensions to interact with major social network.
 - A multi services manager API allowing to deal with multiple OAuth applications and sessions in the same application
 - An easy way to extend it by creating a new module for a new services
 
-Agorava is independent of CDI implementation and fully portable between Java EE 6 and Servlet environments enhanced with CDI. It can be also used with CDI in JSE (desktop application). It has been fully tested with CDI RI implementation (JBoss Weld) and Apache OpenWebBeans. Caucho Candi was not fully tested yet but will be int the coming releases.
+Agorava is independent of CDI implementation and fully portable between Java EE 6 and Servlet environments enhanced with CDI. It can be also used with CDI in JSE (desktop application). It has been fully tested with CDI RI implementation (JBoss Weld) and Apache OpenWebBeans. Caucho Candi was not fully tested yet but will be in the coming releases.
 
 
 === Getting Started
