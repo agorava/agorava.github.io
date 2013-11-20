@@ -2,7 +2,7 @@
 ---
 %article.post
   - if page.alone
-    %ul.pager.visible-desktop{:style=>"float:right;"}
+    %ul.pager.visible-md{:style=>"float:right;"}
       - if page.post.previous_post
         %li
           %a{:href=>page.post.previous_post.url} Previous
@@ -10,7 +10,7 @@
         %li
           %a{:href=>page.post.next_post.url} Next
 
-  %h2
+  %h1
     %a{:href=>page.post.url}
       = page.post.title
   .meta
@@ -41,7 +41,7 @@
             %a.tag{:href=>tag.primary_page.url}= tag
             
   - if page.alone
-    .visible-desktop
+    .visible-md
       %ul.pager
         - if page.post.previous_post
           %li.previous
@@ -50,7 +50,7 @@
           %li.next
             %a{:href=>page.post.next_post.url} Next: #{page.post.next_post.title}
     
-    .hidden-desktop
+    .hidden-md
       %ul.pager
         - if page.post.previous_post
           %li.previous

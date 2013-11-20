@@ -2,7 +2,7 @@
 layout: base
 ---
 .row
-  .span9
+  .col-md-9
     .posts
       - page.posts.each do |post|
         = partial('post.html.haml', {'parent'=>page, 'post'=>post, 'alone' => false})
@@ -10,7 +10,7 @@ layout: base
     = page.disqus_comments_count
 
     - current_page_number = page.posts.current_page_index + 1
-    %div.visible-phone
+    %div.visible-xs
       %ul.pager
         - if page.posts.previous_page
           %li.previous
@@ -27,8 +27,8 @@ layout: base
           %li.next.disabled
             %a{:href => "#"} Next
             
-    %div.pagination.pagination-centered.hidden-phone
-      %ul
+    %div.hidden-xs
+      %ul.pager
         - if page.posts.previous_page
           %li
             %a{:href => "#{site.base_url}/news/"} First
@@ -76,23 +76,25 @@ layout: base
           %li.disabled
             %a{:href => "#"} Last
         
-  .span3
-    .follow-scroll.hidden-phone
+  .col-md-3
+    .follow-scroll.hidden-xs
       %div{:style=>"margin-bottom:20px;text-align:center;"}
         = partial( 'subscribe.html.haml' )
       
-      %ul.nav.nav-list.well{:style=>"clear:both;"}
-        %li.nav-header
-          Tag Cloud
-        %li
+      .panel.panel-default
+        .panel-heading
+          %h3.panel-title
+            Tag Cloud
+        .panel-footer{:style=>"text-align:justify;"}
           = site.posts_tag_cloud
-    .visible-phone
+    .visible-xs
       %div{:style=>"margin-bottom:20px;text-align:center;"}
         = partial( 'subscribe.html.haml' )
       
-      %ul.nav.nav-list.well{:style=>"clear:both;"}
-        %li.nav-header
-          Tag Cloud
-        %li
+      .panel.panel-default
+        .panel-heading
+          %h3.panel-title
+            Tag Cloud
+        .panel-footer{:style=>"text-align:justify;"}
           = site.posts_tag_cloud
         

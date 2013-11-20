@@ -43,11 +43,11 @@ ul.twitter-list li.nav-header {
 }
 
 .post {
-  h2 > a {
+  h1 > a {
     margin-right: 15px;
   }
 
-  h2, .content, .footer {
+  h1, .content, .footer {
     border-bottom: 1px solid #DDDDDD;
     margin-bottom: 10px;
   }
@@ -56,7 +56,7 @@ ul.twitter-list li.nav-header {
     padding-bottom: 10px;
   }
 
-  h2 a:hover {
+  h1 a:hover {
     text-decoration: none;
   }
 

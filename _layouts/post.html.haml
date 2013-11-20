@@ -2,21 +2,23 @@
 layout: base
 ---
 .row
-  .span9
+  .col-md-9
     = partial('post.html.haml', {'parent'=>page, 'post'=>page, 'alone' => true})
   
-  .span3
-    %aside.hidden-phone
-      %ul.nav.nav-list.well
-        %li.nav-header
-          Tag Cloud
-        %li
+  .col-md-3
+    %aside.hidden-xs
+      .panel.panel-default
+        .panel-heading
+          %h3.panel-title
+            Tag Cloud
+        .panel-footer{:style=>"text-align:justify;"}
           = site.posts_tag_cloud
           
-    %aside.visible-phone
-      %ul.nav.nav-list.well
-        %li.nav-header
-          Tag Cloud
-        %li
+    %aside.visible-xs
+      .panel.panel-default
+        .panel-heading
+          %h3.panel-title
+            Tag Cloud
+        .panel-footer{:style=>"text-align:justify;"}
           = site.posts_tag_cloud
       

@@ -124,7 +124,7 @@ To consume an OAuth service you need to declare an application on the service pl
 - an OAuth API public key
 - an OAuth API private/secret key
 
-If you don’t know what this is about, please go check the OAuth concepts on your service documentation.
+If you don't know what this is about, please go check the OAuth concepts on your service documentation.
 
 ==== Producing an OAuthAppSettings to bootstrap service
 

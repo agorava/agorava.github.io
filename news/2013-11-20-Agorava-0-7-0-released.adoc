@@ -1,0 +1,114 @@
+---
+title: "Agorava Core 0.7.0 released"
+authors: [asd]
+layout: post
+tags: [CDI,JSR330]
+---
+
+After 3 month of development, Agorava version 0.7.0 just hit Maven Central today. It is from far the biggest evolution of the framework since its creation.
+Let's see what's new in this release
+
+== API & SPI stabilization
+
+Probably the most important point for Agorava future : the framework has now a clean link:/doc/apidocs070[API] (API and implementation were a bit mixed and moving a lot prior to that)
+
+== Introduction of new concepts
+
+This version brings new concepts and tools that ease and rationalize OAuth interaction
+
+=== OAuthLifeCycleService : a single entry point to manage "OAuth Dance"
+
+OAuth initialization steps (the famous OAuth Dance) are now gathered in a single service bean : link:/doc/apidocs070/org/agorava/api/service/OAuthLifeCycleService.html[`OAuthLifeCycleService`].
+The `startDanceFor()` and `endDance()` methods ease the OAuth 1.0a and 2.0 initialization life cycle.
+
+=== Repositories to store OAuthSessions
+
+This version introduces link:/doc/apidocs070/org/agorava/api/storage/UserSessionRepository.html[`UserSessionRepository`] who allow to handle and contain a collection of OAuthSession (connection to OAuth provider).
+A main repository bean link:/doc/apidocs070/org/agorava/api/storage/GlobalRepository.html[`GlobalRepository`] stored in CDI `@ApplicationScoped` contains all `UserSessionRepository` and is a convenient way to retrieve all OAuthSession on the server side for batch processing for instance.
+
+=== UserSessionRepositoryResolver and SessionResolver 
+
+Depending on your use case `UserSessionRepository` (and their contained `OAuthSession`) can be store in different way. Thanks to `UserSessionRepositoryResolver` and `SessionResolver` you can define different way of storing and resolving repositories and session. Agora provide the following built-in resolver than can be activated in `Agorava.properties` configuration file. These built-in resolver are :
+
+- session : the `UserSessionRepository` is stored in Http Session (`@SessionScoped`) it was the Agorava behavior before version 0.7.x
+- request : the `UserSessionRepository` is provided for the current Http Request (`@RequestScoped`) but you have to propagate the `repoid` url parameter with `UserSessionRepository.getId()` value to retrieve the repo at each request
+- cookie : the `UserSessionRepository` is provided for the current Http Request (`@RequestScoped`), a cookie is used on user browser to keep the track of her `UserSessionRepository`. You can specify the lifetime of the cookie int he config
+- application : the `UserSessionRepository` is provided for all the application time (`@ApplicationScoped`). Not suitable for a multi-user scenario but rather for desktop scenario or a web app providing a shared access to a unique Social Network
+
+== Reducing framework dependencies
+
+This Agorava release reduced it's dependencies to the minimum. The only dependecies are now :
+
+- Jackson library for JSon mapping
+- Deltaspike for CDI helpers.
+
+== Ready for other JSR 330 implementation
+
+Agorava core is now ready to have a new implementation for another JSR 330 compliant framework like Dagger, Guice or Spring.
+
+== Want to give a try ?
+
+check our link:/doc/getting-started[Getting Started guide] and give us your feedback.
+
+== Want to contribute ?
+
+We really need contribution on core, doc, existing modules or new modules. So don't hesitate to join us : 
+
+- IRC (#Agorava),
+- Twitter http://twitter.com/agoravaproj[@Agoravaproj]
+- User Group: http://groups.google.com/group/agorava-dev
+- GitHub: https://github.com/agorava 
+
+== Agorava 0.7.0 Release notes
+
+    
+=== Bug
+
+* [https://issues.jboss.org/browse/AGOVA-48[AGOVA-48]] - Remove Weld
+Core dependency management from Weld-1.x profile
+* [https://issues.jboss.org/browse/AGOVA-60[AGOVA-60]] - Test don't pass
+for OWB
+* [https://issues.jboss.org/browse/AGOVA-61[AGOVA-61]] - SessionProducer
+get activated when producerscope in not definied
+* [https://issues.jboss.org/browse/AGOVA-62[AGOVA-62]] - Passivation
+error for GlobalRepositoryImpl on GF / Weld 2.0.4
+* [https://issues.jboss.org/browse/AGOVA-63[AGOVA-63]] - When using Weld
+2.X on Wildfly 8 or Glassfish 4, looking for OAuthSession fails
+
+=== Enhancement
+
+
+* [https://issues.jboss.org/browse/AGOVA-38[AGOVA-38]] - Integrate Rest
+and OAuth engine in core
+* [https://issues.jboss.org/browse/AGOVA-49[AGOVA-49]] - Remove BOM from
+parent
+* [https://issues.jboss.org/browse/AGOVA-54[AGOVA-54]] - Adding support
+of Raw JSON / XML response
+* [https://issues.jboss.org/browse/AGOVA-55[AGOVA-55]] - Upgrade Jackson
+to 2.X
+* [https://issues.jboss.org/browse/AGOVA-56[AGOVA-56]] - Get rid of
+Guava
+* [https://issues.jboss.org/browse/AGOVA-57[AGOVA-57]] - Get rid of
+Commons Codec
+* [https://issues.jboss.org/browse/AGOVA-58[AGOVA-58]] - Gather testing
+profile in parent POM
+* [https://issues.jboss.org/browse/AGOVA-59[AGOVA-59]] - Use
+RequestTuner to specialize request instead of creating specific
+OAuthService
+
+=== Feature Request
+
+
+* [https://issues.jboss.org/browse/AGOVA-40[AGOVA-40]] - OAuthSession
+production should be ready for all application type (not only Web with
+HttpSession)
+* [https://issues.jboss.org/browse/AGOVA-52[AGOVA-52]] - Support to
+programmatically control callback URL pr auth request
+* [https://issues.jboss.org/browse/AGOVA-53[AGOVA-53]] - OAuthComplete
+Event is unstable as a User facing API
+
+=== Task
+
+
+* [https://issues.jboss.org/browse/AGOVA-7[AGOVA-7]] - Create API and
+common IMPL for JSR 330 compliant framework
