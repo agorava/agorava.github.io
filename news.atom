@@ -2,20 +2,20 @@
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
   <id>http://agorava.org/</id>
   <title>Agorava</title>
-  <updated>2013-11-20T23:00:26+01:00</updated>
+  <updated>2013-11-20T23:56:01+01:00</updated>
   <link href="http://agorava.org/news.atom" rel="self" type="application/atom+xml" />
   <link href="http://agorava.org/" rel="alternate" type="text/html" />
   <entry>
     <id>http://agorava.org/news/2013/11/20/Agorava-0-7-0-released.html</id>
     <title>Agorava Core 0.7.0 released</title>
-    <updated>2013-11-20T23:00:26+01:00</updated>
+    <updated>2013-11-20T23:56:01+01:00</updated>
     <published>2013-11-20T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2013/11/20/Agorava-0-7-0-released.html" rel="alternate" type="text/html" />
     <category term="CDI"></category>
     <category term="JSR330"></category>
     <summary>
       
-      After 3 month of development, Agorava version 0.7.0 just hit Maven Central today. It is from far the biggest evolution of the framework since its creation.
+      After 3 month of development, Agorava version 0.7.0 hit Maven Central today. It is from far the biggest evolution of the framework since its creation.
       Let&#8217;s see what&#8217;s new in this release
       
       
@@ -35,11 +35,11 @@
       
       OAuthLifeCycleService : a single entry point to manage "OAuth Dance"
       
-      OAuth initialization steps (the famous OAuth Dance) are now gathered in a single...
+      OAuth initialization steps (the famous OAuth Dance) are now gathered in a single service...
     </summary>
     <content type="html">
       &lt;div class=&quot;paragraph&quot;&gt;
-      &lt;p&gt;After 3 month of development, Agorava version 0.7.0 just hit Maven Central today. It is from far the biggest evolution of the framework since its creation.
+      &lt;p&gt;After 3 month of development, Agorava version 0.7.0 hit &lt;a href=&quot;http://search.maven.org/#search%7Cga%7C1%7Cagorava:&quot;&gt;Maven Central&lt;/a&gt; today. It is from far the biggest evolution of the framework since its creation.
       Let’s see what’s new in this release&lt;/p&gt;
       &lt;/div&gt;
       &lt;div class=&quot;sect1&quot;&gt;
@@ -78,16 +78,16 @@
       &lt;div class=&quot;ulist&quot;&gt;
       &lt;ul&gt;
       &lt;li&gt;
-      &lt;p&gt;session : the &lt;code&gt;UserSessionRepository&lt;/code&gt; is stored in Http Session (&lt;code&gt;@SessionScoped&lt;/code&gt;) it was the Agorava behavior before version 0.7.x&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;session&lt;/strong&gt; : the &lt;code&gt;UserSessionRepository&lt;/code&gt; is stored in Http Session (&lt;code&gt;@SessionScoped&lt;/code&gt;) it was the Agorava behavior before version 0.7.x&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-      &lt;p&gt;request : the &lt;code&gt;UserSessionRepository&lt;/code&gt; is provided for the current Http Request (&lt;code&gt;@RequestScoped&lt;/code&gt;) but you have to propagate the &lt;code&gt;repoid&lt;/code&gt; url parameter with &lt;code&gt;UserSessionRepository.getId()&lt;/code&gt; value to retrieve the repo at each request&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;request&lt;/strong&gt; : the &lt;code&gt;UserSessionRepository&lt;/code&gt; is provided for the current Http Request (&lt;code&gt;@RequestScoped&lt;/code&gt;) but you have to propagate the &lt;code&gt;repoid&lt;/code&gt; url parameter with &lt;code&gt;UserSessionRepository.getId()&lt;/code&gt; value to retrieve the repo at each request&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-      &lt;p&gt;cookie : the &lt;code&gt;UserSessionRepository&lt;/code&gt; is provided for the current Http Request (&lt;code&gt;@RequestScoped&lt;/code&gt;), a cookie is used on user browser to keep the track of her &lt;code&gt;UserSessionRepository&lt;/code&gt;. You can specify the lifetime of the cookie int he config&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;cookie&lt;/strong&gt; : the &lt;code&gt;UserSessionRepository&lt;/code&gt; is provided for the current Http Request (&lt;code&gt;@RequestScoped&lt;/code&gt;), a cookie is used on user browser to keep the track of her &lt;code&gt;UserSessionRepository&lt;/code&gt;. You can specify the lifetime of the cookie int he config&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-      &lt;p&gt;application : the &lt;code&gt;UserSessionRepository&lt;/code&gt; is provided for all the application time (&lt;code&gt;@ApplicationScoped&lt;/code&gt;). Not suitable for a multi-user scenario but rather for desktop scenario or a web app providing a shared access to a unique Social Network&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;application&lt;/strong&gt; : the &lt;code&gt;UserSessionRepository&lt;/code&gt; is provided for all the application time (&lt;code&gt;@ApplicationScoped&lt;/code&gt;). Not suitable for a multi-user scenario but rather for desktop scenario or a web app providing a shared access to a unique Social Network&lt;/p&gt;
       &lt;/li&gt;
       &lt;/ul&gt;
       &lt;/div&gt;
@@ -260,7 +260,7 @@
   <entry>
     <id>http://agorava.org/news/2013/08/07/Agorava-0-6-1-released.html</id>
     <title>Agorava Core 0.6.1 released</title>
-    <updated>2013-11-20T18:17:31+01:00</updated>
+    <updated>2013-11-20T23:23:01+01:00</updated>
     <published>2013-08-07T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2013/08/07/Agorava-0-6-1-released.html" rel="alternate" type="text/html" />
     <category term="CDI"></category>
@@ -343,7 +343,7 @@
   <entry>
     <id>http://agorava.org/news/2013/07/13/Agorava-0-6-0-released.html</id>
     <title>Agorava Core 0.6.0 released</title>
-    <updated>2013-11-20T18:17:31+01:00</updated>
+    <updated>2013-11-20T23:23:01+01:00</updated>
     <published>2013-07-13T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2013/07/13/Agorava-0-6-0-released.html" rel="alternate" type="text/html" />
     <category term="CDI"></category>
@@ -409,7 +409,7 @@
   <entry>
     <id>http://agorava.org/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released.html</id>
     <title>Twitter, Facebook and LinkdedIn modules released in 0.5</title>
-    <updated>2013-11-20T18:17:31+01:00</updated>
+    <updated>2013-11-20T23:23:01+01:00</updated>
     <published>2013-06-16T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released.html" rel="alternate" type="text/html" />
     <category term="Twitter"></category>
@@ -471,7 +471,7 @@
   <entry>
     <id>http://agorava.org/news/2013/04/23/Agorava-0-5-2-release-and-roadmap.html</id>
     <title>Agorava 0.5.2 released. What's new and what's on the roadmap ?</title>
-    <updated>2013-11-20T18:17:31+01:00</updated>
+    <updated>2013-11-20T23:23:01+01:00</updated>
     <published>2013-04-23T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2013/04/23/Agorava-0-5-2-release-and-roadmap.html" rel="alternate" type="text/html" />
     <category term="CDI"></category>
@@ -527,7 +527,7 @@
   <entry>
     <id>http://agorava.org/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin.html</id>
     <title>Starting a CDI webapp from Maven with Weld-Servlet and Jetty Plugin</title>
-    <updated>2013-11-20T18:17:31+01:00</updated>
+    <updated>2013-11-20T23:23:01+01:00</updated>
     <published>2012-07-10T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin.html" rel="alternate" type="text/html" />
     <category term="CDI"></category>
@@ -705,7 +705,7 @@
   <entry>
     <id>http://agorava.org/news/2012/06/22/Meet-Agorava-the-Social-Framework.html</id>
     <title>Meet Agorava, The Social Framework</title>
-    <updated>2013-11-20T18:17:31+01:00</updated>
+    <updated>2013-11-20T23:23:01+01:00</updated>
     <published>2012-06-22T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2012/06/22/Meet-Agorava-the-Social-Framework.html" rel="alternate" type="text/html" />
     <category term="announce"></category>

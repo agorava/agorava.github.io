@@ -258,11 +258,23 @@
           <div class="paragraph">
           <p>OAuthSession contains all user information regarding an OAuth Access (each <code>OAuthSession</code> get a specific access token to access a specific OAuth application on the behalf of the user who granted access to her account).
           <code>OAuthSession</code> beans are a stateful  sensitive data mandatory for all OAuth exchange. As <code>OauthSession</code> need to have a <code>@Dependent</code> scope (no scope or <em>prototype</em> scope if you prefer), all <code>OAuthSession`of a given Agorava user are stored in a `UserSessionRepository</code> which much store in a place that allow it to be fetch when needed. For that purpose Agora provide different <code>UserSessionRepositoryResolver</code> and <code>SessionResolver</code> that you can activate by configuration. You can also create your own resolver but it&#8217;s beyond this tutorial.
-          Built-in resolver strategy are :
-          - session : the <code>UserSessionRepository</code> is stored in Http Session (<code>@SessionScoped</code>) it was the Agorava behavior before version 0.7.x
-          - request : the <code>UserSessionRepository</code> is provided for the current Http Request (<code>@RequestScoped</code>) but you have to propagate the <code>repoid</code> url parameter with <code>UserSessionRepository.getId()</code> value to retrieve the repo at each request
-          - cookie : the <code>UserSessionRepository</code> is provided for the current Http Request (<code>@RequestScoped</code>), a cookie is used on user browser to keep the track of her <code>UserSessionRepository</code>. You can specify the lifetime of the cookie int he config
-          - application : the <code>UserSessionRepository</code> is provided for all the application time (<code>@ApplicationScoped</code>). Not suitable for a multi-user scenario but rather for desktop scenario or a web app providing a shared access to a unique Social Network</p>
+          Built-in resolver strategy are :</p>
+          </div>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p><strong>session</strong> : the <code>UserSessionRepository</code> is stored in Http Session (<code>@SessionScoped</code>) it was the Agorava behavior before version 0.7.x</p>
+          </li>
+          <li>
+          <p><strong>request</strong> : the <code>UserSessionRepository</code> is provided for the current Http Request (<code>@RequestScoped</code>) but you have to propagate the <code>repoid</code> url parameter with <code>UserSessionRepository.getId()</code> value to retrieve the repo at each request</p>
+          </li>
+          <li>
+          <p><strong>cookie</strong> : the <code>UserSessionRepository</code> is provided for the current Http Request (<code>@RequestScoped</code>), a cookie is used on user browser to keep the track of her <code>UserSessionRepository</code>. You can specify the lifetime of the cookie int he config</p>
+          </li>
+          <li>
+          <p><strong>application</strong> : the <code>UserSessionRepository</code> is provided for all the application time (<code>@ApplicationScoped</code>). Not suitable for a multi-user scenario but rather for desktop scenario or a web app providing a shared access to a unique Social Network</p>
+          </li>
+          </ul>
           </div>
           <div class="paragraph">
           <p>To activate the resolver of your choice you have to add it to <code>agorava.properties</code> file</p>

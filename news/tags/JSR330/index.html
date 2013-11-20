@@ -94,7 +94,7 @@
               </div>
               <div class="content">
                 <div class="paragraph">
-                <p>After 3 month of development, Agorava version 0.7.0 just hit Maven Central today. It is from far the biggest evolution of the framework since its creation.
+                <p>After 3 month of development, Agorava version 0.7.0 hit <a href="http://search.maven.org/#search%7Cga%7C1%7Cagorava:">Maven Central</a> today. It is from far the biggest evolution of the framework since its creation.
                 Let&#8217;s see what&#8217;s new in this release</p>
                 </div>
                 <div class="sect1">
@@ -133,16 +133,16 @@
                 <div class="ulist">
                 <ul>
                 <li>
-                <p>session : the <code>UserSessionRepository</code> is stored in Http Session (<code>@SessionScoped</code>) it was the Agorava behavior before version 0.7.x</p>
+                <p><strong>session</strong> : the <code>UserSessionRepository</code> is stored in Http Session (<code>@SessionScoped</code>) it was the Agorava behavior before version 0.7.x</p>
                 </li>
                 <li>
-                <p>request : the <code>UserSessionRepository</code> is provided for the current Http Request (<code>@RequestScoped</code>) but you have to propagate the <code>repoid</code> url parameter with <code>UserSessionRepository.getId()</code> value to retrieve the repo at each request</p>
+                <p><strong>request</strong> : the <code>UserSessionRepository</code> is provided for the current Http Request (<code>@RequestScoped</code>) but you have to propagate the <code>repoid</code> url parameter with <code>UserSessionRepository.getId()</code> value to retrieve the repo at each request</p>
                 </li>
                 <li>
-                <p>cookie : the <code>UserSessionRepository</code> is provided for the current Http Request (<code>@RequestScoped</code>), a cookie is used on user browser to keep the track of her <code>UserSessionRepository</code>. You can specify the lifetime of the cookie int he config</p>
+                <p><strong>cookie</strong> : the <code>UserSessionRepository</code> is provided for the current Http Request (<code>@RequestScoped</code>), a cookie is used on user browser to keep the track of her <code>UserSessionRepository</code>. You can specify the lifetime of the cookie int he config</p>
                 </li>
                 <li>
-                <p>application : the <code>UserSessionRepository</code> is provided for all the application time (<code>@ApplicationScoped</code>). Not suitable for a multi-user scenario but rather for desktop scenario or a web app providing a shared access to a unique Social Network</p>
+                <p><strong>application</strong> : the <code>UserSessionRepository</code> is provided for all the application time (<code>@ApplicationScoped</code>). Not suitable for a multi-user scenario but rather for desktop scenario or a web app providing a shared access to a unique Social Network</p>
                 </li>
                 </ul>
                 </div>
