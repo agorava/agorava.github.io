@@ -181,10 +181,11 @@ public OAuthAppSettings twitterSettings;
 OAuthSession contains all user information regarding an OAuth Access (each `OAuthSession` get a specific access token to access a specific OAuth application on the behalf of the user who granted access to her account).
 `OAuthSession` beans are a stateful  sensitive data mandatory for all OAuth exchange. As `OauthSession` need to have a `@Dependent` scope (no scope or 'prototype' scope if you prefer), all `OAuthSession`of a given Agorava user are stored in a `UserSessionRepository` which much store in a place that allow it to be fetch when needed. For that purpose Agora provide different `UserSessionRepositoryResolver` and `SessionResolver` that you can activate by configuration. You can also create your own resolver but it's beyond this tutorial.
 Built-in resolver strategy are :
-- session : the `UserSessionRepository` is stored in Http Session (`@SessionScoped`) it was the Agorava behavior before version 0.7.x
-- request : the `UserSessionRepository` is provided for the current Http Request (`@RequestScoped`) but you have to propagate the `repoid` url parameter with `UserSessionRepository.getId()` value to retrieve the repo at each request
-- cookie : the `UserSessionRepository` is provided for the current Http Request (`@RequestScoped`), a cookie is used on user browser to keep the track of her `UserSessionRepository`. You can specify the lifetime of the cookie int he config
-- application : the `UserSessionRepository` is provided for all the application time (`@ApplicationScoped`). Not suitable for a multi-user scenario but rather for desktop scenario or a web app providing a shared access to a unique Social Network
+
+- *session* : the `UserSessionRepository` is stored in Http Session (`@SessionScoped`) it was the Agorava behavior before version 0.7.x
+- *request* : the `UserSessionRepository` is provided for the current Http Request (`@RequestScoped`) but you have to propagate the `repoid` url parameter with `UserSessionRepository.getId()` value to retrieve the repo at each request
+- *cookie* : the `UserSessionRepository` is provided for the current Http Request (`@RequestScoped`), a cookie is used on user browser to keep the track of her `UserSessionRepository`. You can specify the lifetime of the cookie int he config
+- *application* : the `UserSessionRepository` is provided for all the application time (`@ApplicationScoped`). Not suitable for a multi-user scenario but rather for desktop scenario or a web app providing a shared access to a unique Social Network
 
 To activate the resolver of your choice you have to add it to `agorava.properties` file
 

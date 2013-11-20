@@ -5,7 +5,7 @@ layout: post
 tags: [CDI,JSR330]
 ---
 
-After 3 month of development, Agorava version 0.7.0 just hit Maven Central today. It is from far the biggest evolution of the framework since its creation.
+After 3 month of development, Agorava version 0.7.0 hit http://search.maven.org/#search%7Cga%7C1%7Cagorava:[Maven Central] today. It is from far the biggest evolution of the framework since its creation.
 Let's see what's new in this release
 
 == API & SPI stabilization
@@ -30,10 +30,10 @@ A main repository bean link:/doc/apidocs070/org/agorava/api/storage/GlobalReposi
 
 Depending on your use case `UserSessionRepository` (and their contained `OAuthSession`) can be store in different way. Thanks to `UserSessionRepositoryResolver` and `SessionResolver` you can define different way of storing and resolving repositories and session. Agora provide the following built-in resolver than can be activated in `Agorava.properties` configuration file. These built-in resolver are :
 
-- session : the `UserSessionRepository` is stored in Http Session (`@SessionScoped`) it was the Agorava behavior before version 0.7.x
-- request : the `UserSessionRepository` is provided for the current Http Request (`@RequestScoped`) but you have to propagate the `repoid` url parameter with `UserSessionRepository.getId()` value to retrieve the repo at each request
-- cookie : the `UserSessionRepository` is provided for the current Http Request (`@RequestScoped`), a cookie is used on user browser to keep the track of her `UserSessionRepository`. You can specify the lifetime of the cookie int he config
-- application : the `UserSessionRepository` is provided for all the application time (`@ApplicationScoped`). Not suitable for a multi-user scenario but rather for desktop scenario or a web app providing a shared access to a unique Social Network
+- *session* : the `UserSessionRepository` is stored in Http Session (`@SessionScoped`) it was the Agorava behavior before version 0.7.x
+- *request* : the `UserSessionRepository` is provided for the current Http Request (`@RequestScoped`) but you have to propagate the `repoid` url parameter with `UserSessionRepository.getId()` value to retrieve the repo at each request
+- *cookie* : the `UserSessionRepository` is provided for the current Http Request (`@RequestScoped`), a cookie is used on user browser to keep the track of her `UserSessionRepository`. You can specify the lifetime of the cookie int he config
+- *application* : the `UserSessionRepository` is provided for all the application time (`@ApplicationScoped`). Not suitable for a multi-user scenario but rather for desktop scenario or a web app providing a shared access to a unique Social Network
 
 == Reducing framework dependencies
 
