@@ -4,73 +4,77 @@
     <meta charset="utf-8">
     <title>Agorava Project</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="http://agorava.org/stylesheets/styles.css" rel="stylesheet" type="text/css">
     <style>
       body {
-        padding-top: 60px;
+        padding-top: 80px;
       }
     </style>
-    <link href="http://agorava.org/stylesheets/styles.css" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
-    <script src="http://agorava.org/javascripts/bootstrap-collapse.js" type="text/javascript"></script>
-    <script src="http://agorava.org/javascripts/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="http://agorava.org/javascripts/bootstrap/collapse.js" type="text/javascript"></script>
+    <script src="http://agorava.org/javascripts/bootstrap/dropdown.js" type="text/javascript"></script>
   </head>
   <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <div class="github-banner">
-            <a href="https://github.com/agorava">
-              <img alt="Fork me on GitHub" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" style="position: absolute; top: 0; right: 0; border: 0;z-index: 900;">
-            </a>
-          </div>
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <div class="github-banner">
+          <a href="https://github.com/agorava">
+            <img alt="Fork me on GitHub" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" style="position: absolute; top: 0; right: 0; border: 0;z-index: 900;">
           </a>
-          <a class="brand" href="http://agorava.org">Agorava</a>
-          <div class="nav-collapse">
-            <ul class="nav">
+        </div>
+        <a class="btn navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+          <span class="sr-only">
+            Toggle navigation
+          </span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="navbar-brand" href="http://agorava.org">Agorava</a>
+      </div>
+      <div class="navbar-collapse collaspe">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="http://agorava.org/">Home</a>
+          </li>
+          <li>
+            <a href="http://agorava.org/news/">Blog</a>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              Documentation
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
               <li>
-                <a href="http://agorava.org/">Home</a>
+                <a href="http://agorava.org/doc/getting-started">Getting Started</a>
               </li>
               <li>
-                <a href="http://agorava.org/news/">Blog</a>
-              </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                  Documentation
-                  <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="http://agorava.org/doc/getting-started">Getting Started</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="http://agorava.org/calendar/">Calendar</a>
-              </li>
-              <li>
-                <a href="http://agorava.org/sponsors/">Sponsors</a>
+                <a href="http://agorava.org/doc/apidocs070" target="_BLANK">API/SPI Javadoc</a>
               </li>
             </ul>
-          </div>
-        </div>
+          </li>
+          <li>
+            <a href="http://agorava.org/calendar/">Calendar</a>
+          </li>
+          <li>
+            <a href="http://agorava.org/sponsors/">Sponsors</a>
+          </li>
+        </ul>
       </div>
       <script>
         var indexOfSharp = window.location.pathname.indexOf('#');
         var pathname = indexOfSharp > 0 ? window.location.pathname.substring(0, indexOfSharp) : window.location.pathname;
-        var selector = "body > .navbar > .navbar-inner a[href='http://agorava.org"+pathname+"']";
+        var selector = "body > .navbar > .navbar-collapse a[href='http://agorava.org"+pathname+"']";
         $(selector).closest("li").addClass("active");
       </script>
-    </div>
+    </nav>
     <div class="container">
       <div class="row">
-        <div class="span12">
+        <div class="col-md-12">
           <div class="sect1">
           <h2 id="_agorava_contributing_guide">Agorava Contributing Guide</h2>
           <div class="sectionbody">
@@ -86,7 +90,6 @@
           <p>Here are the steps in detail:</p>
           </div>
           <div class="olist arabic">
-          
           <ol class="arabic">
           <li>
           <p>[Fork](<a href="https://github.com/jboss-jdf/jboss-as-quickstart/fork_select">https://github.com/jboss-jdf/jboss-as-quickstart/fork_select</a>) the project. This creates a the project in your own Git with the default remote name <em>origin</em>.</p>
@@ -97,13 +100,11 @@
           </ol>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>git clone git@github.com:&lt;your-username&gt;/jboss-as-quickstart.git</pre>
           </div>
           </div>
           <div class="olist arabic">
-          
           <ol class="arabic">
           <li>
           <p>Change to the <code>jboss-as-quickstart</code> directory.</p>
@@ -114,13 +115,11 @@
           </ol>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>git remote add upstream git@github.com:jboss-jdf/jboss-as-quickstart.git</pre>
           </div>
           </div>
           <div class="olist arabic">
-          
           <ol class="arabic">
           <li>
           <p>Get the latest files from the <code>upstream</code> repository.</p>
@@ -128,13 +127,11 @@
           </ol>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>git fetch upstream</pre>
           </div>
           </div>
           <div class="olist arabic">
-          
           <ol class="arabic">
           <li>
           <p>Create a new topic branch to contain your new quickstart, features, changes, or fixes using the <code>git checkout -b  &lt;topic-branch-name&gt; upstream/master</code> command. For example:</p>
@@ -142,13 +139,11 @@
           </ol>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>git checkout -b helloworld-fix upstream/master</pre>
           </div>
           </div>
           <div class="olist arabic">
-          
           <ol class="arabic">
           <li>
           <p>Contribute new code or make changes to existing files. Make sure that you follow the [General Guidelines](#general-guidelines) below.</p>
@@ -156,144 +151,118 @@
           <li>
           <p>To verify if your code followed the General Guidelines you can run <a href="http://www.jboss.org/jdf/quickstarts/qstools/">QS Tools</a> on your project.</p>
           <div class="ulist">
-          
           <ul>
           <li>
           <p>To run QS Tools, go to your quickstart project root and execute:</p>
           </li>
           </ul>
           </div>
-          
           </li>
           </ol>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>           mvn -U org.jboss.maven.plugins:maven-qstools-plugin:check</pre>
           </div>
           </div>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>This will generate a report on `QUICKSTART_HOME/target/site/qschecker.html`. Review the report to determine if your quickstart project violates any item in the *General Guidelines*.</pre>
           </div>
           </div>
           <div class="olist arabic">
-          
           <ol class="arabic">
           <li>
           <p>Use the <code>git add</code> command to add new or changed file contents to the staging area.</p>
           <div class="ulist">
-          
           <ul>
           <li>
           <p>If you create a new quickstart, you can add files using the subfolder and file names. The following is an example of new quickstart folders and files you may want to stage:</p>
           </li>
           </ul>
           </div>
-          
           </li>
           </ol>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>            git add src/&#x000A;            git add pom.xml&#x000A;            git add README.md</pre>
           </div>
           </div>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>_Note: It is probably best not to add the entire quickstart root folder because you may unintentionally add classes or other target files that should not be in source control._&#x000A;* If you only modified a few files, use `git add &lt;filename&gt;` for every file you create or change. For example:</pre>
           </div>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>            git add README.md</pre>
           </div>
           </div>
           <div class="olist arabic">
-          
           <ol class="arabic">
           <li>
           <p>Use the git status command to view the status of the files in the directory and in the staging area and ensure that all modified files are properly staged:</p>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>git status</pre>
           </div>
           </div>
-          
           </li>
           <li>
           <p>Commit your changes to your local topic branch.</p>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>git commit -m 'Description of change...'</pre>
           </div>
           </div>
-          
           </li>
           <li>
           <p>Update your branch with any changes made upstream since you started.</p>
           <div class="ulist">
-          
           <ul>
           <li>
           <p>Fetch the latest changes from upstream</p>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>     git fetch upstream&#x000A;* Apply those changes to your branch</pre>
           </div>
           </div>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>     git rebase upstream/master&#x000A;* If anyone has commited changes to files that you have also changed, you may see conflicts.&#x000A;Resolve the conflicted files, add them using `git add`, and continue the rebase:</pre>
           </div>
           </div>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>     git add &lt;conflicted-file-name&gt;&#x000A;     git rebase --continue&#x000A;* If there were conflicts, it is a good idea to test your changes again to make they still work.</pre>
           </div>
           </div>
-          
           </li>
           </ul>
           </div>
-          
           </li>
           <li>
           <p>Push your local topic branch to your github forked repository. This will create a branch on your Git fork repository with the same name as your local topic branch name.</p>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>     git push origin HEAD&#x000A;_Note: The above command assumes your remote repository is named 'origin'. You can verify your forked remote repository name using the command `git remote -v`_.</pre>
           </div>
           </div>
-          
           </li>
           <li>
           <p>Browse to the &lt;topic-branch-name&gt; branch on your forked Git repository and [open a Pull Request](<a href="http://help.github.com/send-pull-requests/">http://help.github.com/send-pull-requests/</a>). Give it a clear title and description.</p>
           </li>
           </ol>
           </div>
-          
           </div>
           <div class="sect2">
           <h3 id="_general_guidelines">General Guidelines</h3>
           <div class="ulist">
-          
           <ul>
           <li>
           <p>The sample project should be formatted using the JBoss AS profiles found at <a href="http://github.com/jboss/ide-config/tree/master/">http://github.com/jboss/ide-config/tree/master/</a></p>
           <div class="ulist">
-          
           <ul>
           <li>
           <p>Code should be well documented with good comments. Please add an author tag (@author) to credit yourself for writing the code.</p>
@@ -303,7 +272,6 @@
           </li>
           </ul>
           </div>
-          
           </li>
           <li>
           <p>The package must be <strong>org.jboss.as.quickstarts</strong></p>
@@ -326,7 +294,6 @@
           <li>
           <p>Maven POMs must be used. No other build system is allowed unless the purpose of the quickstart is to show another build system in use. If using Maven it should:</p>
           <div class="ulist">
-          
           <ul>
           <li>
           <p>Not inherit from another POM</p>
@@ -345,7 +312,6 @@
           </li>
           </ul>
           </div>
-          
           </li>
           <li>
           <p>The sample project must contain a <code>README.md</code> file using the <code>template/README.md</code> file as a guideline</p>
@@ -356,7 +322,6 @@
           <li>
           <p>The project must target Java 6</p>
           <div class="ulist">
-          
           <ul>
           <li>
           <p>CDI should be used as the programming model</p>
@@ -369,11 +334,9 @@
           </li>
           </ul>
           </div>
-          
           </li>
           </ul>
           </div>
-          
           </div>
           <div class="sect2">
           <h3 id="_setup_your_environment">Setup your environment</h3>
@@ -382,82 +345,66 @@
           <div class="sect2">
           <h3 id="_license_information_and_contributor_agreement">License Information and Contributor Agreement</h3>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>JBoss Developer Framework is licensed under the Apache License 2.0, as we believe it is one of the most permissive Open Source license. This allows developers to easily make use of the code samples in JBoss Developer Framework.</pre>
           </div>
           </div>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>There is no need to sign a contributor agreement to contribute to JBoss Developer Framework. You just need to explicitly license any contribution under the AL 2.0. If you add any new files to JBoss Developer Framework, make sure to add the correct header.</pre>
           </div>
           </div>
-          
           </div>
           <div class="sect2">
           <h3 id="_java_javascript_and_css_files">Java,  Javascript and CSS files</h3>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>/**&#x000A; * JBoss, Home of Professional Open Source&#x000A; * Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual&#x000A; * contributors by the @authors tag. See the copyright.txt in the&#x000A; * distribution for a full listing of individual contributors.&#x000A; *&#x000A; * Licensed under the Apache License, Version 2.0 (the "License");&#x000A; * you may not use this file except in compliance with the License.&#x000A; * You may obtain a copy of the License at&#x000A; * http://www.apache.org/licenses/LICENSE-2.0&#x000A; * Unless required by applicable law or agreed to in writing, software&#x000A; * distributed under the License is distributed on an "AS IS" BASIS,&#x000A; * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#x000A; * See the License for the specific language governing permissions and&#x000A; * limitations under the License.&#x000A; */</pre>
           </div>
           </div>
-          
           </div>
           <div class="sect2">
           <h3 id="_html_xml_xsd_and_xhtml_files">HTML, XML, XSD and XHTML files</h3>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>&lt;!--&#x000A; JBoss, Home of Professional Open Source&#x000A; Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual&#x000A; contributors by the @authors tag. See the copyright.txt in the&#x000A; distribution for a full listing of individual contributors.</pre>
           </div>
           </div>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>Licensed under the Apache License, Version 2.0 (the "License");&#x000A;you may not use this file except in compliance with the License.&#x000A;You may obtain a copy of the License at&#x000A;http://www.apache.org/licenses/LICENSE-2.0&#x000A;Unless required by applicable law or agreed to in writing, software&#x000A;distributed under the License is distributed on an "AS IS" BASIS,&#x000A;WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#x000A;See the License for the specific language governing permissions and&#x000A;limitations under the License.&#x000A;--&gt;</pre>
           </div>
           </div>
-          
           </div>
           <div class="sect2">
           <h3 id="_properties_files_and_bash_scripts">Properties files and Bash Scripts</h3>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre># JBoss, Home of Professional Open Source&#x000A;# Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual&#x000A;# contributors by the @authors tag. See the copyright.txt in the&#x000A;# distribution for a full listing of individual contributors.&#x000A;#&#x000A;# Licensed under the Apache License, Version 2.0 (the "License");&#x000A;# you may not use this file except in compliance with the License.&#x000A;# You may obtain a copy of the License at&#x000A;# http://www.apache.org/licenses/LICENSE-2.0&#x000A;# Unless required by applicable law or agreed to in writing, software&#x000A;# distributed under the License is distributed on an "AS IS" BASIS,&#x000A;# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#x000A;# See the License for the specific language governing permissions and&#x000A;# limitations under the License.</pre>
           </div>
           </div>
-          
           </div>
           <div class="sect2">
           <h3 id="_sql_files">SQL files</h3>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>--&#x000A;-- JBoss, Home of Professional Open Source&#x000A;-- Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual&#x000A;-- contributors by the @authors tag. See the copyright.txt in the&#x000A;-- distribution for a full listing of individual contributors.&#x000A;--&#x000A;-- Licensed under the Apache License, Version 2.0 (the "License");&#x000A;-- you may not use this file except in compliance with the License.&#x000A;-- You may obtain a copy of the License at&#x000A;-- http://www.apache.org/licenses/LICENSE-2.0&#x000A;-- Unless required by applicable law or agreed to in writing, software&#x000A;-- distributed under the License is distributed on an "AS IS" BASIS,&#x000A;-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#x000A;-- See the License for the specific language governing permissions and&#x000A;-- limitations under the License.&#x000A;--</pre>
           </div>
           </div>
-          
           </div>
           <div class="sect2">
           <h3 id="_jsp_files">JSP files</h3>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>&lt;%--&#x000A;JBoss, Home of Professional Open Source&#x000A;Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual&#x000A;contributors by the @authors tag. See the copyright.txt in the&#x000A;distribution for a full listing of individual contributors.</pre>
           </div>
           </div>
           <div class="literalblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>Licensed under the Apache License, Version 2.0 (the "License");&#x000A;you may not use this file except in compliance with the License.&#x000A;You may obtain a copy of the License at&#x000A;http://www.apache.org/licenses/LICENSE-2.0&#x000A;Unless required by applicable law or agreed to in writing, software&#x000A;distributed under the License is distributed on an "AS IS" BASIS,&#x000A;WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#x000A;See the License for the specific language governing permissions and&#x000A;limitations under the License.&#x000A;--%&gt;</pre>
           </div>
           </div>
-          
           </div>
-          
           </div>
           </div>
         </div>

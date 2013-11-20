@@ -4,80 +4,332 @@
     <meta charset="utf-8">
     <title>Agorava Project</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="http://agorava.org/stylesheets/styles.css" rel="stylesheet" type="text/css">
     <style>
       body {
-        padding-top: 60px;
+        padding-top: 80px;
       }
     </style>
-    <link href="http://agorava.org/stylesheets/styles.css" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
-    <script src="http://agorava.org/javascripts/bootstrap-collapse.js" type="text/javascript"></script>
-    <script src="http://agorava.org/javascripts/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="http://agorava.org/javascripts/bootstrap/collapse.js" type="text/javascript"></script>
+    <script src="http://agorava.org/javascripts/bootstrap/dropdown.js" type="text/javascript"></script>
   </head>
   <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <div class="github-banner">
-            <a href="https://github.com/agorava">
-              <img alt="Fork me on GitHub" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" style="position: absolute; top: 0; right: 0; border: 0;z-index: 900;">
-            </a>
-          </div>
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <div class="github-banner">
+          <a href="https://github.com/agorava">
+            <img alt="Fork me on GitHub" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" style="position: absolute; top: 0; right: 0; border: 0;z-index: 900;">
           </a>
-          <a class="brand" href="http://agorava.org">Agorava</a>
-          <div class="nav-collapse">
-            <ul class="nav">
+        </div>
+        <a class="btn navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+          <span class="sr-only">
+            Toggle navigation
+          </span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="navbar-brand" href="http://agorava.org">Agorava</a>
+      </div>
+      <div class="navbar-collapse collaspe">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="http://agorava.org/">Home</a>
+          </li>
+          <li>
+            <a href="http://agorava.org/news/">Blog</a>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              Documentation
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
               <li>
-                <a href="http://agorava.org/">Home</a>
+                <a href="http://agorava.org/doc/getting-started">Getting Started</a>
               </li>
               <li>
-                <a href="http://agorava.org/news/">Blog</a>
-              </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                  Documentation
-                  <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="http://agorava.org/doc/getting-started">Getting Started</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="http://agorava.org/calendar/">Calendar</a>
-              </li>
-              <li>
-                <a href="http://agorava.org/sponsors/">Sponsors</a>
+                <a href="http://agorava.org/doc/apidocs070" target="_BLANK">API/SPI Javadoc</a>
               </li>
             </ul>
-          </div>
-        </div>
+          </li>
+          <li>
+            <a href="http://agorava.org/calendar/">Calendar</a>
+          </li>
+          <li>
+            <a href="http://agorava.org/sponsors/">Sponsors</a>
+          </li>
+        </ul>
       </div>
       <script>
         var indexOfSharp = window.location.pathname.indexOf('#');
         var pathname = indexOfSharp > 0 ? window.location.pathname.substring(0, indexOfSharp) : window.location.pathname;
-        var selector = "body > .navbar > .navbar-inner a[href='http://agorava.org"+pathname+"']";
+        var selector = "body > .navbar > .navbar-collapse a[href='http://agorava.org"+pathname+"']";
         $(selector).closest("li").addClass("active");
       </script>
-    </div>
+    </nav>
     <div class="container">
       <div class="row">
-        <div class="span9">
+        <div class="col-md-9">
           <div class="posts">
             <article class="post">
-              <h2>
+              <h1>
+                <a href="/news/2013/11/20/Agorava-0-7-0-released/">
+                  Agorava Core 0.7.0 released
+                </a>
+              </h1>
+              <div class="meta">
+                <strong>
+                  Posted by
+                  <span class="authors"> Antoine Sabot-Durand</span>
+                  on
+                  <span class="date">Nov 20, 2013</span>
+                  |
+                   <a href="http://agorava.org/news/2013/11/20/Agorava-0-7-0-released/#disqus_thread" data-disqus-identifier="b2a3aefe3a2a1b1652c11f95375b19d3a04d8da4">Comments</a>
+                </strong>
+              </div>
+              <div class="content">
+                <div class="paragraph">
+                <p>After 3 month of development, Agorava version 0.7.0 just hit Maven Central today. It is from far the biggest evolution of the framework since its creation.
+                Let&#8217;s see what&#8217;s new in this release</p>
+                </div>
+                <div class="sect1">
+                <h2 id="_api_spi_stabilization">API &amp; SPI stabilization</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>Probably the most important point for Agorava future : the framework has now a clean <a href="/doc/apidocs070">API</a> (API and implementation were a bit mixed and moving a lot prior to that)</p>
+                </div>
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_introduction_of_new_concepts">Introduction of new concepts</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>This version brings new concepts and tools that ease and rationalize OAuth interaction</p>
+                </div>
+                <div class="sect2">
+                <h3 id="_oauthlifecycleservice_a_single_entry_point_to_manage_oauth_dance">OAuthLifeCycleService : a single entry point to manage "OAuth Dance"</h3>
+                <div class="paragraph">
+                <p>OAuth initialization steps (the famous OAuth Dance) are now gathered in a single service bean : <a href="/doc/apidocs070/org/agorava/api/service/OAuthLifeCycleService.html"><code>OAuthLifeCycleService</code></a>.
+                The <code>startDanceFor()</code> and <code>endDance()</code> methods ease the OAuth 1.0a and 2.0 initialization life cycle.</p>
+                </div>
+                </div>
+                <div class="sect2">
+                <h3 id="_repositories_to_store_oauthsessions">Repositories to store OAuthSessions</h3>
+                <div class="paragraph">
+                <p>This version introduces <a href="/doc/apidocs070/org/agorava/api/storage/UserSessionRepository.html"><code>UserSessionRepository</code></a> who allow to handle and contain a collection of OAuthSession (connection to OAuth provider).
+                A main repository bean <a href="/doc/apidocs070/org/agorava/api/storage/GlobalRepository.html"><code>GlobalRepository</code></a> stored in CDI <code>@ApplicationScoped</code> contains all <code>UserSessionRepository</code> and is a convenient way to retrieve all OAuthSession on the server side for batch processing for instance.</p>
+                </div>
+                </div>
+                <div class="sect2">
+                <h3 id="_usersessionrepositoryresolver_and_sessionresolver">UserSessionRepositoryResolver and SessionResolver</h3>
+                <div class="paragraph">
+                <p>Depending on your use case <code>UserSessionRepository</code> (and their contained <code>OAuthSession</code>) can be store in different way. Thanks to <code>UserSessionRepositoryResolver</code> and <code>SessionResolver</code> you can define different way of storing and resolving repositories and session. Agora provide the following built-in resolver than can be activated in <code>Agorava.properties</code> configuration file. These built-in resolver are :</p>
+                </div>
+                <div class="ulist">
+                <ul>
+                <li>
+                <p>session : the <code>UserSessionRepository</code> is stored in Http Session (<code>@SessionScoped</code>) it was the Agorava behavior before version 0.7.x</p>
+                </li>
+                <li>
+                <p>request : the <code>UserSessionRepository</code> is provided for the current Http Request (<code>@RequestScoped</code>) but you have to propagate the <code>repoid</code> url parameter with <code>UserSessionRepository.getId()</code> value to retrieve the repo at each request</p>
+                </li>
+                <li>
+                <p>cookie : the <code>UserSessionRepository</code> is provided for the current Http Request (<code>@RequestScoped</code>), a cookie is used on user browser to keep the track of her <code>UserSessionRepository</code>. You can specify the lifetime of the cookie int he config</p>
+                </li>
+                <li>
+                <p>application : the <code>UserSessionRepository</code> is provided for all the application time (<code>@ApplicationScoped</code>). Not suitable for a multi-user scenario but rather for desktop scenario or a web app providing a shared access to a unique Social Network</p>
+                </li>
+                </ul>
+                </div>
+                </div>
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_reducing_framework_dependencies">Reducing framework dependencies</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>This Agorava release reduced it&#8217;s dependencies to the minimum. The only dependecies are now :</p>
+                </div>
+                <div class="ulist">
+                <ul>
+                <li>
+                <p>Jackson library for JSon mapping</p>
+                </li>
+                <li>
+                <p>Deltaspike for CDI helpers.</p>
+                </li>
+                </ul>
+                </div>
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_ready_for_other_jsr_330_implementation">Ready for other JSR 330 implementation</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>Agorava core is now ready to have a new implementation for another JSR 330 compliant framework like Dagger, Guice or Spring.</p>
+                </div>
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_want_to_give_a_try">Want to give a try ?</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>check our <a href="/doc/getting-started">Getting Started guide</a> and give us your feedback.</p>
+                </div>
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_want_to_contribute">Want to contribute ?</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>We really need contribution on core, doc, existing modules or new modules. So don&#8217;t hesitate to join us :</p>
+                </div>
+                <div class="ulist">
+                <ul>
+                <li>
+                <p>IRC (#Agorava),</p>
+                </li>
+                <li>
+                <p>Twitter <a href="http://twitter.com/agoravaproj">@Agoravaproj</a></p>
+                </li>
+                <li>
+                <p>User Group: <a href="http://groups.google.com/group/agorava-dev">http://groups.google.com/group/agorava-dev</a></p>
+                </li>
+                <li>
+                <p>GitHub: <a href="https://github.com/agorava">https://github.com/agorava</a></p>
+                </li>
+                </ul>
+                </div>
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_agorava_0_7_0_release_notes">Agorava 0.7.0 Release notes</h2>
+                <div class="sectionbody">
+                <div class="sect2">
+                <h3 id="_bug">Bug</h3>
+                <div class="ulist">
+                <ul>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-48">AGOVA-48</a>] - Remove Weld
+                Core dependency management from Weld-1.x profile</p>
+                </li>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-60">AGOVA-60</a>] - Test don&#8217;t pass
+                for OWB</p>
+                </li>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-61">AGOVA-61</a>] - SessionProducer
+                get activated when producerscope in not definied</p>
+                </li>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-62">AGOVA-62</a>] - Passivation
+                error for GlobalRepositoryImpl on GF / Weld 2.0.4</p>
+                </li>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-63">AGOVA-63</a>] - When using Weld
+                2.X on Wildfly 8 or Glassfish 4, looking for OAuthSession fails</p>
+                </li>
+                </ul>
+                </div>
+                </div>
+                <div class="sect2">
+                <h3 id="_enhancement">Enhancement</h3>
+                <div class="ulist">
+                <ul>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-38">AGOVA-38</a>] - Integrate Rest
+                and OAuth engine in core</p>
+                </li>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-49">AGOVA-49</a>] - Remove BOM from
+                parent</p>
+                </li>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-54">AGOVA-54</a>] - Adding support
+                of Raw JSON / XML response</p>
+                </li>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-55">AGOVA-55</a>] - Upgrade Jackson
+                to 2.X</p>
+                </li>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-56">AGOVA-56</a>] - Get rid of
+                Guava</p>
+                </li>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-57">AGOVA-57</a>] - Get rid of
+                Commons Codec</p>
+                </li>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-58">AGOVA-58</a>] - Gather testing
+                profile in parent POM</p>
+                </li>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-59">AGOVA-59</a>] - Use
+                RequestTuner to specialize request instead of creating specific
+                OAuthService</p>
+                </li>
+                </ul>
+                </div>
+                </div>
+                <div class="sect2">
+                <h3 id="_feature_request">Feature Request</h3>
+                <div class="ulist">
+                <ul>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-40">AGOVA-40</a>] - OAuthSession
+                production should be ready for all application type (not only Web with
+                HttpSession)</p>
+                </li>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-52">AGOVA-52</a>] - Support to
+                programmatically control callback URL pr auth request</p>
+                </li>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-53">AGOVA-53</a>] - OAuthComplete
+                Event is unstable as a User facing API</p>
+                </li>
+                </ul>
+                </div>
+                </div>
+                <div class="sect2">
+                <h3 id="_task">Task</h3>
+                <div class="ulist">
+                <ul>
+                <li>
+                <p>[<a href="https://issues.jboss.org/browse/AGOVA-7">AGOVA-7</a>] - Create API and
+                common IMPL for JSR 330 compliant framework</p>
+                </li>
+                </ul>
+                </div>
+                </div>
+                </div>
+                </div>
+              </div>
+              <div class="footer">
+                <a href="/news/2013/11/20/Agorava-0-7-0-released/">Permalink</a>
+                |
+                 <a href="http://agorava.org/news/2013/11/20/Agorava-0-7-0-released/#disqus_thread" data-disqus-identifier="b2a3aefe3a2a1b1652c11f95375b19d3a04d8da4">Comments</a>
+                |
+                <span class="tags">
+                  <i class="icon-tags"></i>
+                  Tags :
+                  <a class="tag" href="/news/tags/CDI/">CDI</a>
+                  <a class="tag" href="/news/tags/JSR330/">JSR330</a>
+                </span>
+              </div>
+            </article>
+            <article class="post">
+              <h1>
                 <a href="/news/2013/08/07/Agorava-0-6-1-released/">
                   Agorava Core 0.6.1 released
                 </a>
-              </h2>
+              </h1>
               <div class="meta">
                 <strong>
                   Posted by
@@ -142,11 +394,11 @@
               </div>
             </article>
             <article class="post">
-              <h2>
+              <h1>
                 <a href="/news/2013/07/13/Agorava-0-6-0-released/">
                   Agorava Core 0.6.0 released
                 </a>
-              </h2>
+              </h1>
               <div class="meta">
                 <strong>
                   Posted by
@@ -208,11 +460,11 @@
               </div>
             </article>
             <article class="post">
-              <h2>
+              <h1>
                 <a href="/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released/">
                   Twitter, Facebook and LinkdedIn modules released in 0.5
                 </a>
-              </h2>
+              </h1>
               <div class="meta">
                 <strong>
                   Posted by
@@ -256,11 +508,11 @@
               </div>
             </article>
             <article class="post">
-              <h2>
+              <h1>
                 <a href="/news/2013/04/23/Agorava-0-5-2-release-and-roadmap/">
                   Agorava 0.5.2 released. What's new and what's on the roadmap ?
                 </a>
-              </h2>
+              </h1>
               <div class="meta">
                 <strong>
                   Posted by
@@ -318,82 +570,6 @@
                 </span>
               </div>
             </article>
-            <article class="post">
-              <h2>
-                <a href="/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/">
-                  Starting a CDI webapp from Maven with Weld-Servlet and Jetty Plugin
-                </a>
-              </h2>
-              <div class="meta">
-                <strong>
-                  Posted by
-                  <span class="authors"> Antoine Sabot-Durand</span>
-                  on
-                  <span class="date">Jul 10, 2012</span>
-                  |
-                   <a href="http://agorava.org/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/#disqus_thread" data-disqus-identifier="adf545f104b409e98dd05ac409bd8e04c1f37403">Comments</a>
-                </strong>
-              </div>
-              <div class="content">
-                <p><img src="http://agorava.org/images/weld.png" style="width:80px;" class="left" alt="" /></p>
-                <p>In Agorava framework we want to provide an easy way to launch our example applications. One of the easiest way is to provide a maven Goal that build the project and launch it with embedded Jetty servlet container. If you have read our <a href="/news/2012/06/22/Meet-Agorava-the-Social-Framework">previous post</a> you already know that right now Agorava has only a <span class="caps">CDI</span> implementation. So when we created <a href="http://socializer.agorava.cloudbees.net/home.jsf">Socializer demo app</a> we add to find a way to launch <span class="caps">CDI</span> container from Jetty Maven Plugin. This article is about how we did it.</p>
-                <h3>Launching <span class="caps">CDI</span> from Servlet Api</h3>
-                <p>The first problem to deal with is about launching <span class="caps">CDI</span> container from Servlet <span class="caps">API</span>. <span class="caps">CDI</span> is a Java EE 6 specification and thus comes in all Java EE container like JBoss, TomEE or Glassfish. However the specification doesn&#8217;t provide a standard way to launch <span class="caps">CDI</span> container outside Java EE. Each implementation brings its own solution (to be more precise OpenWebBeans and Weld bring a solution, Candi has no known way to be launch outside Resin). We decided to go with Weld because it&#8217;s the <span class="caps">CDI</span> RI and that it is the implementation on which Agorava was the more tested thru Glassfish and JBoss.</p>
-                <h3>Adding maven dependecies</h3>
-                <p>As we want to support Jetty but also full Java EE containers we added a profile in the pom.xml to keep the Java EE build clean. As this profile is supposed to build and run the project we call it <code>run</code>. We add the following dependencies in the pom.xml</p>
-                <pre class="prettify"><code class="prettify">&lt;profile&gt;&#x000A;  &lt;id&gt;run&lt;/id&gt;&#x000A;    &lt;dependencies&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;org.jboss.weld.servlet&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;weld-servlet&lt;/artifactId&gt;&#x000A;            &lt;version&gt;1.1.8.Final&lt;/version&gt;&#x000A;            &lt;scope&gt;runtime&lt;/scope&gt;&#x000A;        &lt;/dependency&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;com.sun.faces&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;jsf-api&lt;/artifactId&gt;&#x000A;            &lt;version&gt;2.1.3&lt;/version&gt;&#x000A;        &lt;/dependency&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;com.sun.faces&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;jsf-impl&lt;/artifactId&gt;&#x000A;            &lt;version&gt;2.1.3&lt;/version&gt;&#x000A;        &lt;/dependency&gt;&#x000A;    &lt;/dependencies&gt;&#x000A;&lt;/profile&gt;</code></pre>
-                <p>Jsf dependencies are added because Socializer uses <span class="caps">JSF</span> and Jetty doesn&#8217;t provide thrm. The Jboss Weld Servlet is the important dependency here since it will provide bootstrapping for <span class="caps">CDI</span> thru servlet <span class="caps">API</span>. It also will bring transitively all the needed dependencies for Weld core and <span class="caps">CDI</span> <span class="caps">API</span>.</p>
-                <h3>Adding Jetty Maven plugin</h3>
-                <p>Now we can add the plugin to our new profile</p>
-                <pre class="prettify"><code class="prettify">&lt;build&gt;&#x000A;    &lt;plugins&gt;&#x000A;       &lt;plugin&gt;&#x000A;          &lt;groupId&gt;org.mortbay.jetty&lt;/groupId&gt;&#x000A;          &lt;artifactId&gt;jetty-maven-plugin&lt;/artifactId&gt;&#x000A;          &lt;version&gt;8.1.3.v20120416&lt;/version&gt;&#x000A;       &lt;/plugin&gt;&#x000A;    &lt;/plugins&gt;&#x000A;&lt;/build&gt;</code></pre>
-                <p>This plugin allows to build a Maven project and launch Jetty directly from Maven with a simple <code>mvn jetty:run</code> command.</p>
-                <h3>Boostraping <span class="caps">CDI</span></h3>
-                <p>To bootstrap <span class="caps">CDI</span>, we have 2 steps to perform :</p>
-                <h4>Expose <span class="caps">CDI</span> bean manager thru <span class="caps">JNDI</span></h4>
-                <p>To do that we create a <code>jetty-env.xml</code> file in <span class="caps">WEB</span>-<span class="caps">INF</span> containing this</p>
-                <pre class="prettify"><code class="prettify">&lt;!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://www.eclipse.org/jetty/configure.dtd"&gt;&#x000A;&lt;Configure id="webAppCtx" class="org.eclipse.jetty.webapp.WebAppContext"&gt;&#x000A;    &lt;New id="BeanManager" class="org.eclipse.jetty.plus.jndi.Resource"&gt;&#x000A;        &lt;Arg&gt;&#x000A;            &lt;Ref id="webAppCtx"/&gt;&#x000A;        &lt;/Arg&gt;&#x000A;        &lt;Arg&gt;BeanManager&lt;/Arg&gt;&#x000A;        &lt;Arg&gt;&#x000A;            &lt;New class="javax.naming.Reference"&gt;&#x000A;                &lt;Arg&gt;javax.enterprise.inject.spi.BeanManager&lt;/Arg&gt;&#x000A;                &lt;Arg&gt;org.jboss.weld.resources.ManagerObjectFactory&lt;/Arg&gt;&#x000A;                &lt;Arg/&gt;&#x000A;            &lt;/New&gt;&#x000A;        &lt;/Arg&gt;&#x000A;    &lt;/New&gt;&#x000A;&lt;/Configure&gt;</code></pre>
-                <p>This file is a standard Jetty config file and is run by the container at boot time.</p>
-                <h4>Adding Web.xml configuration</h4>
-                <p>To achieve the bootstrapping we also need to add two entries to <code>web.xml</code> :</p>
-                <ul>
-                	<li>One to retrieve the BeanManager exposed in the file above and expose it to servlet <span class="caps">API</span></li>
-                	<li>One to launch the servlet listener that will boot <span class="caps">CDI</span> container</li>
-                </ul>
-                <p>As we don&#8217;t want to pollute existing web.xml which works perfectly for Java EE 6 containers, we add a web.xml overriding file to add our entries. This file is declared in Jetty plugin configuration like this</p>
-                <pre class="prettify"><code class="prettify">&lt;plugin&gt;&#x000A;    &lt;groupId&gt;org.mortbay.jetty&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;jetty-maven-plugin&lt;/artifactId&gt;&#x000A;    &lt;version&gt;8.1.3.v20120416&lt;/version&gt;&#x000A;    &lt;configuration&gt;&#x000A;        &lt;webApp&gt;&#x000A;            &lt;overrideDescriptor&gt;src/main/webapp/WEB-INF/web-add.xml&lt;/overrideDescriptor&gt;&#x000A;        &lt;/webApp&gt;&#x000A;    &lt;/configuration&gt;&#x000A;&lt;/plugin&gt;</code></pre>
-                <p>The content of web-add.xml file is as follow</p>
-                <pre class="prettify"><code class="prettify">&lt;web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&#x000A;         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"&gt;</code>&#x000A;&#x000A;<code class="prettify">    &lt;listener&gt;&#x000A;        &lt;listener-class&gt;org.jboss.weld.environment.servlet.Listener&lt;/listener-class&gt;&#x000A;    &lt;/listener&gt;</code>&#x000A;&#x000A;<code class="prettify">    &lt;resource-env-ref&gt;&#x000A;        &lt;resource-env-ref-name&gt;BeanManager&lt;/resource-env-ref-name&gt;&#x000A;        &lt;resource-env-ref-type&gt;&#x000A;            javax.enterprise.inject.spi.BeanManager&#x000A;        &lt;/resource-env-ref-type&gt;&#x000A;    &lt;/resource-env-ref&gt;&#x000A;&lt;/web-app&gt;</code></pre>
-                <p>It&#8217;s content will override web.xml one (i.e web.xml will be interpreted before web-add.xml).</p>
-                <h3>Last trick to allow injection in servlets</h3>
-                <p>Weld Servlet will try to decorate some Jetty internal class to add the possibility of using <code>@Inject</code> inside servlets. This class is a Jetty system class and therefore is not visible from the web application. We have to tell Jetty classloader to expose this class to the web app in order to have Weld Servlet decorating it.<br />
-                To allow this we create a <code>jetty-context.xml</code> file in <span class="caps">WEB</span>-<span class="caps">INF</span></p>
-                <pre class="prettify"><code class="prettify">&lt;!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd"&gt;&#x000A;&lt;Configure class="org.eclipse.jetty.webapp.WebAppContext"&gt;&#x000A;    &lt;Set name="serverClasses"&gt;&#x000A;        &lt;Array type="java.lang.String"&gt;&#x000A;            &lt;Item&gt;-org.eclipse.jetty.servlet.ServletContextHandler.Decorator&lt;/Item&gt;&#x000A;        &lt;/Array&gt;&#x000A;    &lt;/Set&gt;&#x000A;&lt;/Configure&gt;</code></pre>
-                <p>Then we add it to Jetty Maven plugin configuration like this</p>
-                <pre class="prettify"><code class="prettify">&lt;configuration&gt;&#x000A;    &lt;webApp&gt;&#x000A;        &lt;overrideDescriptor&gt;src/main/webapp/WEB-INF/web-add.xml&lt;/overrideDescriptor&gt;&#x000A;    &lt;/webApp&gt;&#x000A;    &lt;contextXml&gt;src/main/webapp/WEB-INF/jetty-context.xml&lt;/contextXml&gt;&#x000A;&lt;/configuration&gt;</code></pre>
-                <p>Then we&#8217;re done</p>
-                <h3>To sum up</h3>
-                <p>Here is the complete <code>run</code> Profile in our <code>pom.xml</code> file</p>
-                <pre class="prettify"><code class="prettify">&lt;profile&gt;&#x000A;    &lt;id&gt;run&lt;/id&gt;&#x000A;    &lt;dependencies&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;org.jboss.weld.servlet&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;weld-servlet&lt;/artifactId&gt;&#x000A;            &lt;version&gt;1.1.8.Final&lt;/version&gt;&#x000A;            &lt;scope&gt;runtime&lt;/scope&gt;&#x000A;        &lt;/dependency&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;com.sun.faces&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;jsf-api&lt;/artifactId&gt;&#x000A;            &lt;version&gt;2.1.3&lt;/version&gt;&#x000A;        &lt;/dependency&gt;&#x000A;        &lt;dependency&gt;&#x000A;            &lt;groupId&gt;com.sun.faces&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;jsf-impl&lt;/artifactId&gt;&#x000A;            &lt;version&gt;2.1.3&lt;/version&gt;&#x000A;        &lt;/dependency&gt;&#x000A;    &lt;/dependencies&gt;&#x000A;    &lt;build&gt;&#x000A;        &lt;defaultGoal&gt;clean jetty:run&lt;/defaultGoal&gt;&#x000A;        &lt;plugins&gt;&#x000A;            &lt;plugin&gt;&#x000A;                &lt;groupId&gt;org.mortbay.jetty&lt;/groupId&gt;&#x000A;                &lt;artifactId&gt;jetty-maven-plugin&lt;/artifactId&gt;&#x000A;                &lt;version&gt;8.1.3.v20120416&lt;/version&gt;&#x000A;                &lt;configuration&gt;&#x000A;                    &lt;webApp&gt;&#x000A;                        &lt;overrideDescriptor&gt;src/main/webapp/WEB-INF/web-add.xml&lt;/overrideDescriptor&gt;&#x000A;                    &lt;/webApp&gt;&#x000A;                    &lt;contextXml&gt;src/main/webapp/WEB-INF/jetty-context.xml&lt;/contextXml&gt;&#x000A;                &lt;/configuration&gt;&#x000A;            &lt;/plugin&gt;&#x000A;        &lt;/plugins&gt;&#x000A;    &lt;/build&gt;&#x000A;&lt;/profile&gt;</code></pre>
-                <p>Don&#8217;t forget the 3 files above <code>jetty-env.xml</code> to define <span class="caps">JNDI</span>, <code>web-add.xml</code> to override web.xml with <span class="caps">CDI</span> servlet bootstrapping and <span class="caps">JNDI</span> and <code>jetty-context.xml</code> to expose the internal servlet implementation for Weld decorator.<br />
-                With this Maven profile, we only have to enter <code>mvn -Prun</code> to build our web application and have it launched in Jetty to test it. Hard to make it simpler.</p>
-                <h3>Check our code</h3>
-                <p>Feel free to look at <a href="http://github.com/agorava/agorava-socializer">Socializer code</a> and play with our <span class="caps">API</span>. Contribution are always welcome.</p>
-              </div>
-              <div class="footer">
-                <a href="/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/">Permalink</a>
-                |
-                 <a href="http://agorava.org/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/#disqus_thread" data-disqus-identifier="adf545f104b409e98dd05ac409bd8e04c1f37403">Comments</a>
-                |
-                <span class="tags">
-                  <i class="icon-tags"></i>
-                  Tags :
-                  <a class="tag" href="/news/tags/CDI/">CDI</a>
-                  <a class="tag" href="/news/tags/Jetty/">Jetty</a>
-                  <a class="tag" href="/news/tags/Maven/">Maven</a>
-                  <a class="tag" href="/news/tags/Socializer/">Socializer</a>
-                </span>
-              </div>
-            </article>
           </div>
           
                       <script type="text/javascript">
@@ -404,7 +580,7 @@
                         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
                       }());
                       </script>
-          <div class="visible-phone">
+          <div class="visible-xs">
             <ul class="pager">
               <li class="previous disabled">
                 <a href="#">Previous</a>
@@ -417,8 +593,8 @@
               </li>
             </ul>
           </div>
-          <div class="pagination pagination-centered hidden-phone">
-            <ul>
+          <div class="hidden-xs">
+            <ul class="pager">
               <li class="disabled">
                 <a href="#">First</a>
               </li>
@@ -440,24 +616,29 @@
             </ul>
           </div>
         </div>
-        <div class="span3">
-          <div class="follow-scroll hidden-phone">
+        <div class="col-md-3">
+          <div class="follow-scroll hidden-xs">
             <div style="margin-bottom:20px;text-align:center;">
-              <a class="btn" href="http://agorava.org/news.atom">
+              <a class="btn btn-default" href="http://agorava.org/news.atom">
                 Subscribe RSS
               </a>
             </div>
-            <ul class="nav nav-list well" style="clear:both;">
-              <li class="nav-header">
-                Tag Cloud
-              </li>
-              <li>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  Tag Cloud
+                </h3>
+              </div>
+              <div class="panel-footer" style="text-align:justify;">
                 <div class="tag-cloud">
                   <span class="tag tag-6">
                     <a href="http://agorava.org/news/tags/CDI/">CDI</a>
                   </span>
                   <span class="tag tag-0">
                     <a href="http://agorava.org/news/tags/Facebook/">Facebook</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://agorava.org/news/tags/JSR330/">JSR330</a>
                   </span>
                   <span class="tag tag-0">
                     <a href="http://agorava.org/news/tags/Jetty/">Jetty</a>
@@ -496,26 +677,31 @@
                     <a href="http://agorava.org/news/tags/roadmap/">roadmap</a>
                   </span>
                 </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
-          <div class="visible-phone">
+          <div class="visible-xs">
             <div style="margin-bottom:20px;text-align:center;">
-              <a class="btn" href="http://agorava.org/news.atom">
+              <a class="btn btn-default" href="http://agorava.org/news.atom">
                 Subscribe RSS
               </a>
             </div>
-            <ul class="nav nav-list well" style="clear:both;">
-              <li class="nav-header">
-                Tag Cloud
-              </li>
-              <li>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  Tag Cloud
+                </h3>
+              </div>
+              <div class="panel-footer" style="text-align:justify;">
                 <div class="tag-cloud">
                   <span class="tag tag-6">
                     <a href="http://agorava.org/news/tags/CDI/">CDI</a>
                   </span>
                   <span class="tag tag-0">
                     <a href="http://agorava.org/news/tags/Facebook/">Facebook</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://agorava.org/news/tags/JSR330/">JSR330</a>
                   </span>
                   <span class="tag tag-0">
                     <a href="http://agorava.org/news/tags/Jetty/">Jetty</a>
@@ -554,8 +740,8 @@
                     <a href="http://agorava.org/news/tags/roadmap/">roadmap</a>
                   </span>
                 </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -2,13 +2,265 @@
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
   <id>http://agorava.org/</id>
   <title>Agorava</title>
-  <updated>2013-08-07T19:23:36+02:00</updated>
+  <updated>2013-11-20T23:00:26+01:00</updated>
   <link href="http://agorava.org/news.atom" rel="self" type="application/atom+xml" />
   <link href="http://agorava.org/" rel="alternate" type="text/html" />
   <entry>
+    <id>http://agorava.org/news/2013/11/20/Agorava-0-7-0-released.html</id>
+    <title>Agorava Core 0.7.0 released</title>
+    <updated>2013-11-20T23:00:26+01:00</updated>
+    <published>2013-11-20T00:00:00+00:00</published>
+    <link href="http://agorava.org/news/2013/11/20/Agorava-0-7-0-released.html" rel="alternate" type="text/html" />
+    <category term="CDI"></category>
+    <category term="JSR330"></category>
+    <summary>
+      
+      After 3 month of development, Agorava version 0.7.0 just hit Maven Central today. It is from far the biggest evolution of the framework since its creation.
+      Let&#8217;s see what&#8217;s new in this release
+      
+      
+      API &amp; SPI stabilization
+      
+      
+      Probably the most important point for Agorava future : the framework has now a clean API (API and implementation were a bit mixed and moving a lot prior to that)
+      
+      
+      
+      
+      Introduction of new concepts
+      
+      
+      This version brings new concepts and tools that ease and rationalize OAuth interaction
+      
+      
+      OAuthLifeCycleService : a single entry point to manage "OAuth Dance"
+      
+      OAuth initialization steps (the famous OAuth Dance) are now gathered in a single...
+    </summary>
+    <content type="html">
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;After 3 month of development, Agorava version 0.7.0 just hit Maven Central today. It is from far the biggest evolution of the framework since its creation.
+      Let’s see what’s new in this release&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect1&quot;&gt;
+      &lt;h2 id=&quot;_api_spi_stabilization&quot;&gt;API &amp;amp; SPI stabilization&lt;/h2&gt;
+      &lt;div class=&quot;sectionbody&quot;&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Probably the most important point for Agorava future : the framework has now a clean &lt;a href=&quot;http://agorava.org/doc/apidocs070&quot;&gt;API&lt;/a&gt; (API and implementation were a bit mixed and moving a lot prior to that)&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect1&quot;&gt;
+      &lt;h2 id=&quot;_introduction_of_new_concepts&quot;&gt;Introduction of new concepts&lt;/h2&gt;
+      &lt;div class=&quot;sectionbody&quot;&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;This version brings new concepts and tools that ease and rationalize OAuth interaction&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;_oauthlifecycleservice_a_single_entry_point_to_manage_oauth_dance&quot;&gt;OAuthLifeCycleService : a single entry point to manage &quot;OAuth Dance&quot;&lt;/h3&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;OAuth initialization steps (the famous OAuth Dance) are now gathered in a single service bean : &lt;a href=&quot;http://agorava.org/doc/apidocs070/org/agorava/api/service/OAuthLifeCycleService.html&quot;&gt;&lt;code&gt;OAuthLifeCycleService&lt;/code&gt;&lt;/a&gt;.
+      The &lt;code&gt;startDanceFor()&lt;/code&gt; and &lt;code&gt;endDance()&lt;/code&gt; methods ease the OAuth 1.0a and 2.0 initialization life cycle.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;_repositories_to_store_oauthsessions&quot;&gt;Repositories to store OAuthSessions&lt;/h3&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;This version introduces &lt;a href=&quot;http://agorava.org/doc/apidocs070/org/agorava/api/storage/UserSessionRepository.html&quot;&gt;&lt;code&gt;UserSessionRepository&lt;/code&gt;&lt;/a&gt; who allow to handle and contain a collection of OAuthSession (connection to OAuth provider).
+      A main repository bean &lt;a href=&quot;http://agorava.org/doc/apidocs070/org/agorava/api/storage/GlobalRepository.html&quot;&gt;&lt;code&gt;GlobalRepository&lt;/code&gt;&lt;/a&gt; stored in CDI &lt;code&gt;@ApplicationScoped&lt;/code&gt; contains all &lt;code&gt;UserSessionRepository&lt;/code&gt; and is a convenient way to retrieve all OAuthSession on the server side for batch processing for instance.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;_usersessionrepositoryresolver_and_sessionresolver&quot;&gt;UserSessionRepositoryResolver and SessionResolver&lt;/h3&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Depending on your use case &lt;code&gt;UserSessionRepository&lt;/code&gt; (and their contained &lt;code&gt;OAuthSession&lt;/code&gt;) can be store in different way. Thanks to &lt;code&gt;UserSessionRepositoryResolver&lt;/code&gt; and &lt;code&gt;SessionResolver&lt;/code&gt; you can define different way of storing and resolving repositories and session. Agora provide the following built-in resolver than can be activated in &lt;code&gt;Agorava.properties&lt;/code&gt; configuration file. These built-in resolver are :&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;ulist&quot;&gt;
+      &lt;ul&gt;
+      &lt;li&gt;
+      &lt;p&gt;session : the &lt;code&gt;UserSessionRepository&lt;/code&gt; is stored in Http Session (&lt;code&gt;@SessionScoped&lt;/code&gt;) it was the Agorava behavior before version 0.7.x&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;request : the &lt;code&gt;UserSessionRepository&lt;/code&gt; is provided for the current Http Request (&lt;code&gt;@RequestScoped&lt;/code&gt;) but you have to propagate the &lt;code&gt;repoid&lt;/code&gt; url parameter with &lt;code&gt;UserSessionRepository.getId()&lt;/code&gt; value to retrieve the repo at each request&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;cookie : the &lt;code&gt;UserSessionRepository&lt;/code&gt; is provided for the current Http Request (&lt;code&gt;@RequestScoped&lt;/code&gt;), a cookie is used on user browser to keep the track of her &lt;code&gt;UserSessionRepository&lt;/code&gt;. You can specify the lifetime of the cookie int he config&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;application : the &lt;code&gt;UserSessionRepository&lt;/code&gt; is provided for all the application time (&lt;code&gt;@ApplicationScoped&lt;/code&gt;). Not suitable for a multi-user scenario but rather for desktop scenario or a web app providing a shared access to a unique Social Network&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect1&quot;&gt;
+      &lt;h2 id=&quot;_reducing_framework_dependencies&quot;&gt;Reducing framework dependencies&lt;/h2&gt;
+      &lt;div class=&quot;sectionbody&quot;&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;This Agorava release reduced it’s dependencies to the minimum. The only dependecies are now :&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;ulist&quot;&gt;
+      &lt;ul&gt;
+      &lt;li&gt;
+      &lt;p&gt;Jackson library for JSon mapping&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Deltaspike for CDI helpers.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect1&quot;&gt;
+      &lt;h2 id=&quot;_ready_for_other_jsr_330_implementation&quot;&gt;Ready for other JSR 330 implementation&lt;/h2&gt;
+      &lt;div class=&quot;sectionbody&quot;&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Agorava core is now ready to have a new implementation for another JSR 330 compliant framework like Dagger, Guice or Spring.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect1&quot;&gt;
+      &lt;h2 id=&quot;_want_to_give_a_try&quot;&gt;Want to give a try ?&lt;/h2&gt;
+      &lt;div class=&quot;sectionbody&quot;&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;check our &lt;a href=&quot;http://agorava.org/doc/getting-started&quot;&gt;Getting Started guide&lt;/a&gt; and give us your feedback.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect1&quot;&gt;
+      &lt;h2 id=&quot;_want_to_contribute&quot;&gt;Want to contribute ?&lt;/h2&gt;
+      &lt;div class=&quot;sectionbody&quot;&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;We really need contribution on core, doc, existing modules or new modules. So don’t hesitate to join us :&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;ulist&quot;&gt;
+      &lt;ul&gt;
+      &lt;li&gt;
+      &lt;p&gt;IRC (#Agorava),&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;Twitter &lt;a href=&quot;http://twitter.com/agoravaproj&quot;&gt;@Agoravaproj&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;User Group: &lt;a href=&quot;http://groups.google.com/group/agorava-dev&quot;&gt;http://groups.google.com/group/agorava-dev&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/agorava&quot;&gt;https://github.com/agorava&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect1&quot;&gt;
+      &lt;h2 id=&quot;_agorava_0_7_0_release_notes&quot;&gt;Agorava 0.7.0 Release notes&lt;/h2&gt;
+      &lt;div class=&quot;sectionbody&quot;&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;_bug&quot;&gt;Bug&lt;/h3&gt;
+      &lt;div class=&quot;ulist&quot;&gt;
+      &lt;ul&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-48&quot;&gt;AGOVA-48&lt;/a&gt;] - Remove Weld
+      Core dependency management from Weld-1.x profile&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-60&quot;&gt;AGOVA-60&lt;/a&gt;] - Test don’t pass
+      for OWB&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-61&quot;&gt;AGOVA-61&lt;/a&gt;] - SessionProducer
+      get activated when producerscope in not definied&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-62&quot;&gt;AGOVA-62&lt;/a&gt;] - Passivation
+      error for GlobalRepositoryImpl on GF / Weld 2.0.4&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-63&quot;&gt;AGOVA-63&lt;/a&gt;] - When using Weld
+      2.X on Wildfly 8 or Glassfish 4, looking for OAuthSession fails&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;_enhancement&quot;&gt;Enhancement&lt;/h3&gt;
+      &lt;div class=&quot;ulist&quot;&gt;
+      &lt;ul&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-38&quot;&gt;AGOVA-38&lt;/a&gt;] - Integrate Rest
+      and OAuth engine in core&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-49&quot;&gt;AGOVA-49&lt;/a&gt;] - Remove BOM from
+      parent&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-54&quot;&gt;AGOVA-54&lt;/a&gt;] - Adding support
+      of Raw JSON / XML response&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-55&quot;&gt;AGOVA-55&lt;/a&gt;] - Upgrade Jackson
+      to 2.X&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-56&quot;&gt;AGOVA-56&lt;/a&gt;] - Get rid of
+      Guava&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-57&quot;&gt;AGOVA-57&lt;/a&gt;] - Get rid of
+      Commons Codec&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-58&quot;&gt;AGOVA-58&lt;/a&gt;] - Gather testing
+      profile in parent POM&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-59&quot;&gt;AGOVA-59&lt;/a&gt;] - Use
+      RequestTuner to specialize request instead of creating specific
+      OAuthService&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;_feature_request&quot;&gt;Feature Request&lt;/h3&gt;
+      &lt;div class=&quot;ulist&quot;&gt;
+      &lt;ul&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-40&quot;&gt;AGOVA-40&lt;/a&gt;] - OAuthSession
+      production should be ready for all application type (not only Web with
+      HttpSession)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-52&quot;&gt;AGOVA-52&lt;/a&gt;] - Support to
+      programmatically control callback URL pr auth request&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-53&quot;&gt;AGOVA-53&lt;/a&gt;] - OAuthComplete
+      Event is unstable as a User facing API&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;_task&quot;&gt;Task&lt;/h3&gt;
+      &lt;div class=&quot;ulist&quot;&gt;
+      &lt;ul&gt;
+      &lt;li&gt;
+      &lt;p&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-7&quot;&gt;AGOVA-7&lt;/a&gt;] - Create API and
+      common IMPL for JSR 330 compliant framework&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+    </content>
+  </entry>
+  <entry>
     <id>http://agorava.org/news/2013/08/07/Agorava-0-6-1-released.html</id>
     <title>Agorava Core 0.6.1 released</title>
-    <updated>2013-08-07T19:23:36+02:00</updated>
+    <updated>2013-11-20T18:17:31+01:00</updated>
     <published>2013-08-07T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2013/08/07/Agorava-0-6-1-released.html" rel="alternate" type="text/html" />
     <category term="CDI"></category>
@@ -37,17 +289,22 @@
       &lt;ul&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-33&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-33&lt;/a&gt;] –         &lt;span class=&quot;caps&quot;&gt;NPE&lt;/span&gt; when no OAuthSession producer is found&lt;/li&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-34&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-34&lt;/a&gt;] –         Unserializable exception for OAuthSession on Wildfly 8.0&lt;/li&gt;
-      &lt;/ul&gt;&lt;h4&gt;        Enhancement&lt;/h4&gt;
+      &lt;/ul&gt;
+      
+      &lt;h4&gt;        Enhancement&lt;/h4&gt;
       &lt;ul&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-35&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-35&lt;/a&gt;] –         Add Weld 2.0 Test profiles&lt;/li&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-39&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-39&lt;/a&gt;] –         Adopt JBoss Community code formating&lt;/li&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-45&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-45&lt;/a&gt;] –         Switch to a &lt;span class=&quot;caps&quot;&gt;BOM&lt;/span&gt; model&lt;/li&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-46&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-46&lt;/a&gt;] –         Officially switch to git flow maven plugin for release&lt;/li&gt;
-      &lt;/ul&gt;&lt;h4&gt;        Feature Request&lt;/h4&gt;
+      &lt;/ul&gt;
+      
+      &lt;h4&gt;        Feature Request&lt;/h4&gt;
       &lt;ul&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-36&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-36&lt;/a&gt;] –         No more resetConnection() in 0.6.0&lt;/li&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-37&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-37&lt;/a&gt;] –         Add a Servlet to manage callback in OAuth Dance&lt;/li&gt;
-      &lt;/ul&gt;&lt;p&gt;What does it mean in plain english? Let’s see.&lt;/p&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;What does it mean in plain english? Let’s see.&lt;/p&gt;
       &lt;h3&gt;
       &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; 1.1 and Weld 2.x support&lt;/h3&gt;
       &lt;p&gt;A big thanks to Aslak Knustsen on this point. He added profiles to launch test with Weld 2.x and correxted some issue with Agorava &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; extension preventing it to run under &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; 1.1.&lt;br&gt;
@@ -86,7 +343,7 @@
   <entry>
     <id>http://agorava.org/news/2013/07/13/Agorava-0-6-0-released.html</id>
     <title>Agorava Core 0.6.0 released</title>
-    <updated>2013-08-07T18:21:18+02:00</updated>
+    <updated>2013-11-20T18:17:31+01:00</updated>
     <published>2013-07-13T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2013/07/13/Agorava-0-6-0-released.html" rel="alternate" type="text/html" />
     <category term="CDI"></category>
@@ -114,12 +371,15 @@
       &lt;h4&gt;        Bug&lt;/h4&gt;
       &lt;ul&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-29&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-29&lt;/a&gt;] –         Tests fail with OpenWebBeans&lt;/li&gt;
-      &lt;/ul&gt;&lt;h4&gt;        Enhancement&lt;/h4&gt;
+      &lt;/ul&gt;
+      
+      &lt;h4&gt;        Enhancement&lt;/h4&gt;
       &lt;ul&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-23&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-23&lt;/a&gt;] –         Get Rid of JBoss Logging&lt;/li&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-30&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-30&lt;/a&gt;] –         Agorava OAuth 2.0 support doesn't follow rfc6749 (was Agorava doesn't support Empire Avenue)&lt;/li&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-31&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-31&lt;/a&gt;] –         Removing Generics to ease control of the framework&lt;/li&gt;
-      &lt;/ul&gt;&lt;p&gt;Quite terse isn’t it? Let’s focus on main points&lt;/p&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;Quite terse isn’t it? Let’s focus on main points&lt;/p&gt;
       &lt;h3&gt;Stop using JBoss Solder Generics: a long story&lt;/h3&gt;
       &lt;p&gt;To ease creation of new modules and end user’s application configuration, Agorava integrated from the beginning a solution to automatically create some generics beans. This solution was based on JBoss &lt;a href=&quot;http://docs.jboss.org/seam/3/3.1.0.Final/reference/en-US/html/solder-genericbeans.html&quot;&gt;Solder Generic Beans&lt;/a&gt; extension. As you may know, Solder development was discontinued to be integrated in &lt;a href=&quot;http://deltaspike.apache.org&quot;&gt;Apache Deltaspike&lt;/a&gt;. I tried 3 times to have this Solder functionality integrated to Deltaspike, but hadn’t enough time and energy to convince Deltaspike tech leader that it could benefit to other &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; framework development projects.&lt;br&gt;
       The problem was that Agorava was using Generics and that it was no more supported. First decision was to get this code from Solder and put it in an Agorava module. So we created &lt;a href=&quot;https://github.com/agorava/agorava-utils&quot;&gt;Agorava-Utils&lt;/a&gt; (thanks to Ove Ranheim). In Agorava utils we put our own version of Solder Generics,but there were still issues with this solution, the main one being that Generics in Solder only worked with Weld.&lt;br&gt;
@@ -149,7 +409,7 @@
   <entry>
     <id>http://agorava.org/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released.html</id>
     <title>Twitter, Facebook and LinkdedIn modules released in 0.5</title>
-    <updated>2013-07-25T18:39:01+02:00</updated>
+    <updated>2013-11-20T18:17:31+01:00</updated>
     <published>2013-06-16T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2013/06/16/Twitter-Facebook-and-Linkedin-modules-released.html" rel="alternate" type="text/html" />
     <category term="Twitter"></category>
@@ -172,7 +432,8 @@
       &lt;p&gt;This week-end we released version 0.5 of Twitter, Facebook and LinkedIn Agorava modules. They are now in Maven central&lt;/p&gt;
       &lt;h3&gt;End of a long &lt;span class=&quot;caps&quot;&gt;SNAPSHOT&lt;/span&gt;
       &lt;/h3&gt;
-      &lt;p&gt;These 3 modules were in &lt;span class=&quot;caps&quot;&gt;SNAPSHOT&lt;/span&gt; mode for a long time. As people use them today in production and we are about to change (slightly) Agorava core&lt;br&gt;&lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;, we decided to release them to be sure that you won’t have trouble when core will be updated.&lt;/p&gt;
+      &lt;p&gt;These 3 modules were in &lt;span class=&quot;caps&quot;&gt;SNAPSHOT&lt;/span&gt; mode for a long time. As people use them today in production and we are about to change (slightly) Agorava core&lt;br&gt;
+      &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;, we decided to release them to be sure that you won’t have trouble when core will be updated.&lt;/p&gt;
       &lt;h3&gt;How to grab them&lt;/h3&gt;
       &lt;p&gt;Right now they are only available in &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; implementation. You can get them with&lt;/p&gt;
       &lt;pre&gt;
@@ -210,7 +471,7 @@
   <entry>
     <id>http://agorava.org/news/2013/04/23/Agorava-0-5-2-release-and-roadmap.html</id>
     <title>Agorava 0.5.2 released. What's new and what's on the roadmap ?</title>
-    <updated>2013-07-25T18:39:01+02:00</updated>
+    <updated>2013-11-20T18:17:31+01:00</updated>
     <published>2013-04-23T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2013/04/23/Agorava-0-5-2-release-and-roadmap.html" rel="alternate" type="text/html" />
     <category term="CDI"></category>
@@ -245,16 +506,19 @@
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-25&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-25&lt;/a&gt;] –         Weld 1.1.9 and beyond not supported&lt;/li&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-14&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-14&lt;/a&gt;] –         SimpleOAuthAppSettingsBuilder doesn't work when callback url is an &lt;span class=&quot;caps&quot;&gt;SSL&lt;/span&gt; uri&lt;/li&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-19&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-19&lt;/a&gt;] –         Agora dependencies in dependency management uses dynamic project version&lt;/li&gt;
-      &lt;/ul&gt;&lt;h4&gt;        Enhancement&lt;/h4&gt;
+      &lt;/ul&gt;
+      &lt;h4&gt;        Enhancement&lt;/h4&gt;
       &lt;ul&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-26&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-26&lt;/a&gt;] –         Add OpenWebBeans tests&lt;/li&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-15&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-15&lt;/a&gt;] –         Complicated to use Agorava without session scope&lt;/li&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-16&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-16&lt;/a&gt;] –         Annotation @OAuthApplication make params mandatory&lt;/li&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-17&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-17&lt;/a&gt;] –         Making PropertyOAuthAppSettingsBuilder as default builder for OAuthApplication&lt;/li&gt;
-      &lt;/ul&gt;&lt;h4&gt;        Task&lt;/h4&gt;
+      &lt;/ul&gt;
+      &lt;h4&gt;        Task&lt;/h4&gt;
       &lt;ul&gt;
       &lt;li&gt;[&lt;a href=&quot;https://issues.jboss.org/browse/AGOVA-27&quot;&gt;&lt;span class=&quot;caps&quot;&gt;AGOVA&lt;/span&gt;-27&lt;/a&gt;] –         Align Generics on solder last updates&lt;/li&gt;
-      &lt;/ul&gt;&lt;h3&gt;What’s coming next in core ?&lt;/h3&gt;
+      &lt;/ul&gt;
+      &lt;h3&gt;What’s coming next in core ?&lt;/h3&gt;
       &lt;p&gt;We’re now actively working on &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; simplification and OpenWebBeans support in core. After that we’ll be working by integrating our own OAuth engine and provide a &lt;span class=&quot;caps&quot;&gt;JAX&lt;/span&gt;-RS implementation of it. You can follow the roadmap on our &lt;a href=&quot;http://issues.jboss.org/browse/AGOVA&quot;&gt;Jira instance&lt;/a&gt;&lt;/p&gt;
       &lt;h3&gt;What’s coming next in modules ?&lt;/h3&gt;
       &lt;p&gt;Our main modules (Twitter, Facebook, LinkedIn) are still in snapshot. We expect to release them during Q3 2013. Stay tuned and thanks for your patience&lt;/p&gt;
@@ -263,7 +527,7 @@
   <entry>
     <id>http://agorava.org/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin.html</id>
     <title>Starting a CDI webapp from Maven with Weld-Servlet and Jetty Plugin</title>
-    <updated>2013-07-25T18:39:01+02:00</updated>
+    <updated>2013-11-20T18:17:31+01:00</updated>
     <published>2012-07-10T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin.html" rel="alternate" type="text/html" />
     <category term="CDI"></category>
@@ -343,10 +607,11 @@
       &lt;h4&gt;Adding Web.xml configuration&lt;/h4&gt;
       &lt;p&gt;To achieve the bootstrapping we also need to add two entries to &lt;code&gt;web.xml&lt;/code&gt; :&lt;/p&gt;
       &lt;ul&gt;
-      &lt;li&gt;One to retrieve the BeanManager exposed in the file above and expose it to servlet &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;
+      	&lt;li&gt;One to retrieve the BeanManager exposed in the file above and expose it to servlet &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;
       &lt;/li&gt;
       	&lt;li&gt;One to launch the servlet listener that will boot &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; container&lt;/li&gt;
-      &lt;/ul&gt;&lt;p&gt;As we don’t want to pollute existing web.xml which works perfectly for Java EE 6 containers, we add a web.xml overriding file to add our entries. This file is declared in Jetty plugin configuration like this&lt;/p&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;As we don’t want to pollute existing web.xml which works perfectly for Java EE 6 containers, we add a web.xml overriding file to add our entries. This file is declared in Jetty plugin configuration like this&lt;/p&gt;
       &lt;pre class=&quot;prettify&quot;&gt;&lt;code class=&quot;prettify&quot;&gt;&amp;lt;plugin&amp;gt;
           &amp;lt;groupId&amp;gt;org.mortbay.jetty&amp;lt;/groupId&amp;gt;
           &amp;lt;artifactId&amp;gt;jetty-maven-plugin&amp;lt;/artifactId&amp;gt;
@@ -440,7 +705,7 @@
   <entry>
     <id>http://agorava.org/news/2012/06/22/Meet-Agorava-the-Social-Framework.html</id>
     <title>Meet Agorava, The Social Framework</title>
-    <updated>2013-07-25T18:39:01+02:00</updated>
+    <updated>2013-11-20T18:17:31+01:00</updated>
     <published>2012-06-22T00:00:00+00:00</published>
     <link href="http://agorava.org/news/2012/06/22/Meet-Agorava-the-Social-Framework.html" rel="alternate" type="text/html" />
     <category term="announce"></category>
@@ -469,11 +734,12 @@
       &lt;h3&gt;Project roadmap&lt;/h3&gt;
       &lt;p&gt;Right now we’re aiming a 0.5.0 release (the 0.5.0 &lt;span class=&quot;caps&quot;&gt;SNAPSHOT&lt;/span&gt; is fully functional) during the summer. This version will be focused on &lt;span class=&quot;caps&quot;&gt;CDI&lt;/span&gt; implementation only. Main objective of 0.5.0 are:&lt;/p&gt;
       &lt;ul&gt;
-      &lt;li&gt;Support stateless architecture (right now an http session is needed to store user Oauth Tokens)&lt;/li&gt;
-      &lt;/ul&gt;&lt;p&gt;Normally (except if people are ready to contribute and are not afraid of refactoring for version 1.0.0), we won’t work on existing modules (Twitter, Facebook, LinkedIn) since &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; could change in version 1.0.0 when we’ll integrate &lt;span class=&quot;caps&quot;&gt;JAX&lt;/span&gt;-RS client framework.&lt;/p&gt;
+      	&lt;li&gt;Support stateless architecture (right now an http session is needed to store user Oauth Tokens)&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;Normally (except if people are ready to contribute and are not afraid of refactoring for version 1.0.0), we won’t work on existing modules (Twitter, Facebook, LinkedIn) since &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; could change in version 1.0.0 when we’ll integrate &lt;span class=&quot;caps&quot;&gt;JAX&lt;/span&gt;-RS client framework.&lt;/p&gt;
       &lt;p&gt;Objective for 1.0.0 are:&lt;/p&gt;
       &lt;ul&gt;
-      &lt;li&gt;Change &lt;span class=&quot;caps&quot;&gt;REST&lt;/span&gt; engine for &lt;span class=&quot;caps&quot;&gt;JAX&lt;/span&gt;-RS 2.0 client framework&lt;/li&gt;
+      	&lt;li&gt;Change &lt;span class=&quot;caps&quot;&gt;REST&lt;/span&gt; engine for &lt;span class=&quot;caps&quot;&gt;JAX&lt;/span&gt;-RS 2.0 client framework&lt;/li&gt;
       	&lt;li&gt;If necessary implement our own OAuth implementation on &lt;span class=&quot;caps&quot;&gt;JAX&lt;/span&gt;-RS client Framework&lt;/li&gt;
       	&lt;li&gt;Provide compatibility with Weld-OSGi&lt;/li&gt;
       	&lt;li&gt;Java SE implementation&lt;/li&gt;
@@ -481,11 +747,12 @@
       &lt;span class=&quot;caps&quot;&gt;JSR&lt;/span&gt; 330 specific &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; and implementation (Guice or Spring)&lt;/li&gt;
       	&lt;li&gt;Finished Twitter, LinkedIn, Facebook Modules&lt;/li&gt;
       	&lt;li&gt;New modules?&lt;/li&gt;
-      &lt;/ul&gt;&lt;h3&gt;If you want to contribute?&lt;/h3&gt;
+      &lt;/ul&gt;
+      &lt;h3&gt;If you want to contribute?&lt;/h3&gt;
       &lt;p&gt;Of course we need contributors to help us to make Agorava a better Social Media &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; for Java platform.&lt;/p&gt;
       &lt;p&gt;To contribute to, help or just follow the project you can:&lt;/p&gt;
       &lt;ul&gt;
-      &lt;li&gt;join us on our &lt;a href=&quot;http://groups.google.com/group/agorava-dev&quot;&gt;Google Group&lt;/a&gt;
+      	&lt;li&gt;join us on our &lt;a href=&quot;http://groups.google.com/group/agorava-dev&quot;&gt;Google Group&lt;/a&gt;
       &lt;/li&gt;
       	&lt;li&gt;Subscribe to our mailing list (same content as Group) by sending an empty mail to &lt;a href=&quot;mailto:agorava-dev+subscribe@googlegroups.com&quot;&gt;agorava-dev+subscribe@googlegroups.com&lt;/a&gt;
       &lt;/li&gt;
@@ -498,18 +765,20 @@
       	&lt;li&gt;follow us on Twitter &lt;a href=&quot;http://twitter.com/agoravaproj&quot;&gt;@agoravaproj&lt;/a&gt;
       &lt;/li&gt;
       	&lt;li&gt;spread the word…&lt;/li&gt;
-      &lt;/ul&gt;&lt;h3&gt;Project Sponsors&lt;/h3&gt;
+      &lt;/ul&gt;
+      &lt;h3&gt;Project Sponsors&lt;/h3&gt;
       &lt;p&gt;On this road we are not alone. Organizations help us every day to make Agorava a reality and a success. So we’d like to thanks :&lt;/p&gt;
       &lt;ul&gt;
-      &lt;li&gt;
+      	&lt;li&gt;
       &lt;a href=&quot;http://blog.ippon.fr&quot;&gt;Ippon Technologies&lt;/a&gt; (my employer) a French Consulting company that agreed for giving me time to work on Seam Social and now on Agorava&lt;/li&gt;
       	&lt;li&gt;JBoss (Red Hat) who hosted Seam Social and helped Agorava launch and continue to support us every day with Jira, Confluence and good advice. Special thanks to Jason, Pete, Lincoln and Dan.&lt;/li&gt;
       	&lt;li&gt;The &lt;span class=&quot;caps&quot;&gt;JCP&lt;/span&gt;. Ok they voted down our &lt;span class=&quot;caps&quot;&gt;JSR&lt;/span&gt; proposal but most of their critics were helpful and lead us to start Agorava. We’ll get back to them soon.&lt;/li&gt;
       	&lt;li&gt;Spring Source. Spring Social was the inspirer of Seam Social. I also borrowed a lot of code from Spring Social for Twitter, LinkedIn and Facebook connectors. Thank you guys.&lt;/li&gt;
-      &lt;/ul&gt;&lt;h3&gt;Follow us&lt;/h3&gt;
+      &lt;/ul&gt;
+      &lt;h3&gt;Follow us&lt;/h3&gt;
       &lt;p&gt;If you like to keep track of the progress of Agorava following links help you&lt;/p&gt;
       &lt;ul&gt;
-      &lt;li&gt;Website: &lt;a href=&quot;http://agorava.org&quot;&gt;http://agorava.org&lt;/a&gt;
+      	&lt;li&gt;Website: &lt;a href=&quot;http://agorava.org&quot;&gt;http://agorava.org&lt;/a&gt;
       &lt;/li&gt;
       	&lt;li&gt;Twitter : &lt;a href=&quot;http://twitter.com/AgoravaProj&quot;&gt;@Agoravaproj&lt;/a&gt;
       &lt;/li&gt;
@@ -517,7 +786,8 @@
       &lt;/li&gt;
       	&lt;li&gt;GitHub: &lt;a href=&quot;https://github.com/agorava&quot;&gt;https://github.com/agorava&lt;/a&gt;
       &lt;/li&gt;
-      &lt;/ul&gt;&lt;p&gt;See you soon!&lt;/p&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;See you soon!&lt;/p&gt;
     </content>
   </entry>
 </feed>

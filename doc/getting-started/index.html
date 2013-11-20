@@ -4,82 +4,85 @@
     <meta charset="utf-8">
     <title>Agorava Project</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="http://agorava.org/stylesheets/styles.css" rel="stylesheet" type="text/css">
     <style>
       body {
-        padding-top: 60px;
+        padding-top: 80px;
       }
     </style>
-    <link href="http://agorava.org/stylesheets/styles.css" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
-    <script src="http://agorava.org/javascripts/bootstrap-collapse.js" type="text/javascript"></script>
-    <script src="http://agorava.org/javascripts/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="http://agorava.org/javascripts/bootstrap/collapse.js" type="text/javascript"></script>
+    <script src="http://agorava.org/javascripts/bootstrap/dropdown.js" type="text/javascript"></script>
   </head>
   <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <div class="github-banner">
-            <a href="https://github.com/agorava">
-              <img alt="Fork me on GitHub" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" style="position: absolute; top: 0; right: 0; border: 0;z-index: 900;">
-            </a>
-          </div>
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <div class="github-banner">
+          <a href="https://github.com/agorava">
+            <img alt="Fork me on GitHub" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" style="position: absolute; top: 0; right: 0; border: 0;z-index: 900;">
           </a>
-          <a class="brand" href="http://agorava.org">Agorava</a>
-          <div class="nav-collapse">
-            <ul class="nav">
+        </div>
+        <a class="btn navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+          <span class="sr-only">
+            Toggle navigation
+          </span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="navbar-brand" href="http://agorava.org">Agorava</a>
+      </div>
+      <div class="navbar-collapse collaspe">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="http://agorava.org/">Home</a>
+          </li>
+          <li>
+            <a href="http://agorava.org/news/">Blog</a>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              Documentation
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
               <li>
-                <a href="http://agorava.org/">Home</a>
+                <a href="http://agorava.org/doc/getting-started">Getting Started</a>
               </li>
               <li>
-                <a href="http://agorava.org/news/">Blog</a>
-              </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                  Documentation
-                  <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="http://agorava.org/doc/getting-started">Getting Started</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="http://agorava.org/calendar/">Calendar</a>
-              </li>
-              <li>
-                <a href="http://agorava.org/sponsors/">Sponsors</a>
+                <a href="http://agorava.org/doc/apidocs070" target="_BLANK">API/SPI Javadoc</a>
               </li>
             </ul>
-          </div>
-        </div>
+          </li>
+          <li>
+            <a href="http://agorava.org/calendar/">Calendar</a>
+          </li>
+          <li>
+            <a href="http://agorava.org/sponsors/">Sponsors</a>
+          </li>
+        </ul>
       </div>
       <script>
         var indexOfSharp = window.location.pathname.indexOf('#');
         var pathname = indexOfSharp > 0 ? window.location.pathname.substring(0, indexOfSharp) : window.location.pathname;
-        var selector = "body > .navbar > .navbar-inner a[href='http://agorava.org"+pathname+"']";
+        var selector = "body > .navbar > .navbar-collapse a[href='http://agorava.org"+pathname+"']";
         $(selector).closest("li").addClass("active");
       </script>
-    </div>
+    </nav>
     <div class="container">
       <div class="row">
-        <div class="span12">
+        <div class="col-md-12">
           <div class="sect1">
-          <h2 id="_getting_started_with_agorava">Getting Started with Agorava</h2>
+          <h2 id="_getting_started_with_agorava_0_7_x">Getting Started with Agorava 0.7.x</h2>
           <div class="sectionbody">
           <div class="sect2">
           <h3 id="_foreword">Foreword</h3>
           <div class="paragraph">
-          <p><em>Agorava&#8217;s roadmap contains Java SE, JSR 330 and CDI implementations. Right now CDI implementation is the only one developped, so this "getting started" document is only focused on CDI. Other implementations will be released after Agorava 1.0.0. Stay tuned or don&#8217;t hesitate to contribute to these implementations.</em></p>
+          <p><em>Agorava&#8217;s roadmap contains CDI and other JSR 330 implementations. Right now CDI implementation is the only one developed, so this "getting started" document is only focused on CDI. Other implementations will be released after Agorava 1.0.0. Stay tuned or don&#8217;t hesitate to contribute to these implementations.</em></p>
           </div>
-          
           </div>
           <div class="sect2">
           <h3 id="_introduction">Introduction</h3>
@@ -87,7 +90,6 @@
           <p>Agorava Provides CDI Beans and extensions to interact with major social network. It provides these services and eases mixing them:</p>
           </div>
           <div class="ulist">
-          
           <ul>
           <li>
           <p>A generic portable REST client API</p>
@@ -105,17 +107,16 @@
           <p>Specific API for Twitter, Facebook and LinkedIn</p>
           </li>
           <li>
-          <p>A multi services manager API allowing to deal with multiple OAuth applications and sessions in the same application</p>
+          <p>A multi services manager API allowing to deal with multiple OAuth applications and sessions in the same application and in different mode (by web user, in batch mode&#8230; )</p>
           </li>
           <li>
-          <p>An easy way to extend it by creating a new module for a new services</p>
+          <p>An easy way to extend it by creating a new module for a new services using Agorava SPI.</p>
           </li>
           </ul>
           </div>
           <div class="paragraph">
-          <p>Agorava is independent of CDI implementation and fully portable between Java EE 6 and Servlet environments enhanced with CDI. It can be also used with CDI in JSE (desktop application). It has been fully tested with CDI RI implementation (JBoss Weld) and Apache OpenWebBeans. Caucho Candi was not fully tested yet but will be int the coming releases.</p>
+          <p>Agorava is independent of CDI implementation and fully portable between Java EE 6 and Servlet environments enhanced with CDI. It can be also used with CDI in JSE (desktop application). It has been fully tested with CDI RI implementation (JBoss Weld) and Apache OpenWebBeans. Caucho Candi was not fully tested yet but will be in the coming releases.</p>
           </div>
-          
           </div>
           <div class="sect2">
           <h3 id="_getting_started">Getting Started</h3>
@@ -123,27 +124,41 @@
           <p>Agorava is available in Maven Central repository. We don&#8217;t provide official binaries you can download. Let us know if you need them</p>
           </div>
           <div class="paragraph">
-          <p>To use Agorava you’ll have to add Agorava core libraries in your pom :</p>
+          <p>To use Agorava you&#8217;ll have to add Agorava core libraries in your pom :</p>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
-          <pre>&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-core-impl-cdi&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.6.1&lt;/version&gt;&#x000A;    &lt;scope&gt;compile&lt;/scope&gt;&#x000A;&lt;/dependency&gt;</pre>
+          <div class="content">
+          <pre>&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-core-impl-cdi&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.7.0&lt;/version&gt;&#x000A;    &lt;scope&gt;runtime&lt;/scope&gt;&#x000A;&lt;/dependency&gt;&#x000A;&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-core-api&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.7.0&lt;/version&gt;&#x000A;    &lt;scope&gt;compile&lt;/scope&gt;&#x000A;&lt;/dependency&gt;</pre>
           </div>
           </div>
           <div class="paragraph">
-          <p>You also have to add specific dependencies on the services you need in your code</p>
+          <p>You also have to add specific dependencies on the services you need in your code
+          For Twitter :</p>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
-          <pre>&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-twitter-cdi&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.6.1&lt;/version&gt;&#x000A;    &lt;scope&gt;compile&lt;/scope&gt;&#x000A;&lt;/dependency&gt;&#x000A;&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-facebook-cdi&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.6.1&lt;/version&gt;&#x000A;    &lt;scope&gt;compile&lt;/scope&gt;&#x000A;&lt;/dependency&gt;&#x000A;&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-linkedin-cdi&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.6.1&lt;/version&gt;&#x000A;    &lt;scope&gt;compile&lt;/scope&gt;&#x000A;&lt;/dependency&gt;</pre>
+          <div class="content">
+          <pre>&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-twitter-api&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.7.0&lt;/version&gt;&#x000A;    &lt;scope&gt;compile&lt;/scope&gt;&#x000A;&lt;/dependency&gt;&#x000A;&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-twitter-cdi&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.7.0&lt;/version&gt;&#x000A;    &lt;scope&gt;runtime&lt;/scope&gt;&#x000A;&lt;/dependency&gt;</pre>
+          </div>
+          </div>
+          <div class="paragraph">
+          <p>For Facebook</p>
+          </div>
+          <div class="listingblock">
+          <div class="content">
+          <pre>&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-facebook-api&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.7.0&lt;/version&gt;&#x000A;    &lt;scope&gt;compile&lt;/scope&gt;&#x000A;&lt;/dependency&gt;&#x000A;&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-facebook-cdi&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.7.0&lt;/version&gt;&#x000A;    &lt;scope&gt;runtime&lt;/scope&gt;&#x000A;&lt;/dependency&gt;</pre>
+          </div>
+          </div>
+          <div class="paragraph">
+          <p>And for LinkedIn</p>
+          </div>
+          <div class="listingblock">
+          <div class="content">
+          <pre>&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-linkedin-api&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.7.0&lt;/version&gt;&#x000A;    &lt;scope&gt;compile&lt;/scope&gt;&#x000A;&lt;/dependency&gt;&#x000A;&lt;dependency&gt;&#x000A;    &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;    &lt;artifactId&gt;agorava-linkedin-cdi&lt;/artifactId&gt;&#x000A;    &lt;version&gt;0.7.0&lt;/version&gt;&#x000A;    &lt;scope&gt;runtime&lt;/scope&gt;&#x000A;&lt;/dependency&gt;</pre>
           </div>
           </div>
           <div class="paragraph">
           <p>As you&#8217;ll be using CDI implementation you&#8217;ll also have to have a CDI compliant environment (Java EE 6 server or bootstrap CDI like Weld-SE or Deltaspike bootstrap)</p>
           </div>
-          
           </div>
           <div class="sect2">
           <h3 id="_get_agorava_running_in_five_minutes">Get Agorava running in five minutes</h3>
@@ -152,28 +167,24 @@
           Main steps to use Agorava  are :</p>
           </div>
           <div class="ulist">
-          
           <ul>
           <li>
           <p>Declare your OAuth application on the Social Media web site you want to use</p>
           </li>
           <li>
-          <p>Produce an OAuthAppSettings with a CDI producer with the OAuth app keys</p>
+          <p>Produce an <code>OAuthAppSettings</code> with a CDI producer with the OAuth app keys</p>
           </li>
           <li>
-          <p>Produce a scoped OAuthSession to contain user specific key</p>
+          <p>Declare how your OAuth Sessions will be resolved by configuring the <code>producerScope</code> property in Agorava.properties on JNDI</p>
           </li>
           <li>
-          <p>Inject the OAuthService for the given Social Media</p>
+          <p>Call the <code>startDanceFor(&lt;serviceName&gt;)</code> method of <code>OAuthLifeCycleService</code> bean to get the Authorization URL to redirect end user to</p>
           </li>
           <li>
-          <p>Request the Authorization URL for the service and get a request token</p>
+          <p>Let the <code>callBack</code> servlet retrieve retrieve info from service and finish the OAuth dance</p>
           </li>
           <li>
-          <p>Store the verifier in OAuthService bean and init access token</p>
-          </li>
-          <li>
-          <p>Use the service</p>
+          <p>Use the service API</p>
           </li>
           </ul>
           </div>
@@ -192,7 +203,6 @@
           <p>To consume an OAuth service you need to declare an application on the service platform (i.e. for Twitter you can do, this on <a href="https://dev.twitter.com/apps/new)">https://dev.twitter.com/apps/new)</a>. After this declaration you&#8217;ll get at least 2 keys to consume your OAuth service :</p>
           </div>
           <div class="ulist">
-          
           <ul>
           <li>
           <p>an OAuth API public key</p>
@@ -203,36 +213,33 @@
           </ul>
           </div>
           <div class="paragraph">
-          <p>If you don’t know what this is about, please go check the OAuth concepts on your service documentation.</p>
+          <p>If you don&#8217;t know what this is about, please go check the OAuth concepts on your service documentation.</p>
           </div>
-          
           </div>
           <div class="sect3">
           <h4 id="_producing_an_oauthappsettings_to_bootstrap_service">Producing an OAuthAppSettings to bootstrap service</h4>
           <div class="paragraph">
-          <p>The OAuthAppSettings are the entry point to configure a Social Media. It indicates to Agorava Framework that the srvice is activated and that you you can use its service beans. Usually you create this OAuthAppSettings thru a CDI producer method and by using OAuthAppSettings builder like this, like this :</p>
+          <p>The OAuthAppSettings are the entry point to configure a Social Media. It indicates to Agorava Framework that the service is activated and that you you can use its service beans. Usually you create this OAuthAppSettings thru a CDI producer method and by using OAuthAppSettings builder like this, like this :</p>
           </div>
           <div class="sect4">
-          <h5 id="_straight_configuration">Straight Configuration</h5>
+          <h5 id="_in_code_configuration">In code Configuration</h5>
           <div class="paragraph">
-          <p>Using the SimpleOAuthAppSettingsBuilder you can produce your setting like that :</p>
+          <p>Using the <code>@OAuthApplication</code> annotation you can produce your setting like that :</p>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
-          <pre>@ApplicationScoped&#x000A;@Produces&#x000A;@Twitter&#x000A;public OAuthAppSettings produceSetting() {&#x000A;    OAuthAppSettingsBuilder builder = new SimpleOAuthAppSettingsBuilder();&#x000A;    return builder.apiKey("&lt; application key &gt;").apiSecret("&lt; application secret &gt;").build();&#x000A;}</pre>
+          <div class="content">
+          <pre>@ApplicationScoped&#x000A;@Produces&#x000A;@Twitter&#x000A;@OAuthApplication(builder = SimpleOAuthAppSettingsBuilder.class,&#x000A;        params = {@Param(name = OAuthAppSettingsBuilder.API_KEY, value = "&lt;Consumer Key&gt;"),&#x000A;                @Param(name = OAuthAppSettingsBuilder.API_SECRET, value = "&lt;Consumer Secret&gt;"),&#x000A;        })&#x000A;OAuthAppSettings settings;</pre>
           </div>
           </div>
-          
           </div>
           <div class="sect4">
           <h5 id="_reading_configuration_from_a_resource_bundle">Reading configuration from a Resource bundle</h5>
           <div class="paragraph">
-          <p>You can ask Agorava to use another builder to read OAuth application settings. The Builder framework also provides a PropertyOAuthAppSettingsBuilder to do it. You&#8217;ll need to add an "agorava.properties" file in your classpath with the following content :</p>
+          <p>You can also use the default mechanism based on a properties file
+          All you have to do is to provide an <code>agorava.properties</code> file in your classpath with the following content :</p>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>twitter.apiKey=&lt;your key&gt;&#x000A;twitter.apiSecret=&lt;your secret key&gt;&#x000A;&#x000A;facebook.apiKey=&lt;your key&gt;&#x000A;facebook.apiSecret=&lt;your secret key&gt;&#x000A;facebook.scope=&lt;needed scope&gt;&#x000A;&#x000A;linkedin.apiKey=&lt;your key&gt;&#x000A;linkedin.apiSecret=&lt;your secret key&gt;&#x000A;&#x000A;callback=callback</pre>
           </div>
           </div>
@@ -240,83 +247,92 @@
           <p>Now you can produce Twitter OAuthAppSettings like this</p>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
-          <pre>@ApplicationScoped&#x000A;@Produces&#x000A;@Twitter&#x000A;public OAuthAppSettings produceSetting() {&#x000A;    PropertyOAuthAppSettingsBuilder builder = new PropertyOAuthAppSettingsBuilder();&#x000A;    return builder.prefix("twitter").build();  //use prefix to find the right key in agorava.properties file&#x000A;}</pre>
+          <div class="content">
+          <pre>@ApplicationScoped&#x000A;@Produces&#x000A;@Twitter&#x000A;@OAuthApplication(params = {@Param(name = OAuthAppSettingsBuilder.PREFIX, value = "twitter")})&#x000A;public OAuthAppSettings twitterSettings;</pre>
           </div>
           </div>
-          
           </div>
-          
           </div>
           <div class="sect3">
-          <h4 id="_produce_a_scoped_oauthsession">Produce a scoped OAuthSession</h4>
+          <h4 id="_choose_your_oauthsession_resolver">Choose your OAuthSession resolver</h4>
           <div class="paragraph">
-          <p>OAuthSession contains all user information regarding an OAuth Access (each user get a specific access token to access a specific OAuth application). To allow development of all kind of application, OAuthSessionImpl bean has no CDI scope (i.e. has the @Dependent scope). You&#8217;ll probably want to be sure that when a session is initialized you keep it for your application&#8217;s lifetime or at least until you decide to dispose of it.
-          That&#8217;s the reason why you need to provide a producer for the current OAuthSession. You&#8217;ll have to declare your bean with the @Current qualifier to distinguish it from the OAuthSession bean without Qualifier (i.e. with the @Default qualifier).
-          If your application needs only one session by social service for each user you can do something like that :</p>
+          <p>OAuthSession contains all user information regarding an OAuth Access (each <code>OAuthSession</code> get a specific access token to access a specific OAuth application on the behalf of the user who granted access to her account).
+          <code>OAuthSession</code> beans are a stateful  sensitive data mandatory for all OAuth exchange. As <code>OauthSession</code> need to have a <code>@Dependent</code> scope (no scope or <em>prototype</em> scope if you prefer), all <code>OAuthSession`of a given Agorava user are stored in a `UserSessionRepository</code> which much store in a place that allow it to be fetch when needed. For that purpose Agora provide different <code>UserSessionRepositoryResolver</code> and <code>SessionResolver</code> that you can activate by configuration. You can also create your own resolver but it&#8217;s beyond this tutorial.
+          Built-in resolver strategy are :
+          - session : the <code>UserSessionRepository</code> is stored in Http Session (<code>@SessionScoped</code>) it was the Agorava behavior before version 0.7.x
+          - request : the <code>UserSessionRepository</code> is provided for the current Http Request (<code>@RequestScoped</code>) but you have to propagate the <code>repoid</code> url parameter with <code>UserSessionRepository.getId()</code> value to retrieve the repo at each request
+          - cookie : the <code>UserSessionRepository</code> is provided for the current Http Request (<code>@RequestScoped</code>), a cookie is used on user browser to keep the track of her <code>UserSessionRepository</code>. You can specify the lifetime of the cookie int he config
+          - application : the <code>UserSessionRepository</code> is provided for all the application time (<code>@ApplicationScoped</code>). Not suitable for a multi-user scenario but rather for desktop scenario or a web app providing a shared access to a unique Social Network</p>
+          </div>
+          <div class="paragraph">
+          <p>To activate the resolver of your choice you have to add it to <code>agorava.properties</code> file</p>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
-          <pre>@SessionScoped&#x000A;@Produces&#x000A;@Twitter&#x000A;@Current&#x000A;public OAuthSession produceOauthSession(@Twitter @Default OAuthSession session) {&#x000A;    return session;&#x000A;}</pre>
+          <div class="content">
+          <pre>resolver=session</pre>
           </div>
           </div>
           <div class="paragraph">
-          <p>Be careful to avoid instantiating the OAuthSession yourself as your OAuthSession needs to have other beans injected in it. In the example above the @Default qualifier in the parameter inject is important since you produce an @Twitter @Current and without it you would lead to circular reference.</p>
+          <p>cookie resolver create by default a cookie which lifetime is tied to the browser (cookie destroyed when browser closed). You can change this like this</p>
           </div>
-          <div class="paragraph">
-          <p>Should you need to manage multiple session by user (like in Socializer), Agorava provides a MultiSessionManager that help you maintaining a OAuthSession collection for each users.</p>
+          <div class="listingblock">
+          <div class="content">
+          <pre>resolver=cookie&#x000A;cookie.life=31536000 #cookie maxAge in seconds</pre>
           </div>
-          
+          </div>
           </div>
           <div class="sect3">
           <h4 id="_inject_the_oauth_services_in_your_code">Inject the OAuth Services in your code</h4>
           <div class="paragraph">
-          <p>You can now inject the services hub and specific apis</p>
+          <p>You can now inject the social network specific apis</p>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
-          <pre>@Named&#x000A;@SessionScoped&#x000A;public class mySessionBean implements Serializable {&#x000A;...&#x000A;    @Inject&#x000A;    @Twitter&#x000A;    OAuthService service;&#x000A;&#x000A;    @Inject&#x000A;    TwitterTimelineService tl;&#x000A;&#x000A;    @Inject&#x000A;    TwitterUserService userService;&#x000A;&#x000A;    @Named&#x000A;    public OAuthService getMyService()&#x000A;    {&#x000A;        return service;&#x000A;    }&#x000A;...&#x000A;}</pre>
+          <div class="content">
+          <pre>@Named&#x000A;&#x000A;public class mySessionBean implements Serializable {&#x000A;...&#x000A;&#x000A;    @Inject&#x000A;    @Twitter&#x000A;    TwitterTimelineService tl;&#x000A;&#x000A;    @Inject&#x000A;    @Twitter&#x000A;    TwitterUserService userService;&#x000A;&#x000A;...&#x000A;}</pre>
           </div>
           </div>
-          
           </div>
           <div class="sect3">
           <h4 id="_request_the_oauth_authorization_url">Request the OAuth authorization URL</h4>
           <div class="paragraph">
-          <p>You can now ask for the authorization URL for your service</p>
+          <p>Using the <code>OauthLifecycleService</code> bean you can now ask for the authorization URL for your service</p>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
-          <pre>String authURL = service.getAuthorizationUrl();</pre>
+          <div class="content">
+          <pre>&#x000A;@Inject&#x000A;OAuthLifeCycleService lifeCycleService;&#x000A;&#x000A;&#x000A;String authURL = lifeCycelService.startDanceFor("Twitter");&#x000A;//or&#x000A;String authURL = lifeCycelService.startDanceFor(Twitter.class);</pre>
           </div>
           </div>
           <div class="paragraph">
-          <p>Calling this URL will bring the user on the service connection page and right delegation for the application. If the user gives right to the application to use the service on her behalf the service will send the browser back a special code (verifier) that you have to inject in the OAuthService to initiate the connexion.</p>
+          <p>Calling this URL will bring the user on the service connection page and right delegation for the application. If the user gives right to the application to use the service on her behalf the service will send the browser back a special code (verifier) that built in <code>OAuthCallBackServlet</code> use to end the OAuth Dance.</p>
           </div>
-          
           </div>
           <div class="sect3">
-          <h4 id="_use_the_callback_servlet">Use the callback servlet</h4>
+          <h4 id="_the_callback_servlet">The callback servlet</h4>
           <div class="paragraph">
           <p>By default the callback from social media is handle by the callback servlet which is mapper to <code>/callback</code> url. The servlet will get the verifier back from the service and request the access token.</p>
           </div>
           <div class="paragraph">
-          <p>By default the servlet is expect to be launch in a popup since it&#8217;ll close the window at the end of treatment, you can change this behavior by overriding <code>renderResponse</code> method in <code>org.agorava.core.cdi.web.OAuthCallBackCdiServlet</code></p>
-          </div>
-          <div class="paragraph">
-          <p>The service is now connected : you have an access token. Agorava also provide an automatic way to get your user profile thru the OAuthSession :</p>
+          <p>The after this, the servlet redirect the user to the internal call back page. This callback should also be definied in <code>agorava.properties</code> file like this</p>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
-          <pre>UserProfile user = session.getUserProfile();&#x000A;String fullName = user.getFullName();</pre>
+          <div class="content">
+          <pre>internalcallback=/icallback.jsf</pre>
           </div>
           </div>
-          
+          <div class="paragraph">
+          <p>It can also be defined when calling <code>OAuthLifeCycleService.startDancefor()</code> method to decide the returning url at runtime.</p>
+          </div>
+          <div class="paragraph">
+          <p>The service is now connected : you have an access token.</p>
+          </div>
+          <div class="paragraph">
+          <p>During the connection Agorava automatically get your user profile. You can get it thru the OAuthSession :</p>
+          </div>
+          <div class="listingblock">
+          <div class="content">
+          <pre>@Inject&#x000A;@Current&#x000A;OAuthSession session;&#x000A;&#x000A;&#x000A;UserProfile user = session.getUserProfile();&#x000A;String fullName = user.getFullName();</pre>
+          </div>
+          </div>
           </div>
           <div class="sect3">
           <h4 id="_send_request_to_the_service">Send request to the service</h4>
@@ -324,24 +340,25 @@
           <p>you can now use the service on behalf of the user who gave right to your OAuth application</p>
           </div>
           <div class="listingblock">
-          
-          <div class="content monospaced">
+          <div class="content">
           <pre>public class myTweetBean implements Serializable {&#x000A;&#x000A;    @Inject&#x000A;    TwitterTimelineService tl;&#x000A;&#x000A;    public Tweet sendTweet(String msg)&#x000A;    {&#x000A;      return tl.updateStatus(msg);&#x000A;    }&#x000A;}</pre>
           </div>
           </div>
-          
           </div>
-          
+          </div>
+          <div class="sect2">
+          <h3 id="_check_socializer">Check socializer</h3>
+          <div class="paragraph">
+          <p>Our example application Socializer use all these technics, so don&#8217;t forget to check <a href="https://github.com/agorava/agorava-socializer">the code of the application</a> (3 classes, 3 JSF pages and 1 config file) to see how all of this works together</p>
+          </div>
           </div>
           <div class="sect2">
           <h3 id="_to_go_further">To go further</h3>
           <div class="sect3">
-          <h4 id="_working_with_multi_service_manager">Working with Multi Service Manager</h4>
+          <h4 id="_working_with_globalrepository">Working with GlobalRepository</h4>
           <div class="paragraph">
-          <p>Agorava  provides a MultiServicesManager bean that can help you to manage multiple services and session for one user. Without this bean you’ll be able to have multiple services but only one session for each service.
-          The <a href="https://github.com/agorava/agorava-socializer">Socializer</a> web app example application is a good starting point to learn how to use MultiServicesManager bean</p>
+          <p>Whatever resolver you choose, Agorava maintains a <code>GlobalRespository</code> in <code>@ApplicationScoped</code>. This repo contains all the <code>UserSessionRepository</code> of the application. so you use it to access all OAuthSession on server side to provide batch processing on them.</p>
           </div>
-          
           </div>
           <div class="sect3">
           <h4 id="_provided_modules">Provided modules</h4>
@@ -349,7 +366,6 @@
           <p>Right now Agorava  comes with 3 basic social media modules:</p>
           </div>
           <div class="ulist">
-          
           <ul>
           <li>
           <p><a href="https://github.com/agorava/agorava-twitter">Twitter</a></p>
@@ -366,7 +382,6 @@
           <p>Other non officials modules are being developed:</p>
           </div>
           <div class="ulist">
-          
           <ul>
           <li>
           <p><a href="https://github.com/antoinesd/agorava-github">Github</a></p>
@@ -382,18 +397,14 @@
           </li>
           </ul>
           </div>
-          
           </div>
           <div class="sect3">
           <h4 id="_extending_agorava">Extending Agorava</h4>
           <div class="paragraph">
-          <p>Agorava is thought to be extended with new Social Media modules. Right now we decided to wait before creating new modules. Core API are about to change with integration of JAX-RS 2.0 client framework so we will focus on these module when version 1.0.0 will be released.</p>
+          <p>Agorava is thought to be extended with new Social Media modules. Core API are now quite stable so it can be extended in its core or by providing new modules. Stay tuned to check our coming contributor documentation</p>
           </div>
-          
           </div>
-          
           </div>
-          
           </div>
           </div>
         </div>
