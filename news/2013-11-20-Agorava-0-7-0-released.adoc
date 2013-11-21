@@ -2,7 +2,7 @@
 title: "Agorava Core 0.7.0 released"
 authors: [asd]
 layout: post
-tags: [CDI,JSR330]
+tags: [CDI,JSR330,announce]
 ---
 
 After 3 month of development, Agorava version 0.7.0 hit http://search.maven.org/#search%7Cga%7C1%7Cagorava:[Maven Central] today. It is from far the biggest evolution of the framework since its creation.
@@ -23,7 +23,7 @@ The `startDanceFor()` and `endDance()` methods ease the OAuth 1.0a and 2.0 initi
 
 === Repositories to store OAuthSessions
 
-This version introduces link:/doc/apidocs070/org/agorava/api/storage/UserSessionRepository.html[`UserSessionRepository`] who allow to handle and contain a collection of OAuthSession (connection to OAuth provider).
+This version introduces link:/doc/apidocs070/org/agorava/api/storage/UserSessionRepository.html[`UserSessionRepository`] which allows to handle and contain a collection of OAuthSession (connection to OAuth provider).
 A main repository bean link:/doc/apidocs070/org/agorava/api/storage/GlobalRepository.html[`GlobalRepository`] stored in CDI `@ApplicationScoped` contains all `UserSessionRepository` and is a convenient way to retrieve all OAuthSession on the server side for batch processing for instance.
 
 === UserSessionRepositoryResolver and SessionResolver 
