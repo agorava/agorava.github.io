@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Agorava Project</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="http://agorava.org/stylesheets/styles.css" rel="stylesheet" type="text/css">
+    <style>
+      body {
+        padding-top: 80px;
+      }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://agorava.org/javascripts/bootstrap/collapse.js" type="text/javascript"></script>
+    <script src="http://agorava.org/javascripts/bootstrap/dropdown.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <div class="github-banner">
+          <a href="https://github.com/agorava">
+            <img alt="Fork me on GitHub" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" style="position: absolute; top: 0; right: 0; border: 0;z-index: 900;">
+          </a>
+        </div>
+        <a class="btn navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+          <span class="sr-only">
+            Toggle navigation
+          </span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="navbar-brand" href="http://agorava.org">Agorava</a>
+      </div>
+      <div class="navbar-collapse collaspe">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="http://agorava.org/">Home</a>
+          </li>
+          <li></li>
+          <li>
+            <a href="http://agorava.org/news/">Blog</a>
+          </li>
+          <li>
+            <a href="http://agorava.org/contact-us/">Contact us</a>
+          </li>
+          <li>
+            <a href="http://agorava.org/contributing/">Contribute</a>
+          </li>
+          <li>
+            <a href="https://github.com/agorava" target="_BLANK">Source code</a>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              Documentation
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="http://agorava.org/doc/getting-started">Getting Started</a>
+              </li>
+              <li>
+                <a href="http://agorava.org/doc/apidocs070" target="_BLANK">API/SPI Javadoc</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="http://agorava.org/calendar/">Calendar</a>
+          </li>
+        </ul>
+      </div>
+      <script>
+        var indexOfSharp = window.location.pathname.indexOf('#');
+        var pathname = indexOfSharp > 0 ? window.location.pathname.substring(0, indexOfSharp) : window.location.pathname;
+        var selector = "body > .navbar > .navbar-collapse a[href='http://agorava.org"+pathname+"']";
+        $(selector).closest("li").addClass("active");
+      </script>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sect1">
+          <h2 id="_agorava_contributing_guide">Agorava Contributing Guide</h2>
+          <div class="sectionbody">
+          <div class="paragraph">
+          <p>Agorava build is based on Maven 3.x. All source code is hosted on Github in <a href="https://github.com/agorava">Agorava</a> organization.
+          All projects maintained in this organization are based on Gitflow  git workflow and used Atlassian JGitflow Maven plugin to ease Maven and gitflow integration</p>
+          </div>
+          <div class="sect2">
+          <h3 id="_agorava_projects">Agorava Projects</h3>
+          <div class="paragraph">
+          <p>Agorava is organized in 6 different projects</p>
+          </div>
+          <div class="olist arabic">
+          <ol class="arabic">
+          <li>
+          <p><a href="https://github.com/agorava/agorava-parent">agorava-parent</a> : a pom project containing all configuration for other Agorava projects. It used to gather plugins version and configuration, test profiles, or manage release process. You can use it if you&#8217;re developing a new Agorava module</p>
+          </li>
+          <li>
+          <p><a href="https://github.com/agorava/agorava-bom">agorava-bom</a> : a pom project corresponding to a Maven Bill Of Material. You can use it in your dependency management pom section with import scope. It&#8217;s a best practice to use this bom when you develop an application using Agorava.</p>
+          </li>
+          <li>
+          <p><a href="https://github.com/agorava/agorava-core">agorava-core</a> : the core agorava engine. It includes agorava-api and all the engine implementation (JSR-330 and CDI)</p>
+          </li>
+          <li>
+          <p>Agorava modules (<a href="https://github.com/agorava/agorava-twitter">agorava-twitter</a>, <a href="https://github.com/agorava/agorava-facebook">agorava-facebook</a> and <a href="https://github.com/agorava/agorava-linkedin">agorava-linkedin</a>) : modules implementing a Social Network (provider) REST and JSON Api in Java</p>
+          </li>
+          <li>
+          <p><a href="https://github.com/agorava/agorava-socializer">Agorava Socializer</a> : a demo webapp based on Agorava. It&#8217;s a basic Social Network client supporting multiple provider and multiple accounts.</p>
+          </li>
+          <li>
+          <p>Agorva site web : the current site web which is a github project as well</p>
+          </li>
+          </ol>
+          </div>
+          </div>
+          <div class="sect2">
+          <h3 id="_before_contributing_get_in_touch">Before contributing, get in touch</h3>
+          <div class="paragraph">
+          <p>Don&#8217;t hesitate to contact us thru the <a href="mailto:agorava-dev+subscribe@googlegroups.com">mailling list</a> or on <a href="https://kiwiirc.com/client/irc.freenode.net/agorava">IRC</a> before starting contribution. We could give support or lead about what you want to do. Check the <a href="/contact-team/">contact</a> page to get all the information to reach us.</p>
+          </div>
+          </div>
+          <div class="sect2">
+          <h3 id="_about_git_flow_and_jgit_flow_maven_plugin">About Git Flow and JGit Flow Maven plugin</h3>
+          <div class="paragraph">
+          <p>Git is a very powerful DVCS, yet it doesn&#8217;t enforce any approach on creating new features, fixes, version, etc&#8230; In one word, there&#8217;s no default workflow in Git. To ease team development some people proposed workflow to bring some convention to Git. One of the more popular workflow out there is probably the <a href="http://nvie.com/posts/a-successful-git-branching-model/">git flow</a> workflow which Agorava development team uses.</p>
+          </div>
+          <div class="paragraph">
+          <p>The trouble using git flow with a maven project is to have 2 independent process needing to manipulate pom file during the release. Thanks to JGit flow maven plugin this problem is solve by using this plugin to drive all the Git Flow workflow and especially the release part. You&#8217;ll find more detail about this plugin (developed by Atlassian) on the original <a href="http://blogs.atlassian.com/2013/05/maven-git-flow-plugin-for-better-releases/">blog post</a> and the official <a href="https://bitbucket.org/atlassian/maven-jgitflow-plugin/wiki/Home">Bitbucket wiki page</a>.</p>
+          </div>
+          <div class="paragraph">
+          <p>If you plan to contribute to Agorava on core or official modules you should get familiarized with Git Flow. The minimum being to submit your pull request to the <code>develop</code> branch of these projects since <code>master</code> branch is here to keep track of release.</p>
+          </div>
+          <div class="paragraph">
+          <p>If you plan to create a new module we recommend using Git Flow for a future integration to official but you can do as you want.</p>
+          </div>
+          </div>
+          <div class="sect2">
+          <h3 id="_different_ways_to_contribute">Different ways to contribute</h3>
+          <div class="paragraph">
+          <p>You can contribute in many ways on Agorava. The main contribution are :</p>
+          </div>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p>Contributing to Agorava Core : today, core has solid foundation but there are still a lot to do. Bug and features tracking for core are on <a href="https://issues.jboss.org/browse/AGOVA">JBoss Jira server</a>.</p>
+          </li>
+          <li>
+          <p>Contributing to existing modules. Twitter, LinkedIn or Facebook modules can also be enhanced.</p>
+          </li>
+          <li>
+          <p>Contributing to Socializer. Our demo app is still very basic, if you feel like enhancing it, you&#8217;re welcome</p>
+          </li>
+          <li>
+          <p>Creating a new module. There are a lot of Social Media out there. You can decide to create your own Agorava module</p>
+          </li>
+          </ul>
+          </div>
+          </div>
+          <div class="sect2">
+          <h3 id="_basic_steps">Basic Steps</h3>
+          <div class="paragraph">
+          <p>To contribute to one of the project, fork the repository to your own Git, clone your fork, commit your work on topic branches, and make pull requests.</p>
+          </div>
+          <div class="paragraph">
+          <p>If you don&#8217;t have the Git client (<code>git</code>), get it from: <a href="http://git-scm.com/">http://git-scm.com/</a></p>
+          </div>
+          <div class="paragraph">
+          <p>Here are the steps in detail for Agorava-core project:</p>
+          </div>
+          <div class="olist arabic">
+          <ol class="arabic">
+          <li>
+          <p>Add Agorava maven snapshot repository to you maven <code>settings.xml</code> (usually located in <code>$USER_HOME/.m2</code> directory) by adding the following profile to the <code>profiles</code> section of you settings.xml file</p>
+          <div class="listingblock">
+          <div class="content">
+          <pre>    &lt;profile&gt;&#x000A;      &lt;id&gt;agorava&lt;/id&gt;&#x000A;      &lt;repositories&gt;&#x000A;        &lt;repository&gt;&#x000A;          &lt;id&gt;agorava-snapshot-repo&lt;/id&gt;&#x000A;          &lt;name&gt;Agorava Snapshot Repository&lt;/name&gt;&#x000A;          &lt;url&gt;http://repository-agorava.forge.cloudbees.com/snapshot/&lt;/url&gt;&#x000A;          &lt;layout&gt;default&lt;/layout&gt;&#x000A;          &lt;releases&gt;&#x000A;            &lt;enabled&gt;false&lt;/enabled&gt;&#x000A;          &lt;/releases&gt;&#x000A;          &lt;snapshots&gt;&#x000A;            &lt;enabled&gt;true&lt;/enabled&gt;&#x000A;          &lt;/snapshots&gt;&#x000A;        &lt;/repository&gt;&#x000A;      &lt;/repositories&gt;&#x000A;    &lt;/profile&gt;</pre>
+          </div>
+          </div>
+          <div class="paragraph">
+          <p>and by enabling this profile at the end of the file</p>
+          </div>
+          <div class="listingblock">
+          <div class="content">
+          <pre>  &lt;activeProfiles&gt;&#x000A;    &lt;activeProfile&gt;agorava&lt;/activeProfile&gt;&#x000A;  &lt;/activeProfiles&gt;</pre>
+          </div>
+          </div>
+          </li>
+          <li>
+          <p><a href="https://github.com/agorava/agorava-core">Fork</a> the project. This creates a the project in your own Git with the default remote name <em>origin</em>.</p>
+          </li>
+          <li>
+          <p>Clone your fork. This creates and populates a directory in your local file system.</p>
+          <div class="listingblock">
+          <div class="content">
+          <pre>git clone git@github.com:&lt;your-username&gt;/agorava-core.git</pre>
+          </div>
+          </div>
+          </li>
+          <li>
+          <p>Change to the <code>agorava-core</code> directory.</p>
+          </li>
+          <li>
+          <p>Add the remote <code>upstream</code> repository so you can fetch any changes to the original forked repository.</p>
+          <div class="listingblock">
+          <div class="content">
+          <pre>git remote add upstream git@github.com:agorava/agorava-core.git</pre>
+          </div>
+          </div>
+          </li>
+          <li>
+          <p>Get the latest files from the <code>upstream</code> repository.</p>
+          <div class="listingblock">
+          <div class="content">
+          <pre>git fetch upstream</pre>
+          </div>
+          </div>
+          </li>
+          <li>
+          <p>Create a new feature branch to contain your features, changes, or fixes using the JGit Flow maven plugin :</p>
+          <div class="listingblock">
+          <div class="content">
+          <pre>mvn jgitflow:feature-start</pre>
+          </div>
+          </div>
+          </li>
+          <li>
+          <p>Contribute new code or make changes to existing files. Make sure that you follow the [General Guidelines](#general-guidelines) below.</p>
+          </li>
+          <li>
+          <p>Use the <code>git add</code> command to add new or changed file contents to the staging area. You can use `git status`to check the file that have to be added to the stating area.</p>
+          </li>
+          <li>
+          <p>Commit your changes to your local feature branch.</p>
+          <div class="listingblock">
+          <div class="content">
+          <pre>git commit -m 'Description of change...'</pre>
+          </div>
+          </div>
+          </li>
+          <li>
+          <p>Update your branch with any changes made upstream since you started.</p>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p>Fetch the latest changes from upstream</p>
+          <div class="literalblock">
+          <div class="content">
+          <pre>git fetch upstream</pre>
+          </div>
+          </div>
+          </li>
+          <li>
+          <p>Apply those changes to your branch</p>
+          <div class="literalblock">
+          <div class="content">
+          <pre>git rebase upstream/master</pre>
+          </div>
+          </div>
+          </li>
+          <li>
+          <p>If anyone has commited changes to files that you have also changed, you may see conflicts.
+          Resolve the conflicted files, add them using <code>git add</code>, and continue the rebase:</p>
+          <div class="literalblock">
+          <div class="content">
+          <pre>git add &lt;conflicted-file-name&gt;&#x000A;git rebase --continue</pre>
+          </div>
+          </div>
+          </li>
+          <li>
+          <p>If there were conflicts, it is a good idea to test your changes again to make they still work.</p>
+          </li>
+          </ul>
+          </div>
+          </li>
+          <li>
+          <p>Push your local feature branch to your github forked repository. This will create a branch on your Git fork repository with the same name as your local feature branch name.</p>
+          <div class="literalblock">
+          <div class="content">
+          <pre>git push origin HEAD</pre>
+          </div>
+          </div>
+          <div class="paragraph">
+          <p><em>Note: The above command assumes your remote repository is named <em>origin</em>. You can verify your forked remote repository name using the command `git remote -v`</em>.</p>
+          </div>
+          </li>
+          <li>
+          <p>Browse to the <code>&lt;feature-branch-name&gt;</code> branch on your forked Git repository and <a href="http://help.github.com/send-pull-requests/">open a Pull Request</a>. Give it a clear title and description.</p>
+          </li>
+          </ol>
+          </div>
+          </div>
+          <div class="sect2">
+          <h3 id="_general_guidelines">General Guidelines</h3>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p>The sample project should be formatted using the JBoss AS profiles found at <a href="http://github.com/jboss/ide-config/tree/master/">http://github.com/jboss/ide-config/tree/master/</a></p>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p>Code should be well documented with good comments. Please add an author tag (@author) to credit yourself for writing the code.</p>
+          </li>
+          <li>
+          <p>You should use readable variable names to make it easy for users to read the code.</p>
+          </li>
+          </ul>
+          </div>
+          </li>
+          <li>
+          <p>The package must start by <strong>org.agorava</strong></p>
+          </li>
+          <li>
+          <p>The quickstart project <code>&lt;artifactId&gt;</code> in the <code>pom.xml</code> file must be prefixed by <code>jboss-as-</code>. For example, the <code>&lt;artifactId&gt;</code> for the <code>greeter</code> quickstart is <code>jboss-as-greeter</code>.</p>
+          </li>
+          <li>
+          <p>If you create a new maven module, it shouldn&#8217;t inherit from another pom except from <code>agorava-parent</code>. Agorava dependencies should be included with <code>agorava-bom</code> in your maven <code>dependecymanagement</code> section like this :</p>
+          <div class="listingblock">
+          <div class="content">
+          <pre>&lt;dependencyManagement&gt;&#x000A;    &lt;dependencies&gt;&#x000A;         &lt;dependency&gt;&#x000A;            &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;            &lt;artifactId&gt;agorava-bom&lt;/artifactId&gt;&#x000A;            &lt;version&gt;0.7.0&lt;/version&gt;&#x000A;            &lt;type&gt;pom&lt;/type&gt;&#x000A;            &lt;scope&gt;import&lt;/scope&gt;&#x000A;        &lt;/dependency&gt;&#x000A;&lt;/dependencyManagement&gt;</pre>
+          </div>
+          </div>
+          </li>
+          <li>
+          <p>Right now the project must target Java 6 and Java SE 7 max.</p>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p>CDI 1.0 should be used.</p>
+          </li>
+          <li>
+          <p>Avoid using thrid party libraries if possible (to keep Agorava light).</p>
+          </li>
+          <li>
+          <p>Any integration tests should use Arquillian.</p>
+          </li>
+          </ul>
+          </div>
+          </li>
+          </ul>
+          </div>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; Agorava 2014</p>
+      </footer>
+    </div>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount','UA-31280631-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </body>
+</html>
