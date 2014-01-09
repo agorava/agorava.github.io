@@ -1,0 +1,179 @@
+---
+title: "Contributing to Agorava"
+authors: [asd]
+layout: doc
+---
+
+== Agorava Contributing Guide
+Agorava build is based on Maven 3.x. All source code is hosted on Github in https://github.com/agorava[Agorava] organization.
+All projects maintained in this organization are based on Gitflow  git workflow and used Atlassian JGitflow Maven plugin to ease Maven and gitflow integration
+
+
+=== Agorava Projects
+
+Agorava is organized in 6 different projects
+
+1. https://github.com/agorava/agorava-parent[agorava-parent] : a pom project containing all configuration for other Agorava projects. It used to gather plugins version and configuration, test profiles, or manage release process. You can use it if you're developing a new Agorava module
+2. https://github.com/agorava/agorava-bom[agorava-bom] : a pom project corresponding to a Maven Bill Of Material. You can use it in your dependency management pom section with import scope. It's a best practice to use this bom when you develop an application using Agorava.
+3. https://github.com/agorava/agorava-core[agorava-core] : the core agorava engine. It includes agorava-api and all the engine implementation (JSR-330 and CDI)
+4. Agorava modules (https://github.com/agorava/agorava-twitter[agorava-twitter], https://github.com/agorava/agorava-facebook[agorava-facebook] and https://github.com/agorava/agorava-linkedin[agorava-linkedin]) : modules implementing a Social Network (provider) REST and JSON Api in Java
+5. https://github.com/agorava/agorava-socializer[Agorava Socializer] : a demo webapp based on Agorava. It's a basic Social Network client supporting multiple provider and multiple accounts.
+6. Agorva site web : the current site web which is a github project as well
+
+
+
+=== Before contributing, get in touch
+
+Don't hesitate to contact us thru the mailto:agorava-dev+subscribe@googlegroups.com[mailling list] or on https://kiwiirc.com/client/irc.freenode.net/agorava[IRC] before starting contribution. We could give support or lead about what you want to do. Check the link:/contact-team/[contact] page to get all the information to reach us.
+
+
+=== About Git Flow and JGit Flow Maven plugin
+
+Git is a very powerful DVCS, yet it doesn't enforce any approach on creating new features, fixes, version, etc... In one word, there's no default workflow in Git. To ease team development some people proposed workflow to bring some convention to Git. One of the more popular workflow out there is probably the http://nvie.com/posts/a-successful-git-branching-model/[git flow] workflow which Agorava development team uses.
+
+The trouble using git flow with a maven project is to have 2 independent process needing to manipulate pom file during the release. Thanks to JGit flow maven plugin this problem is solve by using this plugin to drive all the Git Flow workflow and especially the release part. You'll find more detail about this plugin (developed by Atlassian) on the original http://blogs.atlassian.com/2013/05/maven-git-flow-plugin-for-better-releases/[blog post] and the official https://bitbucket.org/atlassian/maven-jgitflow-plugin/wiki/Home[Bitbucket wiki page].
+
+If you plan to contribute to Agorava on core or official modules you should get familiarized with Git Flow. The minimum being to submit your pull request to the `develop` branch of these projects since `master` branch is here to keep track of release.
+
+If you plan to create a new module we recommend using Git Flow for a future integration to official but you can do as you want.
+
+=== Different ways to contribute
+
+You can contribute in many ways on Agorava. The main contribution are :
+
+* Contributing to Agorava Core : today, core has solid foundation but there are still a lot to do. Bug and features tracking for core are on https://issues.jboss.org/browse/AGOVA[JBoss Jira server].
+* Contributing to existing modules. Twitter, LinkedIn or Facebook modules can also be enhanced.
+* Contributing to Socializer. Our demo app is still very basic, if you feel like enhancing it, you're welcome
+* Creating a new module. There are a lot of Social Media out there. You can decide to create your own Agorava module
+
+=== Basic Steps
+
+To contribute to one of the project, fork the repository to your own Git, clone your fork, commit your work on topic branches, and make pull requests. 
+
+If you don't have the Git client (`git`), get it from: <http://git-scm.com/>
+
+Here are the steps in detail for Agorava-core project:
+
+. Add Agorava maven snapshot repository to you maven `settings.xml` (usually located in `$USER_HOME/.m2` directory) by adding the following profile to the `profiles` section of you settings.xml file
++
+----
+    <profile>
+      <id>agorava</id>
+      <repositories>
+        <repository>
+          <id>agorava-snapshot-repo</id>
+          <name>Agorava Snapshot Repository</name>
+          <url>http://repository-agorava.forge.cloudbees.com/snapshot/</url>
+          <layout>default</layout>
+          <releases>
+            <enabled>false</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+    </profile>
+----
++
+and by enabling this profile at the end of the file
++
+----
+  <activeProfiles>
+    <activeProfile>agorava</activeProfile>
+  </activeProfiles>
+----
+
+. https://github.com/agorava/agorava-core[Fork] the project. This creates a the project in your own Git with the default remote name 'origin'.
++
+. Clone your fork. This creates and populates a directory in your local file system.
++
+-----
+git clone git@github.com:<your-username>/agorava-core.git
+-----
+
+. Change to the `agorava-core` directory.
+. Add the remote `upstream` repository so you can fetch any changes to the original forked repository.
++
+-----
+git remote add upstream git@github.com:agorava/agorava-core.git
+-----
+
+. Get the latest files from the `upstream` repository.
++
+-----
+git fetch upstream
+-----
+
+. Create a new feature branch to contain your features, changes, or fixes using the JGit Flow maven plugin :
++
+-----
+mvn jgitflow:feature-start
+-----
+
+. Contribute new code or make changes to existing files. Make sure that you follow the [General Guidelines](#general-guidelines) below.
+. Use the `git add` command to add new or changed file contents to the staging area. You can use `git status`to check the file that have to be added to the stating area.      
+. Commit your changes to your local feature branch. 
++
+----
+git commit -m 'Description of change...'
+----
+
+. Update your branch with any changes made upstream since you started.
+   * Fetch the latest changes from upstream
+
+        git fetch upstream
+        
+   * Apply those changes to your branch
+   
+        git rebase upstream/master
+        
+   * If anyone has commited changes to files that you have also changed, you may see conflicts. 
+   Resolve the conflicted files, add them using `git add`, and continue the rebase:
+   
+        git add <conflicted-file-name>
+        git rebase --continue
+   
+   * If there were conflicts, it is a good idea to test your changes again to make they still work.
+        
+. Push your local feature branch to your github forked repository. This will create a branch on your Git fork repository with the same name as your local feature branch name. 
+
+        git push origin HEAD
++
+_Note: The above command assumes your remote repository is named 'origin'. You can verify your forked remote repository name using the command `git remote -v`_.
+   
+. Browse to the `<feature-branch-name>` branch on your forked Git repository and http://help.github.com/send-pull-requests/[open a Pull Request]. Give it a clear title and description.
+
+
+=== General Guidelines
+
+
+* The sample project should be formatted using the JBoss AS profiles found at <http://github.com/jboss/ide-config/tree/master/>
+
+ - Code should be well documented with good comments. Please add an author tag (@author) to credit yourself for writing the code.
+ - You should use readable variable names to make it easy for users to read the code.
+
+* The package must start by *org.agorava*
+
+* The quickstart project `<artifactId>` in the `pom.xml` file must be prefixed by `jboss-as-`. For example, the `<artifactId>` for the `greeter` quickstart is `jboss-as-greeter`.
+
+* If you create a new maven module, it shouldn't inherit from another pom except from `agorava-parent`. Agorava dependencies should be included with `agorava-bom` in your maven `dependecymanagement` section like this :
++
+----
+<dependencyManagement>
+    <dependencies>
+         <dependency>
+            <groupId>org.agorava</groupId>
+            <artifactId>agorava-bom</artifactId>
+            <version>0.7.0</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+</dependencyManagement>
+----
+
+* Right now the project must target Java 6 and Java SE 7 max.
+
+ - CDI 1.0 should be used.
+ - Avoid using thrid party libraries if possible (to keep Agorava light).
+ - Any integration tests should use Arquillian.

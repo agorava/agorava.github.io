@@ -1,0 +1,29 @@
+---
+title: "Contacting Agorava Team"
+authors: [asd]
+layout: doc
+---
+
+== Contacting Agorava Team
+
+You can contact our team to get support, send us feedback or propose a contribution.
+To join us you have multiple solution
+
+=== Mailing List
+
+Our Mailing list is hosted by Google Group, you can subscribe by sending an empty mail to mailto:agorava-dev+subscribe@googlegroups.com[agorava-dev+subscribe@googlegroups.com] or you can join our http://groups.google.com/group/agorava-dev[Google Group] (same content as mailing list)
+
+=== IRC
+
+Join us on IRC on `irc.freenode.net` on the `#agorava` channel. If you don't have an IRC client are behind a firewall or are in hurry, you can use https://kiwiirc.com/client/irc.freenode.net/agorava[kiwiirc] (you'll only have to provide a pseudo)
+
+=== JIRA
+
+Post your issues, enhancement wishes or ideas on our https://issues.jboss.org/browse/AGOVA[JIRA]. But please check with us on the mailing list before posting a bug.
+
+=== Twitter & Google+
+
+To stay informed :
+You can follow us on twitter : http://twitter.com/agoravaproj[@agoravaproj] 
+Or add our https://plus.google.com/109942737091407321992/posts[Google+ page] in your circle.
+
