@@ -13,12 +13,6 @@
     <changefreq>never</changefreq>
   </url>
   <url>
-    <loc>http://agorava.org/agorava.github.com.iml</loc>
-    <lastmod>2014-11-19</lastmod>
-    <priority>0.1</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
     <loc>http://agorava.org/calendar/</loc>
     <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
@@ -1196,12 +1190,6 @@
   </url>
   <url>
     <loc>http://agorava.org/</loc>
-    <lastmod>2014-11-19</lastmod>
-    <priority>0.1</priority>
-    <changefreq>never</changefreq>
-  </url>
-  <url>
-    <loc>http://agorava.org/javascripts/javascripts.iml</loc>
     <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
