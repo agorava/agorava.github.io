@@ -2,1195 +2,1195 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://agorava.org/CNAME</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/README</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/calendar/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/contact-us/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/contributing/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/allclasses-frame.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/allclasses-noframe.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/constant-values.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/deprecated-list.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/help-doc.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/index-all.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/AgoravaConstants.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/AgoravaContext.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/atinject/BeanResolver.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/atinject/Current.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/atinject/GenericBean.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/atinject/InjectWithQualifier.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/atinject/ProviderRelated.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/atinject/class-use/BeanResolver.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/atinject/class-use/Current.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/atinject/class-use/GenericBean.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/atinject/class-use/InjectWithQualifier.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/atinject/class-use/ProviderRelated.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/atinject/package-frame.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/atinject/package-summary.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/atinject/package-tree.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/atinject/package-use.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/event/OAuthComplete.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/event/SocialEvent.Status.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/event/SocialEvent.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/event/StatusUpdated.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/event/class-use/OAuthComplete.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/event/class-use/SocialEvent.Status.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/event/class-use/SocialEvent.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/event/class-use/StatusUpdated.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/event/package-frame.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/event/package-summary.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/event/package-tree.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/event/package-use.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/exception/AgoravaException.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/exception/ConnectionException.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/exception/OAuthParametersMissingException.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/exception/OAuthSignatureException.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/exception/ProviderMismatchException.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/exception/ResponseException.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/exception/class-use/AgoravaException.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/exception/class-use/ConnectionException.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/exception/class-use/OAuthParametersMissingException.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/exception/class-use/OAuthSignatureException.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/exception/class-use/ProviderMismatchException.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/exception/class-use/ResponseException.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/exception/package-frame.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/exception/package-summary.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/exception/package-tree.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/exception/package-use.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/extractor/Extractor.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/extractor/ExtractorType.Type.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/extractor/ExtractorType.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/extractor/StringExtractor.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/extractor/TokenExtractor.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/extractor/class-use/Extractor.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/extractor/class-use/ExtractorType.Type.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/extractor/class-use/ExtractorType.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/extractor/class-use/StringExtractor.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/extractor/class-use/TokenExtractor.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/extractor/package-frame.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/extractor/package-summary.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/extractor/package-tree.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/extractor/package-use.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/OAuth.OAuthVersion.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/OAuth.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/OAuthRequest.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/OAuthService.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/OAuthSession.Builder.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/OAuthSession.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/Token.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/Verifier.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/application/OAuthAppSettings.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/application/OAuthAppSettingsBuilder.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/application/OAuthApplication.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/application/Param.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/application/PropertyOAuthAppSettingsBuilder.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/application/SimpleOAuthAppSettingsBuilder.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/application/class-use/OAuthAppSettings.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/application/class-use/OAuthAppSettingsBuilder.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/application/class-use/OAuthApplication.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/application/class-use/Param.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/application/class-use/PropertyOAuthAppSettingsBuilder.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/application/class-use/SimpleOAuthAppSettingsBuilder.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/application/package-frame.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/application/package-summary.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/application/package-tree.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/application/package-use.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/class-use/OAuth.OAuthVersion.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/class-use/OAuth.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/class-use/OAuthRequest.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/class-use/OAuthService.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/class-use/OAuthSession.Builder.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/class-use/OAuthSession.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/class-use/Token.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/class-use/Verifier.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/package-frame.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/package-summary.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/package-tree.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/oauth/package-use.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/rest/HttpParameters.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/rest/Request.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/rest/RequestTuner.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/rest/Response.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/rest/RestService.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/rest/Verb.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/rest/class-use/HttpParameters.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/rest/class-use/Request.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/rest/class-use/RequestTuner.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/rest/class-use/Response.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/rest/class-use/RestService.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/rest/class-use/Verb.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/rest/package-frame.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/rest/package-summary.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/rest/package-tree.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/rest/package-use.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/JsonMapperService.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/OAuthEncoder.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/OAuthLifeCycleService.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/Preconditions.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/SignatureService.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/SignatureType.Type.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/SignatureType.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/StringUtils.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/TimestampService.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/class-use/JsonMapperService.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/class-use/OAuthEncoder.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/class-use/OAuthLifeCycleService.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/class-use/Preconditions.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/class-use/SignatureService.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/class-use/SignatureType.Type.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/class-use/SignatureType.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/class-use/StringUtils.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/class-use/TimestampService.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/package-frame.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/package-summary.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/package-tree.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/service/package-use.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/storage/GlobalRepository.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/storage/Identifiable.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/storage/Repository.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/storage/UserSessionRepository.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/storage/class-use/GlobalRepository.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/storage/class-use/Identifiable.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/storage/class-use/Repository.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/storage/class-use/UserSessionRepository.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/storage/package-frame.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/storage/package-summary.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/storage/package-tree.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/api/storage/package-use.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/class-use/AgoravaConstants.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/class-use/AgoravaContext.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/package-frame.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/package-summary.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/package-tree.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/package-use.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/AppSettingsTuner.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/ProviderApiService.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/ProviderConfig.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/ProviderConfigOauth.SignaturePlace.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/ProviderConfigOauth.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/ProviderConfigOauth10a.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/ProviderConfigOauth20.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/ProviderConfigOauth20Final.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/SessionResolver.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/UserProfile.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/UserProfileService.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/UserSessionRepositoryResolver.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/class-use/AppSettingsTuner.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/class-use/ProviderApiService.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/class-use/ProviderConfig.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/class-use/ProviderConfigOauth.SignaturePlace.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/class-use/ProviderConfigOauth.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/class-use/ProviderConfigOauth10a.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/class-use/ProviderConfigOauth20.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/class-use/ProviderConfigOauth20Final.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/class-use/SessionResolver.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/class-use/UserProfile.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/class-use/UserProfileService.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/class-use/UserSessionRepositoryResolver.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/package-frame.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/package-summary.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/package-tree.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/org/agorava/spi/package-use.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/overview-frame.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/overview-summary.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/overview-tree.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/package-list</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/apidocs070/serialized-form.html</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/getting-started/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/getting-started_0_6/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/doc/module-creation/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
@@ -1238,115 +1238,115 @@
   </url>
   <url>
     <loc>http://agorava.org/sponsors/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/page/2/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/tags/CDI/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/tags/JSR330/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/tags/announce/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/tags/Wildfly/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/tags/OpenWebBeans/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/tags/OAuth/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/tags/Twitter/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/tags/Facebook/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/tags/LinkedIn/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/tags/Weld/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/tags/Solder/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/tags/roadmap/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/tags/Jetty/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/tags/Maven/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/tags/Socializer/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>
   <url>
     <loc>http://agorava.org/news/tags/</loc>
-    <lastmod>2014-01-09</lastmod>
+    <lastmod>2014-11-19</lastmod>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
   </url>

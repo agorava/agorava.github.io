@@ -114,7 +114,7 @@
           <p>Specific API for Twitter, Facebook and LinkedIn</p>
           </li>
           <li>
-          <p>A multi services manager API allowing to deal with multiple OAuth applications and sessions in the same application and in different mode (by web user, in batch mode&#8230; )</p>
+          <p>A multi services manager API allowing to deal with multiple OAuth applications and sessions in the same application and in different mode (by web user, in batch mode&#8230;&#8203; )</p>
           </li>
           <li>
           <p>An easy way to extend it by creating a new module for a new services using Agorava SPI.</p>
@@ -207,7 +207,7 @@
           <div class="sect3">
           <h4 id="_declaring_an_oauth_application">Declaring an OAuth application</h4>
           <div class="paragraph">
-          <p>To consume an OAuth service you need to declare an application on the service platform (i.e. for Twitter you can do, this on <a href="https://dev.twitter.com/apps/new)">https://dev.twitter.com/apps/new)</a>. After this declaration you&#8217;ll get at least 2 keys to consume your OAuth service :</p>
+          <p>To consume an OAuth service you need to declare an application on the service platform (i.e. for Twitter you can do, this on <a href="https://dev.twitter.com/apps/new" class="bare">https://dev.twitter.com/apps/new</a>). After this declaration you&#8217;ll get at least 2 keys to consume your OAuth service :</p>
           </div>
           <div class="ulist">
           <ul>
@@ -264,7 +264,7 @@
           <h4 id="_choose_your_oauthsession_resolver">Choose your OAuthSession resolver</h4>
           <div class="paragraph">
           <p>OAuthSession contains all user information regarding an OAuth Access (each <code>OAuthSession</code> get a specific access token to access a specific OAuth application on the behalf of the user who granted access to her account).
-          <code>OAuthSession</code> beans are a stateful  sensitive data mandatory for all OAuth exchange. As <code>OauthSession</code> need to have a <code>@Dependent</code> scope (no scope or <em>prototype</em> scope if you prefer), all <code>OAuthSession`of a given Agorava user are stored in a `UserSessionRepository</code> which much store in a place that allow it to be fetch when needed. For that purpose Agora provide different <code>UserSessionRepositoryResolver</code> and <code>SessionResolver</code> that you can activate by configuration. You can also create your own resolver but it&#8217;s beyond this tutorial.
+          <code>OAuthSession</code> beans are a stateful  sensitive data mandatory for all OAuth exchange. As <code>OauthSession</code> need to have a <code>@Dependent</code> scope (no scope or 'prototype' scope if you prefer), all <code>OAuthSession`of a given Agorava user are stored in a `UserSessionRepository</code> which much store in a place that allow it to be fetch when needed. For that purpose Agora provide different <code>UserSessionRepositoryResolver</code> and <code>SessionResolver</code> that you can activate by configuration. You can also create your own resolver but it&#8217;s beyond this tutorial.
           Built-in resolver strategy are :</p>
           </div>
           <div class="ulist">
@@ -318,7 +318,7 @@
           </div>
           <div class="listingblock">
           <div class="content">
-          <pre>&#x000A;@Inject&#x000A;OAuthLifeCycleService lifeCycleService;&#x000A;&#x000A;&#x000A;String authURL = lifeCycelService.startDanceFor("Twitter");&#x000A;//or&#x000A;String authURL = lifeCycelService.startDanceFor(Twitter.class);</pre>
+          <pre>@Inject&#x000A;OAuthLifeCycleService lifeCycleService;&#x000A;&#x000A;&#x000A;String authURL = lifeCycelService.startDanceFor("Twitter");&#x000A;//or&#x000A;String authURL = lifeCycelService.startDanceFor(Twitter.class);</pre>
           </div>
           </div>
           <div class="paragraph">
@@ -433,15 +433,6 @@
         <p>&copy; Agorava 2014</p>
       </footer>
     </div>
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount','UA-31280631-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
+    
   </body>
 </html>
