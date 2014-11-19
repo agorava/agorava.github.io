@@ -6,10 +6,9 @@ profiles:
   development:
     disqus_developer: true
   production:
-    base_url: http://agorava.org/
+    base_url: http://www.agorava.org/
     google_analytics: UA-31280631-1
     disqus_generate_id: true
     deploy:
       host: github_pages
       branch: master
-
