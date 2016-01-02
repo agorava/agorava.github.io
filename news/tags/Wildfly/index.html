@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Agorava Project</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link href="http://www.agorava.org/stylesheets/styles.css" rel="stylesheet" type="text/css">
+    <link href="http://localhost:4242/stylesheets/styles.css" rel="stylesheet" type="text/css">
     <style>
       body {
         padding-top: 80px;
@@ -14,8 +14,8 @@
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
-    <script src="http://www.agorava.org/javascripts/bootstrap/collapse.js" type="text/javascript"></script>
-    <script src="http://www.agorava.org/javascripts/bootstrap/dropdown.js" type="text/javascript"></script>
+    <script src="http://localhost:4242/javascripts/bootstrap/collapse.js" type="text/javascript"></script>
+    <script src="http://localhost:4242/javascripts/bootstrap/dropdown.js" type="text/javascript"></script>
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -33,22 +33,22 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <a class="navbar-brand" href="http://www.agorava.org">Agorava</a>
+        <a class="navbar-brand" href="http://localhost:4242">Agorava</a>
       </div>
       <div class="navbar-collapse collaspe">
         <ul class="nav navbar-nav">
           <li>
-            <a href="http://www.agorava.org/">Home</a>
+            <a href="http://localhost:4242/">Home</a>
           </li>
           <li></li>
           <li>
-            <a href="http://www.agorava.org/news/">Blog</a>
+            <a href="http://localhost:4242/news/">Blog</a>
           </li>
           <li>
-            <a href="http://www.agorava.org/contact-us/">Contact us</a>
+            <a href="http://localhost:4242/contact-us/">Contact us</a>
           </li>
           <li>
-            <a href="http://www.agorava.org/contributing/">Contribute</a>
+            <a href="http://localhost:4242/contributing/">Contribute</a>
           </li>
           <li>
             <a href="https://github.com/agorava" target="_BLANK">Source code</a>
@@ -60,22 +60,22 @@
             </a>
             <ul class="dropdown-menu">
               <li>
-                <a href="http://www.agorava.org/doc/getting-started">Getting Started</a>
+                <a href="http://localhost:4242/doc/getting-started">Getting Started</a>
               </li>
               <li>
-                <a href="http://www.agorava.org/doc/apidocs070" target="_BLANK">API/SPI Javadoc</a>
+                <a href="http://localhost:4242/doc/apidocs070" target="_BLANK">API/SPI Javadoc</a>
               </li>
             </ul>
           </li>
           <li>
-            <a href="http://www.agorava.org/calendar/">Calendar</a>
+            <a href="http://localhost:4242/calendar/">Calendar</a>
           </li>
         </ul>
       </div>
       <script>
         var indexOfSharp = window.location.pathname.indexOf('#');
         var pathname = indexOfSharp > 0 ? window.location.pathname.substring(0, indexOfSharp) : window.location.pathname;
-        var selector = "body > .navbar > .navbar-collapse a[href='http://www.agorava.org"+pathname+"']";
+        var selector = "body > .navbar > .navbar-collapse a[href='http://localhost:4242"+pathname+"']";
         $(selector).closest("li").addClass("active");
       </script>
     </nav>
@@ -96,7 +96,7 @@
                   on
                   <span class="date">Aug 07, 2013</span>
                   |
-                   <a href="http://www.agorava.org/news/2013/08/07/Agorava-0-6-1-released/#disqus_thread" data-disqus-identifier="fa7e3f231e7860b892f4858e75d4bb69eda5e043">Comments</a>
+                   <a href="http://localhost:4242/news/2013/08/07/Agorava-0-6-1-released/#disqus_thread">Comments</a>
                 </strong>
               </div>
               <div class="content">
@@ -105,36 +105,36 @@
                 
                 <h4>        Bug</h4>
                 <ul>
-                <li>[<a href='https://issues.jboss.org/browse/AGOVA-33'><span class="caps">AGOVA</span>-33</a>] &#8211;         <span class="caps">NPE</span> when no OAuthSession producer is found</li>
-                <li>[<a href='https://issues.jboss.org/browse/AGOVA-34'><span class="caps">AGOVA</span>-34</a>] &#8211;         Unserializable exception for OAuthSession on Wildfly 8.0</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-33'>AGOVA-33</a>] &#8211;         NPE when no OAuthSession producer is found</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-34'>AGOVA-34</a>] &#8211;         Unserializable exception for OAuthSession on Wildfly 8.0</li>
                 </ul>
                 
                 <h4>        Enhancement</h4>
                 <ul>
-                <li>[<a href='https://issues.jboss.org/browse/AGOVA-35'><span class="caps">AGOVA</span>-35</a>] &#8211;         Add Weld 2.0 Test profiles</li>
-                <li>[<a href='https://issues.jboss.org/browse/AGOVA-39'><span class="caps">AGOVA</span>-39</a>] &#8211;         Adopt JBoss Community code formating</li>
-                <li>[<a href='https://issues.jboss.org/browse/AGOVA-45'><span class="caps">AGOVA</span>-45</a>] &#8211;         Switch to a <span class="caps">BOM</span> model</li>
-                <li>[<a href='https://issues.jboss.org/browse/AGOVA-46'><span class="caps">AGOVA</span>-46</a>] &#8211;         Officially switch to git flow maven plugin for release</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-35'>AGOVA-35</a>] &#8211;         Add Weld 2.0 Test profiles</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-39'>AGOVA-39</a>] &#8211;         Adopt JBoss Community code formating</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-45'>AGOVA-45</a>] &#8211;         Switch to a BOM model</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-46'>AGOVA-46</a>] &#8211;         Officially switch to git flow maven plugin for release</li>
                 </ul>
                 
                 <h4>        Feature Request</h4>
                 <ul>
-                <li>[<a href='https://issues.jboss.org/browse/AGOVA-36'><span class="caps">AGOVA</span>-36</a>] &#8211;         No more resetConnection() in 0.6.0</li>
-                <li>[<a href='https://issues.jboss.org/browse/AGOVA-37'><span class="caps">AGOVA</span>-37</a>] &#8211;         Add a Servlet to manage callback in OAuth Dance</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-36'>AGOVA-36</a>] &#8211;         No more resetConnection() in 0.6.0</li>
+                <li>[<a href='https://issues.jboss.org/browse/AGOVA-37'>AGOVA-37</a>] &#8211;         Add a Servlet to manage callback in OAuth Dance</li>
                 </ul>
                 <p>What does it mean in plain english? Let&#8217;s see.</p>
-                <h3><span class="caps">CDI</span> 1.1 and Weld 2.x support</h3>
-                <p>A big thanks to Aslak Knustsen on this point. He added profiles to launch test with Weld 2.x and correxted some issue with Agorava <span class="caps">CDI</span> extension preventing it to run under <span class="caps">CDI</span> 1.1.<br />
-                Agorava now support OpenWebBeans 1.1.7 and Weld from 1.1.5 to 2.0.2. We&#8217;ll continue to extends <span class="caps">CDI</span> support in next release especially with OpenWebBeans 2.x when it&#8217;ll be ready.</p>
+                <h3>CDI 1.1 and Weld 2.x support</h3>
+                <p>A big thanks to Aslak Knustsen on this point. He added profiles to launch test with Weld 2.x and correxted some issue with Agorava CDI extension preventing it to run under CDI 1.1.<br />
+                Agorava now support OpenWebBeans 1.1.7 and Weld from 1.1.5 to 2.0.2. We&#8217;ll continue to extends CDI support in next release especially with OpenWebBeans 2.x when it&#8217;ll be ready.</p>
                 <h3>Servlet to manage callback in OAuth initialization</h3>
                 <p>An old feature request was achieved in this release the <a href="https://github.com/agorava/agorava-core/blob/0.6.1/agorava-core-impl-cdi/src/main/java/org/agorava/core/cdi/web/OAuthCallBackCdiServlet.java">callback servlet</a> that deal with the end of OAuth initialization process. Its default behavior is to close the current window (working for a popup) but you can easily override it to add your behavior.</p>
-                <h3>Dependency Management with maven <span class="caps">BOM</span></h3>
+                <h3>Dependency Management with maven BOM</h3>
                 <p>Dependencies are now managed by a Maven Bill Of Material, it will allow Agorava users to integrate Agorava dependencies more easily than with a parent pom. You&#8217;ll just have to add this to the `dependencyManagement` section of your project :</p>
                 <pre>&#x000A;    &lt;dependencyManagement&gt;&#x000A;        &lt;dependencies&gt;&#x000A;            &lt;dependency&gt;&#x000A;                &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;                &lt;artifactId&gt;agorava-bom&lt;/artifactId&gt;&#x000A;                &lt;version&gt;0.6.1&lt;/version&gt;&#x000A;                &lt;type&gt;pom&lt;/type&gt;&#x000A;                &lt;scope&gt;import&lt;/scope&gt;&#x000A;            &lt;/dependency&gt;&#x000A;        &lt;/dependencies&gt;&#x000A;    &lt;/dependencyManagement&gt; </pre>
                 <h3>thanks</h3>
                 <p>Again, many thanks to Aslak Knutsen for his help and to George Gastaldi for his feedback and work on PicketLink integration.</p>
                 <h3>What&#8217;s next ?</h3>
-                <p>Version 0.7.0 has started (for real this time), we&#8217;re going to integrate our own OAuth engine to prepare migration to OAuth client framework and add support to Apache Camel to provide better integration solution (especially for Social Media providing Streaming <span class="caps">API</span>).<br />
+                <p>Version 0.7.0 has started (for real this time), we&#8217;re going to integrate our own OAuth engine to prepare migration to OAuth client framework and add support to Apache Camel to provide better integration solution (especially for Social Media providing Streaming API).<br />
                 In the meantime go for :</p>
                 <pre>&#x000A;  &lt;dependency&gt;&#x000A;      &lt;groupId&gt;org.agorava&lt;/groupId&gt;&#x000A;      &lt;artifactId&gt;agorava-core-impl-cdi&lt;/artifactId&gt;&#x000A;      &lt;version&gt;0.6.1&lt;/version&gt;&#x000A;  &lt;/dependency&gt;</pre>
                 <p>check our <a href="/doc/getting-started">Getting Started guide</a> and give us your feedback</p>
@@ -142,7 +142,7 @@
               <div class="footer">
                 <a href="/news/2013/08/07/Agorava-0-6-1-released/">Permalink</a>
                 |
-                 <a href="http://www.agorava.org/news/2013/08/07/Agorava-0-6-1-released/#disqus_thread" data-disqus-identifier="fa7e3f231e7860b892f4858e75d4bb69eda5e043">Comments</a>
+                 <a href="http://localhost:4242/news/2013/08/07/Agorava-0-6-1-released/#disqus_thread">Comments</a>
                 |
                 <span class="tags">
                   <i class="icon-tags"></i>
@@ -158,7 +158,7 @@
                       var disqus_shortname = 'agoravablog';
                       (function () {
                         var s = document.createElement('script'); s.async = true;
-                        s.src = "http://disqus.com/forums/agoravablog/count.js";
+                        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
                         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
                       }());
                       </script>
@@ -198,7 +198,7 @@
         <div class="col-md-3">
           <div class="follow-scroll hidden-xs">
             <div style="margin-bottom:20px;text-align:center;">
-              <a class="btn btn-default" href="http://www.agorava.org/news.atom">
+              <a class="btn btn-default" href="http://localhost:4242/news.atom">
                 Subscribe RSS
               </a>
             </div>
@@ -211,49 +211,55 @@
               <div class="panel-footer" style="text-align:justify;">
                 <div class="tag-cloud">
                   <span class="tag tag-6">
-                    <a href="http://www.agorava.org/news/tags/CDI/">CDI</a>
+                    <a href="http://localhost:4242/news/tags/CDI/">CDI</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/Facebook/">Facebook</a>
+                    <a href="http://localhost:4242/news/tags/CI/">CI</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/JSR330/">JSR330</a>
+                    <a href="http://localhost:4242/news/tags/DevOps/">DevOps</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/Jetty/">Jetty</a>
+                    <a href="http://localhost:4242/news/tags/Facebook/">Facebook</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/LinkedIn/">LinkedIn</a>
+                    <a href="http://localhost:4242/news/tags/JSR330/">JSR330</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/Maven/">Maven</a>
+                    <a href="http://localhost:4242/news/tags/Jetty/">Jetty</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/OAuth/">OAuth</a>
+                    <a href="http://localhost:4242/news/tags/LinkedIn/">LinkedIn</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://localhost:4242/news/tags/Maven/">Maven</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://localhost:4242/news/tags/OAuth/">OAuth</a>
                   </span>
                   <span class="tag tag-2">
-                    <a href="http://www.agorava.org/news/tags/OpenWebBeans/">OpenWebBeans</a>
+                    <a href="http://localhost:4242/news/tags/OpenWebBeans/">OpenWebBeans</a>
                   </span>
                   <span class="tag tag-2">
-                    <a href="http://www.agorava.org/news/tags/Socializer/">Socializer</a>
+                    <a href="http://localhost:4242/news/tags/Socializer/">Socializer</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/Solder/">Solder</a>
+                    <a href="http://localhost:4242/news/tags/Solder/">Solder</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/Twitter/">Twitter</a>
+                    <a href="http://localhost:4242/news/tags/Twitter/">Twitter</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/Weld/">Weld</a>
+                    <a href="http://localhost:4242/news/tags/Weld/">Weld</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/Wildfly/">Wildfly</a>
+                    <a href="http://localhost:4242/news/tags/Wildfly/">Wildfly</a>
+                  </span>
+                  <span class="tag tag-3">
+                    <a href="http://localhost:4242/news/tags/announce/">announce</a>
                   </span>
                   <span class="tag tag-2">
-                    <a href="http://www.agorava.org/news/tags/announce/">announce</a>
-                  </span>
-                  <span class="tag tag-2">
-                    <a href="http://www.agorava.org/news/tags/roadmap/">roadmap</a>
+                    <a href="http://localhost:4242/news/tags/roadmap/">roadmap</a>
                   </span>
                 </div>
               </div>
@@ -261,7 +267,7 @@
           </div>
           <div class="visible-xs">
             <div style="margin-bottom:20px;text-align:center;">
-              <a class="btn btn-default" href="http://www.agorava.org/news.atom">
+              <a class="btn btn-default" href="http://localhost:4242/news.atom">
                 Subscribe RSS
               </a>
             </div>
@@ -274,49 +280,55 @@
               <div class="panel-footer" style="text-align:justify;">
                 <div class="tag-cloud">
                   <span class="tag tag-6">
-                    <a href="http://www.agorava.org/news/tags/CDI/">CDI</a>
+                    <a href="http://localhost:4242/news/tags/CDI/">CDI</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/Facebook/">Facebook</a>
+                    <a href="http://localhost:4242/news/tags/CI/">CI</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/JSR330/">JSR330</a>
+                    <a href="http://localhost:4242/news/tags/DevOps/">DevOps</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/Jetty/">Jetty</a>
+                    <a href="http://localhost:4242/news/tags/Facebook/">Facebook</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/LinkedIn/">LinkedIn</a>
+                    <a href="http://localhost:4242/news/tags/JSR330/">JSR330</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/Maven/">Maven</a>
+                    <a href="http://localhost:4242/news/tags/Jetty/">Jetty</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/OAuth/">OAuth</a>
+                    <a href="http://localhost:4242/news/tags/LinkedIn/">LinkedIn</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://localhost:4242/news/tags/Maven/">Maven</a>
+                  </span>
+                  <span class="tag tag-0">
+                    <a href="http://localhost:4242/news/tags/OAuth/">OAuth</a>
                   </span>
                   <span class="tag tag-2">
-                    <a href="http://www.agorava.org/news/tags/OpenWebBeans/">OpenWebBeans</a>
+                    <a href="http://localhost:4242/news/tags/OpenWebBeans/">OpenWebBeans</a>
                   </span>
                   <span class="tag tag-2">
-                    <a href="http://www.agorava.org/news/tags/Socializer/">Socializer</a>
+                    <a href="http://localhost:4242/news/tags/Socializer/">Socializer</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/Solder/">Solder</a>
+                    <a href="http://localhost:4242/news/tags/Solder/">Solder</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/Twitter/">Twitter</a>
+                    <a href="http://localhost:4242/news/tags/Twitter/">Twitter</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/Weld/">Weld</a>
+                    <a href="http://localhost:4242/news/tags/Weld/">Weld</a>
                   </span>
                   <span class="tag tag-0">
-                    <a href="http://www.agorava.org/news/tags/Wildfly/">Wildfly</a>
+                    <a href="http://localhost:4242/news/tags/Wildfly/">Wildfly</a>
+                  </span>
+                  <span class="tag tag-3">
+                    <a href="http://localhost:4242/news/tags/announce/">announce</a>
                   </span>
                   <span class="tag tag-2">
-                    <a href="http://www.agorava.org/news/tags/announce/">announce</a>
-                  </span>
-                  <span class="tag tag-2">
-                    <a href="http://www.agorava.org/news/tags/roadmap/">roadmap</a>
+                    <a href="http://localhost:4242/news/tags/roadmap/">roadmap</a>
                   </span>
                 </div>
               </div>
@@ -326,9 +338,21 @@
       </div>
       <hr>
       <footer>
-        <p>&copy; Agorava 2014</p>
+        <p>&copy; Agorava 2016</p>
       </footer>
     </div>
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    
+                        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    
+                        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+     
+    ga('create', '', 'auto');
+    ga('send', 'pageview');
+    
+    </script>
   </body>
 </html>
