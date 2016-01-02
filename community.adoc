@@ -1,12 +1,12 @@
 ---
-title: "Contacting Agorava Team"
-authors: [asd]
+title: "Community"
+authors: [keilw]
 layout: doc
 ---
 
 == Contacting Agorava Team
 
-You can contact our team to get support, send us feedback or propose a contribution.
+You can contact the Agorava team to get support, send us feedback or propose a contribution.
 To join us you have multiple solution
 
 === Mailing List

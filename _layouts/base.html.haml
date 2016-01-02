@@ -35,12 +35,6 @@
           %li
           %li
             %a{ :href=>"#{site.base_url}/news/" } Blog
-          %li
-            %a{ :href=>"#{site.base_url}/contact-us/"} Contact us
-          %li
-            %a{ :href=>"#{site.base_url}/contributing/"} Contribute
-          %li
-            %a{ :href=>"https://github.com/agorava", :target=>"_BLANK"} Source code
           %li.dropdown
             %a.dropdown-toggle{"data-toggle"=>"dropdown", :href=>"#"}
               Documentation
@@ -49,7 +43,15 @@
               %li
                 %a{:href=>"#{site.base_url}/doc/getting-started" } Getting Started
               %li
+                %a{:href=>"#{site.base_url}/doc/modules" } Modules
+              %li
                 %a{:href=>"#{site.base_url}/doc/apidocs070", :target=>"_BLANK" } API/SPI Javadoc
+          %li
+            %a{ :href=>"#{site.base_url}/contact-us/"} Community
+          %li
+            %a{ :href=>"#{site.base_url}/contributing/"} Contribute
+          %li
+            %a{ :href=>"https://github.com/agorava", :target=>"_BLANK"} Source code
           %li
             %a{ :href=>"#{site.base_url}/calendar/" } Calendar
 
