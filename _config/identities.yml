@@ -1,6 +1,9 @@
 pauldijou:
   firstName: "Paul"
-  lastName: "Dijou"
+  lastName:  "Dijou"
 asd:
   firstName: "Antoine"
-  lastName: "Sabot-Durand"
+  lastName:  "Sabot-Durand"
+keilw:
+  firstName: "Werner"
+  lastName:  "Keil"
