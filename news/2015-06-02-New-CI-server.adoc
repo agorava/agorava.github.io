@@ -1,0 +1,8 @@
+---
+title: "New CI Server"
+authors: [keilw]
+layout: post
+tags: [CI,DevOps,announce]
+---
+
+As free CloudBees hosted Jenkins servers gave a wrong impression of broken builds by shutting down the build job without commits for some time, we recently switched all relevant build jobs to https://circleci.com/[CircleCI] which so far refrains from this annoying behavior.

@@ -1,0 +1,32 @@
+---
+title: "Agorava Modules"
+authors: [keilw]
+layout: doc
+---
+
+== Modules
+
+=== List of Modules
+
+==== Provided modules
+
+Right now Agorava  comes with 3 basic social media modules:
+
+- https://github.com/agorava/agorava-twitter[Twitter]
+- https://github.com/agorava/agorava-facebook[Facebook]
+- https://github.com/agorava/agorava-socializer[LinkedIn]
+
+==== 3rd Party modules
+Other 3rd Party modules are being developed:
+
+- https://github.com/keilw/agorava-xing[XING]
+- https://github.com/keilw/agorava-yammer[Yammer]
+- https://github.com/antoinesd/agorava-github[Github]
+- https://github.com/Riduidel/agorava-stackoverflow[StackOverflow]
+- https://github.com/Riduidel/agorava-wordpress[Wordpress]
+- https://github.com/djegauth/agorava-instagram[Instagram]
+- https://github.com/rajmahendra/agorava-tripit[TripIt]
+- https://github.com/jugchennai/agorava-empireavenue[Empire Avenue]
+- https://github.com/jughyd/agorava-meetup[Meetup]
+- https://github.com/unitsofmeasurement/uom-fitbit[Fitbit]
+- https://github.com/unitsofmeasurement/uom-strava[Strava]
