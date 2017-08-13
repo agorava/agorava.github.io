@@ -1,0 +1,8 @@
+---
+title: "New Socializer Live Demo"
+authors: [keilw]
+layout: post
+tags: [Demo,Cloud,announce]
+---
+
+Thanks to https://jelastic.com/[Jelastic] we got a new Agorava Socializer ttps://jelastic.com/[Live demo]. Go check it out.
