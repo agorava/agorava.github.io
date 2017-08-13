@@ -1,0 +1,28 @@
+<h1>invalid byte sequence in US-ASCII</h1>
+<h2>Rendering file C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/awestruct-0.5.6/lib/awestruct/extensions/template.atom.haml resulted in a failure.</h2>
+<p>Line: unknown</p>
+<p>Backtrace:</p>
+<pre>org/jruby/RubyString.java:3101:in `gsub'
+org/jruby/RubyString.java:3069:in `gsub'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/haml-4.0.7/lib/haml/helpers.rb:539:in `html_escape'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/awestruct-0.5.6/lib/awestruct/extensions/template.atom.haml:41:in `__singleton__'
+org/jruby/RubyArray.java:1613:in `each'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/awestruct-0.5.6/lib/awestruct/extensions/template.atom.haml:20:in `__singleton__'
+org/jruby/RubyBasicObject.java:1594:in `instance_eval'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/awestruct-0.5.6/lib/awestruct/extensions/template.atom.haml:-7:in `__singleton__'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/awestruct-0.5.6/lib/awestruct/extensions/template.atom.haml:-9:in `__tilt_3030'
+org/jruby/RubyMethod.java:120:in `call'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/tilt-2.0.1/lib/tilt/template.rb:155:in `evaluate'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/tilt-2.0.1/lib/tilt/haml.rb:17:in `evaluate'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/tilt-2.0.1/lib/tilt/template.rb:96:in `render'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/awestruct-0.5.6/lib/awestruct/handlers/base_tilt_handler.rb:134:in `rendered_content'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/awestruct-0.5.6/lib/awestruct/handlers/layout_handler.rb:47:in `rendered_content'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/awestruct-0.5.6/lib/awestruct/page.rb:143:in `rendered_content'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/awestruct-0.5.6/lib/awestruct/engine.rb:381:in `generate_page'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/awestruct-0.5.6/lib/awestruct/engine.rb:364:in `generate_output'
+org/jruby/RubyProc.java:281:in `call'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/parallel-1.6.1/lib/parallel.rb:408:in `call_with_index'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/parallel-1.6.1/lib/parallel.rb:288:in `work_in_threads'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/parallel-1.6.1/lib/parallel.rb:419:in `with_instrumentation'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/parallel-1.6.1/lib/parallel.rb:287:in `work_in_threads'
+C:/ProgramData/Ruby/jruby-1.7.23/lib/ruby/gems/shared/gems/parallel-1.6.1/lib/parallel.rb:183:in `in_threads'</pre>
