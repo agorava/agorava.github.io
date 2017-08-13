@@ -88,276 +88,53 @@
           <article class="post">
             <ul class="pager visible-md" style="float:right;">
               <li>
-                <a href="/news/2013/08/07/Agorava-0-6-1-released/">Previous</a>
-              </li>
-              <li>
-                <a href="/news/2015/06/02/New-CI-server/">Next</a>
+                <a href="/news/2015/06/02/New-CI-server/">Previous</a>
               </li>
             </ul>
             <h1>
-              <a href="/news/2013/11/20/Agorava-0-7-0-released/">
-                Agorava Core 0.7.0 released
+              <a href="/news/2017/07/16/New-Demo/">
+                New Socializer Live Demo
               </a>
             </h1>
             <div class="meta">
               <strong>
                 Posted by
-                <span class="authors"> Antoine Sabot-Durand</span>
+                <span class="authors"> Werner Keil</span>
                 on
-                <span class="date">Nov 20, 2013</span>
+                <span class="date">Jul 16, 2017</span>
                 |
-                 <a href="http://localhost:4242/news/2013/11/20/Agorava-0-7-0-released/#disqus_thread">Comments</a>
+                 <a href="http://localhost:4242/news/2017/07/16/New-Demo/#disqus_thread">Comments</a>
               </strong>
             </div>
             <div class="content">
               <div class="paragraph">
-              <p>After 3 month of development, Agorava version 0.7.0 hit <a href="http://search.maven.org/#search%7Cga%7C1%7Cagorava:">Maven Central</a> today. It is from far the biggest evolution of the framework since its creation.
-              Let&#8217;s see what&#8217;s new in this release</p>
-              </div>
-              <div class="sect1">
-              <h2 id="_api_spi_stabilization">API &amp; SPI stabilization</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>Probably the most important point for Agorava future : the framework has now a clean <a href="/doc/apidocs070">API</a> (API and implementation were a bit mixed and moving a lot prior to that)</p>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="_introduction_of_new_concepts">Introduction of new concepts</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>This version brings new concepts and tools that ease and rationalize OAuth interaction</p>
-              </div>
-              <div class="sect2">
-              <h3 id="_oauthlifecycleservice_a_single_entry_point_to_manage_oauth_dance">OAuthLifeCycleService : a single entry point to manage "OAuth Dance"</h3>
-              <div class="paragraph">
-              <p>OAuth initialization steps (the famous OAuth Dance) are now gathered in a single service bean : <a href="/doc/apidocs070/org/agorava/api/service/OAuthLifeCycleService.html"><code>OAuthLifeCycleService</code></a>.
-              The <code>startDanceFor()</code> and <code>endDance()</code> methods ease the OAuth 1.0a and 2.0 initialization life cycle.</p>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="_repositories_to_store_oauthsessions">Repositories to store OAuthSessions</h3>
-              <div class="paragraph">
-              <p>This version introduces <a href="/doc/apidocs070/org/agorava/api/storage/UserSessionRepository.html"><code>UserSessionRepository</code></a> which allows to handle and contain a collection of OAuthSession (connection to OAuth provider).
-              A main repository bean <a href="/doc/apidocs070/org/agorava/api/storage/GlobalRepository.html"><code>GlobalRepository</code></a> stored in CDI <code>@ApplicationScoped</code> contains all <code>UserSessionRepository</code> and is a convenient way to retrieve all OAuthSession on the server side for batch processing for instance.</p>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="_usersessionrepositoryresolver_and_sessionresolver">UserSessionRepositoryResolver and SessionResolver</h3>
-              <div class="paragraph">
-              <p>Depending on your use case <code>UserSessionRepository</code> (and their contained <code>OAuthSession</code>) can be store in different way. Thanks to <code>UserSessionRepositoryResolver</code> and <code>SessionResolver</code> you can define different way of storing and resolving repositories and session. Agora provide the following built-in resolver than can be activated in <code>Agorava.properties</code> configuration file. These built-in resolver are :</p>
-              </div>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p><strong>session</strong> : the <code>UserSessionRepository</code> is stored in Http Session (<code>@SessionScoped</code>) it was the Agorava behavior before version 0.7.x</p>
-              </li>
-              <li>
-              <p><strong>request</strong> : the <code>UserSessionRepository</code> is provided for the current Http Request (<code>@RequestScoped</code>) but you have to propagate the <code>repoid</code> url parameter with <code>UserSessionRepository.getId()</code> value to retrieve the repo at each request</p>
-              </li>
-              <li>
-              <p><strong>cookie</strong> : the <code>UserSessionRepository</code> is provided for the current Http Request (<code>@RequestScoped</code>), a cookie is used on user browser to keep the track of her <code>UserSessionRepository</code>. You can specify the lifetime of the cookie int he config</p>
-              </li>
-              <li>
-              <p><strong>application</strong> : the <code>UserSessionRepository</code> is provided for all the application time (<code>@ApplicationScoped</code>). Not suitable for a multi-user scenario but rather for desktop scenario or a web app providing a shared access to a unique Social Network</p>
-              </li>
-              </ul>
-              </div>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="_reducing_framework_dependencies">Reducing framework dependencies</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>This Agorava release reduced it&#8217;s dependencies to the minimum. The only dependecies are now :</p>
-              </div>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>Jackson library for JSon mapping</p>
-              </li>
-              <li>
-              <p>Deltaspike for CDI helpers.</p>
-              </li>
-              </ul>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="_ready_for_other_jsr_330_implementation">Ready for other JSR 330 implementation</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>Agorava core is now ready to have a new implementation for another JSR 330 compliant framework like Dagger, Guice or Spring.</p>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="_want_to_give_a_try">Want to give a try ?</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>check our <a href="/doc/getting-started">Getting Started guide</a> and give us your feedback.</p>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="_want_to_contribute">Want to contribute ?</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>We really need contribution on core, doc, existing modules or new modules. So don&#8217;t hesitate to join us :</p>
-              </div>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>IRC (#Agorava),</p>
-              </li>
-              <li>
-              <p>Twitter <a href="http://twitter.com/agoravaproj">@Agoravaproj</a></p>
-              </li>
-              <li>
-              <p>User Group: <a href="http://groups.google.com/group/agorava-dev" class="bare">http://groups.google.com/group/agorava-dev</a></p>
-              </li>
-              <li>
-              <p>GitHub: <a href="https://github.com/agorava" class="bare">https://github.com/agorava</a></p>
-              </li>
-              </ul>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="_agorava_0_7_0_release_notes">Agorava 0.7.0 Release notes</h2>
-              <div class="sectionbody">
-              <div class="sect2">
-              <h3 id="_bug">Bug</h3>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-48">AGOVA-48</a>] - Remove Weld
-              Core dependency management from Weld-1.x profile</p>
-              </li>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-60">AGOVA-60</a>] - Test don&#8217;t pass
-              for OWB</p>
-              </li>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-61">AGOVA-61</a>] - SessionProducer
-              get activated when producerscope in not definied</p>
-              </li>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-62">AGOVA-62</a>] - Passivation
-              error for GlobalRepositoryImpl on GF / Weld 2.0.4</p>
-              </li>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-63">AGOVA-63</a>] - When using Weld
-              2.X on Wildfly 8 or Glassfish 4, looking for OAuthSession fails</p>
-              </li>
-              </ul>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="_enhancement">Enhancement</h3>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-38">AGOVA-38</a>] - Integrate Rest
-              and OAuth engine in core</p>
-              </li>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-49">AGOVA-49</a>] - Remove BOM from
-              parent</p>
-              </li>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-54">AGOVA-54</a>] - Adding support
-              of Raw JSON / XML response</p>
-              </li>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-55">AGOVA-55</a>] - Upgrade Jackson
-              to 2.X</p>
-              </li>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-56">AGOVA-56</a>] - Get rid of
-              Guava</p>
-              </li>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-57">AGOVA-57</a>] - Get rid of
-              Commons Codec</p>
-              </li>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-58">AGOVA-58</a>] - Gather testing
-              profile in parent POM</p>
-              </li>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-59">AGOVA-59</a>] - Use
-              RequestTuner to specialize request instead of creating specific
-              OAuthService</p>
-              </li>
-              </ul>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="_feature_request">Feature Request</h3>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-40">AGOVA-40</a>] - OAuthSession
-              production should be ready for all application type (not only Web with
-              HttpSession)</p>
-              </li>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-52">AGOVA-52</a>] - Support to
-              programmatically control callback URL pr auth request</p>
-              </li>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-53">AGOVA-53</a>] - OAuthComplete
-              Event is unstable as a User facing API</p>
-              </li>
-              </ul>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="_task">Task</h3>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>[<a href="https://issues.jboss.org/browse/AGOVA-7">AGOVA-7</a>] - Create API and
-              common IMPL for JSR 330 compliant framework</p>
-              </li>
-              </ul>
-              </div>
-              </div>
-              </div>
+              <p>Thanks to <a href="https://jelastic.com/">Jelastic</a> we got a new Agorava Socializer ttps://jelastic.com/[Live demo]. Go check it out.</p>
               </div>
             </div>
             <div class="footer">
-              <a href="/news/2013/11/20/Agorava-0-7-0-released/">Permalink</a>
+              <a href="/news/2017/07/16/New-Demo/">Permalink</a>
               |
-               <a href="http://localhost:4242/news/2013/11/20/Agorava-0-7-0-released/#disqus_thread">Comments</a>
+               <a href="http://localhost:4242/news/2017/07/16/New-Demo/#disqus_thread">Comments</a>
               |
               <span class="tags">
                 <i class="icon-tags"></i>
                 Tags :
-                <a class="tag" href="/news/tags/CDI/">CDI</a>
-                <a class="tag" href="/news/tags/JSR330/">JSR330</a>
+                <a class="tag" href="/news/tags/Demo/">Demo</a>
+                <a class="tag" href="/news/tags/Cloud/">Cloud</a>
                 <a class="tag" href="/news/tags/announce/">announce</a>
               </span>
             </div>
             <div class="visible-md">
               <ul class="pager">
                 <li class="previous">
-                  <a href="/news/2013/08/07/Agorava-0-6-1-released/">Previous: Agorava Core 0.6.1 released</a>
-                </li>
-                <li class="next">
-                  <a href="/news/2015/06/02/New-CI-server/">Next: New CI Server</a>
+                  <a href="/news/2015/06/02/New-CI-server/">Previous: New CI Server</a>
                 </li>
               </ul>
             </div>
             <div class="hidden-md">
               <ul class="pager">
                 <li class="previous">
-                  <a href="/news/2013/08/07/Agorava-0-6-1-released/">Previous</a>
-                </li>
-                <li class="next">
-                  <a href="/news/2015/06/02/New-CI-server/">Next</a>
+                  <a href="/news/2015/06/02/New-CI-server/">Previous</a>
                 </li>
               </ul>
             </div>
@@ -375,7 +152,7 @@
                           <div id="disqus_thread"></div>
                           <script type="text/javascript">
                           var disqus_shortname = 'agoravablog';
-                          var disqus_url = "http://localhost:4242/news/2013/11/20/Agorava-0-7-0-released/";
+                          var disqus_url = "http://localhost:4242/news/2017/07/16/New-Demo/";
                           var disqus_developer = null;
                           var disqus_identifier = null;
                           (function() {

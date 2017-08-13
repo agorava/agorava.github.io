@@ -85,94 +85,92 @@
     <div class="container">
       <div class="row">
         <div class="col-md-9">
-          <article class="post">
-            <ul class="pager visible-md" style="float:right;">
-              <li>
-                <a href="/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/">Next</a>
+          <div class="posts">
+            <article class="post">
+              <h1>
+                <a href="/news/2017/07/16/New-Demo/">
+                  New Socializer Live Demo
+                </a>
+              </h1>
+              <div class="meta">
+                <strong>
+                  Posted by
+                  <span class="authors"> Werner Keil</span>
+                  on
+                  <span class="date">Jul 16, 2017</span>
+                  |
+                   <a href="http://localhost:4242/news/2017/07/16/New-Demo/#disqus_thread">Comments</a>
+                </strong>
+              </div>
+              <div class="content">
+                <div class="paragraph">
+                <p>Thanks to <a href="https://jelastic.com/">Jelastic</a> we got a new Agorava Socializer ttps://jelastic.com/[Live demo]. Go check it out.</p>
+                </div>
+              </div>
+              <div class="footer">
+                <a href="/news/2017/07/16/New-Demo/">Permalink</a>
+                |
+                 <a href="http://localhost:4242/news/2017/07/16/New-Demo/#disqus_thread">Comments</a>
+                |
+                <span class="tags">
+                  <i class="icon-tags"></i>
+                  Tags :
+                  <a class="tag" href="/news/tags/Demo/">Demo</a>
+                  <a class="tag" href="/news/tags/Cloud/">Cloud</a>
+                  <a class="tag" href="/news/tags/announce/">announce</a>
+                </span>
+              </div>
+            </article>
+          </div>
+          
+                      <script type="text/javascript">
+                      var disqus_shortname = 'agoravablog';
+                      (function () {
+                        var s = document.createElement('script'); s.async = true;
+                        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+                      }());
+                      </script>
+          <div class="visible-xs">
+            <ul class="pager">
+              <li class="previous disabled">
+                <a href="#">Previous</a>
+              </li>
+              <li class="disabled">
+                <a href="#">1 of 1</a>
+              </li>
+              <li class="next disabled">
+                <a href="#">Next</a>
               </li>
             </ul>
-            <h1>
-              <a href="/news/2012/06/22/Meet-Agorava-the-Social-Framework/">
-                Meet Agorava, The Social Framework
-              </a>
-            </h1>
-            <div class="meta">
-              <strong>
-                Posted by
-                <span class="authors"> Antoine Sabot-Durand</span>
-                on
-                <span class="date">Jun 22, 2012</span>
-                |
-                 <a href="http://localhost:4242/news/2012/06/22/Meet-Agorava-the-Social-Framework/#disqus_thread">Comments</a>
-              </strong>
-            </div>
-            <div class="content">
-              <p><img src="#{site.base_url}/images/logo.png" class="left" alt="" /></p>
-              <p>Did you ever looked for a nice solution in java to authenticate your users with their Twitter, Facebook or LinkedIn account ? Have you ever looked for a nice way to post tweets or Facebook updates from your Java application? Do you need to read your timeline or perform a search on a Social Media services from Java EE web application? If you answered yes to one of these questions Agorava is (or will be soon) the right answer to your needs.<br />
-              Agorava is the missing framework to deal with Social Media based on OAuth 1.0a and OAuth 2.0. It provides a way to authenticate on Social Media, use APIs and map JSON answers to Java pojo. It&#8217;ll have multiple implementations (like CDI, Java SE, JSR 330 supporting framework and others) to support your needs. Right now the only implementation is based on CDI but we&#8217;ll provide others in the coming months.</p>
-              <h3>Agorava genesis</h3>
-              <p>Agorava&#8217;s short history is important because it helps to understand the goals of our team. In March 2011 the project Seam Social was launched. This project was a collection of CDI beans and extension to support Social Network consuming. It lived inside Seam 3 project which was an ambitious JBoss project aimed to provide a rich ecosystem for Java EE 6 thru CDI extensions. For all kind of reasons we won&#8217;t develop here, Seam 3 project was stopped at the end of 2011 to create a new project around CDI ecosystem : <a href="https://cwiki.apache.org/confluence/display/DeltaSpike/Temporary+Documentation">Apache Deltaspike</a> (merging Seam 3, Apache CODI and others initiatives).<br />
-              In parallel of this event, a few people launched a JCP proposal on Social Media : <a href="http://jcp.org/en/jsr/detail?id=357">Java Social JSR 357</a>. Projects like Seam Social or <a href="http://java.net/projects/dalicore">DaliCore</a> were main influencers for this proposal. This proposal was voted down for all kind of reasons, but mainly because there wasn&#8217;t a real proof of concept (an implementation) behind it.<br />
-              So the conjunction of these 2 stories brought us to create a new project : start from Seam Social code to provide an implementation for Java Social with the goal to go back to JCP in the future. This project is also a experiment to answer the problem and challenges in creating a standard API for Social Media API for Java platform. Thus Agorava is born</p>
-              <h3>But most Social Media already have their own APIs. So why do we reinvent the wheel?</h3>
-              <p>Yes it&#8217;s true, but these social APIs are almost always in Javascript only and if it</p>
-            </div>
-            <div class="footer">
-              <a href="/news/2012/06/22/Meet-Agorava-the-Social-Framework/">Permalink</a>
-              |
-               <a href="http://localhost:4242/news/2012/06/22/Meet-Agorava-the-Social-Framework/#disqus_thread">Comments</a>
-              |
-              <span class="tags">
-                <i class="icon-tags"></i>
-                Tags :
-                <a class="tag" href="/news/tags/announce/">announce</a>
-                <a class="tag" href="/news/tags/Socializer/">Socializer</a>
-                <a class="tag" href="/news/tags/roadmap/">roadmap</a>
-              </span>
-            </div>
-            <div class="visible-md">
-              <ul class="pager">
-                <li class="next">
-                  <a href="/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/">Next: Starting a CDI webapp from Maven with Weld-Servlet and Jetty Plugin</a>
-                </li>
-              </ul>
-            </div>
-            <div class="hidden-md">
-              <ul class="pager">
-                <li class="next">
-                  <a href="/news/2012/07/10/Starting-a-CDI-webapp-from-Maven-with-Weld-servlet-and-jetty-plugin/">Next</a>
-                </li>
-              </ul>
-            </div>
-            
-                        <script type="text/javascript">
-                        var disqus_shortname = 'agoravablog';
-                        (function () {
-                          var s = document.createElement('script'); s.async = true;
-                          s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-                          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-                        }());
-                        </script>
-            <div class="comments">
-              
-                          <div id="disqus_thread"></div>
-                          <script type="text/javascript">
-                          var disqus_shortname = 'agoravablog';
-                          var disqus_url = "http://localhost:4242/news/2012/06/22/Meet-Agorava-the-Social-Framework/";
-                          var disqus_developer = null;
-                          var disqus_identifier = null;
-                          (function() {
-                            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
-                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
-                          })();
-                          </script>
-                          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=agoravablog">comments powered by Disqus.</a></noscript>
-            </div>
-          </article>
+          </div>
+          <div class="hidden-xs">
+            <ul class="pager">
+              <li class="disabled">
+                <a href="#">First</a>
+              </li>
+              <li class="disabled">
+                <a href="#">Previous</a>
+              </li>
+              <li class="active">
+                <a href="#">1 of 1</a>
+              </li>
+              <li class="disabled">
+                <a href="#">Next</a>
+              </li>
+              <li class="disabled">
+                <a href="#">Last</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="col-md-3">
-          <aside class="hidden-xs">
+          <div class="follow-scroll hidden-xs">
+            <div style="margin-bottom:20px;text-align:center;">
+              <a class="btn btn-default" href="http://localhost:4242/news.atom">
+                Subscribe RSS
+              </a>
+            </div>
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h3 class="panel-title">
@@ -241,8 +239,13 @@
                 </div>
               </div>
             </div>
-          </aside>
-          <aside class="visible-xs">
+          </div>
+          <div class="visible-xs">
+            <div style="margin-bottom:20px;text-align:center;">
+              <a class="btn btn-default" href="http://localhost:4242/news.atom">
+                Subscribe RSS
+              </a>
+            </div>
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h3 class="panel-title">
@@ -311,7 +314,7 @@
                 </div>
               </div>
             </div>
-          </aside>
+          </div>
         </div>
       </div>
       <hr>
